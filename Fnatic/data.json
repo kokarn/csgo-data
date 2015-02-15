@@ -1,7 +1,11 @@
 {
     "name" : "Fnatic",
-    "csgolounge-name" : "fnatic",
-    "steam-name" : "fntc"
+    "steam" : {
+        "name" : "fntc"
+    },
+    "csgolounge" : {
+        "name" : "fnatic"
+    },
     "gosugamers" : {
         "name" : "fnatic",
         "id" : 7386
