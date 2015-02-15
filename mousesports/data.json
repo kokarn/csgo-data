@@ -1,0 +1,13 @@
+{
+    "name" : "mousesports",
+    "steam" : {
+        "name" : "mss"
+    },
+    "csgolounge" : {
+        "name" : "mouz"
+    },
+    "gosugamers" : {
+        "name" : "mousesports.CS",
+        "id" : 7395
+    }
+}
