@@ -1,0 +1,24 @@
+{
+  "name": "csgo-teams",
+  "version": "1.0.0",
+  "description": "CSGO Team Data with logos",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://kokarn@github.com/kokarn/csgo-teams.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kokarn/csgo-teams/issues"
+  },
+  "homepage": "https://github.com/kokarn/csgo-teams",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-responsive-images": "^0.1.6"
+  }
+}
