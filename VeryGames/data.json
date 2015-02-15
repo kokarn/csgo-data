@@ -1,0 +1,13 @@
+{
+    "name" : "VeryGames",
+    "steam" : {
+        "name" : "vg"
+    },
+    "csgolounge" : {
+        "name" : "VG"
+    },
+    "gosugamers" : {
+        "name" : "Team VeryGames",
+        "id" : 7385
+    }
+}
