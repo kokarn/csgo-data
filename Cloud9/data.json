@@ -1,0 +1,13 @@
+{
+    "name" : "Cloud9",
+    "steam" : {
+        "name" : "c9"
+    },
+    "csgolounge" : {
+        "name" : "Cloud9"
+    },
+    "gosugamers" : {
+        "name" : "Cloud9.CS",
+        "id" : 8843
+    }
+}
