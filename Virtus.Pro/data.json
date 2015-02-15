@@ -1,0 +1,13 @@
+{
+    "name" : "Virtus.Pro",
+    "steam" : {
+        "name" : "vp"
+    },
+    "csgolounge" : {
+        "name" : "VP"
+    },
+    "gosugamers" : {
+        "name" : "Virtus.Pro.CS",
+        "id" : 7455
+    }
+}
