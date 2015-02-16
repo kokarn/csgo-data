@@ -1,5 +1,4 @@
-module.exports = function(grunt) {
-
+module.exports = function( grunt ) {
     grunt.initConfig({
         responsive_images: {
             options : {
