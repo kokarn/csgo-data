@@ -44,7 +44,7 @@ module.exports = function( grunt ) {
                     'Team EnVyUs/teamenvyus.png' : 'Team EnVyUs/logo-highres.png',
                     'Team LDLC.com/teamldlccom.png' : 'Team LDLC.com/logo-highres.png',
                     'Team Liquid/teamliquid.png' : 'Team Liquid/logo-highres.png',
-                    'Team Property/teamproperty.png' : 'Team Property/logo-300x300.png',
+                    'Team Property/teamproperty.png' : 'Team Property/logo-287x287.png',
                     'Team SoloMid/teamsolomid.png' : 'Team SoloMid/logo-highres.png',
                     'Team Wolf/teamwolf.png' : 'Team Wolf/logo-184x184.png',
                     'Titan/titan.png' : 'Titan/logo-highres.png',
