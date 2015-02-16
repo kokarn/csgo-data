@@ -38,7 +38,7 @@ module.exports = function( grunt ) {
                     'Natus Vincere/natusvincere.png' : 'Natus Vincere/logo-highres.png',
                     'PENTA Sports/pentasports.png' : 'PENTA Sports/logo-highres.png',
                     'PiTER/piter.png' : 'PiTER/logo-highres.png',
-                    'PlanetKey Dynamics/planetkeydynamics.png' : 'PlanetKey Dynamics/logo-highres.png',
+                    'PlanetKey Dynamics/planetkeydynamics.png' : 'PlanetKey Dynamics/logo-394x394.png',
                     'Reason Gaming/reasongaming.png' : 'Reason Gaming/logo-highres.png',
                     'Team Dignitas/teamdignitas.png' : 'Team Dignitas/logo-highres.png',
                     'Team EnVyUs/teamenvyus.png' : 'Team EnVyUs/logo-highres.png',
