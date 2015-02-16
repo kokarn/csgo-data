@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                 files : {
                     '3DMAX/3dmax.png' : '3DMAX/logo-highres.png',
                     'Astana Dragons/astanadragons.png' : 'Astana Dragons/logo-highres.png',
-                    'Bravado Gaming/bravadogaming.png' : 'Bravado Gaming/logo-highres.png',
+                    'Bravado Gaming/bravadogaming.png' : 'Bravado Gaming/logo-146x146.png',
                     'Clan Mystik/clanmystik.png' : 'Clan Mystik/logo-highres.png',
                     'Cloud9/cloud9.png' : 'Cloud9/logo-highres.png',
                     'compLexity/complexity.png' : 'compLexity/logo-highres.png',
