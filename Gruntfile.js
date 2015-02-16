@@ -36,6 +36,7 @@ module.exports = function( grunt ) {
                     'mousesports/mousesports.png' : 'mousesports/logo-highres.png',
                     'MyXMG/myxmg.png' : 'MyXMG/logo-330x330.png',
                     'Natus Vincere/natusvincere.png' : 'Natus Vincere/logo-highres.png',
+                    'Ninjas in Pyjamas/ninjasinpyjamas.png' : 'Ninjas in Pyjamas/logo-highres.png',
                     'PENTA Sports/pentasports.png' : 'PENTA Sports/logo-highres.png',
                     'PiTER/piter.png' : 'PiTER/logo-highres.png',
                     'PlanetKey Dynamics/planetkeydynamics.png' : 'PlanetKey Dynamics/logo-394x394.png',
