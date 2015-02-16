@@ -51,7 +51,7 @@ module.exports = function( grunt ) {
                     'VeryGames/verygames.png' : 'VeryGames/logo-highres.png',
                     'Virtus.Pro/virtuspro.png' : 'Virtus.Pro/logo-highres.png',
                     'Vox Eminor/voxeminor.png' : 'Vox Eminor/logo-highres.png',
-                    'K1CK/k1ck.png' : 'K1CK/logo-174x157.png'
+                    'K1CK/k1ck.png' : 'K1CK/logo-171x171.png'
                 }
             }
         }
