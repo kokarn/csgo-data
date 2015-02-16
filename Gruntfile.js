@@ -32,7 +32,7 @@ module.exports = function( grunt ) {
                     'INSHOCK/inshock.png' : 'INSHOCK/logo-highres.png',
                     'KaBuM.TD/kabumtd.png' : 'KaBuM.TD/logo-highres.png',
                     'LGB Esports/lgbesports.png' : 'LGB Esports/logo-highres.png',
-                    'London Conspiracy/londonconspiracy.png' : 'London Conspiracy/logo-250x250.png',
+                    'London Conspiracy/londonconspiracy.png' : 'London Conspiracy/logo-183x183.png',
                     'mousesports/mousesports.png' : 'mousesports/logo-highres.png',
                     'MyXMG/myxmg.png' : 'MyXMG/logo-358x265.png',
                     'Natus Vincere/natusvincere.png' : 'Natus Vincere/logo-highres.png',
