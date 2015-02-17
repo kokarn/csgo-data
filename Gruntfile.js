@@ -21,7 +21,7 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/complexity.png' : 'teams/compLexity/logo-highres.png',
                     'web/ingame-logo/copenhagenwolves.png' : 'teams/Copenhagen Wolves/logo-highres.png',
                     'web/ingame-logo/counterlogicgaming.png' : 'teams/Counter Logic Gaming/logo-highres.png',
-                    'web/ingame-logo/datteam.png' : 'teams/dAT Team/logo-184x184.png',
+                    'web/ingame-logo/datteam.png' : 'teams/dAT Team/logo-257x257.png',
                     'web/ingame-logo/epsilonesports.png' : 'teams/Epsilon eSports/logo-highres.png',
                     'web/ingame-logo/escgaming.png' : 'teams/ESC Gaming/logo-highres.png',
                     'web/ingame-logo/flipsid3tactics.png' : 'teams/Flipsid3 Tactics/logo-highres.png',
