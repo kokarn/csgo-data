@@ -39,7 +39,7 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/ninjasinpyjamas.png' : 'teams/Ninjas in Pyjamas/logo-highres.png',
                     'web/ingame-logo/pentasports.png' : 'teams/PENTA Sports/logo-highres.png',
                     'web/ingame-logo/piter.png' : 'teams/PiTER/logo-highres.png',
-                    'web/ingame-logo/planetkeydynamics.png' : 'teams/PlanetKey Dynamics/logo-394x394.png',
+                    'web/ingame-logo/planetkeydynamics.png' : 'teams/Planetkey Dynamics/logo-394x394.png',
                     'web/ingame-logo/reasongaming.png' : 'teams/Reason Gaming/logo-397x397.png',
                     'web/ingame-logo/teamdignitas.png' : 'teams/Team Dignitas/logo-highres.png',
                     'web/ingame-logo/teamenvyus.png' : 'teams/Team EnVyUs/logo-highres.png',
