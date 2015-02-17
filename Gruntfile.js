@@ -53,7 +53,15 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/virtuspro.png' : 'teams/Virtus.Pro/logo-highres.png',
                     'web/ingame-logo/voxeminor.png' : 'teams/Vox Eminor/logo-highres.png',
                     'web/ingame-logo/k1ck.png' : 'teams/K1CK/logo-171x171.png',
-                    'web/ingame-logo/games4u.png' : 'teams/Games4u/logo-234x234.png'
+                    'web/ingame-logo/games4u.png' : 'teams/Games4u/logo-234x234.png',
+                    'web/ingame-logo/mythic.png' : 'teams/Mythic/logo-272x272.png',
+                    'web/ingame-logo/elevate.png' : 'teams/eLevate/logo-highres.png',
+                    'web/ingame-logo/sapphirekelownadotcom.png' : 'teams/SapphireKelownaDotCom/logo-298x298.png',
+                    'web/ingame-logo/immunity.png' : 'teams/Immunity/logo-208x208.png',
+                    'web/ingame-logo/thechiefs.png' : 'teams/The Chiefs/logo-236x236.png',
+                    'web/ingame-logo/streamline.png' : 'teams/Streamline/logo-195x195.png',
+                    'web/ingame-logo/avantgarde.png' : 'teams/Avant Garde/logo-292x292.png',
+                    'web/ingame-logo/trident.png' : 'teams/TRIDENT/logo-221x221.png'
                 }
             }
         }
