@@ -1,7 +1,7 @@
-# CSGO Teams
-Data for Counter Strike: Global Offensive teams
+# CSGO Data
+Data for Counter Strike: Global Offensive
 
-Includes:
+For teams:
  * Logo
  * Steam "id"
  * CSGOLounge "id"
