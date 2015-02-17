@@ -56,8 +56,7 @@ module.exports = function( grunt ) {
     }
 
     grunt.registerTask( 'teams', function() {
-        var teams = fs.readdirSync( 'teams' )
-            var done = this.async(),
+        var teams = fs.readdirSync( 'teams' ),
             index;
 
         for( index in teams ){
@@ -69,7 +68,7 @@ module.exports = function( grunt ) {
                 fs.readFile( 'teams/' + teams[ index ] + '/data.json', 'utf8', function( error, data ){
                     var teamData;
                     if( error ){
-                        throw error
+                        throw error;
                     } else {
                         teamData = JSON.parse( data );
                         teamData = checkIdentifier( teamData );
