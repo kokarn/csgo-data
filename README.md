@@ -7,9 +7,9 @@ For teams:
  * CSGOLounge "id"
  * GosuGamers name and id
 
-SourceMod Plugin for TeamLogos
-https://forums.alliedmods.net/showthread.php?t=258206
+[SourceMod Plugin for TeamLogos and TeamNames](https://forums.alliedmods.net/showthread.php?t=258206)
 
+----
 ## How do I add a team?
 
 There are three different ways to help out and add a missing team.
@@ -27,6 +27,28 @@ Generally this is the information about the team and a version of the logo in as
 If you can't find any resources on the team, just [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into adding it ASAP.
 
+----
+### I want to host this and force downloads the same way you are doing!
+Of course you want! This is the config we use on [csgo-data.com](http://csho-data.com)
+
+.htaccess
+
+```
+<FilesMatch ".(cfg|zip|png)$">
+    ForceType application/octet-stream
+    Header set Content-Disposition attachment
+</FilesMatch>
+```
+nginx
+
+```
+location ~* ^/teams/(.*\.)(cfg|zip|png)$ {
+    add_header Content-Disposition "attachment; filename=$1$2";
+    default_type application/octet-stream;
+}
+```
+
+---
 ## Legal
 
 #### __All logos and trademarks are the property of their respective owners!__
