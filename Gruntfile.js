@@ -58,7 +58,8 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/elevate.png' : 'teams/eLevate/logo-highres.png',
                     'web/ingame-logo/sapphirekelownadotcom.png' : 'teams/SapphireKelownaDotCom/logo-298x298.png',
                     'web/ingame-logo/immunity.png' : 'teams/Immunity/logo-208x208.png',
-                    'web/ingame-logo/thechiefs.png' : 'teams/The Chiefs/logo-236x236.png'
+                    'web/ingame-logo/thechiefs.png' : 'teams/The Chiefs/logo-236x236.png',
+                    'web/ingame-logo/streamline.png' : 'teams/Streamline/logo-195x195.png'
                 }
             }
         }
