@@ -73,6 +73,8 @@ module.exports = function( grunt ) {
         }
     });
 
+    grunt.loadTasks( 'tasks' );
+
     grunt.loadNpmTasks( 'grunt-responsive-images' );
-    grunt.registerTask( 'default', [ 'responsive_images' ] );
+    grunt.registerTask( 'default', [ 'responsive_images', 'teams' ] );
 };

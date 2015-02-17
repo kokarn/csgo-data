@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/kokarn/csgo-teams",
   "devDependencies": {
+    "archiver": "^0.14.3",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-responsive-images": "^0.1.6"
+    "grunt-responsive-images": "^0.1.6",
+    "normalize-for-search": "^1.2.0"
   }
 }
