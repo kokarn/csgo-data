@@ -66,7 +66,8 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/x6tence.png' : 'teams/x6tence/logo-170x170.png',
                     'web/ingame-logo/wizards.png' : 'teams/Wizards/logo-188x188.png',
                     'web/ingame-logo/publiclirse.png' : 'teams/Publiclir.se/logo-161x161.png',
-                    'web/ingame-logo/playingducks.png' : 'teams/Playing Ducks/logo-436x436.png'
+                    'web/ingame-logo/playingducks.png' : 'teams/Playing Ducks/logo-436x436.png',
+                    'web/ingame-logo/onlinebots.png' : 'teams/OnlineBOTS/logo-265x265.png'
                 }
             }
         }
