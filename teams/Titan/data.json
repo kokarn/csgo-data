@@ -1,13 +1,14 @@
 {
-    "name" : "Titan",
-    "steam" : {
-        "name" : "tit"
+    "name": "Titan",
+    "steam": {
+        "name": "tit"
     },
-    "csgolounge" : {
-        "name" : "Titan"
+    "csgolounge": {
+        "name": "Titan"
     },
-    "gosugamers" : {
-        "name" : "Titan.CS",
-        "id" : 8436
-    }
+    "gosugamers": {
+        "name": "Titan.CS",
+        "id": 8436
+    },
+    "identifier": "titan"
 }

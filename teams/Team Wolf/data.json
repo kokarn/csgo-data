@@ -1,13 +1,14 @@
 {
-    "name" : "Team Wolf",
-    "steam" : {
-        "name" : "indw"
+    "name": "Team Wolf",
+    "steam": {
+        "name": "indw"
     },
-    "csgolounge" : {
-        "name" : "Wolf"
+    "csgolounge": {
+        "name": "Wolf"
     },
-    "gosugamers" : {
-        "name" : "Wolf",
-        "id" : 8844
-    }
+    "gosugamers": {
+        "name": "Wolf",
+        "id": 8844
+    },
+    "identifier": "teamwolf"
 }

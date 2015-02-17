@@ -1,13 +1,14 @@
 {
-    "name" : "dAT Team",
-    "steam" : {
-        "name" : "dat"
+    "name": "dAT Team",
+    "steam": {
+        "name": "dat"
     },
-    "csgolounge" : {
-        "name" : "dAT"
+    "csgolounge": {
+        "name": "dAT"
     },
-    "gosugamers" : {
-        "name" : "dAT team",
-        "id" : 7456
-    }
+    "gosugamers": {
+        "name": "dAT team",
+        "id": 7456
+    },
+    "identifier": "datteam"
 }

@@ -1,13 +1,14 @@
 {
-    "name" : "Ninjas in Pyjamas",
-    "steam" : {
-        "name" : "nip"
+    "name": "Ninjas in Pyjamas",
+    "steam": {
+        "name": "nip"
     },
-    "csgolounge" : {
-        "name" : "NiP"
+    "csgolounge": {
+        "name": "NiP"
     },
-    "gosugamers" : {
-        "name" : "Ninjas in Pyjamas",
-        "id" : 7384
-    }
+    "gosugamers": {
+        "name": "Ninjas in Pyjamas",
+        "id": 7384
+    },
+    "identifier": "ninjasinpyjamas"
 }

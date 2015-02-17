@@ -1,10 +1,11 @@
 {
-    "name" : "Team Property",
-    "csgolounge" : {
-        "name" : "Property"
+    "name": "Team Property",
+    "csgolounge": {
+        "name": "Property"
     },
-    "gosugamers" : {
-        "name" : "Team Property.CS",
-        "id" : 8664
-    }
+    "gosugamers": {
+        "name": "Team Property.CS",
+        "id": 8664
+    },
+    "identifier": "teamproperty"
 }

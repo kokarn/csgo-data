@@ -1,13 +1,14 @@
 {
-    "name" : "Vox Eminor",
-    "steam" : {
-        "name" : "ve"
+    "name": "Vox Eminor",
+    "steam": {
+        "name": "ve"
     },
-    "csgolounge" : {
-        "name" : "VOX"
+    "csgolounge": {
+        "name": "VOX"
     },
-    "gosugamers" : {
-        "name" : "VOX EMINOR",
-        "id" : 8602
-    }
+    "gosugamers": {
+        "name": "VOX EMINOR",
+        "id": 8602
+    },
+    "identifier": "voxeminor"
 }

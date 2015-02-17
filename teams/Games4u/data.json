@@ -1,10 +1,11 @@
 {
-    "name" : "Games4u",
-    "csgolounge" : {
-        "name" : "G4U"
+    "name": "Games4u",
+    "csgolounge": {
+        "name": "G4U"
     },
-    "gosugamers" : {
-        "name" : "Games4u.se",
-        "id" : 8814
-    }
+    "gosugamers": {
+        "name": "Games4u.se",
+        "id": 8814
+    },
+    "identifier": "games4u"
 }

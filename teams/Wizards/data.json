@@ -1,10 +1,11 @@
 {
-    "name" : "Wizards",
-    "csgolounge" : {
-        "name" : "Wizards"
+    "name": "Wizards",
+    "csgolounge": {
+        "name": "Wizards"
     },
-    "gosugamers" : {
-        "name" : "Wizards",
-        "id" : 8450
-    }
+    "gosugamers": {
+        "name": "Wizards",
+        "id": 8450
+    },
+    "identifier": "wizards"
 }

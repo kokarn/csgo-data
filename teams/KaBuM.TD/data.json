@@ -1,10 +1,11 @@
 {
-    "name" : "KaBuM.TD",
-    "csgolounge" : {
-        "name" : "Kabum"
+    "name": "KaBuM.TD",
+    "csgolounge": {
+        "name": "Kabum"
     },
-    "gosugamers" : {
-        "name" : "Team KaBuM",
-        "id" : 9195
-    }
+    "gosugamers": {
+        "name": "Team KaBuM",
+        "id": 9195
+    },
+    "identifier": "kabumtd"
 }

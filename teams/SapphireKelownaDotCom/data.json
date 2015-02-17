@@ -1,10 +1,11 @@
 {
-    "name" : "SapphireKelownaDotCom",
-    "csgolounge" : {
-        "name" : "SKDC"
+    "name": "SapphireKelownaDotCom",
+    "csgolounge": {
+        "name": "SKDC"
     },
-    "gosugamers" : {
-        "name" : "SapphireKelownaDotCom",
-        "id" : 8826
-    }
+    "gosugamers": {
+        "name": "SapphireKelownaDotCom",
+        "id": 8826
+    },
+    "identifier": "sapphirekelownadotcom"
 }

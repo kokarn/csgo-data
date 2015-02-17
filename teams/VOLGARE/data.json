@@ -1,10 +1,11 @@
 {
-    "name" : "VOLGARE",
-    "csgolounge" : {
-        "name" : "Volgare"
+    "name": "VOLGARE",
+    "csgolounge": {
+        "name": "Volgare"
     },
-    "gosugamers" : {
-        "name" : "VOLGARE",
-        "id" : 9635
-    }
+    "gosugamers": {
+        "name": "VOLGARE",
+        "id": 9635
+    },
+    "identifier": "volgare"
 }

@@ -1,13 +1,14 @@
 {
-    "name" : "Planetkey Dynamics",
-    "steam" : {
-        "name" : "pkd"
+    "name": "Planetkey Dynamics",
+    "steam": {
+        "name": "pkd"
     },
-    "csgolounge" : {
-        "name" : "Planetkey"
+    "csgolounge": {
+        "name": "Planetkey"
     },
-    "gosugamers" : {
-        "name" : "Planetkey Dynamics",
-        "id" : 8578
-    }
+    "gosugamers": {
+        "name": "Planetkey Dynamics",
+        "id": 8578
+    },
+    "identifier": "planetkeydynamics"
 }

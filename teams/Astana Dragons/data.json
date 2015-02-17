@@ -1,13 +1,14 @@
 {
-    "name" : "Astana Dragons",
-    "steam" : {
-        "name" : "ad"
+    "name": "Astana Dragons",
+    "steam": {
+        "name": "ad"
     },
-    "csgolounge" : {
-        "name" : "AD"
+    "csgolounge": {
+        "name": "AD"
     },
-    "gosugamers" : {
-        "name" : "Astana Dragons",
-        "id" : 7387
-    }
+    "gosugamers": {
+        "name": "Astana Dragons",
+        "id": 7387
+    },
+    "identifier": "astanadragons"
 }

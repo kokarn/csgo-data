@@ -1,10 +1,11 @@
 {
-    "name" : "Publiclir.se",
-    "csgolounge" : {
-        "name" : "Publiclir"
+    "name": "Publiclir.se",
+    "csgolounge": {
+        "name": "Publiclir"
     },
-    "gosugamers" : {
-        "name" : "Publiclir.se",
-        "id" : 8565
-    }
+    "gosugamers": {
+        "name": "Publiclir.se",
+        "id": 8565
+    },
+    "identifier": "publiclirse"
 }

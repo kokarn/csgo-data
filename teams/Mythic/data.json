@@ -1,10 +1,11 @@
 {
-    "name" : "Mythic",
-    "csgolounge" : {
-        "name" : "Mythic"
+    "name": "Mythic",
+    "csgolounge": {
+        "name": "Mythic"
     },
-    "gosugamers" : {
-        "name" : "Mythic",
-        "id" : 9402
-    }
+    "gosugamers": {
+        "name": "Mythic",
+        "id": 9402
+    },
+    "identifier": "mythic"
 }

@@ -1,10 +1,11 @@
 {
-    "name" : "Team Liquid",
-    "csgolounge" : {
-        "name" : "Liquid"
+    "name": "Team Liquid",
+    "csgolounge": {
+        "name": "Liquid"
     },
-    "gosugamers" : {
-        "name" : "Team Liquid.CS",
-        "id" : 10561
-    }
+    "gosugamers": {
+        "name": "Team Liquid.CS",
+        "id": 10561
+    },
+    "identifier": "teamliquid"
 }

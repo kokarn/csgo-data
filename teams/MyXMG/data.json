@@ -1,13 +1,14 @@
 {
-    "name" : "MyXMG",
-    "steam" : {
-        "name" : "myxmg"
+    "name": "MyXMG",
+    "steam": {
+        "name": "myxmg"
     },
-    "csgolounge" : {
-        "name" : "myXMG"
+    "csgolounge": {
+        "name": "myXMG"
     },
-    "gosugamers" : {
-        "name" : "myXMG",
-        "id" : 8577
-    }
+    "gosugamers": {
+        "name": "myXMG",
+        "id": 8577
+    },
+    "identifier": "myxmg"
 }

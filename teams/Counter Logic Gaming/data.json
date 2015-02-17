@@ -1,10 +1,11 @@
 {
-    "name" : "Counter Logic Gaming",
-    "csgolounge" : {
-        "name" : "CLG"
+    "name": "Counter Logic Gaming",
+    "csgolounge": {
+        "name": "CLG"
     },
-    "gosugamers" : {
-        "name" : "Counter Logic Gaming.CS",
-        "id" : 10569
-    }
+    "gosugamers": {
+        "name": "Counter Logic Gaming.CS",
+        "id": 10569
+    },
+    "identifier": "counterlogicgaming"
 }

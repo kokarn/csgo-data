@@ -1,10 +1,11 @@
 {
-    "name" : "Team SoloMid",
-    "csgolounge" : {
-        "name" : "TSM"
+    "name": "Team SoloMid",
+    "csgolounge": {
+        "name": "TSM"
     },
-    "gosugamers" : {
-        "name" : "Team Solomid.CS",
-        "id" : 10649
-    }
+    "gosugamers": {
+        "name": "Team Solomid.CS",
+        "id": 10649
+    },
+    "identifier": "teamsolomid"
 }

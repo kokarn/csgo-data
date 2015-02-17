@@ -1,13 +1,14 @@
 {
-    "name" : "PENTA Sports",
-    "steam" : {
-        "name" : "penta"
+    "name": "PENTA Sports",
+    "steam": {
+        "name": "penta"
     },
-    "csgolounge" : {
-        "name" : "Penta"
+    "csgolounge": {
+        "name": "Penta"
     },
-    "gosugamers" : {
-        "name" : "PENTA Sports",
-        "id" : 8816
-    }
+    "gosugamers": {
+        "name": "PENTA Sports",
+        "id": 8816
+    },
+    "identifier": "pentasports"
 }

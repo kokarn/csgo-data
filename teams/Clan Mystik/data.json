@@ -1,13 +1,14 @@
 {
-    "name" : "Clan Mystik",
-    "steam" : {
-        "name" : "cm"
+    "name": "Clan Mystik",
+    "steam": {
+        "name": "cm"
     },
-    "csgolounge" : {
-        "name" : "Mystik"
+    "csgolounge": {
+        "name": "Mystik"
     },
-    "gosugamers" : {
-        "name" : "Clan-Mystik",
-        "id" : 7410
-    }
+    "gosugamers": {
+        "name": "Clan-Mystik",
+        "id": 7410
+    },
+    "identifier": "clanmystik"
 }
