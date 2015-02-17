@@ -2,7 +2,7 @@ module.exports = function( grunt ) {
     grunt.initConfig({
         responsive_images: {
             options : {
-                newFilesOnly: false,
+                //newFilesOnly: false,
                 sizes : [{
                     name : "ingame",
                     height : 64,
