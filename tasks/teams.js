@@ -1,7 +1,8 @@
 module.exports = function( grunt ) {
     'use strict';
     var fs = require( 'fs' ),
-        archiver = require( 'archiver' );
+        archiver = require( 'archiver' ),
+        normalizeForSearch = require( 'normalize-for-search' );
 
     function createIdentifier( name ){
         return normalizeForSearch( name.replace( /[\s\.\-]+/g, '' ) );
@@ -56,7 +57,6 @@ module.exports = function( grunt ) {
     grunt.registerTask( 'teams', function() {
         var teams = fs.readdirSync( 'teams' )
             var done = this.async(),
-            normalizeForSearch = require( 'normalize-for-search' ),
             index,
             skipFiles = [ '.DS_Store' ];
 
