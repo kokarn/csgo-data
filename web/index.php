@@ -16,8 +16,8 @@
         <h2>
             Current Endpoints
         </h2>
-        <a href="ingame-logo/">
-            Team in-game logos
+        <a href="teams/">
+            Team in-game logos and names
         </a>
     </div>
     <a href="https://github.com/kokarn/csgo-data">
