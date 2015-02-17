@@ -21,7 +21,7 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/complexity.png' : 'teams/compLexity/logo-highres.png',
                     'web/ingame-logo/copenhagenwolves.png' : 'teams/Copenhagen Wolves/logo-highres.png',
                     'web/ingame-logo/counterlogicgaming.png' : 'teams/Counter Logic Gaming/logo-highres.png',
-                    'web/ingame-logo/datteam.png' : 'teams/dAT Team/logo-184x184.png',
+                    'web/ingame-logo/datteam.png' : 'teams/dAT Team/logo-257x257.png',
                     'web/ingame-logo/epsilonesports.png' : 'teams/Epsilon eSports/logo-highres.png',
                     'web/ingame-logo/escgaming.png' : 'teams/ESC Gaming/logo-highres.png',
                     'web/ingame-logo/flipsid3tactics.png' : 'teams/Flipsid3 Tactics/logo-highres.png',
@@ -39,7 +39,7 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/ninjasinpyjamas.png' : 'teams/Ninjas in Pyjamas/logo-highres.png',
                     'web/ingame-logo/pentasports.png' : 'teams/PENTA Sports/logo-highres.png',
                     'web/ingame-logo/piter.png' : 'teams/PiTER/logo-highres.png',
-                    'web/ingame-logo/planetkeydynamics.png' : 'teams/PlanetKey Dynamics/logo-394x394.png',
+                    'web/ingame-logo/planetkeydynamics.png' : 'teams/Planetkey Dynamics/logo-394x394.png',
                     'web/ingame-logo/reasongaming.png' : 'teams/Reason Gaming/logo-397x397.png',
                     'web/ingame-logo/teamdignitas.png' : 'teams/Team Dignitas/logo-highres.png',
                     'web/ingame-logo/teamenvyus.png' : 'teams/Team EnVyUs/logo-highres.png',
@@ -61,7 +61,13 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/thechiefs.png' : 'teams/The Chiefs/logo-236x236.png',
                     'web/ingame-logo/streamline.png' : 'teams/Streamline/logo-highres.png',
                     'web/ingame-logo/avantgarde.png' : 'teams/Avant Garde/logo-292x292.png',
-                    'web/ingame-logo/trident.png' : 'teams/TRIDENT/logo-221x221.png'
+                    'web/ingame-logo/trident.png' : 'teams/TRIDENT/logo-221x221.png',
+                    'web/ingame-logo/volgare.png' : 'teams/VOLGARE/logo-200x200.png',
+                    'web/ingame-logo/x6tence.png' : 'teams/x6tence/logo-170x170.png',
+                    'web/ingame-logo/wizards.png' : 'teams/Wizards/logo-188x188.png',
+                    'web/ingame-logo/publiclirse.png' : 'teams/Publiclir.se/logo-161x161.png',
+                    'web/ingame-logo/playingducks.png' : 'teams/Playing Ducks/logo-436x436.png',
+                    'web/ingame-logo/onlinebots.png' : 'teams/OnlineBOTS/logo-265x265.png'
                 }
             }
         }
