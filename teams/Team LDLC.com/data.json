@@ -1,13 +1,14 @@
 {
-    "name" : "Team LDLC.com",
-    "steam" : {
-        "name" : "ldlc"
+    "name": "Team LDLC.com",
+    "steam": {
+        "name": "ldlc"
     },
-    "csgolounge" : {
-        "name" : "LDLC"
+    "csgolounge": {
+        "name": "LDLC"
     },
-    "gosugamers" : {
-        "name" : "Team LDLC",
-        "id" : 7443
-    }
+    "gosugamers": {
+        "name": "Team LDLC",
+        "id": 7443
+    },
+    "identifier": "teamldlccom"
 }

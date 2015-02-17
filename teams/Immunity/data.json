@@ -1,10 +1,11 @@
 {
-    "name" : "Immunity",
-    "csgolounge" : {
-        "name" : "Imm"
+    "name": "Immunity",
+    "csgolounge": {
+        "name": "Imm"
     },
-    "gosugamers" : {
-        "name" : "Team Immunity.CS",
-        "id" : 10845
-    }
+    "gosugamers": {
+        "name": "Team Immunity.CS",
+        "id": 10845
+    },
+    "identifier": "immunity"
 }

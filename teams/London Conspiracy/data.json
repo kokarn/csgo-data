@@ -1,13 +1,14 @@
 {
-    "name" : "Lodon Conspiracy",
-    "steam" : {
-        "name" : "lc"
+    "name": "London Conspiracy",
+    "steam": {
+        "name": "lc"
     },
-    "csgolounge" : {
-        "name" : "LC"
+    "csgolounge": {
+        "name": "LC"
     },
-    "gosugamers" : {
-        "name" : "London Conspiracy.CS",
-        "id" : 8493
-    }
+    "gosugamers": {
+        "name": "London Conspiracy.CS",
+        "id": 8493
+    },
+    "identifier": "londonconspiracy"
 }

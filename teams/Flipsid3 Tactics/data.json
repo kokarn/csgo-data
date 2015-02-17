@@ -1,13 +1,14 @@
 {
-    "name" : "Flipsid3 Tactics",
-    "steam" : {
-        "name" : "flip"
+    "name": "Flipsid3 Tactics",
+    "steam": {
+        "name": "flip"
     },
-    "csgolounge" : {
-        "name" : "FSid3"
+    "csgolounge": {
+        "name": "FSid3"
     },
-    "gosugamers" : {
-        "name" : "Flipsid3 Tactics",
-        "id" : 8564
-    }
+    "gosugamers": {
+        "name": "Flipsid3 Tactics",
+        "id": 8564
+    },
+    "identifier": "flipsid3tactics"
 }

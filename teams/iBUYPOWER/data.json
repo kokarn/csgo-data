@@ -1,13 +1,14 @@
 {
-    "name" : "iBUYPOWER",
-    "steam" : {
-        "name" : "ibp"
+    "name": "iBUYPOWER",
+    "steam": {
+        "name": "ibp"
     },
-    "csgolounge" : {
-        "name" : "IBP"
+    "csgolounge": {
+        "name": "IBP"
     },
-    "gosugamers" : {
-        "name" : "iBUYPOWER",
-        "id" : 7414
-    }
+    "gosugamers": {
+        "name": "iBUYPOWER",
+        "id": 7414
+    },
+    "identifier": "ibuypower"
 }

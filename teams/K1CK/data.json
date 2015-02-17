@@ -1,10 +1,11 @@
 {
-    "name" : "K1CK",
-    "csgolounge" : {
-        "name" : "K1CK"
+    "name": "K1CK",
+    "csgolounge": {
+        "name": "K1CK"
     },
-    "gosugamers" : {
-        "name" : "k1ck eSports Club",
-        "id" : 7405
-    }
+    "gosugamers": {
+        "name": "k1ck eSports Club",
+        "id": 7405
+    },
+    "identifier": "k1ck"
 }

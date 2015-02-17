@@ -1,13 +1,14 @@
 {
-    "name" : "Reason Gaming",
-    "steam" : {
-        "name" : "rgg"
+    "name": "Reason Gaming",
+    "steam": {
+        "name": "rgg"
     },
-    "csgolounge" : {
-        "name" : "Reason"
+    "csgolounge": {
+        "name": "Reason"
     },
-    "gosugamers" : {
-        "name" : "Reason Gaming CS",
-        "id" : 7407
-    }
+    "gosugamers": {
+        "name": "Reason Gaming CS",
+        "id": 7407
+    },
+    "identifier": "reasongaming"
 }

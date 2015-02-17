@@ -1,13 +1,14 @@
 {
-    "name" : "Virtus.Pro",
-    "steam" : {
-        "name" : "vp"
+    "name": "Virtus.Pro",
+    "steam": {
+        "name": "vp"
     },
-    "csgolounge" : {
-        "name" : "VP"
+    "csgolounge": {
+        "name": "VP"
     },
-    "gosugamers" : {
-        "name" : "Virtus.Pro.CS",
-        "id" : 7455
-    }
+    "gosugamers": {
+        "name": "Virtus.Pro.CS",
+        "id": 7455
+    },
+    "identifier": "virtuspro"
 }

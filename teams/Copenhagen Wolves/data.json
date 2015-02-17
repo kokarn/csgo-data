@@ -1,13 +1,14 @@
 {
-    "name" : "Copenhagen Wolves",
-    "steam" : {
-        "name" : "cw"
+    "name": "Copenhagen Wolves",
+    "steam": {
+        "name": "cw"
     },
-    "csgolounge" : {
-        "name" : "CW"
+    "csgolounge": {
+        "name": "CW"
     },
-    "gosugamers" : {
-        "name" : "CPH Wolves",
-        "id" : 7396
-    }
+    "gosugamers": {
+        "name": "CPH Wolves",
+        "id": 7396
+    },
+    "identifier": "copenhagenwolves"
 }

@@ -1,13 +1,14 @@
 {
-    "name" : "compLexity",
-    "steam" : {
-        "name" : "col"
+    "name": "compLexity",
+    "steam": {
+        "name": "col"
     },
-    "csgolounge" : {
-        "name" : "coL"
+    "csgolounge": {
+        "name": "coL"
     },
-    "gosugamers" : {
-        "name" : "compLexity Gaming",
-        "id" : 8604
-    }
+    "gosugamers": {
+        "name": "compLexity Gaming",
+        "id": 8604
+    },
+    "identifier": "complexity"
 }

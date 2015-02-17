@@ -1,13 +1,14 @@
 {
-    "name" : "Epsilon eSports",
-    "steam" : {
-        "name" : "eps"
+    "name": "Epsilon eSports",
+    "steam": {
+        "name": "eps"
     },
-    "csgolounge" : {
-        "name" : "Epsilon"
+    "csgolounge": {
+        "name": "Epsilon"
     },
-    "gosugamers" : {
-        "name" : "Epsilon",
-        "id" : 8494
-    }
+    "gosugamers": {
+        "name": "Epsilon",
+        "id": 8494
+    },
+    "identifier": "epsilonesports"
 }

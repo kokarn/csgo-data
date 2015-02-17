@@ -1,13 +1,14 @@
 {
-    "name" : "ESC Gaming",
-    "steam" : {
-        "name" : "esc"
+    "name": "ESC Gaming",
+    "steam": {
+        "name": "esc"
     },
-    "csgolounge" : {
-        "name" : "ESC"
+    "csgolounge": {
+        "name": "ESC"
     },
-    "gosugamers" : {
-        "name" : "ESC Gaming",
-        "id" : 7428
-    }
+    "gosugamers": {
+        "name": "ESC Gaming",
+        "id": 7428
+    },
+    "identifier": "escgaming"
 }

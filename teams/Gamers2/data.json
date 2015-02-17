@@ -1,10 +1,11 @@
 {
-    "name" : "Gamers2",
-    "csgolounge" : {
-        "name" : "G2"
+    "name": "Gamers2",
+    "csgolounge": {
+        "name": "G2"
     },
-    "gosugamers" : {
-        "name" : "Gamers2",
-        "id" : 10804
-    }
+    "gosugamers": {
+        "name": "Gamers2",
+        "id": 10804
+    },
+    "identifier": "gamers2"
 }

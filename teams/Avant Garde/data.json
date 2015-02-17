@@ -1,7 +1,8 @@
 {
-    "name" : "Avant Garde",
-    "gosugamers" : {
-        "name" : "Avant Garde.CS",
-        "id" : 10847
-    }
+    "name": "Avant Garde",
+    "gosugamers": {
+        "name": "Avant Garde.CS",
+        "id": 10847
+    },
+    "identifier": "avantgarde"
 }

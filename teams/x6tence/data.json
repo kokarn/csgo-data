@@ -1,10 +1,11 @@
 {
-    "name" : "x6tence",
-    "csgolounge" : {
-        "name" : "X6tence"
+    "name": "x6tence",
+    "csgolounge": {
+        "name": "X6tence"
     },
-    "gosugamers" : {
-        "name" : "x6tence",
-        "id" : 7420
-    }
+    "gosugamers": {
+        "name": "x6tence",
+        "id": 7420
+    },
+    "identifier": "x6tence"
 }

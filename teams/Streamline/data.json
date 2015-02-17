@@ -1,7 +1,8 @@
 {
-    "name" : "Streamline",
-    "gosugamers" : {
-        "name" : "Streamline",
-        "id" : 10848
-    }
+    "name": "Streamline",
+    "gosugamers": {
+        "name": "Streamline",
+        "id": 10848
+    },
+    "identifier": "streamline"
 }

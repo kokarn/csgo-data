@@ -1,13 +1,14 @@
 {
-    "name" : "Team Dignitas",
-    "steam" : {
-        "name" : "dig"
+    "name": "Team Dignitas",
+    "steam": {
+        "name": "dig"
     },
-    "csgolounge" : {
-        "name" : "Dignitas"
+    "csgolounge": {
+        "name": "Dignitas"
     },
-    "gosugamers" : {
-        "name" : "Team Dignitas.CS",
-        "id" : 8431
-    }
+    "gosugamers": {
+        "name": "Team Dignitas.CS",
+        "id": 8431
+    },
+    "identifier": "teamdignitas"
 }

@@ -1,10 +1,11 @@
 {
-    "name" : "OnlineBOTS",
-    "csgolounge" : {
-        "name" : "OB"
+    "name": "OnlineBOTS",
+    "csgolounge": {
+        "name": "OB"
     },
-    "gosugamers" : {
-        "name" : "OnlineBOTS",
-        "id" : 8595
-    }
+    "gosugamers": {
+        "name": "OnlineBOTS",
+        "id": 8595
+    },
+    "identifier": "onlinebots"
 }

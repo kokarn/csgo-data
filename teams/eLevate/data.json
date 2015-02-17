@@ -1,10 +1,11 @@
 {
-    "name" : "eLevate",
-    "csgolounge" : {
-        "name" : "eLevate"
+    "name": "eLevate",
+    "csgolounge": {
+        "name": "eLevate"
     },
-    "gosugamers" : {
-        "name" : "eLevate",
-        "id" : 9011
-    }
+    "gosugamers": {
+        "name": "eLevate",
+        "id": 9011
+    },
+    "identifier": "elevate"
 }

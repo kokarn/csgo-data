@@ -1,10 +1,11 @@
 {
-    "name" : "INSHOCK",
-    "csgolounge" : {
-        "name" : "InShock"
+    "name": "INSHOCK",
+    "csgolounge": {
+        "name": "InShock"
     },
-    "gosugamers" : {
-        "name" : "INShock",
-        "id" : 8587
-    }
+    "gosugamers": {
+        "name": "INShock",
+        "id": 8587
+    },
+    "identifier": "inshock"
 }

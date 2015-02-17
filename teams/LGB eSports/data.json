@@ -1,13 +1,14 @@
 {
-    "name" : "LGB eSports",
-    "steam" : {
-        "name" : "lgb"
+    "name": "LGB eSports",
+    "steam": {
+        "name": "lgb"
     },
-    "csgolounge" : {
-        "name" : "LGB"
+    "csgolounge": {
+        "name": "LGB"
     },
-    "gosugamers" : {
-        "name" : "LGB eSports",
-        "id" : 7413
-    }
+    "gosugamers": {
+        "name": "LGB eSports",
+        "id": 7413
+    },
+    "identifier": "lgbesports"
 }

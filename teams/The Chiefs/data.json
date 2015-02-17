@@ -1,7 +1,8 @@
 {
-    "name" : "The Chiefs",
-    "gosugamers" : {
-        "name" : "The Chiefs",
-        "id" : 10849
-    }
+    "name": "The Chiefs",
+    "gosugamers": {
+        "name": "The Chiefs",
+        "id": 10849
+    },
+    "identifier": "thechiefs"
 }

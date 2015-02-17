@@ -1,7 +1,8 @@
 {
-    "name" : "TRIDENT",
-    "gosugamers" : {
-        "name" : "TRIDENT",
-        "id" : 10846
-    }
+    "name": "TRIDENT",
+    "gosugamers": {
+        "name": "TRIDENT",
+        "id": 10846
+    },
+    "identifier": "trident"
 }

@@ -1,13 +1,14 @@
 {
-    "name" : "Bravado Gaming",
-    "steam" : {
-        "name" : "bravg"
+    "name": "Bravado Gaming",
+    "steam": {
+        "name": "bravg"
     },
-    "csgolounge" : {
-        "name" : "Bravado"
+    "csgolounge": {
+        "name": "Bravado"
     },
-    "gosugamers" : {
-        "name" : "Bravado Gaming",
-        "id" : 9494
-    }
+    "gosugamers": {
+        "name": "Bravado Gaming",
+        "id": 9494
+    },
+    "identifier": "bravadogaming"
 }

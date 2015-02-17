@@ -1,10 +1,11 @@
 {
-    "name" : "PiTER",
-    "csgolounge" : {
-        "name" : "Piter"
+    "name": "PiTER",
+    "csgolounge": {
+        "name": "Piter"
     },
-    "gosugamers" : {
-        "name" : "Piter",
-        "id" : 10199
-    }
+    "gosugamers": {
+        "name": "Piter",
+        "id": 10199
+    },
+    "identifier": "piter"
 }

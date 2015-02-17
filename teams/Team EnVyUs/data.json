@@ -1,10 +1,11 @@
 {
-    "name" : "Team EnVyUs",
-    "csgolounge" : {
-        "name" : "EnVyUs"
+    "name": "Team EnVyUs",
+    "csgolounge": {
+        "name": "EnVyUs"
     },
-    "gosugamers" : {
-        "name" : "Team EnVyUs",
-        "id" : 10705
-    }
+    "gosugamers": {
+        "name": "Team EnVyUs",
+        "id": 10705
+    },
+    "identifier": "teamenvyus"
 }

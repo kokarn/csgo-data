@@ -1,13 +1,14 @@
 {
-    "name" : "Natus Vincere",
-    "steam" : {
-        "name" : "navi"
+    "name": "Natus Vincere",
+    "steam": {
+        "name": "navi"
     },
-    "csgolounge" : {
-        "name" : "Na'Vi"
+    "csgolounge": {
+        "name": "Na'Vi"
     },
-    "gosugamers" : {
-        "name" : "Natus Vincere",
-        "id" : 7397
-    }
+    "gosugamers": {
+        "name": "Natus Vincere",
+        "id": 7397
+    },
+    "identifier": "natusvincere"
 }
