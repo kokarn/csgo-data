@@ -31,7 +31,7 @@ issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into addi
 ### I want to host this and force downloads the same way you are doing!
 Of course you want! This is the config we use on [csgo-data.com](http://csho-data.com)
 
-.htaccess
+.htaccess (this goes in the '/teams/' directory)
 
 ```
 <FilesMatch ".(cfg|zip|png)$">
