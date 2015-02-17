@@ -60,7 +60,8 @@ module.exports = function( grunt ) {
                     'web/ingame-logo/immunity.png' : 'teams/Immunity/logo-208x208.png',
                     'web/ingame-logo/thechiefs.png' : 'teams/The Chiefs/logo-236x236.png',
                     'web/ingame-logo/streamline.png' : 'teams/Streamline/logo-195x195.png',
-                    'web/ingame-logo/avantgarde.png' : 'teams/Avant Garde/logo-292x292.png'
+                    'web/ingame-logo/avantgarde.png' : 'teams/Avant Garde/logo-292x292.png',
+                    'web/ingame-logo/trident.png' : 'teams/TRIDENT/logo-221x221.png'
                 }
             }
         }
