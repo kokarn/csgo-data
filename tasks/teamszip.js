@@ -22,10 +22,14 @@ module.exports = function( grunt ) {
                 continue;
             }
 
+            if( files[ index ].substr( -4 ) !== '.cfg' && files[ index ].substr( -4 ) !== '.png' ){
+                continue;
+            }
+
             if( files.hasOwnProperty( index ) ){
                 archive.append(
                     fs.createReadStream(
-                        'web/teams/' + files[ index ] + ''
+                        'web/teams/' + files[ index ]
                     ), {
                         name: files[ index ]
                     }
