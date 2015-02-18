@@ -11,16 +11,46 @@
         table tbody > tr > td.vertical-middle {
             vertical-align: middle;
         }
+
+        .modal-body img {
+            max-width: 100%;
+        }
+
+        .location-code-wrapper:hover {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>
-            Available teams
-            <a class="btn btn-primary pull-right" href="all.zip">
+        <h1>
+            CSGO teams
+        </h1>
+        <p class="pull-left">
+            Put the files in
+            <code data-toggle="modal" data-target="#location-modal" class="location-code-wrapper">
+                csgo/resource/flash/econ/tournaments/teams/
+            </code>
+            <div class="modal fade" id="location-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../resources/location.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p>
+        <p class="pull-right">
+            <a class="btn btn-primary" href="all.zip">
                 Download zip with all teams
             </a>
-        </h2>
+        </p>
         <table class="table table-hover">
             <tbody>
                 <?php
@@ -125,6 +155,7 @@
             </tbody>
         </table>
     </div>
+    <script src="//cdn.jsdelivr.net/g/jquery@2.1.3,bootstrap@3.3.1"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
