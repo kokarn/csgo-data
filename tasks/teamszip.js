@@ -8,6 +8,7 @@ module.exports = function( grunt ) {
         var output = fs.createWriteStream( 'web/all.zip' ),
             archive = archiver( 'zip' ),
             files = fs.readdirSync( 'web/teams/' ),
+            done = this.async(),
             index;
 
         archive.on( 'error', function( error ) {
