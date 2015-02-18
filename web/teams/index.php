@@ -155,6 +155,9 @@
             </tbody>
         </table>
     </div>
+    <a href="https://github.com/kokarn/csgo-data">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="../resources/contribute.png" alt="Contribute on GitHub">
+    </a>
     <script src="//cdn.jsdelivr.net/g/jquery@2.1.3,bootstrap@3.3.1"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
