@@ -23,8 +23,8 @@ module.exports = function( grunt ) {
         return teamData;
     }
 
-    function createZip( teamData ){
-        var output = fs.createWriteStream( 'web/teams/' + teamData.identifier + '.zip' ),
+    function writeZip( identifier ){
+        var output = fs.createWriteStream( 'web/teams/' + identifier + '.zip' ),
             archive = archiver( 'zip' );
 
         archive.on( 'error', function( error ) {
@@ -34,25 +34,34 @@ module.exports = function( grunt ) {
         archive.pipe( output );
 
         archive
-            .append( fs.createReadStream( 'web/teams/' + teamData.identifier + '.cfg' ), {
-                    name: teamData.identifier + '.cfg'
+            .append( fs.createReadStream( 'web/teams/' + identifier + '.cfg' ), {
+                    name: identifier + '.cfg'
                 }
             )
-            .append( fs.createReadStream( 'web/teams/' + teamData.identifier + '.png' ), {
-                    name: teamData.identifier + '.png'
+            .append( fs.createReadStream( 'web/teams/' + identifier + '.png' ), {
+                    name: identifier + '.png'
                 }
             )
             .finalize();
     }
 
-    function createCfg( teamData ){
-        fs.writeFile( 'web/teams/' + teamData.identifier + '.cfg', teamData.name, function( error ){
+    function writeCfg( identifier, cfgData, createZip ){
+        fs.writeFile( 'web/teams/' + identifier + '.cfg', cfgData, function( error ){
             if( error ){
                 console.log( error );
             } else {
-                createZip( teamData );
+                if( createZip ) {
+                    writeZip( identifier );
+                }
             }
         });
+    }
+
+    function createCfg( teamData ){
+        var cfgData = teamData.name + "\n";
+
+        writeCfg( teamData.identifier, cfgData, true );
+
     }
 
     grunt.registerTask( 'teams', function() {
