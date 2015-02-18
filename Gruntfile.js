@@ -17,7 +17,7 @@ module.exports = function( grunt ) {
                     'web/teams/astanadragons.png' : 'teams/Astana Dragons/logo-highres.png',
                     'web/teams/bravadogaming.png' : 'teams/Bravado Gaming/logo-146x146.png',
                     'web/teams/clanmystik.png' : 'teams/Clan Mystik/logo-386x386.png',
-                    'web/teams/cloud9.png' : 'teams/Cloud9/logo-300x300.png',
+                    'web/teams/cloud9.png' : 'teams/Cloud9/logo-highres.png',
                     'web/teams/complexity.png' : 'teams/compLexity/logo-highres.png',
                     'web/teams/copenhagenwolves.png' : 'teams/Copenhagen Wolves/logo-highres.png',
                     'web/teams/counterlogicgaming.png' : 'teams/Counter Logic Gaming/logo-highres.png',
