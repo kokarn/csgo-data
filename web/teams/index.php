@@ -16,26 +16,7 @@
                 Download zip with all teams
             </a>
         </h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        Team
-                    </th>
-                    <th>
-                        Identifier
-                    </th>
-                    <th>
-                        In-game image
-                    </th>
-                    <th>
-                        In-game config
-                    </th>
-                    <th>
-                        In-game image & config zip
-                    </th>
-                </tr>
-            </thead>
+        <table class="table table-hover">
             <tbody>
                 <?php
                 $items = scandir( '.' );
@@ -94,34 +75,34 @@
                         <td>
                             <?php echo $team->identifier ?>
                         </td>
-                        <td>
+                        <td class="text-right">
                             <?php
                             if( $team->hasImage ) :
                                 ?>
-                                <a href="<?php echo $team->identifier, '.png'; ?>">
-                                    Download
+                                <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.png'; ?>">
+                                    Download logo
                                 </a>
                                 <?php
                             endif;
                             ?>
                         </td>
-                        <td>
+                        <td class="text-right">
                             <?php
                             if( $team->hasConfig ) :
                                 ?>
-                                <a href="<?php echo $team->identifier, '.cfg'; ?>">
-                                    Download
+                                <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.cfg'; ?>">
+                                    Download config
                                 </a>
                                 <?php
                             endif;
                             ?>
                         </td>
-                        <td>
+                        <td class="text-right">
                             <?php
                             if( $team->hasZip ) :
                                 ?>
-                                <a href="<?php echo $team->identifier, '.zip'; ?>">
-                                    Download
+                                <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.zip'; ?>">
+                                    Download zip with logo and config
                                 </a>
                                 <?php
                             endif;
