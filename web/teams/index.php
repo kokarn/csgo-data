@@ -7,6 +7,11 @@
         CSGO Team In-game logos
     </title>
     <link href="//cdn.jsdelivr.net/bootswatch/3.3.1.2/paper/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table tbody > tr > td.vertical-middle {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -61,21 +66,26 @@
                     endif;
                     ?>
                     <tr>
+                        <td class="vertical-middle">
+                            <img src="<?php echo $team->identifier, '.png'; ?>">
+                        </td>
                         <td>
-                            <?php
-                            if( $team->hasConfig ) :
-                                echo $team->name;
-                            else :
-                                ?>
-                                ???
+                            <p class="lead">
                                 <?php
-                            endif;
-                            ?>
+                                if( $team->hasConfig ) :
+                                    echo $team->name;
+                                else :
+                                    ?>
+                                    ???
+                                    <?php
+                                endif;
+                                ?>
+                            </p>
+                            <em>
+                                <?php echo $team->identifier ?>
+                            </em>
                         </td>
-                        <td>
-                            <?php echo $team->identifier ?>
-                        </td>
-                        <td class="text-right">
+                        <td class="text-right vertical-middle">
                             <?php
                             if( $team->hasImage ) :
                                 ?>
@@ -86,7 +96,7 @@
                             endif;
                             ?>
                         </td>
-                        <td class="text-right">
+                        <td class="text-right vertical-middle">
                             <?php
                             if( $team->hasConfig ) :
                                 ?>
@@ -97,7 +107,7 @@
                             endif;
                             ?>
                         </td>
-                        <td class="text-right">
+                        <td class="text-right vertical-middle">
                             <?php
                             if( $team->hasZip ) :
                                 ?>
