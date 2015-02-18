@@ -154,22 +154,20 @@
                 ?>
             </tbody>
         </table>
-        <div class="clearfix">
-            <blockquote class="pull-right">
-                <p>
-                    What is this? Logos for ants?
-                </p>
-                <small>
-                    <cite title="You">
-                        You
-                    </cite>
-                </small>
-            </blockquote>
-        </div>
+        <blockquote>
+            <p>
+                What is this? Logos for ants?
+            </p>
+            <small>
+                <cite title="You">
+                    You
+                </cite>
+            </small>
+        </blockquote>
         <p class="lead">
             Yes, you want the high resolution logos, we get it.
             For performance and hotlinking reasons we don't have them hosted here.
-            Those you can easily get from the <a href="https://github.com/kokarn/csgo-data/">GitHub repository</a>.
+            Buy you can easily get them from the <a href="https://github.com/kokarn/csgo-data/">GitHub repository</a>.
         </p>
     </div>
     <a href="https://github.com/kokarn/csgo-data">
