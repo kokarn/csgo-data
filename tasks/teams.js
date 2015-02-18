@@ -62,6 +62,11 @@ module.exports = function( grunt ) {
 
         writeCfg( teamData.identifier, cfgData, true );
 
+        if( teamData.steam !== undefined ){
+            if( teamData.steam.name !== teamData.identifier ){
+                writeCfg( teamData.steam.name, cfgData, false );
+            }
+        }
     }
 
     grunt.registerTask( 'teams', function() {
