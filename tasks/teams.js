@@ -66,6 +66,7 @@ module.exports = function( grunt ) {
 
     grunt.registerTask( 'teams', function() {
         var teams = fs.readdirSync( 'teams' ),
+            done = this.async(),
             index;
 
         for( index in teams ){
