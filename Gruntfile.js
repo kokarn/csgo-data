@@ -69,7 +69,8 @@ module.exports = function( grunt ) {
                     'web/teams/playingducks.png' : 'teams/Playing Ducks/logo-436x436.png',
                     'web/teams/onlinebots.png' : 'teams/OnlineBOTS/logo-265x265.png',
                     'web/teams/badmonkeygaming.png' : 'teams/Bad Monkey Gaming/logo-highres.png',
-                    'web/teams/affnity.png' : 'teams/affNity/logo-271x271.png'
+                    'web/teams/affnity.png' : 'teams/affNity/logo-271x271.png',
+                    'web/teams/ascendancy.png' : 'teams/Ascendancy/logo-187x187.png'
                 }
             }
         }
