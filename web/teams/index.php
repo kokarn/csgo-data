@@ -75,6 +75,9 @@
                     endswitch;
                 endforeach;
                 foreach( $teamList as $team ) :
+                    if( !isset( $team->hasImage ) || !$team->hasImage ) :
+                        continue;
+                    endif;
                     ?>
                     <tr>
                         <td>
