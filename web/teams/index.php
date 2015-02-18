@@ -120,7 +120,7 @@
                             if( $team->hasImage ) :
                                 ?>
                                 <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.png'; ?>">
-                                    Download logo
+                                    Download in-game logo
                                 </a>
                                 <?php
                             endif;
@@ -154,6 +154,23 @@
                 ?>
             </tbody>
         </table>
+        <div class="clearfix">
+            <blockquote class="pull-right">
+                <p>
+                    What is this? Logos for ants?
+                </p>
+                <small>
+                    <cite title="You">
+                        You
+                    </cite>
+                </small>
+            </blockquote>
+        </div>
+        <p class="lead">
+            Yes, you want the high resolution logos, we get it.
+            For performance and hotlinking reasons we don't have them hosted here.
+            Those you can easily get from the <a href="https://github.com/kokarn/csgo-data/">GitHub repository</a>.
+        </p>
     </div>
     <a href="https://github.com/kokarn/csgo-data">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="../resources/contribute.png" alt="Contribute on GitHub">

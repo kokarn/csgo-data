@@ -67,7 +67,12 @@ module.exports = function( grunt ) {
                     'web/teams/wizards.png' : 'teams/Wizards/logo-188x188.png',
                     'web/teams/publiclirse.png' : 'teams/Publiclir.se/logo-161x161.png',
                     'web/teams/playingducks.png' : 'teams/Playing Ducks/logo-436x436.png',
-                    'web/teams/onlinebots.png' : 'teams/OnlineBOTS/logo-265x265.png'
+                    'web/teams/onlinebots.png' : 'teams/OnlineBOTS/logo-265x265.png',
+                    'web/teams/badmonkeygaming.png' : 'teams/Bad Monkey Gaming/logo-highres.png',
+                    'web/teams/affnity.png' : 'teams/affNity/logo-271x271.png',
+                    'web/teams/ascendancy.png' : 'teams/Ascendancy/logo-187x187.png',
+                    'web/teams/denialesports.png' : 'teams/Denial eSports/logo-231x231.png',
+                    'web/teams/lunatikesports.png' : 'teams/LunatiK eSports/logo-highres.png'
                 }
             }
         }
