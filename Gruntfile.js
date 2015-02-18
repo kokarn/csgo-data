@@ -34,7 +34,7 @@ module.exports = function( grunt ) {
                     'web/teams/lgbesports.png' : 'teams/LGB Esports/logo-highres.png',
                     'web/teams/londonconspiracy.png' : 'teams/London Conspiracy/logo-183x183.png',
                     'web/teams/mousesports.png' : 'teams/mousesports/logo-highres.png',
-                    'web/teams/myxmg.png' : 'teams/MyXMG/logo-330x330.png',
+                    'web/teams/myxmg.png' : 'teams/MyXMG/logo-highres.png',
                     'web/teams/natusvincere.png' : 'teams/Natus Vincere/logo-highres.png',
                     'web/teams/ninjasinpyjamas.png' : 'teams/Ninjas in Pyjamas/logo-highres.png',
                     'web/teams/pentasports.png' : 'teams/PENTA Sports/logo-highres.png',
