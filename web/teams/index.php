@@ -12,6 +12,9 @@
     <div class="container">
         <h2>
             Available teams
+            <a class="btn btn-primary pull-right" href="all.zip">
+                Download zip with all teams
+            </a>
         </h2>
         <table class="table">
             <thead>

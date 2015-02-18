@@ -5,7 +5,7 @@ module.exports = function( grunt ) {
         skipFiles = [ '.DS_Store' ];
 
     grunt.registerTask( 'teams_zip', function() {
-        var output = fs.createWriteStream( 'web/all.zip' ),
+        var output = fs.createWriteStream( 'web/teams/all.zip' ),
             archive = archiver( 'zip' ),
             files = fs.readdirSync( 'web/teams/' ),
             done = this.async(),
