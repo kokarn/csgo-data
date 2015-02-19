@@ -108,5 +108,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
 
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'responsive_images', 'newer:imagemin:ingame', 'teams' ] );
+    grunt.registerTask( 'teamdata', [ 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'responsive_images', 'newer:imagemin:ingame', 'teamdata' ] );
 };
