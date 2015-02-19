@@ -4,7 +4,7 @@ module.exports = function( grunt ) {
             options : {
                 newFilesOnly: false,
                 sizes : [{
-                    name : "ingame",
+                    name : 'ingame',
                     height : 64,
                     width: 64,
                     rename: false,
@@ -85,7 +85,7 @@ module.exports = function( grunt ) {
                 files: [{
                     expand: true,
                     cwd: 'teams/',
-                    src: ['**/*.png'],
+                    src: [ '**/*.png' ],
                     dest: 'teams/'
                 }]
             },
@@ -96,7 +96,7 @@ module.exports = function( grunt ) {
                 files: [{
                     expand: true,
                     cwd: 'web/teams/',
-                    src: ['*.png'],
+                    src: [ '*.png' ],
                     dest: 'web/teams/'
                 }]
             }
