@@ -6,6 +6,8 @@ For teams:
  * Steam "id"
  * CSGOLounge "id"
  * GosuGamers name and id
+ * An unique identifier
+
 
 [SourceMod Plugin for TeamLogos and TeamNames](https://forums.alliedmods.net/showthread.php?t=258206)
 
