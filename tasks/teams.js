@@ -3,7 +3,10 @@ module.exports = function( grunt ) {
     var fs = require( 'fs' ),
         archiver = require( 'archiver' ),
         normalizeForSearch = require( 'normalize-for-search' ),
-        skipFiles = [ '.DS_Store' ];
+        skipFiles = [ '.DS_Store' ],
+        done,
+        doneJobs = 0,
+        totalJobs;
 
     function createIdentifier( name ){
         return normalizeForSearch( name.replace( /[\s\.\-]+/g, '' ) );
@@ -21,6 +24,12 @@ module.exports = function( grunt ) {
         }
 
         return teamData;
+    }
+
+    function checkAllDone(){
+        if( doneJobs === totalJobs ){
+            done();
+        }
     }
 
     function writeZip( identifier ){
@@ -43,15 +52,22 @@ module.exports = function( grunt ) {
                 }
             )
             .finalize();
+
+        doneJobs = doneJobs + 1;
+
+        checkAllDone();
     }
 
     function writeCfg( identifier, cfgData, createZip ){
         fs.writeFile( 'web/teams/' + identifier + '.cfg', cfgData, function( error ){
             if( error ){
                 console.log( error );
+                done( false );
             } else {
                 if( createZip ) {
                     writeZip( identifier );
+                } else {
+                    doneJobs = doneJobs + 1;
                 }
             }
         });
@@ -65,14 +81,21 @@ module.exports = function( grunt ) {
         if( teamData.steam !== undefined ){
             if( teamData.steam.name !== teamData.identifier ){
                 writeCfg( teamData.steam.name, cfgData, false );
+            } else {
+                doneJobs = doneJobs + 1;
             }
+        } else {
+            doneJobs = doneJobs + 1;
         }
     }
 
     grunt.registerTask( 'teams', function() {
         var teams = fs.readdirSync( 'teams' ),
-            done = this.async(),
             index;
+
+        done = this.async();
+
+        totalJobs = teams.length;
 
         for( index in teams ){
             if( skipFiles.indexOf( teams[ index ] ) !== -1 ){

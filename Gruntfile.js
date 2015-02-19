@@ -72,14 +72,43 @@ module.exports = function( grunt ) {
                     'web/teams/affnity.png' : 'teams/affNity/logo-271x271.png',
                     'web/teams/ascendancy.png' : 'teams/Ascendancy/logo-187x187.png',
                     'web/teams/denialesports.png' : 'teams/Denial eSports/logo-231x231.png',
-                    'web/teams/lunatikesports.png' : 'teams/LunatiK eSports/logo-highres.png'
+                    'web/teams/lunatikesports.png' : 'teams/LunatiK eSports/logo-highres.png',
+                    'web/teams/gplay.png' : 'teams/GPlay/logo-355x355.png'
                 }
+            }
+        },
+        imagemin: {
+            source: {
+                options: {
+                    optimizationLevel: 4
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'teams/',
+                    src: ['**/*.png'],
+                    dest: 'teams/'
+                }]
+            },
+            ingame: {
+                options: {
+                    optimizationLevel: 4
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'web/teams/',
+                    src: ['*.png'],
+                    dest: 'web/teams/'
+                }]
             }
         }
     });
 
     grunt.loadTasks( 'tasks' );
 
+    grunt.loadNpmTasks( 'grunt-newer' );
+    grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
-    grunt.registerTask( 'default', [ 'responsive_images', 'teams' ] );
+
+    grunt.registerTask( 'teamdata', [ 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'responsive_images', 'newer:imagemin:ingame', 'teamdata' ] );
 };
