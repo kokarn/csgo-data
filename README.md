@@ -27,19 +27,11 @@ Generally this is the information about the team and a version of the logo in as
 If you can't find any resources on the team, just [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into adding it ASAP.
 
-----
+
+## Miscellaneous
 ### I want to host this and force downloads the same way you are doing!
-Of course you want! This is the config we use on [csgo-data.com](http://csgo-data.com)
+Of course you want! This is the config we use on [csgo-data.com](http://csgo-data.com) on nginx
 
-.htaccess (this goes in the '/teams/' directory)
-
-```
-<FilesMatch ".(cfg|zip|png)$">
-    ForceType application/octet-stream
-    Header set Content-Disposition attachment
-</FilesMatch>
-```
-nginx
 
 ```
 location ~* ^/teams/(.*\.)(cfg|zip|png)$ {
@@ -47,8 +39,14 @@ location ~* ^/teams/(.*\.)(cfg|zip|png)$ {
     default_type application/octet-stream;
 }
 ```
+If you use apache, this is a .htaccess file that goes in the '/teams/' directory
 
----
+```
+<FilesMatch ".(cfg|zip|png)$">
+    ForceType application/octet-stream
+    Header set Content-Disposition attachment
+</FilesMatch>
+```
 ## Legal
 
 #### __All logos and trademarks are the property of their respective owners!__
