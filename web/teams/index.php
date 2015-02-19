@@ -47,6 +47,9 @@
             </div>
         </p>
         <p class="pull-right">
+            <a class="btn btn-primary" href="fastdl.zip">
+                FastDL Download
+            </a>
             <a class="btn btn-primary" href="all.zip">
                 Download zip with all teams
             </a>
