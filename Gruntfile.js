@@ -2,7 +2,7 @@ module.exports = function( grunt ) {
     grunt.initConfig({
         responsive_images: {
             options : {
-                //newFilesOnly: false,
+                newFilesOnly: false,
                 sizes : [{
                     name : "ingame",
                     height : 64,
@@ -110,5 +110,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-responsive-images' );
 
     grunt.registerTask( 'teamdata', [ 'teams', 'teams_zip' ] );
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'responsive_images', 'newer:imagemin:ingame', 'teamdata' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images', 'newer:imagemin:ingame', 'teamdata' ] );
 };
