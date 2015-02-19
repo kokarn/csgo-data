@@ -2,15 +2,10 @@ module.exports = function( grunt ) {
     'use strict';
     var fs = require( 'fs' ),
         archiver = require( 'archiver' ),
-        normalizeForSearch = require( 'normalize-for-search' ),
         skipFiles = [ '.DS_Store' ],
         done,
         doneJobs = 0,
         totalJobs;
-
-    function createIdentifier( name ){
-        return normalizeForSearch( name.replace( /[\s\.\-]+/g, '' ) );
-    }
 
     function checkIdentifier( teamData ){
         if( typeof teamData.identifier === 'undefined' ){
