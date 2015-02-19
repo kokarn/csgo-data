@@ -4,11 +4,9 @@ module.exports = function( grunt ) {
         archiver = require( 'archiver' ),
         skipFiles = [ '.DS_Store' ];
 
-    grunt.registerTask( 'teams_zip', function() {
+    function generateZip( files ){
         var output = fs.createWriteStream( 'web/teams/all.zip' ),
             archive = archiver( 'zip' ),
-            files = fs.readdirSync( 'web/teams/' ),
-            done = this.async(),
             index;
 
         archive.on( 'error', function( error ) {
@@ -38,5 +36,74 @@ module.exports = function( grunt ) {
         }
 
         archive.finalize();
+    }
+
+    function generateFastdl( files ){
+        var compressjs = require( 'compressjs' ),
+            algorithm = compressjs.Bzip2,
+            output,
+            archive = archiver( 'zip' ),
+            index,
+            data,
+            compressed,
+            compressedBuffer,
+            bzip2List = [],
+            bzip2Name;
+
+        for( index in files ){
+            if( skipFiles.indexOf( files[ index ] ) !== -1 ){
+                continue;
+            }
+
+            if( files[ index ].substr( -4 ) !== '.png' ){
+                continue;
+            }
+
+            if( files.hasOwnProperty( index ) ){
+                bzip2Name = files[ index ] + '.bz2';
+                data = fs.readFileSync( 'web/teams/' + files[ index ] );
+                compressed = algorithm.compressFile( data );
+                compressedBuffer = new Buffer( compressed );
+                fs.writeFileSync( 'web/teams/' + bzip2Name, compressedBuffer );
+                bzip2List.push( bzip2Name );
+            }
+        }
+
+        output = fs.createWriteStream( 'web/teams/fastdl.zip' );
+
+        archive.on( 'error', function( error ) {
+            throw error;
+        });
+
+        archive.pipe( output );
+
+        for( index in bzip2List ){
+            if( bzip2List.hasOwnProperty( index ) ){
+                archive.append(
+                    fs.createReadStream(
+                        'web/teams/' + bzip2List[ index ]
+                    ), {
+                        name: bzip2List[ index ]
+                    }
+                )
+            }
+        }
+
+        archive.finalize();
+
+        for( index in bzip2List ){
+            if( bzip2List.hasOwnProperty( index ) ){
+                fs.unlink( 'web/teams/' + bzip2List[ index ] );
+            }
+        }
+    }
+
+    grunt.registerTask( 'teams_zip', function() {
+        var done = this.async(),
+            files = fs.readdirSync( 'web/teams/' );
+
+        generateZip( files );
+
+        generateFastdl( files );
     });
 };
