@@ -6,10 +6,10 @@ For teams:
  * Steam "id"
  * CSGOLounge "id"
  * GosuGamers name and id
+ * An unique identifier
 
-[SourceMod Plugin for TeamLogos and TeamNames](https://forums.alliedmods.net/showthread.php?t=258206)
 
-----
+
 ## How do I add a team?
 
 There are three different ways to help out and add a missing team.
@@ -21,25 +21,25 @@ This is the best way because it's by far the fastest. If you can, please do this
 If you don't know how to create a pull request, please [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) and attach the files need.
 
-Generally this is the information about the team and a version of the logo in as hight a resolution as possible.
+Generally this is the information about the team and a version of the logo in as high a resolution as possible.
 
 #### #3 Create an issue
 If you can't find any resources on the team, just [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into adding it ASAP.
 
-----
+
+## Who are using this?
+
+### Team Logo Manager
+A SourceMod plugin that let's you select both logo and team-name easily on your own server.
+
+[Team Logo Manager](https://forums.alliedmods.net/showthread.php?t=258206)
+
+
+## Miscellaneous
 ### I want to host this and force downloads the same way you are doing!
-Of course you want! This is the config we use on [csgo-data.com](http://csgo-data.com)
+Of course you want! This is the config we use on [csgo-data.com](http://csgo-data.com) on nginx
 
-.htaccess (this goes in the '/teams/' directory)
-
-```
-<FilesMatch ".(cfg|zip|png)$">
-    ForceType application/octet-stream
-    Header set Content-Disposition attachment
-</FilesMatch>
-```
-nginx
 
 ```
 location ~* ^/teams/(.*\.)(cfg|zip|png)$ {
@@ -47,8 +47,14 @@ location ~* ^/teams/(.*\.)(cfg|zip|png)$ {
     default_type application/octet-stream;
 }
 ```
+If you use apache, this is a .htaccess file that goes in the '/teams/' directory
 
----
+```
+<FilesMatch ".(cfg|zip|png)$">
+    ForceType application/octet-stream
+    Header set Content-Disposition attachment
+</FilesMatch>
+```
 ## Legal
 
 #### __All logos and trademarks are the property of their respective owners!__
@@ -57,3 +63,5 @@ If you represent the entity that has the rights over a logo and you want,
 for whatever reason, that logo removed from this project, [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) requesting its
 takedown and we will remove it as soon as possible.
+
+Everything else is licensed under MIT.
