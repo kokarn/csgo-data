@@ -72,7 +72,8 @@ module.exports = function( grunt ) {
                     'web/teams/affnity.png' : 'teams/affNity/logo-271x271.png',
                     'web/teams/ascendancy.png' : 'teams/Ascendancy/logo-187x187.png',
                     'web/teams/denialesports.png' : 'teams/Denial eSports/logo-231x231.png',
-                    'web/teams/lunatikesports.png' : 'teams/LunatiK eSports/logo-highres.png'
+                    'web/teams/lunatikesports.png' : 'teams/LunatiK eSports/logo-highres.png',
+                    'web/teams/gplay.png' : 'teams/GPlay/logo-355x355.png'
                 }
             }
         },
