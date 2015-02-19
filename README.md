@@ -57,3 +57,5 @@ If you represent the entity that has the rights over a logo and you want,
 for whatever reason, that logo removed from this project, [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) requesting its
 takedown and we will remove it as soon as possible.
+
+Everything else is licensed under MIT.
