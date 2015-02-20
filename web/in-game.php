@@ -47,17 +47,18 @@
             </div>
         </p>
         <p class="pull-right">
-            <a class="btn btn-primary" href="fastdl.zip">
+            <a class="btn btn-primary" href="resources/fastdl.zip">
                 FastDL Download
             </a>
-            <a class="btn btn-primary" href="all.zip">
+            <a class="btn btn-primary" href="resources/all.zip">
                 Download zip with all teams
             </a>
         </p>
         <table class="table table-hover">
             <tbody>
                 <?php
-                $items = scandir( '.' );
+                $teamsPath = './teams/';
+                $items = scandir( $teamsPath );
                 $teamList = array();
                 $skiplist = array( '.', '..', 'index.php' );
                 foreach( $items as $item ) :
@@ -84,8 +85,8 @@
                             break;
                         case 'cfg':
                             $teamList[ $identifier ]->hasConfig = true;
-                            $file = fopen( $item, 'r' );
-                            $teamList[ $identifier ]->name = fread( $file, filesize( $item ) );
+                            $file = fopen( $teamsPath . $item, 'r' );
+                            $teamList[ $identifier ]->name = fread( $file, filesize( $teamsPath . $item ) );
                             fclose( $file );
                             break;
                         case 'zip':
@@ -100,7 +101,7 @@
                     ?>
                     <tr>
                         <td class="vertical-middle">
-                            <img src="<?php echo $team->identifier, '.png'; ?>">
+                            <img src="<?php echo $teamsPath, $team->identifier, '.png'; ?>">
                         </td>
                         <td>
                             <p class="lead">
@@ -122,7 +123,7 @@
                             <?php
                             if( $team->hasImage ) :
                                 ?>
-                                <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.png'; ?>">
+                                <a class="btn btn-sm btn-primary" href="<?php echo $teamsPath, $team->identifier, '.png'; ?>">
                                     Download in-game logo
                                 </a>
                                 <?php
@@ -133,7 +134,7 @@
                             <?php
                             if( $team->hasConfig ) :
                                 ?>
-                                <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.cfg'; ?>">
+                                <a class="btn btn-sm btn-primary" href="<?php echo $teamsPath, $team->identifier, '.cfg'; ?>">
                                     Download config
                                 </a>
                                 <?php
@@ -144,7 +145,7 @@
                             <?php
                             if( $team->hasZip ) :
                                 ?>
-                                <a class="btn btn-sm btn-primary" href="<?php echo $team->identifier, '.zip'; ?>">
+                                <a class="btn btn-sm btn-primary" href="<?php echo $teamsPath, $team->identifier, '.zip'; ?>">
                                     Download zip with logo and config
                                 </a>
                                 <?php
@@ -174,7 +175,7 @@
         </p>
     </div>
     <a href="https://github.com/kokarn/csgo-data">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="../resources/contribute.png" alt="Contribute on GitHub">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="resources/contribute.png" alt="Contribute on GitHub">
     </a>
     <script src="//cdn.jsdelivr.net/g/jquery@2.1.3,bootstrap@3.3.1"></script>
     <script>

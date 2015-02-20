@@ -9,15 +9,27 @@ module.exports = function( grunt ) {
         responsive_images: {
             options : {
                 newFilesOnly: false,
-                sizes : [{
-                    name : 'ingame',
-                    height : 64,
-                    width: 64,
-                    rename: false,
-                    aspectRatio: false
+            },
+            ingame : {
+                options : {
+                    sizes : [{
+                        name : 'ingame',
+                        height : 64,
+                        width: 64,
+                        rename: false,
+                        aspectRatio: false
+                    }]
+                },
+                files : [{
+                    expand: true,
+                    cwd: 'teams/',
+                    src: [ '**/*.png' ],
+                    dest: 'web/teams/',
+                    rename: function( dest, src ){
+                        return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '.png';
+                    }
                 }]
             },
-            default : {
                 files : [{
                     expand: true,
                     cwd: 'teams/',
@@ -61,6 +73,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
 
-    grunt.registerTask( 'teamdata', [ 'teams', 'teams_zip' ] );
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images', 'newer:imagemin:ingame', 'teamdata' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:imagemin:ingame', 'teams', 'teams_zip' ] );
 };

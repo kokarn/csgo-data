@@ -5,7 +5,7 @@ module.exports = function( grunt ) {
         skipFiles = [ '.DS_Store' ];
 
     function generateZip( files ){
-        var output = fs.createWriteStream( 'web/teams/all.zip' ),
+        var output = fs.createWriteStream( 'web/resources/all.zip' ),
             archive = archiver( 'zip' ),
             index;
 
@@ -69,7 +69,7 @@ module.exports = function( grunt ) {
             }
         }
 
-        output = fs.createWriteStream( 'web/teams/fastdl.zip' );
+        output = fs.createWriteStream( 'web/resources/fastdl.zip' );
 
         archive.on( 'error', function( error ) {
             throw error;
