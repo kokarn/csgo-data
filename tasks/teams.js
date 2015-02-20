@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
     }
 
     function writeZip( identifier ){
-        var output = fs.createWriteStream( 'web/teams/' + identifier + '.zip' ),
+        var output = fs.createWriteStream( 'web/resources/ingame/' + identifier + '.zip' ),
             archive = archiver( 'zip' );
 
         archive.on( 'error', function( error ) {
@@ -38,11 +38,11 @@ module.exports = function( grunt ) {
         archive.pipe( output );
 
         archive
-            .append( fs.createReadStream( 'web/teams/' + identifier + '.cfg' ), {
+            .append( fs.createReadStream( 'web/resources/ingame/' + identifier + '.cfg' ), {
                     name: identifier + '.cfg'
                 }
             )
-            .append( fs.createReadStream( 'web/teams/' + identifier + '.png' ), {
+            .append( fs.createReadStream( 'web/resources/ingame/' + identifier + '.png' ), {
                     name: identifier + '.png'
                 }
             )
@@ -54,7 +54,7 @@ module.exports = function( grunt ) {
     }
 
     function writeCfg( identifier, cfgData, createZip ){
-        fs.writeFile( 'web/teams/' + identifier + '.cfg', cfgData, function( error ){
+        fs.writeFile( 'web/resources/ingame/' + identifier + '.cfg', cfgData, function( error ){
             if( error ){
                 console.log( error );
                 done( false );

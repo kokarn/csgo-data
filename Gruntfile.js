@@ -24,7 +24,7 @@ module.exports = function( grunt ) {
                     expand: true,
                     cwd: 'teams/',
                     src: [ '**/*.png' ],
-                    dest: 'web/teams/',
+                    dest: 'web/resources/ingame/',
                     rename: function( dest, src ){
                         return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '.png';
                     }
@@ -59,9 +59,9 @@ module.exports = function( grunt ) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'web/teams/',
+                    cwd: 'web/resources/ingame/',
                     src: [ '*.png' ],
-                    dest: 'web/teams/'
+                    dest: 'web/resources/ingame/'
                 }]
             }
         }
