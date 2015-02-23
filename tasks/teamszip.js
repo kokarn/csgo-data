@@ -5,7 +5,7 @@ module.exports = function( grunt ) {
         skipFiles = [ '.DS_Store' ];
 
     function generateZip( files ){
-        var output = fs.createWriteStream( 'web/teams/all.zip' ),
+        var output = fs.createWriteStream( 'web/resources/all.zip' ),
             archive = archiver( 'zip' ),
             index;
 
@@ -61,15 +61,15 @@ module.exports = function( grunt ) {
 
             if( files.hasOwnProperty( index ) ){
                 bzip2Name = files[ index ] + '.bz2';
-                data = fs.readFileSync( 'web/teams/' + files[ index ] );
+                data = fs.readFileSync( 'web/resources/ingame/' + files[ index ] );
                 compressed = algorithm.compressFile( data );
                 compressedBuffer = new Buffer( compressed );
-                fs.writeFileSync( 'web/teams/' + bzip2Name, compressedBuffer );
+                fs.writeFileSync( 'web/resources/ingame/' + bzip2Name, compressedBuffer );
                 bzip2List.push( bzip2Name );
             }
         }
 
-        output = fs.createWriteStream( 'web/teams/fastdl.zip' );
+        output = fs.createWriteStream( 'web/resources/fastdl.zip' );
 
         archive.on( 'error', function( error ) {
             throw error;
@@ -81,7 +81,7 @@ module.exports = function( grunt ) {
             if( bzip2List.hasOwnProperty( index ) ){
                 archive.append(
                     fs.createReadStream(
-                        'web/teams/' + bzip2List[ index ]
+                        'web/resources/ingame/' + bzip2List[ index ]
                     ), {
                         name: bzip2List[ index ]
                     }
@@ -93,14 +93,14 @@ module.exports = function( grunt ) {
 
         for( index in bzip2List ){
             if( bzip2List.hasOwnProperty( index ) ){
-                fs.unlink( 'web/teams/' + bzip2List[ index ] );
+                fs.unlink( 'web/resources/ingame/' + bzip2List[ index ] );
             }
         }
     }
 
     grunt.registerTask( 'teams_zip', function() {
         var done = this.async(),
-            files = fs.readdirSync( 'web/teams/' );
+            files = fs.readdirSync( 'web/resources/ingame/' );
 
         generateZip( files );
 

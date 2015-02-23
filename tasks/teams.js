@@ -5,7 +5,8 @@ module.exports = function( grunt ) {
         skipFiles = [ '.DS_Store' ],
         done,
         doneJobs = 0,
-        totalJobs;
+        totalJobs,
+        teamList = {};
 
     function checkIdentifier( teamData ){
         if( typeof teamData.identifier === 'undefined' ){
@@ -23,12 +24,12 @@ module.exports = function( grunt ) {
 
     function checkAllDone(){
         if( doneJobs === totalJobs ){
-            done();
+            writeTeamList();
         }
     }
 
     function writeZip( identifier ){
-        var output = fs.createWriteStream( 'web/teams/' + identifier + '.zip' ),
+        var output = fs.createWriteStream( 'web/resources/ingame/' + identifier + '.zip' ),
             archive = archiver( 'zip' );
 
         archive.on( 'error', function( error ) {
@@ -38,11 +39,11 @@ module.exports = function( grunt ) {
         archive.pipe( output );
 
         archive
-            .append( fs.createReadStream( 'web/teams/' + identifier + '.cfg' ), {
+            .append( fs.createReadStream( 'web/resources/ingame/' + identifier + '.cfg' ), {
                     name: identifier + '.cfg'
                 }
             )
-            .append( fs.createReadStream( 'web/teams/' + identifier + '.png' ), {
+            .append( fs.createReadStream( 'web/resources/ingame/' + identifier + '.png' ), {
                     name: identifier + '.png'
                 }
             )
@@ -54,7 +55,7 @@ module.exports = function( grunt ) {
     }
 
     function writeCfg( identifier, cfgData, createZip ){
-        fs.writeFile( 'web/teams/' + identifier + '.cfg', cfgData, function( error ){
+        fs.writeFile( 'web/resources/ingame/' + identifier + '.cfg', cfgData, function( error ){
             if( error ){
                 console.log( error );
                 done( false );
@@ -84,6 +85,17 @@ module.exports = function( grunt ) {
         }
     }
 
+    function writeTeamList(){
+        fs.writeFile( 'web/resources/teamlist.json', JSON.stringify( teamList, null, 4 ), function( error ){
+            if( error ){
+                console.log( error );
+                done( false );
+            } else {
+                done();
+            }
+        });
+    }
+
     grunt.registerTask( 'teams', function() {
         var teams = fs.readdirSync( 'teams' ),
             index;
@@ -105,6 +117,7 @@ module.exports = function( grunt ) {
                     } else {
                         teamData = JSON.parse( data );
                         teamData = checkIdentifier( teamData );
+                        teamList[ teamData.identifier ] = teamData.name;
                         createCfg( teamData );
                     }
                 });

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        CSGO Match page
+    </title>
+    <link href="resources/design/bootswatch.paper.min.css" rel="stylesheet">
+    <link href="resources/design/flipclock.css" rel="stylesheet">
+    <link href="resources/design/datetimepicker.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'counter-strike';
+            src: url( 'resources/design/fonts/CounterStrike.eot' );
+            src: url( 'resources/design/fonts/CounterStrike.eot?#iefix' ) format( 'embedded-opentype' ),
+                 url( 'resources/design/fonts/CounterStrike.woff2' ) format( 'woff2' ),
+                 url( 'resources/design/fonts/CounterStrike.woff' ) format( 'woff' ),
+                 url( 'resources/design/fonts/CounterStrike.ttf' ) format( 'truetype' );
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Glyphicons Halflings';
+            src: url( '//cdn.jsdelivr.net/bootswatch/3.3.1.2/fonts/glyphicons-halflings-regular.eot' );
+            src: url( '//cdn.jsdelivr.net/bootswatch/3.3.1.2/fonts/glyphicons-halflings-regular.eot?#iefix' ) format( 'embedded-opentype' ),
+                 url( '//cdn.jsdelivr.net/bootswatch/3.3.1.2/fonts/glyphicons-halflings-regular.woff' ) format( 'woff' ),
+                 url( '//cdn.jsdelivr.net/bootswatch/3.3.1.2/fonts/glyphicons-halflings-regular.ttf' ) format( 'truetype' );
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html,
+        body,
+        .page-wrapper,
+        .match-wrapper {
+            height: 100%;
+        }
+
+        html {
+            background-blend-mode: darken;
+            background-image: url( 'resources/background-1.jpg' );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 1s;
+        }
+
+        body {
+            background: rgba( 0, 0, 0, 0.5 );
+        }
+
+        h2 {
+            color: #cecece;
+            font-family: 'counter-strike', serif;
+            font-size: 56px;
+        }
+
+        .team-wrapper {
+            position: relative;
+            text-align: center;
+            top: 50%;
+            transform: translateY( -50% );
+        }
+
+        .vs-wrapper {
+            display: table;
+            height: 100%;
+        }
+
+        .vs-text-wrapper {
+            color: #fff;
+            display: table-cell;
+            font-family: 'counter-strike';
+            font-size: 160px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .countdown-wrapper {
+            bottom: 10px;
+            left: 50%;
+            position: absolute;
+            transform: translateX( -50% );
+        }
+
+        .flip-clock-divider .flip-clock-label {
+            color: #fff;
+        }
+
+        .settings-wrapper {
+            background-color: #fff;
+            left: 0;
+            height: 0;
+            max-width: 100%;
+            overflow: hidden;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: height 0.3s ease;
+        }
+
+        .settings-open .settings-wrapper {
+            height: 200px;
+        }
+
+        .settings-open .toggle-menu-wrapper {
+            top: 200px;
+        }
+
+        .toggle-menu-wrapper {
+            bottom: -40px;
+            left: 0;
+            height: 40px;
+            opacity: 1;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: top 0.3s ease, opacity 0.3s ease;
+        }
+
+        .toggle-menu-wrapper.hidden-toggle {
+            opacity: 0;
+        }
+
+        .toggle-menu-wrapper .icon-wrapper {
+            background-image: url( 'resources/design/images/menu-toggle.png' );
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 40px;
+            left: 50%;
+            margin-left: -25px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .toggle-menu-wrapper .icon-wrapper:hover {
+            cursor: pointer;
+        }
+
+        .background-wrapper {
+            float: left;
+            height: 70px;
+            width: 122px;
+        }
+
+        .background-wrapper:hover {
+            cursor: pointer;
+        }
+
+        .background-wrapper img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .file-upload {
+        	position: relative;
+        	overflow: hidden;
+        	margin: 10px auto;
+        }
+
+        .file-upload input.upload {
+        	position: absolute;
+        	top: 0;
+        	right: 0;
+        	margin: 0;
+        	padding: 0;
+        	font-size: 20px;
+        	cursor: pointer;
+        	opacity: 0;
+        	filter: alpha(opacity=0);
+        }
+
+        /* css for timepicker */
+        .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+        .ui-timepicker-div dl { text-align: left; }
+        .ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+        .ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+        .ui-timepicker-div td { font-size: 90%; }
+        .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+        .ui-timepicker-rtl{ direction: rtl; }
+        .ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+        .ui-timepicker-rtl dl dt{ float: right; clear: right; }
+        .ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid page-wrapper">
+        <div class="row match-wrapper">
+            <div class="team-wrapper first-team-wrapper col-md-5 js-first-team-wrapper">
+                <img src="resources/teams/3dmax-500x500.png">
+                <h2>
+                    3DMAX
+                </h2>
+            </div>
+            <div class="vs-wrapper col-md-2">
+                <div class="vs-text-wrapper">
+                    VS
+                </div>
+            </div>
+            <div class="team-wrapper second-team-wrapper col-md-5 js-second-team-wrapper">
+                <img src="resources/teams/virtuspro-500x500.png">
+                <h2>
+                    Virtus.Pro
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="countdown-wrapper">
+        <div class="js-countdown"></div>
+    </div>
+    <div class="settings-wrapper js-settings-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <form class="form-horizontal">
+                    <h4>
+                        Teams
+                    </h4>
+                    <div class="form-group">
+                        <label for="first-team-select" class="col-lg-3 control-label">
+                            First team
+                        </label>
+                        <div class="col-lg-9">
+                            <select name="first-team" id="first-team-select" class="form-control js-first-team">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-team-select" class="col-lg-3 control-label">
+                            Second team
+                        </label>
+                        <div class="col-lg-9">
+                            <select name="second-team" id="second-team-select" class="form-control js-second-team">
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h4>
+                    Background
+                </h4>
+                <div class="background-wrapper js-background-select" data-background-id="1">
+                    <img src="resources/background-1.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="2">
+                    <img src="resources/background-2.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="3">
+                    <img src="resources/background-3.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="4">
+                    <img src="resources/background-4.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="5">
+                    <img src="resources/background-5.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="6">
+                    <img src="resources/background-6.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="7">
+                    <img src="resources/background-7.jpg">
+                </div>
+                <div class="background-wrapper js-background-select" data-background-id="8">
+                    <img src="resources/background-8.jpg">
+                </div>
+                <!--
+                <div class="file-upload btn btn-primary">
+                    <span>
+                        Use local file
+                    </span>
+                    <input type="file" class="upload">
+                </div>
+            -->
+            </div>
+            <div class="col-md-4">
+                <h4>
+                    Start date & time
+                </h4>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                    </span>
+                    <input class="form-control js-datetimepicker" type="text" value="" id="datetimepicker" data-date-format="yyyy-mm-ddThh:ii">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default js-clear-datetime" type="button">
+                            Remove date & time
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toggle-menu-wrapper js-toggle-menu">
+        <div class="icon-wrapper"></div>
+    </div>
+    <script src="//cdn.jsdelivr.net/g/jquery@2.1.3,bootstrap@3.3.1"></script>
+    <script src="resources/js/flipclock.min.js"></script>
+    <script src="resources/js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+    (function( $ ){
+        'use strict';
+        var team1,
+            team2,
+            background,
+            start,
+            teamList,
+            menu,
+            clock;
+
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function setupPageVars(){
+            if( getParameterByName( 'team1' ) && getParameterByName( 'team1' ).length > 0 ){
+                team1 = getParameterByName( 'team1' );
+            } else {
+                team1 = '3dmax';
+            }
+
+            if( getParameterByName( 'team2' ) && getParameterByName( 'team2' ).length > 0 ){
+                team2 = getParameterByName( 'team2' );
+            } else {
+                team2 = 'fnatic';
+            }
+
+            if( getParameterByName( 'background' ) && getParameterByName( 'background' ).length > 0 ){
+                background = getParameterByName( 'background' );
+            } else {
+                background = Math.floor( Math.random() * 9 + 1 );
+            }
+
+            if( getParameterByName( 'start' ) && getParameterByName( 'start' ).length > 0 ){
+                start = getParameterByName( 'start' );
+            } else {
+                start = '0';
+            }
+
+            if( getParameterByName( 'menu' ) && getParameterByName( 'menu' ).length > 0 ){
+                menu = getParameterByName( 'menu' );
+            } else {
+                menu = '1';
+            }
+
+            if( menu === '1' ){
+                toggleMenu();
+            } else {
+                setTimeout( function(){
+                    $( '.toggle-menu-wrapper' ).addClass( 'hidden-toggle' );
+                }, 3000 );
+            }
+
+            setFirstTeam( team1 );
+            setSecondTeam( team2 );
+            setBackground( background );
+            setStartDateTime();
+            setCountdown();
+        }
+
+        function setStartDateTime(){
+            $( '.js-datetimepicker' ).val( start );
+        }
+
+        function setCountdown(){
+            var clockFace = 'HourlyCounter',
+                startDate,
+                currentDate,
+                countdownValue;
+
+            if( start <= 0 ){
+                if( clock ){
+                    clock = false;
+                    $( '.js-countdown' ).replaceWith( '<div class="js-countdown"></div>' );
+                }
+                return false;
+            }
+
+            startDate = new Date( start );
+            currentDate = new Date();
+            countdownValue = Math.floor( ( startDate.getTime() - currentDate.getTime() ) / 1000 );
+
+            if( countdownValue / 3600 > 24 ){
+                clockFace = 'DailyCounter';
+            }
+
+            clock = $( '.js-countdown' ).FlipClock( countdownValue, {
+                clockFace: clockFace,
+                countdown: true
+            });
+        }
+
+        function toggleMenu(){
+            var $body = $( 'body' );
+
+            if( $body.hasClass( 'settings-open' ) ){
+                $body.removeClass( 'settings-open' );
+                menu = 0;
+            } else {
+                $body.addClass( 'settings-open' );
+                menu = 1;
+            }
+
+            setTimeout( function(){
+                $( '.toggle-menu-wrapper' ).addClass( 'hidden-toggle' );
+            }, 3000 );
+        }
+
+        function setBackground( background ){
+            setBackgroundImage( 'resources/background-' + background + '.jpg' );
+        }
+
+        function setBackgroundImage( imageUrl ){
+            $( 'html' ).css({
+                'background-image' : 'url(' + imageUrl + ')'
+            });
+        }
+
+        function onFileLoad( event ) {
+            setBackgroundImage( event.target.result );
+        }
+
+        function setUrl(){
+            var queryStringVars = [];
+
+            if( team1.length > 0 ){
+                queryStringVars.push( 'team1=' + team1 );
+            }
+
+            if( team2.length > 0 ){
+                queryStringVars.push( 'team2=' + team2 );
+            }
+
+            if( background.toString().length > 0 ){
+                queryStringVars.push( 'background=' + background );
+            }
+
+            if( start.toString().length > 0 ){
+                queryStringVars.push( 'start=' + start );
+            }
+
+            if( menu.toString().length > 0 ){
+                queryStringVars.push( 'menu=' + menu );
+            }
+
+            history.replaceState( {}, 'Same page', 'match.html?' + queryStringVars.join( '&' ) );
+        }
+
+        function setFirstTeam( identifier ){
+            team1 = identifier;
+            $( '.js-first-team-wrapper' ).find( 'img' ).attr( 'src', 'resources/teams/' + identifier + '-500x500.png' );
+            $( '.js-first-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ] );
+        }
+
+        function setSecondTeam( identifier ){
+            team2 = identifier;
+            $( '.js-second-team-wrapper' ).find( 'img' ).attr( 'src', 'resources/teams/' + identifier + '-500x500.png' );
+            $( '.js-second-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ] );
+        }
+
+        $.getJSON( 'resources/teamlist.json', function( data ){
+            var identifier,
+                $optionMarkup =  $( '<option></option>' ),
+                $firstTeamList = $( '.js-first-team' ),
+                $secondTeamList = $( '.js-second-team' ),
+                teams = [],
+                index;
+
+            teamList = data;
+
+            setupPageVars();
+
+            for( identifier in data ){
+                if( data.hasOwnProperty( identifier ) ){
+                    teams.push( identifier );
+                }
+            }
+
+            teams.sort();
+
+            for( index = 0; index < teams.length; index = index + 1 ){
+                $optionMarkup.val( teams[ index ] ).text( teamList[ teams[ index ] ] );
+
+                if( team1 === teams[ index ] ){
+                    $firstTeamList.append( $optionMarkup.clone().prop( 'selected', true ) );
+                } else {
+                    $firstTeamList.append( $optionMarkup.clone() );
+                }
+
+                if( team2 === teams[ index ] ){
+                    $secondTeamList.append( $optionMarkup.clone().prop( 'selected', true ) );
+                } else {
+                    $secondTeamList.append( $optionMarkup.clone() );
+                }
+            }
+        });
+
+        $(function(){
+            var $body = $( 'body' ),
+                hideToggleTimeout;
+
+            $body.on( 'change', 'input[type="file"]', function( event ){
+                var reader = new FileReader();
+                reader.onload = onFileLoad;
+                reader.readAsDataURL( this.files[ 0 ] );
+            });
+
+            $( '#datetimepicker' ).datetimepicker({
+                weekStart: 1,
+                autoclose: true,
+                startDate: new Date()
+            });
+
+            $body.on( 'change', '.js-first-team, .js-second-team', function( event ){
+                var $target = $( event.currentTarget );
+
+                if( $target.is( '.js-first-team' ) ){
+                    setFirstTeam( $target.val() );
+                } else {
+                    setSecondTeam( $target.val() );
+                }
+
+                setUrl();
+            });
+
+            $body.on( 'click', '.js-background-select', function( event ){
+                var $target = $( this ),
+                    backgroundId = $target.data( 'background-id' );
+
+                event.preventDefault();
+
+                setBackground( backgroundId );
+
+                background = backgroundId;
+
+                setUrl();
+            });
+
+            $body.on( 'change', '.js-datetimepicker', function( event ){
+                start = $( this ).val();
+
+                setCountdown();
+
+                setUrl();
+            });
+
+            $body.on( 'click', '.js-clear-datetime', function( event ){
+                $( '.js-datetimepicker' ).val( '' ).trigger( 'change' );
+            });
+
+            $body.on( 'mousemove', function( event ){
+                var $toggleMenu = $( '.js-toggle-menu' );
+
+                clearTimeout( hideToggleTimeout );
+
+                $toggleMenu.removeClass( 'hidden-toggle' );
+
+                hideToggleTimeout = setTimeout( function(){
+                    $toggleMenu.addClass( 'hidden-toggle' );
+                }, 3000 );
+            });
+
+            $body.on( 'click', '.js-toggle-menu', function( event ){
+                toggleMenu();
+
+                setUrl();
+            });
+        })
+    })( $ );
+</script>
+</body>
