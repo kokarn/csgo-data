@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
                     ), {
                         name: files[ index ]
                     }
-                )
+                );
             }
         }
 
@@ -85,7 +85,7 @@ module.exports = function( grunt ) {
                     ), {
                         name: bzip2List[ index ]
                     }
-                )
+                );
             }
         }
 

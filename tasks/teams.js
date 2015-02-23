@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
         teamList = {};
 
     function checkIdentifier( teamData ){
-        if( typeof teamData.identifier === 'undefined' ){
+        if( teamData.identifier === undefined ){
             teamData.identifier = createIdentifier( teamData.name );
 
             fs.writeFile( 'teams/' + teamData.name + '/data.json', JSON.stringify( teamData, null, 4 ), function( error ) {
