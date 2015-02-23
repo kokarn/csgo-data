@@ -30,11 +30,20 @@ module.exports = function( grunt ) {
                     }
                 }]
             },
+            match : {
+                options : {
+                    sizes : [{
+                        name : '500x500',
+                        height : 500,
+                        width: 500,
+                        aspectRatio: false
+                    }]
+                },
                 files : [{
                     expand: true,
                     cwd: 'teams/',
                     src: [ '**/*.png' ],
-                    dest: 'web/teams/',
+                    dest: 'web/resources/teams/',
                     rename: function( dest, src ){
                         return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '.png';
                     }
