@@ -6,6 +6,11 @@ module.exports = function( grunt ) {
     }
 
     grunt.initConfig({
+        jshint: {
+            tasks: [
+                'tasks/*.js'
+            ]
+        },
         responsive_images: {
             options : {
                 newFilesOnly: false,
@@ -36,6 +41,7 @@ module.exports = function( grunt ) {
                         name : '500x500',
                         height : 500,
                         width: 500,
+                        rename: false,
                         aspectRatio: false
                     }]
                 },
@@ -45,7 +51,7 @@ module.exports = function( grunt ) {
                     src: [ '**/*.png' ],
                     dest: 'web/resources/teams/',
                     rename: function( dest, src ){
-                        return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '.png';
+                        return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '-500x500.png';
                     }
                 }]
             }
@@ -72,6 +78,17 @@ module.exports = function( grunt ) {
                     src: [ '*.png' ],
                     dest: 'web/resources/ingame/'
                 }]
+            },
+            teams: {
+                options: {
+                    optimizationLevel: 4
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'web/resources/teams/',
+                    src: [ '*.png' ],
+                    dest: 'web/resources/teams/'
+                }]
             }
         }
     });
@@ -81,6 +98,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-newer' );
     grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
+    grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:imagemin:ingame', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:responsive_images:match', 'newer:imagemin:ingame', 'newer:imagemin:teams', 'teams', 'teams_zip' ] );
 };
