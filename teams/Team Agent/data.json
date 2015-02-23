@@ -1,0 +1,11 @@
+{
+    "name": "Team Agent",
+    "csgolounge": {
+        "name": "Agent"
+    },
+    "gosugamers": {
+        "name": "Agent",
+        "id": 10701
+    },
+    "identifier": "teamagent"
+}
