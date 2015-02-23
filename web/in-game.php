@@ -57,7 +57,7 @@
         <table class="table table-hover">
             <tbody>
                 <?php
-                $teamsPath = './teams/';
+                $teamsPath = './resources/ingame/';
                 $items = scandir( $teamsPath );
                 $teamList = array();
                 $skiplist = array( '.', '..', 'index.php' );
