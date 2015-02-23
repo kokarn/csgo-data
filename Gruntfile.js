@@ -72,6 +72,17 @@ module.exports = function( grunt ) {
                     src: [ '*.png' ],
                     dest: 'web/resources/ingame/'
                 }]
+            },
+            teams: {
+                options: {
+                    optimizationLevel: 4
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'web/resources/teams/',
+                    src: [ '*.png' ],
+                    dest: 'web/resources/teams/'
+                }]
             }
         }
     });
@@ -82,5 +93,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
 
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:imagemin:ingame', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:responsive_images:match', 'newer:imagemin:ingame', 'newer:imagemin:teams', 'teams', 'teams_zip' ] );
 };
