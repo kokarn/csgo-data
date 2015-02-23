@@ -6,6 +6,11 @@ module.exports = function( grunt ) {
     }
 
     grunt.initConfig({
+        jshint: {
+            tasks: [
+                'tasks/*.js'
+            ]
+        },
         responsive_images: {
             options : {
                 newFilesOnly: false,
@@ -92,6 +97,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-newer' );
     grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
+    grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
     grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:responsive_images:match', 'newer:imagemin:ingame', 'newer:imagemin:teams', 'teams', 'teams_zip' ] );
 };
