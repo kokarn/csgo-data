@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
             if( files.hasOwnProperty( index ) ){
                 archive.append(
                     fs.createReadStream(
-                        'web/teams/' + files[ index ]
+                        'web/resources/ingame/' + files[ index ]
                     ), {
                         name: files[ index ]
                     }
