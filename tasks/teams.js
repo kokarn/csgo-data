@@ -5,7 +5,8 @@ module.exports = function( grunt ) {
         skipFiles = [ '.DS_Store' ],
         done,
         doneJobs = 0,
-        totalJobs;
+        totalJobs,
+        teamList = {};
 
     function checkIdentifier( teamData ){
         if( typeof teamData.identifier === 'undefined' ){
@@ -23,7 +24,7 @@ module.exports = function( grunt ) {
 
     function checkAllDone(){
         if( doneJobs === totalJobs ){
-            done();
+            writeTeamList();
         }
     }
 
@@ -84,6 +85,17 @@ module.exports = function( grunt ) {
         }
     }
 
+    function writeTeamList(){
+        fs.writeFile( 'web/resources/teamlist.json', JSON.stringify( teamList, null, 4 ), function( error ){
+            if( error ){
+                console.log( error );
+                done( false );
+            } else {
+                done();
+            }
+        });
+    }
+
     grunt.registerTask( 'teams', function() {
         var teams = fs.readdirSync( 'teams' ),
             index;
@@ -105,6 +117,7 @@ module.exports = function( grunt ) {
                     } else {
                         teamData = JSON.parse( data );
                         teamData = checkIdentifier( teamData );
+                        teamList[ teamData.identifier ] = teamData.name;
                         createCfg( teamData );
                     }
                 });
