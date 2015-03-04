@@ -18,13 +18,16 @@
   "homepage": "https://github.com/kokarn/csgo-teams",
   "devDependencies": {
     "archiver": "^0.14.3",
+    "chalk": "^1.0.0",
     "compressjs": "^1.0.2",
+    "file-type": "^2.4.0",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-imagemin": "^0.9.3",
     "grunt-contrib-jshint": "^0.11.0",
     "grunt-newer": "^1.1.0",
     "grunt-responsive-images": "^0.1.6",
+    "jsdom": "^3.1.2",
     "normalize-for-search": "^1.2.0"
   }
 }
