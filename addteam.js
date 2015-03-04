@@ -29,17 +29,19 @@ var http = require( 'http' ),
                 }
             });
         },
-        setGosugamers : function( index, callback ){
+        setGosugamers : function( searchPhrase, index, callback ){
             'use strict';
 
             jsdom.env(
-                addTeam.gosugamersBaseUrl + addTeam.teamData.name,
+                addTeam.gosugamersBaseUrl + searchPhrase,
                 [ 'http://code.jquery.com/jquery.js' ],
                 function( errors, window ) {
-                    addTeam.teamData.gosugamers = {
-                        id: window.$( '.ranking-link' ).eq( index ).data( 'id' ),
-                        name: window.$( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
-                    };
+                    if( window.$( '.ranking-link' ).eq( index ).length > 0 ){
+                        addTeam.teamData.gosugamers = {
+                            id: window.$( '.ranking-link' ).eq( index ).data( 'id' ),
+                            name: window.$( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
+                        };
+                    }
 
                     if( typeof callback === 'function' ){
                         callback.call();
@@ -47,11 +49,11 @@ var http = require( 'http' ),
                 }
             );
         },
-        searchGosugamers : function(){
+        searchGosugamers : function( searchPhrase ){
             'use strict';
 
             jsdom.env(
-                addTeam.gosugamersBaseUrl + addTeam.teamData.name,
+                addTeam.gosugamersBaseUrl + searchPhrase,
                 [ 'http://code.jquery.com/jquery.js' ],
                 function( errors, window ) {
                     if( errors ){
@@ -59,13 +61,32 @@ var http = require( 'http' ),
                     }
                     var $teams = window.$( '.ranking-link' );
 
-                    window.$.each( $teams, function( index, element ){
-                        console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
-                    });
+                    if( $teams.length <= 0 ){
+                        console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
+                        addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
+                            if( answer.length <= 0 ){
+                                addTeam.finish();
+                            } else {
+                                addTeam.searchGosugamers( answer );
+                            }
+                        });
+                    } else {
+                        window.$.each( $teams, function( index, element ){
+                            console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
+                        });
 
-                    addTeam.rl.question( 'Select the correct team ', function( answer ) {
-                        addTeam.setGosugamers( parseInt( answer - 1, 10 ), addTeam.finish );
-                    });
+                        addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
+                            if( answer.length <= 0 ){
+                                addTeam.finish();
+                            } else if( answer === '0' ){
+                                addTeam.rl.question( 'Please enter a search term ', function( answer ) {
+                                    addTeam.searchGosugamers( answer );
+                                });
+                            } else {
+                                addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
+                            }
+                        });
+                    }
                 }
             );
         },
@@ -83,7 +104,7 @@ var http = require( 'http' ),
                         addTeam.csGoLoungeName();
                         break;
                     case '3':
-                        addTeam.searchGosugamers();
+                        addTeam.searchGosugamers( addTeam.teamData.name );
                         break;
                     default:
                         addTeam.finish();
@@ -158,7 +179,7 @@ var http = require( 'http' ),
             'use strict';
 
             addTeam.teamData.name = teamName;
-            addTeam.setGosugamers( 0 );
+            addTeam.setGosugamers( addTeam.teamData.name, 0 );
             addTeam.ensureExists( 'teams/' + addTeam.teamData.name, function( error ) {
                 if( error ){
                     console.log( error );
