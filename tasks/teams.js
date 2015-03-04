@@ -86,7 +86,22 @@ module.exports = function( grunt ) {
     }
 
     function writeTeamList(){
-        fs.writeFile( 'web/resources/teamlist.json', JSON.stringify( teamList, null, 4 ), function( error ){
+        var sortedList = {},
+            identifierList = [];
+
+        for( var identifier in teamList ){
+            if( teamList.hasOwnProperty( identifier ) ){
+                identifierList.push( identifier );
+            }
+        }
+
+        identifierList.sort();
+
+        for( var index = 0; index < identifierList.length; index = index + 1 ){
+            sortedList[ identifierList[ index ] ] = teamList[ identifierList[ index ] ];
+        }
+
+        fs.writeFile( 'web/resources/teamlist.json', JSON.stringify( sortedList, null, 4 ), function( error ){
             if( error ){
                 console.log( error );
                 done( false );
