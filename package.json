@@ -1,7 +1,7 @@
 {
-  "name": "csgo-teams",
+  "name": "csgo-data",
   "version": "1.0.0",
-  "description": "CSGO Team Data with logos",
+  "description": "CSGO Data",
   "main": "\"\"",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,9 +13,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kokarn/csgo-teams/issues"
+    "url": "https://github.com/kokarn/csgo-data/issues"
   },
-  "homepage": "https://github.com/kokarn/csgo-teams",
+  "homepage": "http://csgo-data.com",
   "devDependencies": {
     "archiver": "^0.14.3",
     "chalk": "^1.0.0",
