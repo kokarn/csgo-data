@@ -5,8 +5,9 @@ var http = require( 'http' ),
     chalk = require( 'chalk' ),
     fs = require( 'fs' ),
     readline = require( 'readline' ),
-    jsdom = require( 'jsdom' ),
+    cheerio = require( 'cheerio' ),
     fileType = require( 'file-type' ),
+    request = require( 'request' ),
     addTeam = {
         rl : false,
         state: 0,
@@ -33,63 +34,62 @@ var http = require( 'http' ),
         setGosugamers : function( searchPhrase, index, callback ){
             'use strict';
 
-            jsdom.env(
-                addTeam.gosugamersBaseUrl + searchPhrase,
-                [ 'http://code.jquery.com/jquery.js' ],
-                function( errors, window ) {
-                    if( window.$( '.ranking-link' ).eq( index ).length > 0 ){
-                        addTeam.teamData.gosugamers = {
-                            id: window.$( '.ranking-link' ).eq( index ).data( 'id' ),
-                            name: window.$( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
-                        };
-                    }
+            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
+                var $ = cheerio.load( html );
 
-                    if( typeof callback === 'function' ){
-                        callback.call();
-                    }
+
+                if( $( '.ranking-link' ).eq( index ).length > 0 ){
+                    addTeam.teamData.gosugamers = {
+                        id: $( '.ranking-link' ).eq( index ).data( 'id' ),
+                        name: $( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
+                    };
                 }
-            );
+
+                if( typeof callback === 'function' ){
+                    callback.call();
+                }
+            });
         },
         searchGosugamers : function( searchPhrase ){
             'use strict';
 
-            jsdom.env(
-                addTeam.gosugamersBaseUrl + searchPhrase,
-                [ 'http://code.jquery.com/jquery.js' ],
-                function( errors, window ) {
-                    if( errors ){
-                        console.log( errors );
-                    }
-                    var $teams = window.$( '.ranking-link' );
+            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
+                var $ = cheerio.load( html ),
+                    $teams;
 
-                    if( $teams.length <= 0 ){
-                        console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
-                        addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
-                            if( answer.length <= 0 ){
-                                addTeam.finish();
-                            } else {
-                                addTeam.searchGosugamers( answer );
-                            }
-                        });
-                    } else {
-                        window.$.each( $teams, function( index, element ){
-                            console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
-                        });
-
-                        addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
-                            if( answer.length <= 0 ){
-                                addTeam.finish();
-                            } else if( answer === '0' ){
-                                addTeam.rl.question( 'Please enter a search term ', function( answer ) {
-                                    addTeam.searchGosugamers( answer );
-                                });
-                            } else {
-                                addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
-                            }
-                        });
-                    }
+                if( error ){
+                    console.log( error );
                 }
-            );
+
+                $teams = $( '.ranking-link' );
+
+                if( $teams.length <= 0 ){
+                    console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
+                    addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
+                        if( answer.length <= 0 ){
+                            addTeam.finish();
+                        } else {
+                            addTeam.searchGosugamers( answer );
+                        }
+                    });
+                } else {
+                    $teams.each( function( index, element ){
+                        console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
+                    });
+
+                    addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
+                        if( answer.length <= 0 ){
+                            addTeam.finish();
+                        } else if( answer === '0' ){
+                            addTeam.rl.question( 'Please enter a search term ', function( answer ) {
+                                addTeam.searchGosugamers( answer );
+                            });
+                        } else {
+                            addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
+                        }
+                    });
+                }
+            });
         },
         changeData : function(){
             console.log( '1: Name' );

@@ -19,6 +19,7 @@
   "devDependencies": {
     "archiver": "^0.14.3",
     "chalk": "^1.0.0",
+    "cheerio": "^0.18.0",
     "compressjs": "^1.0.2",
     "file-type": "^2.4.0",
     "grunt": "^0.4.5",
@@ -27,7 +28,7 @@
     "grunt-contrib-jshint": "^0.11.0",
     "grunt-newer": "^1.1.0",
     "grunt-responsive-images": "^0.1.6",
-    "jsdom": "^3.1.2",
     "normalize-for-search": "^1.2.0"
+    "request": "^2.53.0"
   }
 }
