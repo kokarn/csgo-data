@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 var http = require( 'http' ),
+    https = require( 'https' ),
     chalk = require( 'chalk' ),
     fs = require( 'fs' ),
     readline = require( 'readline' ),
@@ -152,10 +153,17 @@ var http = require( 'http' ),
             var writeTarget = 'teams/' + addTeam.teamData.name + '/logo',
                 writeStream = fs.createWriteStream( writeTarget ),
                 request,
-                extension;
+                extension,
+                protocol;
 
             addTeam.rl.question( 'URL to the logo? ', function( url ) {
-                request = http.get( url, function( response ) {
+                if( url.substr( 0, 5 ) === 'https' ){
+                    protocol = https;
+                } else {
+                    protocol = http;
+                }
+
+                request = protocol.get( url, function( response ) {
 
                     response.once( 'data', function( chunk ) {
                         extension = fileType( chunk ).ext;
