@@ -1,11 +1,15 @@
 #! /usr/bin/env node
 
 var http = require( 'http' ),
+    https = require( 'https' ),
     chalk = require( 'chalk' ),
     fs = require( 'fs' ),
     readline = require( 'readline' ),
-    jsdom = require( 'jsdom' ),
+    cheerio = require( 'cheerio' ),
     fileType = require( 'file-type' ),
+    exec = require( 'child_process' ),
+    request = require( 'request' ),
+    logoFilename = '',
     addTeam = {
         rl : false,
         state: 0,
@@ -32,63 +36,62 @@ var http = require( 'http' ),
         setGosugamers : function( searchPhrase, index, callback ){
             'use strict';
 
-            jsdom.env(
-                addTeam.gosugamersBaseUrl + searchPhrase,
-                [ 'http://code.jquery.com/jquery.js' ],
-                function( errors, window ) {
-                    if( window.$( '.ranking-link' ).eq( index ).length > 0 ){
-                        addTeam.teamData.gosugamers = {
-                            id: window.$( '.ranking-link' ).eq( index ).data( 'id' ),
-                            name: window.$( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
-                        };
-                    }
+            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
+                var $ = cheerio.load( html );
 
-                    if( typeof callback === 'function' ){
-                        callback.call();
-                    }
+
+                if( $( '.ranking-link' ).eq( index ).length > 0 ){
+                    addTeam.teamData.gosugamers = {
+                        id: $( '.ranking-link' ).eq( index ).data( 'id' ),
+                        name: $( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
+                    };
                 }
-            );
+
+                if( typeof callback === 'function' ){
+                    callback.call();
+                }
+            });
         },
         searchGosugamers : function( searchPhrase ){
             'use strict';
 
-            jsdom.env(
-                addTeam.gosugamersBaseUrl + searchPhrase,
-                [ 'http://code.jquery.com/jquery.js' ],
-                function( errors, window ) {
-                    if( errors ){
-                        console.log( errors );
-                    }
-                    var $teams = window.$( '.ranking-link' );
+            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
+                var $ = cheerio.load( html ),
+                    $teams;
 
-                    if( $teams.length <= 0 ){
-                        console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
-                        addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
-                            if( answer.length <= 0 ){
-                                addTeam.finish();
-                            } else {
-                                addTeam.searchGosugamers( answer );
-                            }
-                        });
-                    } else {
-                        window.$.each( $teams, function( index, element ){
-                            console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
-                        });
-
-                        addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
-                            if( answer.length <= 0 ){
-                                addTeam.finish();
-                            } else if( answer === '0' ){
-                                addTeam.rl.question( 'Please enter a search term ', function( answer ) {
-                                    addTeam.searchGosugamers( answer );
-                                });
-                            } else {
-                                addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
-                            }
-                        });
-                    }
+                if( error ){
+                    console.log( error );
                 }
-            );
+
+                $teams = $( '.ranking-link' );
+
+                if( $teams.length <= 0 ){
+                    console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
+                    addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
+                        if( answer.length <= 0 ){
+                            addTeam.finish();
+                        } else {
+                            addTeam.searchGosugamers( answer );
+                        }
+                    });
+                } else {
+                    $teams.each( function( index, element ){
+                        console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
+                    });
+
+                    addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
+                        if( answer.length <= 0 ){
+                            addTeam.finish();
+                        } else if( answer === '0' ){
+                            addTeam.rl.question( 'Please enter a search term ', function( answer ) {
+                                addTeam.searchGosugamers( answer );
+                            });
+                        } else {
+                            addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
+                        }
+                    });
+                }
+            });
         },
         changeData : function(){
             console.log( '1: Name' );
@@ -118,7 +121,18 @@ var http = require( 'http' ),
                     console.log( error );
                 } else {
                     console.log( 'Team data written successfully' );
-                    addTeam.setTeamName();
+                    addTeam.rl.question( 'Open logo for editing (Y/N)? ', function( answer ) {
+                        switch( answer ){
+                            case 'y':
+                            case 'Y':
+                                addTeam.watchLogo();
+                                exec.execSync( 'open "' + addTeam.logoFilename + '"' );
+                                break;
+                            default:
+                                addTeam.runGrunt();
+                                break;
+                        }
+                    });
                 }
             });
         },
@@ -137,6 +151,13 @@ var http = require( 'http' ),
                 }
             });
         },
+        runGrunt: function(){
+            var child = exec.spawn( 'grunt', [], { stdio: 'inherit' } );
+
+            child.on( 'exit', function(){
+                process.exit();
+            });
+        },
         csGoLoungeName: function(){
             addTeam.rl.question( 'What is the name of the team on CSGOLounge? ', function( answer ) {
                 if( answer.length > 0 ){
@@ -152,17 +173,25 @@ var http = require( 'http' ),
             var writeTarget = 'teams/' + addTeam.teamData.name + '/logo',
                 writeStream = fs.createWriteStream( writeTarget ),
                 request,
-                extension;
+                extension,
+                protocol;
 
             addTeam.rl.question( 'URL to the logo? ', function( url ) {
-                request = http.get( url, function( response ) {
+                if( url.substr( 0, 5 ) === 'https' ){
+                    protocol = https;
+                } else {
+                    protocol = http;
+                }
+
+                request = protocol.get( url, function( response ) {
 
                     response.once( 'data', function( chunk ) {
                         extension = fileType( chunk ).ext;
+                        addTeam.logoFilename = writeTarget + '.' + extension;
                     });
 
                     response.on( 'end', function() {
-                        fs.rename( writeTarget, writeTarget + '.' + extension, function( error ) {
+                        fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
                             if( error ) {
                                 console.log( 'ERROR: ' + error );
                             }
@@ -173,6 +202,37 @@ var http = require( 'http' ),
                 });
 
                 addTeam.csGoLoungeName();
+            });
+        },
+        watchLogo : function(){
+            'use strict';
+            var sizeOf = require( 'image-size' ),
+                dimensions,
+                newFilename,
+                dimensionString = '';
+
+            console.log( 'watching ' + addTeam.logoFilename );
+
+            fs.watch( addTeam.logoFilename, function( event, filename ) {
+                console.log( 'Logo changed, setting new logo name.' );
+
+                dimensions = sizeOf( addTeam.logoFilename );
+
+                if( dimensions.width >= 500 && dimensions.height >= 500 ) {
+                    dimensionString = 'highres';
+                } else {
+                    dimensionString = dimensions.width + 'x' + dimensions.height;
+                }
+
+                newFilename = addTeam.logoFilename.replace( 'logo.', 'logo-' + dimensionString + '.' );
+
+                fs.rename( addTeam.logoFilename, newFilename , function( error ) {
+                    if( error ) {
+                        console.log( 'ERROR: ' + error );
+                    }
+
+                    addTeam.runGrunt();
+                });
             });
         },
         createTeam : function( teamName ){
