@@ -7,7 +7,9 @@ var http = require( 'http' ),
     readline = require( 'readline' ),
     cheerio = require( 'cheerio' ),
     fileType = require( 'file-type' ),
+    exec = require( 'child_process' ),
     request = require( 'request' ),
+    logoFilename = '',
     addTeam = {
         rl : false,
         state: 0,
@@ -119,7 +121,18 @@ var http = require( 'http' ),
                     console.log( error );
                 } else {
                     console.log( 'Team data written successfully' );
-                    addTeam.setTeamName();
+                    addTeam.rl.question( 'Open logo for editing (Y/N)? ', function( answer ) {
+                        switch( answer ){
+                            case 'y':
+                            case 'Y':
+                                addTeam.watchLogo();
+                                exec.execSync( 'open "' + addTeam.logoFilename + '"' );
+                                break;
+                            default:
+                                addTeam.runGrunt();
+                                break;
+                        }
+                    });
                 }
             });
         },
@@ -136,6 +149,13 @@ var http = require( 'http' ),
                         addTeam.writeData();
                         break;
                 }
+            });
+        },
+        runGrunt: function(){
+            var child = exec.spawn( 'grunt', [], { stdio: 'inherit' } );
+
+            child.on( 'exit', function(){
+                process.exit();
             });
         },
         csGoLoungeName: function(){
@@ -167,10 +187,11 @@ var http = require( 'http' ),
 
                     response.once( 'data', function( chunk ) {
                         extension = fileType( chunk ).ext;
+                        addTeam.logoFilename = writeTarget + '.' + extension;
                     });
 
                     response.on( 'end', function() {
-                        fs.rename( writeTarget, writeTarget + '.' + extension, function( error ) {
+                        fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
                             if( error ) {
                                 console.log( 'ERROR: ' + error );
                             }
@@ -181,6 +202,37 @@ var http = require( 'http' ),
                 });
 
                 addTeam.csGoLoungeName();
+            });
+        },
+        watchLogo : function(){
+            'use strict';
+            var sizeOf = require( 'image-size' ),
+                dimensions,
+                newFilename,
+                dimensionString = '';
+
+            console.log( 'watching ' + addTeam.logoFilename );
+
+            fs.watch( addTeam.logoFilename, function( event, filename ) {
+                console.log( 'Logo changed, setting new logo name.' );
+
+                dimensions = sizeOf( addTeam.logoFilename );
+
+                if( dimensions.width >= 500 && dimensions.height >= 500 ) {
+                    dimensionString = 'highres';
+                } else {
+                    dimensionString = dimensions.width + 'x' + dimensions.height;
+                }
+
+                newFilename = addTeam.logoFilename.replace( 'logo.', 'logo-' + dimensionString + '.' );
+
+                fs.rename( addTeam.logoFilename, newFilename , function( error ) {
+                    if( error ) {
+                        console.log( 'ERROR: ' + error );
+                    }
+
+                    addTeam.runGrunt();
+                });
             });
         },
         createTeam : function( teamName ){
