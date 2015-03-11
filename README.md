@@ -36,6 +36,11 @@ There is a supersimple node app that does that for you.
 
 ## Who are using this?
 
+### CSGO Bettingstats
+A site that consolidates betting stats for upcoming matches
+
+[CSGO Bettingstats](http://csgobettingstats.com/)
+
 ### Team Logo Manager
 A SourceMod plugin that let's you select both logo and team-name easily on your own server.
 
