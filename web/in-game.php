@@ -19,10 +19,14 @@
         .location-code-wrapper:hover {
             cursor: pointer;
         }
+
+        .container-fluid {
+            max-width: 1170px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <h1>
             CSGO teams
         </h1>
