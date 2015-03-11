@@ -8,7 +8,6 @@ For teams:
  * GosuGamers name and id
  * An unique identifier
 
-
 ## How do I add a team?
 
 There are three different ways to help out and add a missing team.
@@ -26,15 +25,14 @@ Generally this is the information about the team and a version of the logo in as
 If you can't find any resources on the team, just [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into adding it ASAP.
 
-## How do I generate team logos in a different size?
+## How do I get team logos in a different size?
 Glad you asked! 
 
 There is a supersimple node app that does that for you.
 
-Just go into the folder where you've cloned the repository to and run ```node teamlogos.js``` and it should generate what you need.
-
-Yes, you will need [nodejs](http://nodejs.org/) to do this.
-
+1. If you haven't used [NodeJS](http://nodejs.org/) before you need to install that first
+2. Go to the directory where you have cloned the repository and run ```npm install``` from the command line
+3. Run ```node teamlogos.js``` and it should generate what you need.
 
 ## Who are using this?
 
