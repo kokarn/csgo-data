@@ -61,6 +61,20 @@
         <table class="table table-hover">
             <tbody>
                 <?php
+
+                function nameSort( $a, $b ){
+                    $lowercaseA = strtolower( $a->name );
+                    $lowercaseB = strtolower( $b->name );
+
+                    if( $lowercaseA > $lowercaseB ) :
+                        return 1;
+                    elseif( $lowercaseA < $lowercaseB ) :
+                        return -1;
+                    endif;
+
+                    return 0;
+                }
+
                 $teamsPath = './resources/ingame/';
                 $items = scandir( $teamsPath );
                 $teamList = array();
@@ -98,6 +112,9 @@
                             break;
                     endswitch;
                 endforeach;
+
+                usort( $teamList, 'nameSort' );
+
                 foreach( $teamList as $team ) :
                     if( !isset( $team->hasImage ) || !$team->hasImage ) :
                         continue;
