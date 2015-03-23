@@ -1,5 +1,8 @@
 {
     "name": "Team EnVyUs",
+    "steam": {
+        "name": "envy"
+    },
     "csgolounge": {
         "name": "EnVyUs"
     },

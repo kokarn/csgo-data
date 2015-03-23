@@ -1,5 +1,8 @@
 {
     "name": "Space Soldiers",
+    "steam": {
+        "name": "space"
+    },
     "gosugamers": {
         "id": 9642,
         "name": "Space Soldiers Black"

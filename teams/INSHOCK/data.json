@@ -1,5 +1,8 @@
 {
     "name": "INSHOCK",
+    "steam": {
+        "name": "insho"
+    },
     "csgolounge": {
         "name": "InShock"
     },

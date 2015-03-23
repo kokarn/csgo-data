@@ -1,5 +1,8 @@
 {
     "name": "myKPV",
+    "steam": {
+        "name": "mykpv"
+    },
     "csgolounge": {
         "name": "KPV"
     },

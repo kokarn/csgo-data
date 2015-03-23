@@ -1,5 +1,8 @@
 {
     "name": "fm-eSports",
+    "steam": {
+        "name": "fme"
+    },
     "csgolounge": {
         "name": "FM"
     },

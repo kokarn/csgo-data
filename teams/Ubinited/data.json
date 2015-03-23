@@ -1,5 +1,8 @@
 {
     "name": "Ubinited",
+    "steam": {
+        "name": "ubini"
+    },
     "csgolounge": {
         "name": "Ubinited"
     },

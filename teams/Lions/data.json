@@ -1,5 +1,8 @@
 {
     "name": "Lions",
+    "steam": {
+        "name": "lions"
+    },
     "gosugamers": {
         "id": 10901,
         "name": "Lions"

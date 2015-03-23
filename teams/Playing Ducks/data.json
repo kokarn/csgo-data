@@ -1,5 +1,8 @@
 {
     "name": "Playing Ducks",
+    "steam": {
+        "name": "playin"
+    },
     "csgolounge": {
         "name": "Ducks"
     },

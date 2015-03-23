@@ -1,5 +1,8 @@
 {
     "name": "iGamerz",
+    "steam": {
+        "name": "igame"
+    },
     "gosugamers": {
         "id": 9389,
         "name": "Infernal Gamerz"

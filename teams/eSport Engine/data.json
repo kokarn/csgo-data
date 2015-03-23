@@ -1,4 +1,7 @@
 {
     "name": "eSport Engine",
+    "steam": {
+        "name": "espen"
+    },
     "identifier": "esportengine"
 }

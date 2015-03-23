@@ -1,5 +1,8 @@
 {
     "name": "HEAT",
+    "steam": {
+        "name": "heat"
+    },
     "gosugamers": {
         "id": 9400,
         "name": "HEAT"

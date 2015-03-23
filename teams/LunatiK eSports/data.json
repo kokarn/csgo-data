@@ -1,5 +1,8 @@
 {
     "name": "LunatiK eSports",
+    "steam": {
+        "name": "lunat"
+    },
     "csgolounge": {
         "name": "Lunatik"
     },

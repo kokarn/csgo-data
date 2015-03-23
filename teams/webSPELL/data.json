@@ -1,5 +1,8 @@
 {
     "name": "webSPELL",
+    "steam": {
+        "name": "websp"
+    },
     "csgolounge": {
         "name": "webSpell"
     },

@@ -1,4 +1,7 @@
 {
     "name": "Heat eSports",
+    "steam": {
+        "name": "heate"
+    },
     "identifier": "heatesports"
 }

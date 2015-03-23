@@ -1,5 +1,8 @@
 {
     "name": "HEADSHOTBG",
+    "steam": {
+        "name": "hsbg"
+    },
     "gosugamers": {
         "id": 8667,
         "name": "HeadshotBG.CS"

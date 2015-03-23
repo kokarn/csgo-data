@@ -1,5 +1,8 @@
 {
     "name": "Moscow Five",
+    "steam": {
+        "name": "m5"
+    },
     "csgolounge": {
         "name": "M5"
     },

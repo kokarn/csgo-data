@@ -1,5 +1,8 @@
 {
     "name": "Area51",
+    "steam": {
+        "name": "area5"
+    },
     "csgolounge": {
         "name": "A51"
     },

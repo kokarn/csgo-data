@@ -1,5 +1,8 @@
 {
     "name": "KaBuM.TD",
+    "steam": {
+        "name": "kabum"
+    },
     "csgolounge": {
         "name": "Kabum"
     },

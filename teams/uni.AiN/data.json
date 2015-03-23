@@ -1,5 +1,8 @@
 {
     "name": "uni.AiN",
+    "steam": {
+        "name": "uniai"
+    },
     "csgolounge": {
         "name": "uni.AiN"
     },

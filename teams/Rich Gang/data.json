@@ -1,4 +1,7 @@
 {
     "name": "Rich Gang",
+    "steam": {
+        "name": "richg"
+    },
     "identifier": "richgang"
 }

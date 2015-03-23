@@ -1,5 +1,8 @@
 {
     "name": "Games4u",
+    "steam": {
+        "name": "g4u"
+    },
     "csgolounge": {
         "name": "G4U"
     },

@@ -1,9 +1,10 @@
 module.exports = function( grunt ) {
+    var jf = require( 'jsonfile' );
 
     global[ 'createIdentifier' ] = function ( name ){
         var normalizeForSearch = require( 'normalize-for-search' );
         return normalizeForSearch( name.replace( /[\s\.\-]+/g, '' ) );
-    }
+    };
 
     grunt.initConfig({
         jshint: {
@@ -31,7 +32,8 @@ module.exports = function( grunt ) {
                     src: [ '**/*.png' ],
                     dest: 'web/resources/ingame/',
                     rename: function( dest, src ){
-                        return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '.png';
+                        var data = jf.readFileSync( 'teams/' + src.split( '/' )[ 0 ] + '/data.json' );
+                        return dest + data.steam.name + '.png';
                     }
                 }]
             },

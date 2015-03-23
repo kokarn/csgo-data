@@ -1,5 +1,8 @@
 {
     "name": "CM Storm",
+    "steam": {
+        "name": "cmsto"
+    },
     "gosugamers": {
         "id": 11110,
         "name": "CMStorm Female"

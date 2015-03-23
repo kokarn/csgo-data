@@ -1,5 +1,8 @@
 {
     "name": "Team Menace.fi",
+    "steam": {
+        "name": "menac"
+    },
     "csgolounge": {
         "name": "Menace"
     },

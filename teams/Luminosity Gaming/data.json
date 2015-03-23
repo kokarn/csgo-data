@@ -1,5 +1,8 @@
 {
     "name": "Luminosity Gaming",
+    "steam": {
+        "name": "lumin"
+    },
     "gosugamers": {
         "id": 10920,
         "name": "Luminosity Gaming"

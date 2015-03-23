@@ -1,5 +1,8 @@
 {
     "name": "WiLD",
+    "steam": {
+        "name": "wild"
+    },
     "gosugamers": {
         "id": 9636,
         "name": "WiLD.CM"

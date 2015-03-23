@@ -1,5 +1,8 @@
 {
     "name": "Publiclir.se",
+    "steam": {
+        "name": "publi"
+    },
     "csgolounge": {
         "name": "Publiclir"
     },

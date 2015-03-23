@@ -1,4 +1,7 @@
 {
     "name": "SUMMA.GG",
+    "steam": {
+        "name": "summa"
+    },
     "identifier": "summagg"
 }

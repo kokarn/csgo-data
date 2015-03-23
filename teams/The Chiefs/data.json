@@ -1,5 +1,8 @@
 {
     "name": "The Chiefs",
+    "steam": {
+        "name": "chief"
+    },
     "gosugamers": {
         "name": "The Chiefs",
         "id": 10849

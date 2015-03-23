@@ -1,5 +1,8 @@
 {
     "name": "GPlay",
+    "steam": {
+        "name": "gplay"
+    },
     "csgolounge": {
         "name": "GPlay"
     },

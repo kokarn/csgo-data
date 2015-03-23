@@ -1,5 +1,8 @@
 {
     "name": "Counter Logic Gaming",
+    "steam": {
+        "name": "clg"
+    },
     "csgolounge": {
         "name": "CLG"
     },

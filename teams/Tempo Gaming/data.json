@@ -1,5 +1,8 @@
 {
     "name": "Tempo Gaming",
+    "steam": {
+        "name": "tempo"
+    },
     "gosugamers": {
         "id": 8828,
         "name": "Tempo Gaming"

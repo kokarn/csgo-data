@@ -1,5 +1,8 @@
 {
     "name": "rizeGaming",
+    "steam": {
+        "name": "rizeg"
+    },
     "csgolounge": {
         "name": "Rize"
     },

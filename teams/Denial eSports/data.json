@@ -1,5 +1,8 @@
 {
     "name": "Denial eSports",
+    "steam": {
+        "name": "denia"
+    },
     "csgolounge": {
         "name": "Denial"
     },

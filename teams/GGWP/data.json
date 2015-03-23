@@ -1,5 +1,8 @@
 {
     "name": "GGWP",
+    "steam": {
+        "name": "ggwp"
+    },
     "gosugamers": {
         "id": 10544,
         "name": "GGWP"

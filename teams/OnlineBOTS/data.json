@@ -1,5 +1,8 @@
 {
     "name": "OnlineBOTS",
+    "steam": {
+        "name": "ob"
+    },
     "csgolounge": {
         "name": "OB"
     },

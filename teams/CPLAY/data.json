@@ -1,5 +1,8 @@
 {
     "name": "CPLAY",
+    "steam": {
+        "name": "cplay"
+    },
     "gosugamers" : {
         "name": "CPLAY",
         "id": 7437
