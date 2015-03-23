@@ -1,5 +1,8 @@
 {
     "name": "Streamline",
+    "steam": {
+        "name": "stream"
+    },
     "gosugamers": {
         "name": "Streamline",
         "id": 10848

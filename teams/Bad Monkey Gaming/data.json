@@ -1,5 +1,8 @@
 {
     "name": "Bad Monkey Gaming",
+    "steam": {
+        "name": "bmg"
+    },
     "csgolounge": {
         "name": "BMonkey"
     },

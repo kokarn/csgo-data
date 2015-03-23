@@ -1,5 +1,8 @@
 {
     "name": "Team Alternate",
+    "steam": {
+        "name": "alter"
+    },
     "gosugamers": {
         "id": 7398,
         "name": "Team Alternate.CS"

@@ -1,4 +1,7 @@
 {
     "name": "melty eSport Club",
+    "steam": {
+        "name": "melty"
+    },
     "identifier": "meltyesportclub"
 }

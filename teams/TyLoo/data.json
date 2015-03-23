@@ -1,5 +1,8 @@
 {
     "name": "TyLoo",
+    "steam": {
+        "name": "tyloo"
+    },
     "gosugamers": {
         "id": 8612,
         "name": "TyLoo.CS"

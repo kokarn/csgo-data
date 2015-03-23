@@ -1,5 +1,8 @@
 {
     "name": "iNation",
+    "steam": {
+        "name": "inati"
+    },
     "gosugamers": {
         "id": 10527,
         "name": "iNation"

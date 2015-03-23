@@ -1,5 +1,8 @@
 {
     "name": "PiTER",
+    "steam": {
+        "name": "piter"
+    },
     "csgolounge": {
         "name": "Piter"
     },

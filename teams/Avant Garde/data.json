@@ -1,5 +1,8 @@
 {
     "name": "Avant Garde",
+    "steam": {
+        "name": "avant"
+    },
     "gosugamers": {
         "name": "Avant Garde.CS",
         "id": 10847

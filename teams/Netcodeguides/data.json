@@ -1,5 +1,8 @@
 {
     "name": "Netcodeguides",
+    "steam": {
+        "name": "netco"
+    },
     "csgolounge": {
         "name": "NetCode"
     },

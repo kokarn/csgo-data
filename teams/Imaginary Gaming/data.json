@@ -1,5 +1,8 @@
 {
     "name": "Imaginary Gaming",
+    "steam": {
+        "name": "imagi"
+    },
     "gosugamers": {
         "id": 10142,
         "name": "Imaginary Gaming Female"

@@ -1,5 +1,8 @@
 {
     "name": "Mythic",
+    "steam": {
+        "name": "mythi"
+    },
     "csgolounge": {
         "name": "Mythic"
     },

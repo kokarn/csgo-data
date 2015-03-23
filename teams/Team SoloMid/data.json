@@ -1,5 +1,8 @@
 {
     "name": "Team SoloMid",
+    "steam": {
+        "name": "tsm"
+    },
     "csgolounge": {
         "name": "TSM"
     },

@@ -1,5 +1,8 @@
 {
     "name": "VOLGARE",
+    "steam": {
+        "name": "volga"
+    },
     "csgolounge": {
         "name": "Volgare"
     },

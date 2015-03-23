@@ -1,5 +1,8 @@
 {
     "name": "Ascendancy",
+    "steam": {
+        "name": "ascen"
+    },
     "csgolounge": {
         "name": "ASC"
     },

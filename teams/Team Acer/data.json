@@ -1,5 +1,8 @@
 {
     "name": "Team Acer",
+    "steam": {
+        "name": "acer"
+    },
     "gosugamers": {
         "name": "Team Acer.",
         "id": 10962

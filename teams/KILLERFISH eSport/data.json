@@ -1,5 +1,8 @@
 {
     "name": "KILLERFISH eSport",
+    "steam": {
+        "name": "killer"
+    },
     "gosugamers": {
         "name": "KILLERFISH eSport e.V.",
         "id": 9245

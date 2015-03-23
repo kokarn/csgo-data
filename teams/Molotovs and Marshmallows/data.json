@@ -1,5 +1,8 @@
 {
     "name": "Molotovs and Marshmallows",
+    "steam": {
+        "name": "mnm"
+    },
     "gosugamers": {
         "id": 10191,
         "name": "MnM"

@@ -1,5 +1,8 @@
 {
     "name": "Team Liquid",
+    "steam": {
+        "name": "liqui"
+    },
     "csgolounge": {
         "name": "Liquid"
     },

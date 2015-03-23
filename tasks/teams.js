@@ -2,6 +2,7 @@ module.exports = function( grunt ) {
     'use strict';
     var fs = require( 'fs' ),
         archiver = require( 'archiver' ),
+        jf = require( 'jsonfile' ),
         skipFiles = [ '.DS_Store' ],
         done,
         doneJobs = 0,
@@ -54,17 +55,13 @@ module.exports = function( grunt ) {
         checkAllDone();
     }
 
-    function writeCfg( identifier, cfgData, createZip ){
+    function writeCfg( identifier, cfgData ){
         fs.writeFile( 'web/resources/ingame/' + identifier + '.cfg', cfgData, function( error ){
             if( error ){
                 console.log( error );
                 done( false );
             } else {
-                if( createZip ) {
-                    writeZip( identifier );
-                } else {
-                    doneJobs = doneJobs + 1;
-                }
+                writeZip( identifier );
             }
         });
     }
@@ -72,17 +69,9 @@ module.exports = function( grunt ) {
     function createCfg( teamData ){
         var cfgData = teamData.name + "\n";
 
-        writeCfg( teamData.identifier, cfgData, true );
+        writeCfg( teamData.steam.name, cfgData );
 
-        if( teamData.steam !== undefined ){
-            if( teamData.steam.name !== teamData.identifier ){
-                writeCfg( teamData.steam.name, cfgData, false );
-            } else {
-                doneJobs = doneJobs + 1;
-            }
-        } else {
-            doneJobs = doneJobs + 1;
-        }
+        doneJobs = doneJobs + 1;
     }
 
     function writeTeamList(){
@@ -125,12 +114,10 @@ module.exports = function( grunt ) {
             }
 
             if( teams.hasOwnProperty( index ) ){
-                fs.readFile( 'teams/' + teams[ index ] + '/data.json', 'utf8', function( error, data ){
-                    var teamData;
+                jf.readFile( 'teams/' + teams[ index ] + '/data.json', function( error, teamData ){
                     if( error ){
                         throw error;
                     } else {
-                        teamData = JSON.parse( data );
                         teamData = checkIdentifier( teamData );
                         teamList[ teamData.identifier ] = teamData.name;
                         createCfg( teamData );

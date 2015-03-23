@@ -1,4 +1,7 @@
 {
     "name": "Atlantis",
+    "steam": {
+        "name": "atlan"
+    },
     "identifier": "atlantis"
 }

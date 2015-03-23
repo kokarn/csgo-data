@@ -1,5 +1,8 @@
 {
     "name": "Team Infused",
+    "steam": {
+        "name": "infus"
+    },
     "csgolounge": {
         "name": "Infused"
     },

@@ -1,5 +1,8 @@
 {
     "name": "Team Orbit",
+    "steam": {
+        "name": "orbit"
+    },
     "gosugamers": {
         "id": 8981,
         "name": "Team Orbit"

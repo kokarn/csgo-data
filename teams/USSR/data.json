@@ -1,5 +1,8 @@
 {
     "name": "USSR",
+    "steam": {
+        "name": "ussr"
+    },
     "gosugamers": {
         "id": 8584,
         "name": "USSR"

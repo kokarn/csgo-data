@@ -1,5 +1,8 @@
 {
     "name": "Incursion",
+    "steam": {
+        "name": "incur"
+    },
     "gosugamers": {
         "id": 10789,
         "name": "Incursion"

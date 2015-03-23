@@ -1,5 +1,8 @@
 {
     "name": "eLevate",
+    "steam": {
+        "name": "eleva"
+    },
     "csgolounge": {
         "name": "eLevate"
     },

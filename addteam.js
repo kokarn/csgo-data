@@ -169,6 +169,19 @@ var http = require( 'http' ),
                 addTeam.finish();
             });
         },
+        setSteamName: function(){
+            addTeam.rl.question( 'What should be the steam identifier? ', function( answer ) {
+                if( answer.length > 0 && answer.length <= 5 ){
+                    addTeam.teamData.steam = {
+                        'name': answer
+                    };
+                    addTeam.addLogo();
+                } else {
+                    console.log( 'The length needs to be more than 0 and less than 5' );
+                    addTeam.setSteamName();
+                }
+            });
+        },
         addLogo : function(){
             var writeTarget = 'teams/' + addTeam.teamData.name + '/logo',
                 writeStream = fs.createWriteStream( writeTarget ),
@@ -244,7 +257,7 @@ var http = require( 'http' ),
                 if( error ){
                     console.log( error );
                 } else {
-                    addTeam.addLogo();
+                    addTeam.setSteamName();
                 }
             });
         },

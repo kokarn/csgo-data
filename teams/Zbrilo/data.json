@@ -1,5 +1,8 @@
 {
     "name": "Zbrilo",
+    "steam": {
+        "name": "zbril"
+    },
     "gosugamers": {
         "id": 10201,
         "name": "Zbrilo"

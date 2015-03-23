@@ -1,5 +1,8 @@
 {
     "name": "TRIDENT",
+    "steam": {
+        "name": "tride"
+    },
     "gosugamers": {
         "name": "TRIDENT",
         "id": 10846

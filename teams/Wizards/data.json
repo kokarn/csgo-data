@@ -1,5 +1,8 @@
 {
     "name": "Wizards",
+    "steam": {
+        "name": "wizar"
+    },
     "csgolounge": {
         "name": "Wizards"
     },

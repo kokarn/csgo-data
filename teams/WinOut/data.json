@@ -1,5 +1,8 @@
 {
     "name": "WinOut",
+    "steam": {
+        "name": "winou"
+    },
     "gosugamers": {
         "id": 10675,
         "name": "WinOut.NET"

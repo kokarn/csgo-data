@@ -1,5 +1,8 @@
 {
     "name": "aimface",
+    "steam": {
+        "name": "aimfa"
+    },
     "csgolounge": {
         "name": "Aimface"
     },
