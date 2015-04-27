@@ -1,0 +1,14 @@
+{
+    "name": "RCTIC eSports",
+    "gosugamers": {
+        "id": 8798,
+        "name": "RCTIC eSports.CS"
+    },
+    "steam": {
+        "name": "rctic"
+    },
+    "csgolounge": {
+        "name": "RCTIC"
+    },
+    "identifier": "rcticesports"
+}
