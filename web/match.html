@@ -533,7 +533,8 @@
             $( '#datetimepicker' ).datetimepicker({
                 weekStart: 1,
                 autoclose: true,
-                startDate: new Date()
+                startDate: new Date(),
+                todayHighlight: true
             });
 
             $body.on( 'change', '.js-first-team, .js-second-team', function( event ){
