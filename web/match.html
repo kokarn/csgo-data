@@ -318,6 +318,21 @@
             return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
         }
 
+        function getFormattedTimezoneOffset(){
+            var date = new Date(),
+                offset = ( -date.getTimezoneOffset() / 60 ).toString();
+
+            if( offset.substr( 0, 1) !== '-' ){
+                offset = '+' + offset;
+            }
+
+            if( offset < 10 && offset > -10 ){
+                offset = offset.substr( 0, 1 ) + '0' + offset.substr( 1 )
+            }
+
+            return offset;
+        }
+
         function setupPageVars(){
             if( getParameterByName( 'team1' ) && getParameterByName( 'team1' ).length > 0 ){
                 team1 = getParameterByName( 'team1' );
@@ -372,7 +387,8 @@
             var clockFace = 'HourlyCounter',
                 startDate,
                 currentDate,
-                countdownValue;
+                countdownValue,
+                startDateString;
 
             if( start <= 0 ){
                 if( clock ){
@@ -382,8 +398,11 @@
                 return false;
             }
 
-            startDate = new Date( start );
             currentDate = new Date();
+
+            startDateString = start + ':00.000' + getFormattedTimezoneOffset() + ':00';
+            startDate = new Date( startDateString );
+
             countdownValue = Math.floor( ( startDate.getTime() - currentDate.getTime() ) / 1000 );
 
             if( countdownValue / 3600 > 24 ){
@@ -514,7 +533,8 @@
             $( '#datetimepicker' ).datetimepicker({
                 weekStart: 1,
                 autoclose: true,
-                startDate: new Date()
+                startDate: new Date(),
+                todayHighlight: true
             });
 
             $body.on( 'change', '.js-first-team, .js-second-team', function( event ){

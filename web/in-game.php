@@ -31,10 +31,15 @@
             CSGO teams
         </h1>
         <p class="pull-left">
-            Put the files in
+            Either put the files in
             <code data-toggle="modal" data-target="#location-modal" class="location-code-wrapper">
                 csgo/resource/flash/econ/tournaments/teams/
             </code>
+            <p class="pull-left">
+                <a href="http://www.reddit.com/r/GlobalOffensive/comments/357q2u/a_simple_stepbystep_guide_to_include_any_team/">
+                    or follow this simple guide on how to use these
+                </a>
+            </p>
             <div class="modal fade" id="location-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
