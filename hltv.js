@@ -10,7 +10,7 @@ module.exports = {
             teamList = [],
             i;
 
-        request( _this.baseUrl + searchPhrase, function( error, response, teams ) {
+        request( _this.baseUrl + encodeURIComponent( searchPhrase ), function( error, response, teams ) {
             rawTeamList = JSON.parse( teams );
 
             for( i = 0; i < rawTeamList.length; i = i + 1 ){
