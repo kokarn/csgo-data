@@ -474,13 +474,13 @@
         function setFirstTeam( identifier ){
             team1 = identifier;
             $( '.js-first-team-wrapper' ).find( 'img' ).attr( 'src', 'resources/teams/' + identifier + '-500x500.png' );
-            $( '.js-first-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ] );
+            $( '.js-first-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ].name );
         }
 
         function setSecondTeam( identifier ){
             team2 = identifier;
             $( '.js-second-team-wrapper' ).find( 'img' ).attr( 'src', 'resources/teams/' + identifier + '-500x500.png' );
-            $( '.js-second-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ] );
+            $( '.js-second-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ].name );
         }
 
         $.getJSON( 'resources/teamlist.json', function( data ){
@@ -504,7 +504,7 @@
             teams.sort();
 
             for( index = 0; index < teams.length; index = index + 1 ){
-                $optionMarkup.val( teams[ index ] ).text( teamList[ teams[ index ] ] );
+                $optionMarkup.val( teams[ index ] ).text( teamList[ teams[ index ] ].name );
 
                 if( team1 === teams[ index ] ){
                     $firstTeamList.append( $optionMarkup.clone().prop( 'selected', true ) );
