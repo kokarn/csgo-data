@@ -10,6 +10,7 @@ var http = require( 'http' ),
     exec = require( 'child_process' ),
     request = require( 'request' ),
     gosugamers = require( './gosugamers' ),
+    hltv = require( './hltv' ),
     logoFilename = '',
     addTeam = {
         rl : false,
@@ -33,15 +34,60 @@ var http = require( 'http' ),
                 }
             });
         },
+        setInitialHltv : function( searchPhrase ){
+            hltv.search( searchPhrase, function( teams ){
+                if( teams.length > 0 ){
+                    addTeam.teamData.hltv = {
+                        name : teams[ 0 ].name,
+                        id : teams[ 0 ].id
+                    };
+                }
+            } );
+        },
+        searchHltv : function( searchPhrase ){
+            'use strict';
+            hltv.search( searchPhrase, function( teams ){
+                var i;
+
+                if( teams.length <= 0 ){
+                    console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
+                    addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
+                        if( answer.length <= 0 ){
+                            addTeam.finish();
+                        } else {
+                            addTeam.searchHltv( answer );
+                        }
+                    });
+                } else {
+                    for( i = 0; i < teams.length; i = i + 1 ){
+                        console.log( parseInt( i + 1, 10 ) + ': ' + teams[ i ].name + ' (' + teams[ i ].country + ')' );
+                    }
+
+                    addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
+                        if( answer.length <= 0 ){
+                            addTeam.finish();
+                        } else if( answer === '0' ){
+                            addTeam.rl.question( 'Please enter a search term ', function( answer ) {
+                                addTeam.searchHltv( answer );
+                            });
+                        } else {
+                            addTeam.teamData.hltv = {
+                                name : teams[ answer ].name,
+                                id : teams[ answer ].id
+                            };
+
+                            addTeam.finish();
+                        }
+                    });
+                }
+            } );
+        },
         setInitialGosugamers : function( searchPhrase ){
             gosugamers.search( searchPhrase, function( teams ){
                 if( teams.length > 0 ){
                     addTeam.teamData.gosugamers = teams[ 0 ];
                 }
             } );
-        },
-                }
-            });
         },
         searchGosugamers : function( searchPhrase ){
             'use strict';
@@ -81,6 +127,7 @@ var http = require( 'http' ),
             console.log( '1: Name' );
             console.log( '2: CSGOLounge' );
             console.log( '3: Gosugamers' );
+            console.log( '4: HLTV' );
 
             addTeam.rl.question( 'What do you want to change? ', function( answer ) {
                 switch( answer ){
@@ -92,6 +139,9 @@ var http = require( 'http' ),
                         break;
                     case '3':
                         addTeam.searchGosugamers( addTeam.teamData.name );
+                        break;
+                    case '4':
+                        addTeam.searchHltv( addTeam.teamData.name );
                         break;
                     default:
                         addTeam.finish();
@@ -241,6 +291,7 @@ var http = require( 'http' ),
 
             addTeam.teamData.name = teamName;
             addTeam.setInitialGosugamers( addTeam.teamData.name );
+            addTeam.setInitialHltv( addTeam.teamData.name );
             addTeam.ensureExists( 'teams/' + addTeam.teamData.name, function( error ) {
                 if( error ){
                     console.log( error );
