@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Tyloo"
     },
-    "identifier": "tyloo"
+    "identifier": "tyloo",
+    "hltv": {
+        "name": "TyLoo",
+        "id": "2063"
+    }
 }

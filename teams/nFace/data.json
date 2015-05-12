@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "nFace"
     },
-    "identifier": "nface"
+    "identifier": "nface",
+    "hltv": {
+        "name": "Nface",
+        "id": "4864"
+    }
 }

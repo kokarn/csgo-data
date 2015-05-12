@@ -10,5 +10,9 @@
         "name": "Astana Dragons",
         "id": 7387
     },
-    "identifier": "astanadragons"
+    "identifier": "astanadragons",
+    "hltv": {
+        "name": "Astana Dragons",
+        "id": "4984"
+    }
 }

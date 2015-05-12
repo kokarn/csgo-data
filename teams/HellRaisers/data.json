@@ -10,5 +10,9 @@
         "name": "HellRaisers",
         "id": 8481
     },
-    "identifier": "hellraisers"
+    "identifier": "hellraisers",
+    "hltv": {
+        "name": "HellRaisers",
+        "id": "5310"
+    }
 }

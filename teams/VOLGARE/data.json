@@ -10,5 +10,9 @@
         "name": "VOLGARE",
         "id": 9635
     },
-    "identifier": "volgare"
+    "identifier": "volgare",
+    "hltv": {
+        "name": "volgare",
+        "id": "2471"
+    }
 }

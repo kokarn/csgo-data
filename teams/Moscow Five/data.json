@@ -10,5 +10,9 @@
         "id": 9344,
         "name": "Moscow 5"
     },
-    "identifier": "moscowfive"
+    "identifier": "moscowfive",
+    "hltv": {
+        "name": "Moscow Five",
+        "id": "3429"
+    }
 }

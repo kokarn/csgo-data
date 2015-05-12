@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "GGWP"
     },
-    "identifier": "ggwp"
+    "identifier": "ggwp",
+    "hltv": {
+        "name": "GGWP",
+        "id": "5970"
+    }
 }

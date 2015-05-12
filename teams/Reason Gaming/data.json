@@ -10,5 +10,9 @@
         "name": "Reason Gaming CS",
         "id": 7407
     },
-    "identifier": "reasongaming"
+    "identifier": "reasongaming",
+    "hltv": {
+        "name": "Reason Gaming",
+        "id": "4822"
+    }
 }

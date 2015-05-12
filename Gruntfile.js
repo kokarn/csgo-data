@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
                 },
                 files : [{
                     expand: true,
-                    cwd: 'teams/',
+                    cwd: 'teams/**/',
                     src: [ '**/*.png' ],
                     dest: 'web/resources/ingame/',
                     rename: function( dest, src ){

@@ -10,5 +10,9 @@
         "id": 9716,
         "name": "PerilousRAGE"
     },
-    "identifier": "perilousrage"
+    "identifier": "perilousrage",
+    "hltv": {
+        "name": "PerilousRAGE",
+        "id": "5876"
+    }
 }

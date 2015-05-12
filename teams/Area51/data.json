@@ -10,5 +10,9 @@
         "id": 7425,
         "name": "Area 51 Gaming"
     },
-    "identifier": "area51"
+    "identifier": "area51",
+    "hltv": {
+        "name": "Area51",
+        "id": "2967"
+    }
 }

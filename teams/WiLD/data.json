@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "WiLD"
     },
-    "identifier": "wild"
+    "identifier": "wild",
+    "hltv": {
+        "name": "WiLD",
+        "id": "4364"
+    }
 }

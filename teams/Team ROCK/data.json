@@ -10,5 +10,9 @@
         "id": 11696,
         "name": "ROCK"
     },
-    "identifier": "teamrock"
+    "identifier": "teamrock",
+    "hltv": {
+        "name": "Rock",
+        "id": "6059"
+    }
 }

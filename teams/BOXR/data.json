@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Boxr"
     },
-    "identifier": "boxr"
+    "identifier": "boxr",
+    "hltv": {
+        "name": "BOXR",
+        "id": "6050"
+    }
 }

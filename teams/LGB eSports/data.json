@@ -10,5 +10,9 @@
         "name": "LGB eSports",
         "id": 7413
     },
-    "identifier": "lgbesports"
+    "identifier": "lgbesports",
+    "hltv": {
+        "name": "LGB",
+        "id": "5962"
+    }
 }

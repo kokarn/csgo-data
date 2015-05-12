@@ -3,5 +3,13 @@
     "steam": {
         "name": "atlan"
     },
-    "identifier": "atlantis"
+    "identifier": "atlantis",
+    "hltv": {
+        "name": "Atlantis",
+        "id": "6035"
+    },
+    "gosugamers": {
+        "name": "Atlantis eSports",
+        "id": 11060
+    }
 }

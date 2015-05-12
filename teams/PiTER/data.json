@@ -10,5 +10,9 @@
         "name": "Piter",
         "id": 10199
     },
-    "identifier": "piter"
+    "identifier": "piter",
+    "hltv": {
+        "name": "PiTER",
+        "id": "5949"
+    }
 }

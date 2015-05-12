@@ -10,5 +10,9 @@
         "name": "Clan-Mystik",
         "id": 7410
     },
-    "identifier": "clanmystik"
+    "identifier": "clanmystik",
+    "hltv": {
+        "name": "Clan-Mystik",
+        "id": "4948"
+    }
 }

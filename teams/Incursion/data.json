@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Incursion"
     },
-    "identifier": "incursion"
+    "identifier": "incursion",
+    "hltv": {
+        "name": "Incursion",
+        "id": "5927"
+    }
 }

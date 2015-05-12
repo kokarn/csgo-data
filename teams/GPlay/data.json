@@ -10,5 +10,9 @@
         "name": "Gplay",
         "id": 9261
     },
-    "identifier": "gplay"
+    "identifier": "gplay",
+    "hltv": {
+        "name": "GPlay",
+        "id": "5817"
+    }
 }

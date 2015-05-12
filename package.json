@@ -36,6 +36,7 @@
     "jsonfile": "^2.0.0",
     "lwip": "0.0.6",
     "normalize-for-search": "^1.2.0",
-    "request": "^2.53.0"
+    "request": "^2.53.0",
+    "readline-sync": "^1.2.14"
   }
 }

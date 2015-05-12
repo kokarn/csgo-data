@@ -7,5 +7,9 @@
         "name": "KILLERFISH eSport e.V.",
         "id": 9245
     },
-    "identifier": "killerfishesport"
+    "identifier": "killerfishesport",
+    "hltv": {
+        "name": "KILLERFISH",
+        "id": "5093"
+    }
 }

@@ -10,5 +10,9 @@
         "name": "Team Liquid.CS",
         "id": 10561
     },
-    "identifier": "teamliquid"
+    "identifier": "teamliquid",
+    "hltv": {
+        "name": "Liquid",
+        "id": "5973"
+    }
 }

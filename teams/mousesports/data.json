@@ -10,5 +10,9 @@
         "name": "mousesports.CS",
         "id": 7395
     },
-    "identifier": "mousesports"
+    "identifier": "mousesports",
+    "hltv": {
+        "name": "mousesports",
+        "id": "60"
+    }
 }

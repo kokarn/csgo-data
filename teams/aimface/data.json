@@ -10,5 +10,9 @@
         "name": "aimface",
         "id": 8980
     },
-    "identifier": "aimface"
+    "identifier": "aimface",
+    "hltv": {
+        "name": "aimface",
+        "id": "5722"
+    }
 }

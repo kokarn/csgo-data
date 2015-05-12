@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "xGame"
     },
-    "identifier": "xgamekz"
+    "identifier": "xgamekz",
+    "hltv": {
+        "name": "xGame.KZ",
+        "id": "6020"
+    }
 }

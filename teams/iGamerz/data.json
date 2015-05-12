@@ -7,5 +7,9 @@
         "id": 9389,
         "name": "Infernal Gamerz"
     },
-    "identifier": "igamerz"
+    "identifier": "igamerz",
+    "hltv": {
+        "name": "iGamerz",
+        "id": "2247"
+    }
 }

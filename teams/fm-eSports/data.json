@@ -10,5 +10,9 @@
         "id": 8806,
         "name": "FM eSports"
     },
-    "identifier": "fmesports"
+    "identifier": "fmesports",
+    "hltv": {
+        "name": "fm-eSports",
+        "id": "4445"
+    }
 }

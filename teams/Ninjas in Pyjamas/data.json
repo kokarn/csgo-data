@@ -10,5 +10,9 @@
         "name": "Ninjas in Pyjamas",
         "id": 7384
     },
-    "identifier": "ninjasinpyjamas"
+    "identifier": "ninjasinpyjamas",
+    "hltv": {
+        "name": "NiP",
+        "id": "157"
+    }
 }

@@ -10,5 +10,9 @@
         "name": "Team KaBuM",
         "id": 9195
     },
-    "identifier": "kabumtd"
+    "identifier": "kabumtd",
+    "hltv": {
+        "name": "KaBuM.TD",
+        "id": "5822"
+    }
 }

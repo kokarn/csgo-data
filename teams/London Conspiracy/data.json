@@ -10,5 +10,9 @@
         "name": "London Conspiracy.CS",
         "id": 8493
     },
-    "identifier": "londonconspiracy"
+    "identifier": "londonconspiracy",
+    "hltv": {
+        "name": "London Conspiracy",
+        "id": "5569"
+    }
 }

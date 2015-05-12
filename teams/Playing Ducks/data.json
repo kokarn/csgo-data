@@ -10,5 +10,9 @@
         "name": "Playing-Ducks",
         "id": 8858
     },
-    "identifier": "playingducks"
+    "identifier": "playingducks",
+    "hltv": {
+        "name": "Playing Ducks",
+        "id": "3396"
+    }
 }

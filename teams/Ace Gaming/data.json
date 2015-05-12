@@ -3,5 +3,9 @@
     "steam": {
         "name": "acega"
     },
-    "identifier": "acegaming"
+    "identifier": "acegaming",
+    "gosugamers": {
+        "name": "Ace Gaming.",
+        "id": 11847
+    }
 }

@@ -10,5 +10,9 @@
         "id": 10919,
         "name": "XPC"
     },
-    "identifier": "xpcgaming"
+    "identifier": "xpcgaming",
+    "hltv": {
+        "name": "XPC",
+        "id": "6025"
+    }
 }

@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "RCTIC"
     },
-    "identifier": "rcticesports"
+    "identifier": "rcticesports",
+    "hltv": {
+        "name": "RCTIC",
+        "id": "2971"
+    }
 }

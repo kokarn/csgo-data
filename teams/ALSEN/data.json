@@ -10,5 +10,9 @@
         "name": "ALSEN",
         "id": 8585
     },
-    "identifier": "alsen"
+    "identifier": "alsen",
+    "hltv": {
+        "name": "ALSEN",
+        "id": "3982"
+    }
 }

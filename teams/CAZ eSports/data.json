@@ -3,5 +3,13 @@
     "steam": {
         "name": "cazes"
     },
-    "identifier": "cazesports"
+    "identifier": "cazesports",
+    "hltv": {
+        "name": "CAZ",
+        "id": "6058"
+    },
+    "gosugamers": {
+        "name": "CAZ eSports",
+        "id": 11208
+    }
 }

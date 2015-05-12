@@ -7,5 +7,9 @@
         "name": "TRIDENT",
         "id": 10846
     },
-    "identifier": "trident"
+    "identifier": "trident",
+    "hltv": {
+        "name": "TRIDENT",
+        "id": "5290"
+    }
 }

@@ -3,12 +3,16 @@
     "steam": {
         "name": "cplay"
     },
-    "gosugamers" : {
+    "gosugamers": {
         "name": "CPLAY",
         "id": 7437
     },
     "csgolounge": {
         "name": "CPlay"
     },
-    "identifier": "cplay"
+    "identifier": "cplay",
+    "hltv": {
+        "name": "CPLAY",
+        "id": "4900"
+    }
 }

@@ -10,5 +10,9 @@
         "name": "Bad Monkey Gaming Female",
         "id": 9161
     },
-    "identifier": "badmonkeygaming"
+    "identifier": "badmonkeygaming",
+    "hltv": {
+        "name": "Bad Monkey",
+        "id": "5519"
+    }
 }

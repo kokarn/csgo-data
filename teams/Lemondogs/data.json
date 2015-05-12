@@ -7,5 +7,9 @@
     "steam": {
         "name": "lemon"
     },
-    "identifier": "lemondogs"
+    "identifier": "lemondogs",
+    "hltv": {
+        "name": "Lemondogs",
+        "id": "2990"
+    }
 }

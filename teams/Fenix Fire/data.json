@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "FenixFr"
     },
-    "identifier": "fenixfire"
+    "identifier": "fenixfire",
+    "hltv": {
+        "name": "Fenix Fire",
+        "id": "6009"
+    }
 }

@@ -3,5 +3,9 @@
     "steam": {
         "name": "melty"
     },
-    "identifier": "meltyesportclub"
+    "identifier": "meltyesportclub",
+    "hltv": {
+        "name": "melty",
+        "id": "6073"
+    }
 }

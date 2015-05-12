@@ -7,5 +7,9 @@
         "name": "Avant Garde.CS",
         "id": 10847
     },
-    "identifier": "avantgarde"
+    "identifier": "avantgarde",
+    "hltv": {
+        "name": "AVANT GARDE",
+        "id": "5293"
+    }
 }

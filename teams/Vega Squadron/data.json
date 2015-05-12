@@ -7,5 +7,9 @@
     "steam": {
         "name": "vegas"
     },
-    "identifier": "vegasquadron"
+    "identifier": "vegasquadron",
+    "hltv": {
+        "name": "Vega Squadron",
+        "id": "6094"
+    }
 }

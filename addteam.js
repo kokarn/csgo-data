@@ -4,17 +4,16 @@ var http = require( 'http' ),
     https = require( 'https' ),
     chalk = require( 'chalk' ),
     fs = require( 'fs' ),
-    readline = require( 'readline' ),
     cheerio = require( 'cheerio' ),
     fileType = require( 'file-type' ),
+    readline = require( 'readline-sync' ),
     exec = require( 'child_process' ),
     request = require( 'request' ),
+    gosugamers = require( './gosugamers' ),
+    hltv = require( './hltv' ),
     logoFilename = '',
     addTeam = {
-        rl : false,
-        state: 0,
         teamData : {},
-        gosugamersBaseUrl : 'http://www.gosugamers.net/counterstrike/rankings?tunranked=0&tunranked=1&tname=',
         ensureExists: function( path, mask, callback ) {
             if( typeof mask == 'function' ) { // allow the `mask` parameter to be optional
                 callback = mask;
@@ -33,87 +32,116 @@ var http = require( 'http' ),
                 }
             });
         },
-        setGosugamers : function( searchPhrase, index, callback ){
-            'use strict';
-
-            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
-                var $ = cheerio.load( html );
-
-
-                if( $( '.ranking-link' ).eq( index ).length > 0 ){
-                    addTeam.teamData.gosugamers = {
-                        id: $( '.ranking-link' ).eq( index ).data( 'id' ),
-                        name: $( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
+        setInitialHltv : function( searchPhrase ){
+            hltv.search( searchPhrase, function( teams ){
+                if( teams.length > 0 ){
+                    addTeam.teamData.hltv = {
+                        name : teams[ 0 ].name,
+                        id : teams[ 0 ].id
                     };
                 }
+            } );
+        },
+        searchHltv : function( searchPhrase ){
+            'use strict';
+            hltv.search( searchPhrase, function( teams ){
+                var i,
+                    answer;
 
-                if( typeof callback === 'function' ){
-                    callback.call();
+                if( teams.length <= 0 ){
+                    console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
+                    answer = readline.question( 'Please enter another search term or enter to cancel ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else {
+                        addTeam.searchHltv( answer );
+                    }
+                } else {
+                    for( i = 0; i < teams.length; i = i + 1 ){
+                        console.log( parseInt( i + 1, 10 ) + ': ' + teams[ i ].name + ' (' + teams[ i ].country + ')' );
+                    }
+
+                    answer = readline.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else if( answer === '0' ){
+                        answer = readline.question( 'Please enter a search term ' );
+                        addTeam.searchHltv( answer );
+                    } else {
+                        addTeam.teamData.hltv = {
+                            name : teams[ answer ].name,
+                            id : teams[ answer ].id
+                        };
+
+                        addTeam.finish();
+                    }
                 }
-            });
+            } );
+        },
+        setInitialGosugamers : function( searchPhrase ){
+            gosugamers.search( searchPhrase, function( teams ){
+                if( teams.length > 0 ){
+                    addTeam.teamData.gosugamers = teams[ 0 ];
+                }
+            } );
         },
         searchGosugamers : function( searchPhrase ){
             'use strict';
+            gosugamers.search( searchPhrase, function( teams ){
+                var i,
+                    answer;
 
-            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
-                var $ = cheerio.load( html ),
-                    $teams;
-
-                if( error ){
-                    console.log( error );
-                }
-
-                $teams = $( '.ranking-link' );
-
-                if( $teams.length <= 0 ){
+                if( teams.length <= 0 ){
                     console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
-                    addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
-                        if( answer.length <= 0 ){
-                            addTeam.finish();
-                        } else {
-                            addTeam.searchGosugamers( answer );
-                        }
-                    });
+                    answer = readline.question( 'Please enter another search term or enter to cancel ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else {
+                        addTeam.searchGosugamers( answer );
+                    }
                 } else {
-                    $teams.each( function( index, element ){
-                        console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
-                    });
+                    for( i = 0; i < teams.length; i = i + 1 ){
+                        console.log( parseInt( i + 1, 10 ) + ': ' + teams[ i ].name );
+                    }
 
-                    addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
-                        if( answer.length <= 0 ){
-                            addTeam.finish();
-                        } else if( answer === '0' ){
-                            addTeam.rl.question( 'Please enter a search term ', function( answer ) {
-                                addTeam.searchGosugamers( answer );
-                            });
-                        } else {
-                            addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
-                        }
-                    });
+                    answer = readline.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else if( answer === '0' ){
+                        answer = readline.question( 'Please enter a search term ' );
+                        addTeam.searchGosugamers( answer );
+                    } else {
+                        addTeam.teamData.gosugamers = teams[ answer ];
+                        addTeam.finish();
+                    }
                 }
-            });
+            } );
         },
         changeData : function(){
+            var answer;
             console.log( '1: Name' );
             console.log( '2: CSGOLounge' );
             console.log( '3: Gosugamers' );
+            console.log( '4: HLTV' );
 
-            addTeam.rl.question( 'What do you want to change? ', function( answer ) {
-                switch( answer ){
-                    case '1':
-                        addTeam.setTeamName();
-                        break;
-                    case '2':
-                        addTeam.csGoLoungeName();
-                        break;
-                    case '3':
-                        addTeam.searchGosugamers( addTeam.teamData.name );
-                        break;
-                    default:
-                        addTeam.finish();
-                        break;
-                }
-            });
+            answer = readline.question( 'What do you want to change? ' );
+            switch( answer ){
+                case '1':
+                    addTeam.setTeamName();
+                    break;
+                case '2':
+                    addTeam.csGoLoungeName();
+                    break;
+                case '3':
+                    addTeam.searchGosugamers( addTeam.teamData.name );
+                    break;
+                case '4':
+                    addTeam.searchHltv( addTeam.teamData.name );
+                    break;
+                default:
+                    addTeam.finish();
+                    break;
+            }
         },
         writeData : function(){
             fs.writeFile( 'teams/' + addTeam.teamData.name + '/data.json', JSON.stringify( addTeam.teamData, null, 4 ), function( error ){
@@ -121,35 +149,34 @@ var http = require( 'http' ),
                     console.log( error );
                 } else {
                     console.log( 'Team data written successfully' );
-                    addTeam.rl.question( 'Open logo for editing (Y/N)? ', function( answer ) {
-                        switch( answer ){
-                            case 'y':
-                            case 'Y':
-                                addTeam.watchLogo();
-                                exec.execSync( 'open "' + addTeam.logoFilename + '"' );
-                                break;
-                            default:
-                                addTeam.runGrunt();
-                                break;
-                        }
-                    });
+                    answer = readline.question( 'Open logo for editing (Y/N)? ' );
+                    switch( answer ){
+                        case 'y':
+                        case 'Y':
+                            addTeam.watchLogo();
+                            exec.execSync( 'open "' + addTeam.logoFilename + '"' );
+                            break;
+                        default:
+                            addTeam.runGrunt();
+                            break;
+                    }
                 }
             });
         },
         finish: function(){
+            var answer;
             console.log( JSON.stringify( addTeam.teamData, null, 4 ) );
-            addTeam.rl.question( 'Is this correct? (Y/N) ', function( answer ) {
-                switch( answer ){
-                    case 'n':
-                    case 'N':
-                        addTeam.changeData();
-                        break;
-                    case 'y':
-                    case 'Y':
-                        addTeam.writeData();
-                        break;
-                }
-            });
+            answer = readline.question( 'Is this correct? (Y/N) ' );
+            switch( answer ){
+                case 'n':
+                case 'N':
+                    addTeam.changeData();
+                    break;
+                case 'y':
+                case 'Y':
+                    addTeam.writeData();
+                    break;
+            }
         },
         runGrunt: function(){
             var child = exec.spawn( 'grunt', [], { stdio: 'inherit' } );
@@ -159,37 +186,43 @@ var http = require( 'http' ),
             });
         },
         csGoLoungeName: function(){
-            addTeam.rl.question( 'What is the name of the team on CSGOLounge? ', function( answer ) {
-                if( answer.length > 0 ){
-                    addTeam.teamData.csgolounge = {
-                        'name': answer
-                    };
-                }
+            var answer;
 
-                addTeam.finish();
-            });
+            answer = readline.question( 'What is the name of the team on CSGOLounge? ' );
+            if( answer.length > 0 ){
+                addTeam.teamData.csgolounge = {
+                    'name': answer
+                };
+            }
+
+            addTeam.finish();
         },
         setSteamName: function(){
-            addTeam.rl.question( 'What should be the steam identifier? ', function( answer ) {
-                if( answer.length > 0 && answer.length <= 5 ){
-                    addTeam.teamData.steam = {
-                        'name': answer
-                    };
-                    addTeam.addLogo();
-                } else {
-                    console.log( 'The length needs to be more than 0 and less than 5' );
-                    addTeam.setSteamName();
-                }
-            });
+            var answer;
+
+            answer = readline.question( 'What should be the steam identifier? ' );
+            if( answer.length > 0 && answer.length <= 5 ){
+                addTeam.teamData.steam = {
+                    'name': answer
+                };
+                addTeam.addLogo();
+            } else {
+                console.log( 'The length needs to be more than 0 and less than 5' );
+                addTeam.setSteamName();
+            }
         },
         addLogo : function(){
             var writeTarget = 'teams/' + addTeam.teamData.name + '/logo',
                 writeStream = fs.createWriteStream( writeTarget ),
                 request,
                 extension,
-                protocol;
+                protocol,
+                url;
 
-            addTeam.rl.question( 'URL to the logo? ', function( url ) {
+            url = readline.question( 'URL to the logo? ' );
+            if( url.length <= 0 ){
+                addTeam.csGoLoungeName();
+            } else {
                 if( url.substr( 0, 5 ) === 'https' ){
                     protocol = https;
                 } else {
@@ -215,7 +248,7 @@ var http = require( 'http' ),
                 });
 
                 addTeam.csGoLoungeName();
-            });
+            }
         },
         watchLogo : function(){
             'use strict';
@@ -252,7 +285,8 @@ var http = require( 'http' ),
             'use strict';
 
             addTeam.teamData.name = teamName;
-            addTeam.setGosugamers( addTeam.teamData.name, 0 );
+            addTeam.setInitialGosugamers( addTeam.teamData.name );
+            addTeam.setInitialHltv( addTeam.teamData.name );
             addTeam.ensureExists( 'teams/' + addTeam.teamData.name, function( error ) {
                 if( error ){
                     console.log( error );
@@ -261,34 +295,15 @@ var http = require( 'http' ),
                 }
             });
         },
-        setupReadLine : function(){
-            if( addTeam.rl === false ) {
-                addTeam.rl = readline.createInterface({
-                    input: process.stdin,
-                    output: process.stdout
-                }),
-
-                addTeam.rl.on( 'SIGINT', function() {
-                    if( addTeam.state !== 0 ){
-                        addTeam.rl.close();
-                        addTeam.rl = false;
-                        addTeam.start();
-                    } else {
-                        console.log();
-                        process.exit();
-                    }
-                });
-            }
-        },
         setTeamName : function(){
-            addTeam.rl.question( 'What is the name of the team? ', function( answer ) {
-                addTeam.createTeam( answer );
-            });
+            var answer;
+
+            answer = readline.question( 'What is the name of the team? ');
+            addTeam.createTeam( answer );
         },
         start : function(){
             'use strict';
 
-            addTeam.setupReadLine();
             addTeam.setTeamName();
         }
     };

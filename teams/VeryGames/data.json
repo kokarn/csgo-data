@@ -10,5 +10,9 @@
         "name": "Team VeryGames",
         "id": 7385
     },
-    "identifier": "verygames"
+    "identifier": "verygames",
+    "hltv": {
+        "name": "VeryGames",
+        "id": "4467"
+    }
 }

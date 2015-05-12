@@ -10,5 +10,9 @@
         "name": "LunatiK",
         "id": "9618"
     },
-    "identifier": "lunatikesports"
+    "identifier": "lunatikesports",
+    "hltv": {
+        "name": "LunatiK",
+        "id": "5700"
+    }
 }

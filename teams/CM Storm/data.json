@@ -7,5 +7,9 @@
         "id": 11110,
         "name": "CMStorm Female"
     },
-    "identifier": "cmstorm"
+    "identifier": "cmstorm",
+    "hltv": {
+        "name": "CM Storm",
+        "id": "6041"
+    }
 }

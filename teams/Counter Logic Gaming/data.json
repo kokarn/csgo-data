@@ -10,5 +10,9 @@
         "name": "Counter Logic Gaming.CS",
         "id": 10569
     },
-    "identifier": "counterlogicgaming"
+    "identifier": "counterlogicgaming",
+    "hltv": {
+        "name": "CLG",
+        "id": "5974"
+    }
 }

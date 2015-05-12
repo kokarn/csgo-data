@@ -10,5 +10,9 @@
         "name": "Ubinited",
         "id": 9322
     },
-    "identifier": "ubinited"
+    "identifier": "ubinited",
+    "hltv": {
+        "name": "UBINITED fe",
+        "id": "4011"
+    }
 }

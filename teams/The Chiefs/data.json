@@ -7,5 +7,9 @@
         "name": "The Chiefs",
         "id": 10849
     },
-    "identifier": "thechiefs"
+    "identifier": "thechiefs",
+    "hltv": {
+        "name": "The Chiefs",
+        "id": "6010"
+    }
 }

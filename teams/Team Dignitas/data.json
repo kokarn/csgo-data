@@ -10,5 +10,9 @@
         "name": "Team Dignitas.CS",
         "id": 8431
     },
-    "identifier": "teamdignitas"
+    "identifier": "teamdignitas",
+    "hltv": {
+        "name": "dignitas",
+        "id": "5422"
+    }
 }

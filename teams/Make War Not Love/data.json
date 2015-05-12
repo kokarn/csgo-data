@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "MWNL"
     },
-    "identifier": "makewarnotlove"
+    "identifier": "makewarnotlove",
+    "hltv": {
+        "name": "MWNL",
+        "id": "5699"
+    }
 }

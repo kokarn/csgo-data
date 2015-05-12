@@ -10,5 +10,9 @@
         "name": "eLevate",
         "id": 9011
     },
-    "identifier": "elevate"
+    "identifier": "elevate",
+    "hltv": {
+        "name": "eLevate",
+        "id": "5775"
+    }
 }

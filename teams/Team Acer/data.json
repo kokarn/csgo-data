@@ -7,5 +7,9 @@
         "name": "Team Acer.",
         "id": 10962
     },
-    "identifier": "teamacer"
+    "identifier": "teamacer",
+    "hltv": {
+        "name": "Acer",
+        "id": "6031"
+    }
 }

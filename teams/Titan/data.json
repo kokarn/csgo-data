@@ -10,5 +10,9 @@
         "name": "Titan.CS",
         "id": 8436
     },
-    "identifier": "titan"
+    "identifier": "titan",
+    "hltv": {
+        "name": "Titan",
+        "id": "5284"
+    }
 }

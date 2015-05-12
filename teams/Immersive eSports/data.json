@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Ims"
     },
-    "identifier": "immersiveesports"
+    "identifier": "immersiveesports",
+    "hltv": {
+        "name": "Immersive",
+        "id": "6054"
+    }
 }
