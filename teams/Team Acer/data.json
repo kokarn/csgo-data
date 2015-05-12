@@ -11,5 +11,8 @@
     "hltv": {
         "name": "Acer",
         "id": "6031"
+    },
+    "csgolounge": {
+        "name": "TA"
     }
 }
