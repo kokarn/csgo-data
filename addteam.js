@@ -70,7 +70,7 @@ var http = require( 'http' ),
                                 addTeam.searchGosugamers( answer );
                             });
                         } else {
-                            addTeam.teamData.gosugamers = teams[ i ];
+                            addTeam.teamData.gosugamers = teams[ answer ];
                             addTeam.finish();
                         }
                     });
