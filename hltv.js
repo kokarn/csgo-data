@@ -14,11 +14,13 @@ module.exports = {
             rawTeamList = JSON.parse( teams );
 
             for( i = 0; i < rawTeamList.length; i = i + 1 ){
-                teamList.push({
-                    name : rawTeamList[ i ].name,
-                    id : rawTeamList[ i ].teamid,
-                    country : rawTeamList[ i ].country
-                });
+                if( rawTeamList[ i ].teamid > 0 ){
+                    teamList.push({
+                        name : rawTeamList[ i ].name,
+                        id : rawTeamList[ i ].teamid,
+                        country : rawTeamList[ i ].country
+                    });
+                }
             }
 
             callback.call( this, teamList );
