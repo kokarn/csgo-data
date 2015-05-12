@@ -4,17 +4,15 @@ var http = require( 'http' ),
     https = require( 'https' ),
     chalk = require( 'chalk' ),
     fs = require( 'fs' ),
-    readline = require( 'readline' ),
     cheerio = require( 'cheerio' ),
     fileType = require( 'file-type' ),
+    readline = require( 'readline-sync' ),
     exec = require( 'child_process' ),
     request = require( 'request' ),
     gosugamers = require( './gosugamers' ),
     hltv = require( './hltv' ),
     logoFilename = '',
     addTeam = {
-        rl : false,
-        state: 0,
         teamData : {},
         ensureExists: function( path, mask, callback ) {
             if( typeof mask == 'function' ) { // allow the `mask` parameter to be optional
@@ -47,38 +45,36 @@ var http = require( 'http' ),
         searchHltv : function( searchPhrase ){
             'use strict';
             hltv.search( searchPhrase, function( teams ){
-                var i;
+                var i,
+                    answer;
 
                 if( teams.length <= 0 ){
                     console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
-                    addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
-                        if( answer.length <= 0 ){
-                            addTeam.finish();
-                        } else {
-                            addTeam.searchHltv( answer );
-                        }
-                    });
+                    answer = readline.question( 'Please enter another search term or enter to cancel ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else {
+                        addTeam.searchHltv( answer );
+                    }
                 } else {
                     for( i = 0; i < teams.length; i = i + 1 ){
                         console.log( parseInt( i + 1, 10 ) + ': ' + teams[ i ].name + ' (' + teams[ i ].country + ')' );
                     }
 
-                    addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
-                        if( answer.length <= 0 ){
-                            addTeam.finish();
-                        } else if( answer === '0' ){
-                            addTeam.rl.question( 'Please enter a search term ', function( answer ) {
-                                addTeam.searchHltv( answer );
-                            });
-                        } else {
-                            addTeam.teamData.hltv = {
-                                name : teams[ answer ].name,
-                                id : teams[ answer ].id
-                            };
+                    answer = readline.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else if( answer === '0' ){
+                        answer = readline.question( 'Please enter a search term ' );
+                        addTeam.searchHltv( answer );
+                    } else {
+                        addTeam.teamData.hltv = {
+                            name : teams[ answer ].name,
+                            id : teams[ answer ].id
+                        };
 
-                            addTeam.finish();
-                        }
-                    });
+                        addTeam.finish();
+                    }
                 }
             } );
         },
@@ -92,62 +88,60 @@ var http = require( 'http' ),
         searchGosugamers : function( searchPhrase ){
             'use strict';
             gosugamers.search( searchPhrase, function( teams ){
-                var i;
+                var i,
+                    answer;
 
                 if( teams.length <= 0 ){
                     console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
-                    addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
-                        if( answer.length <= 0 ){
-                            addTeam.finish();
-                        } else {
-                            addTeam.searchGosugamers( answer );
-                        }
-                    });
+                    answer = readline.question( 'Please enter another search term or enter to cancel ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else {
+                        addTeam.searchGosugamers( answer );
+                    }
                 } else {
                     for( i = 0; i < teams.length; i = i + 1 ){
                         console.log( parseInt( i + 1, 10 ) + ': ' + teams[ i ].name );
                     }
 
-                    addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
-                        if( answer.length <= 0 ){
-                            addTeam.finish();
-                        } else if( answer === '0' ){
-                            addTeam.rl.question( 'Please enter a search term ', function( answer ) {
-                                addTeam.searchGosugamers( answer );
-                            });
-                        } else {
-                            addTeam.teamData.gosugamers = teams[ answer ];
-                            addTeam.finish();
-                        }
-                    });
+                    answer = readline.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ' );
+                    if( answer.length <= 0 ){
+                        addTeam.finish();
+                    } else if( answer === '0' ){
+                        answer = readline.question( 'Please enter a search term ' );
+                        addTeam.searchGosugamers( answer );
+                    } else {
+                        addTeam.teamData.gosugamers = teams[ answer ];
+                        addTeam.finish();
+                    }
                 }
             } );
         },
         changeData : function(){
+            var answer;
             console.log( '1: Name' );
             console.log( '2: CSGOLounge' );
             console.log( '3: Gosugamers' );
             console.log( '4: HLTV' );
 
-            addTeam.rl.question( 'What do you want to change? ', function( answer ) {
-                switch( answer ){
-                    case '1':
-                        addTeam.setTeamName();
-                        break;
-                    case '2':
-                        addTeam.csGoLoungeName();
-                        break;
-                    case '3':
-                        addTeam.searchGosugamers( addTeam.teamData.name );
-                        break;
-                    case '4':
-                        addTeam.searchHltv( addTeam.teamData.name );
-                        break;
-                    default:
-                        addTeam.finish();
-                        break;
-                }
-            });
+            answer = readline.question( 'What do you want to change? ' );
+            switch( answer ){
+                case '1':
+                    addTeam.setTeamName();
+                    break;
+                case '2':
+                    addTeam.csGoLoungeName();
+                    break;
+                case '3':
+                    addTeam.searchGosugamers( addTeam.teamData.name );
+                    break;
+                case '4':
+                    addTeam.searchHltv( addTeam.teamData.name );
+                    break;
+                default:
+                    addTeam.finish();
+                    break;
+            }
         },
         writeData : function(){
             fs.writeFile( 'teams/' + addTeam.teamData.name + '/data.json', JSON.stringify( addTeam.teamData, null, 4 ), function( error ){
@@ -155,35 +149,34 @@ var http = require( 'http' ),
                     console.log( error );
                 } else {
                     console.log( 'Team data written successfully' );
-                    addTeam.rl.question( 'Open logo for editing (Y/N)? ', function( answer ) {
-                        switch( answer ){
-                            case 'y':
-                            case 'Y':
-                                addTeam.watchLogo();
-                                exec.execSync( 'open "' + addTeam.logoFilename + '"' );
-                                break;
-                            default:
-                                addTeam.runGrunt();
-                                break;
-                        }
-                    });
+                    answer = readline.question( 'Open logo for editing (Y/N)? ' );
+                    switch( answer ){
+                        case 'y':
+                        case 'Y':
+                            addTeam.watchLogo();
+                            exec.execSync( 'open "' + addTeam.logoFilename + '"' );
+                            break;
+                        default:
+                            addTeam.runGrunt();
+                            break;
+                    }
                 }
             });
         },
         finish: function(){
+            var answer;
             console.log( JSON.stringify( addTeam.teamData, null, 4 ) );
-            addTeam.rl.question( 'Is this correct? (Y/N) ', function( answer ) {
-                switch( answer ){
-                    case 'n':
-                    case 'N':
-                        addTeam.changeData();
-                        break;
-                    case 'y':
-                    case 'Y':
-                        addTeam.writeData();
-                        break;
-                }
-            });
+            answer = readline.question( 'Is this correct? (Y/N) ' );
+            switch( answer ){
+                case 'n':
+                case 'N':
+                    addTeam.changeData();
+                    break;
+                case 'y':
+                case 'Y':
+                    addTeam.writeData();
+                    break;
+            }
         },
         runGrunt: function(){
             var child = exec.spawn( 'grunt', [], { stdio: 'inherit' } );
@@ -193,67 +186,69 @@ var http = require( 'http' ),
             });
         },
         csGoLoungeName: function(){
-            addTeam.rl.question( 'What is the name of the team on CSGOLounge? ', function( answer ) {
-                if( answer.length > 0 ){
-                    addTeam.teamData.csgolounge = {
-                        'name': answer
-                    };
-                }
+            var answer;
 
-                addTeam.finish();
-            });
+            answer = readline.question( 'What is the name of the team on CSGOLounge? ' );
+            if( answer.length > 0 ){
+                addTeam.teamData.csgolounge = {
+                    'name': answer
+                };
+            }
+
+            addTeam.finish();
         },
         setSteamName: function(){
-            addTeam.rl.question( 'What should be the steam identifier? ', function( answer ) {
-                if( answer.length > 0 && answer.length <= 5 ){
-                    addTeam.teamData.steam = {
-                        'name': answer
-                    };
-                    addTeam.addLogo();
-                } else {
-                    console.log( 'The length needs to be more than 0 and less than 5' );
-                    addTeam.setSteamName();
-                }
-            });
+            var answer;
+
+            answer = readline.question( 'What should be the steam identifier? ' );
+            if( answer.length > 0 && answer.length <= 5 ){
+                addTeam.teamData.steam = {
+                    'name': answer
+                };
+                addTeam.addLogo();
+            } else {
+                console.log( 'The length needs to be more than 0 and less than 5' );
+                addTeam.setSteamName();
+            }
         },
         addLogo : function(){
             var writeTarget = 'teams/' + addTeam.teamData.name + '/logo',
                 writeStream = fs.createWriteStream( writeTarget ),
                 request,
                 extension,
-                protocol;
+                protocol,
+                url;
 
-            addTeam.rl.question( 'URL to the logo? ', function( url ) {
-                if( url.length <= 0 ){
-                    addTeam.csGoLoungeName();
+            url = readline.question( 'URL to the logo? ' );
+            if( url.length <= 0 ){
+                addTeam.csGoLoungeName();
+            } else {
+                if( url.substr( 0, 5 ) === 'https' ){
+                    protocol = https;
                 } else {
-                    if( url.substr( 0, 5 ) === 'https' ){
-                        protocol = https;
-                    } else {
-                        protocol = http;
-                    }
+                    protocol = http;
+                }
 
-                    request = protocol.get( url, function( response ) {
+                request = protocol.get( url, function( response ) {
 
-                        response.once( 'data', function( chunk ) {
-                            extension = fileType( chunk ).ext;
-                            addTeam.logoFilename = writeTarget + '.' + extension;
-                        });
-
-                        response.on( 'end', function() {
-                            fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
-                                if( error ) {
-                                    console.log( 'ERROR: ' + error );
-                                }
-                            });
-                        });
-
-                        response.pipe( writeStream );
+                    response.once( 'data', function( chunk ) {
+                        extension = fileType( chunk ).ext;
+                        addTeam.logoFilename = writeTarget + '.' + extension;
                     });
 
-                    addTeam.csGoLoungeName();
-                }
-            });
+                    response.on( 'end', function() {
+                        fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
+                            if( error ) {
+                                console.log( 'ERROR: ' + error );
+                            }
+                        });
+                    });
+
+                    response.pipe( writeStream );
+                });
+
+                addTeam.csGoLoungeName();
+            }
         },
         watchLogo : function(){
             'use strict';
@@ -300,34 +295,15 @@ var http = require( 'http' ),
                 }
             });
         },
-        setupReadLine : function(){
-            if( addTeam.rl === false ) {
-                addTeam.rl = readline.createInterface({
-                    input: process.stdin,
-                    output: process.stdout
-                }),
-
-                addTeam.rl.on( 'SIGINT', function() {
-                    if( addTeam.state !== 0 ){
-                        addTeam.rl.close();
-                        addTeam.rl = false;
-                        addTeam.start();
-                    } else {
-                        console.log();
-                        process.exit();
-                    }
-                });
-            }
-        },
         setTeamName : function(){
-            addTeam.rl.question( 'What is the name of the team? ', function( answer ) {
-                addTeam.createTeam( answer );
-            });
+            var answer;
+
+            answer = readline.question( 'What is the name of the team? ');
+            addTeam.createTeam( answer );
         },
         start : function(){
             'use strict';
 
-            addTeam.setupReadLine();
             addTeam.setTeamName();
         }
     };
