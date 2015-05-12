@@ -174,31 +174,35 @@ var http = require( 'http' ),
                 protocol;
 
             addTeam.rl.question( 'URL to the logo? ', function( url ) {
-                if( url.substr( 0, 5 ) === 'https' ){
-                    protocol = https;
+                if( url.length <= 0 ){
+                    addTeam.csGoLoungeName();
                 } else {
-                    protocol = http;
-                }
+                    if( url.substr( 0, 5 ) === 'https' ){
+                        protocol = https;
+                    } else {
+                        protocol = http;
+                    }
 
-                request = protocol.get( url, function( response ) {
+                    request = protocol.get( url, function( response ) {
 
-                    response.once( 'data', function( chunk ) {
-                        extension = fileType( chunk ).ext;
-                        addTeam.logoFilename = writeTarget + '.' + extension;
-                    });
-
-                    response.on( 'end', function() {
-                        fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
-                            if( error ) {
-                                console.log( 'ERROR: ' + error );
-                            }
+                        response.once( 'data', function( chunk ) {
+                            extension = fileType( chunk ).ext;
+                            addTeam.logoFilename = writeTarget + '.' + extension;
                         });
+
+                        response.on( 'end', function() {
+                            fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
+                                if( error ) {
+                                    console.log( 'ERROR: ' + error );
+                                }
+                            });
+                        });
+
+                        response.pipe( writeStream );
                     });
 
-                    response.pipe( writeStream );
-                });
-
-                addTeam.csGoLoungeName();
+                    addTeam.csGoLoungeName();
+                }
             });
         },
         watchLogo : function(){
