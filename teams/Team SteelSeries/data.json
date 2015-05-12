@@ -7,5 +7,9 @@
     "hltv": {
         "name": "Steelseries",
         "id": "6097"
+    },
+    "gosugamers": {
+        "name": "Team Steelseries",
+        "id": 11532
     }
 }

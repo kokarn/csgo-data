@@ -10,5 +10,9 @@
     "hltv": {
         "name": "Ascendancy",
         "id": "5921"
+    },
+    "gosugamers": {
+        "name": "Ascendancy",
+        "id": 10235
     }
 }

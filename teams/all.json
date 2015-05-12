@@ -22,7 +22,11 @@
         "steam": {
             "name": "acega"
         },
-        "identifier": "acegaming"
+        "identifier": "acegaming",
+        "gosugamers": {
+            "name": "Ace Gaming.",
+            "id": 11847
+        }
     },
     "affnity": {
         "name": "affNity",
@@ -36,6 +40,10 @@
         "hltv": {
             "name": "affNity",
             "id": "5998"
+        },
+        "gosugamers": {
+            "name": "affNity",
+            "id": 10878
         }
     },
     "aimface": {
@@ -104,6 +112,10 @@
         "hltv": {
             "name": "Ascendancy",
             "id": "5921"
+        },
+        "gosugamers": {
+            "name": "Ascendancy",
+            "id": 10235
         }
     },
     "astanadragons": {
@@ -133,6 +145,10 @@
         "hltv": {
             "name": "Atlantis",
             "id": "6035"
+        },
+        "gosugamers": {
+            "name": "Atlantis eSports",
+            "id": 11060
         }
     },
     "avantgarde": {
@@ -213,6 +229,10 @@
         "hltv": {
             "name": "CAZ",
             "id": "6058"
+        },
+        "gosugamers": {
+            "name": "CAZ eSports",
+            "id": 11208
         }
     },
     "check6": {
@@ -1274,6 +1294,10 @@
         "hltv": {
             "name": "Nihilum",
             "id": "6098"
+        },
+        "gosugamers": {
+            "name": "Nihilum Gaming",
+            "id": 11485
         }
     },
     "ninjasinpyjamas": {
@@ -1790,6 +1814,10 @@
         "hltv": {
             "name": "Menace",
             "id": "4576"
+        },
+        "gosugamers": {
+            "name": "Team Menace.",
+            "id": 8713
         }
     },
     "teamorbit": {
@@ -1873,6 +1901,10 @@
         "hltv": {
             "name": "Steelseries",
             "id": "6097"
+        },
+        "gosugamers": {
+            "name": "Team Steelseries",
+            "id": 11532
         }
     },
     "teamstorm": {
