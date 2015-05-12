@@ -1091,6 +1091,20 @@
         },
         "identifier": "qlimaxcrew"
     },
+    "rcticesports": {
+        "name": "RCTIC eSports",
+        "gosugamers": {
+            "id": 8798,
+            "name": "RCTIC eSports.CS"
+        },
+        "steam": {
+            "name": "rctic"
+        },
+        "csgolounge": {
+            "name": "RCTIC"
+        },
+        "identifier": "rcticesports"
+    },
     "reasongaming": {
         "name": "Reason Gaming",
         "steam": {
@@ -1400,6 +1414,20 @@
             "name": "ROCK"
         },
         "identifier": "teamrock"
+    },
+    "teamsolomid": {
+        "name": "Team SoloMid",
+        "steam": {
+            "name": "tsm"
+        },
+        "csgolounge": {
+            "name": "TSM"
+        },
+        "gosugamers": {
+            "name": "Team Solomid.CS",
+            "id": 10649
+        },
+        "identifier": "teamsolomid"
     },
     "teamsteelseries": {
         "name": "Team SteelSeries",
