@@ -9,12 +9,12 @@ var http = require( 'http' ),
     fileType = require( 'file-type' ),
     exec = require( 'child_process' ),
     request = require( 'request' ),
+    gosugamers = require( './gosugamers' ),
     logoFilename = '',
     addTeam = {
         rl : false,
         state: 0,
         teamData : {},
-        gosugamersBaseUrl : 'http://www.gosugamers.net/counterstrike/rankings?tunranked=0&tunranked=1&tname=',
         ensureExists: function( path, mask, callback ) {
             if( typeof mask == 'function' ) { // allow the `mask` parameter to be optional
                 callback = mask;
@@ -33,39 +33,22 @@ var http = require( 'http' ),
                 }
             });
         },
-        setGosugamers : function( searchPhrase, index, callback ){
-            'use strict';
-
-            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
-                var $ = cheerio.load( html );
-
-
-                if( $( '.ranking-link' ).eq( index ).length > 0 ){
-                    addTeam.teamData.gosugamers = {
-                        id: $( '.ranking-link' ).eq( index ).data( 'id' ),
-                        name: $( '.ranking-link' ).eq( index ).find( 'h4' ).text().trim()
-                    };
+        setInitialGosugamers : function( searchPhrase ){
+            gosugamers.search( searchPhrase, function( teams ){
+                if( teams.length > 0 ){
+                    addTeam.teamData.gosugamers = teams[ 0 ];
                 }
-
-                if( typeof callback === 'function' ){
-                    callback.call();
+            } );
+        },
                 }
             });
         },
         searchGosugamers : function( searchPhrase ){
             'use strict';
+            gosugamers.search( searchPhrase, function( teams ){
+                var i;
 
-            request( addTeam.gosugamersBaseUrl + searchPhrase, function( error, response, html ) {
-                var $ = cheerio.load( html ),
-                    $teams;
-
-                if( error ){
-                    console.log( error );
-                }
-
-                $teams = $( '.ranking-link' );
-
-                if( $teams.length <= 0 ){
+                if( teams.length <= 0 ){
                     console.log( 'Could not find any teams matching "' + searchPhrase + '". ' );
                     addTeam.rl.question( 'Please enter another search term or enter to cancel ', function( answer ) {
                         if( answer.length <= 0 ){
@@ -75,9 +58,9 @@ var http = require( 'http' ),
                         }
                     });
                 } else {
-                    $teams.each( function( index, element ){
-                        console.log( parseInt( index + 1, 10 ) + ': ' + $teams.eq( index ).find( 'h4' ).text().trim() );
-                    });
+                    for( i = 0; i < teams.length; i = i + 1 ){
+                        console.log( parseInt( i + 1, 10 ) + ': ' + teams[ i ].name );
+                    }
 
                     addTeam.rl.question( 'Select the correct team, if none match, enter 0. To cancel, press Enter ', function( answer ) {
                         if( answer.length <= 0 ){
@@ -87,11 +70,12 @@ var http = require( 'http' ),
                                 addTeam.searchGosugamers( answer );
                             });
                         } else {
-                            addTeam.setGosugamers( searchPhrase, parseInt( answer - 1, 10 ), addTeam.finish );
+                            addTeam.teamData.gosugamers = teams[ i ];
+                            addTeam.finish();
                         }
                     });
                 }
-            });
+            } );
         },
         changeData : function(){
             console.log( '1: Name' );
@@ -252,7 +236,7 @@ var http = require( 'http' ),
             'use strict';
 
             addTeam.teamData.name = teamName;
-            addTeam.setGosugamers( addTeam.teamData.name, 0 );
+            addTeam.setInitialGosugamers( addTeam.teamData.name );
             addTeam.ensureExists( 'teams/' + addTeam.teamData.name, function( error ) {
                 if( error ){
                     console.log( error );
