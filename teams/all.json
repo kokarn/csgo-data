@@ -1,0 +1,1809 @@
+{
+    "3dmax": {
+        "name": "3DMAX",
+        "steam": {
+            "name": "3dm"
+        },
+        "csgolounge": {
+            "name": "3DMAX"
+        },
+        "gosugamers": {
+            "name": "3DMAX.CS",
+            "id": 7399
+        },
+        "identifier": "3dmax"
+    },
+    "acegaming": {
+        "name": "Ace Gaming",
+        "steam": {
+            "name": "acega"
+        },
+        "identifier": "acegaming"
+    },
+    "affnity": {
+        "name": "affNity",
+        "steam": {
+            "name": "affni"
+        },
+        "csgolounge": {
+            "name": "AffNity"
+        },
+        "identifier": "affnity"
+    },
+    "aimface": {
+        "name": "aimface",
+        "steam": {
+            "name": "aimfa"
+        },
+        "csgolounge": {
+            "name": "Aimface"
+        },
+        "gosugamers": {
+            "name": "aimface",
+            "id": 8980
+        },
+        "identifier": "aimface"
+    },
+    "alsen": {
+        "name": "ALSEN",
+        "steam": {
+            "name": "alsen"
+        },
+        "csgolounge": {
+            "name": "Alsen"
+        },
+        "gosugamers": {
+            "name": "ALSEN",
+            "id": 8585
+        },
+        "identifier": "alsen"
+    },
+    "area51": {
+        "name": "Area51",
+        "steam": {
+            "name": "area5"
+        },
+        "csgolounge": {
+            "name": "A51"
+        },
+        "gosugamers": {
+            "id": 7425,
+            "name": "Area 51 Gaming"
+        },
+        "identifier": "area51"
+    },
+    "ascendancy": {
+        "name": "Ascendancy",
+        "steam": {
+            "name": "ascen"
+        },
+        "csgolounge": {
+            "name": "ASC"
+        },
+        "identifier": "ascendancy"
+    },
+    "astanadragons": {
+        "name": "Astana Dragons",
+        "steam": {
+            "name": "ad"
+        },
+        "csgolounge": {
+            "name": "AD"
+        },
+        "gosugamers": {
+            "name": "Astana Dragons",
+            "id": 7387
+        },
+        "identifier": "astanadragons"
+    },
+    "atlantis": {
+        "name": "Atlantis",
+        "steam": {
+            "name": "atlan"
+        },
+        "identifier": "atlantis"
+    },
+    "avantgarde": {
+        "name": "Avant Garde",
+        "steam": {
+            "name": "avant"
+        },
+        "gosugamers": {
+            "name": "Avant Garde.CS",
+            "id": 10847
+        },
+        "identifier": "avantgarde"
+    },
+    "badmonkeygaming": {
+        "name": "Bad Monkey Gaming",
+        "steam": {
+            "name": "bmg"
+        },
+        "csgolounge": {
+            "name": "BMonkey"
+        },
+        "gosugamers": {
+            "name": "Bad Monkey Gaming Female",
+            "id": 9161
+        },
+        "identifier": "badmonkeygaming"
+    },
+    "boxr": {
+        "name": "BOXR",
+        "gosugamers": {
+            "id": 11232,
+            "name": "BOXR"
+        },
+        "steam": {
+            "name": "boxr"
+        },
+        "csgolounge": {
+            "name": "Boxr"
+        },
+        "identifier": "boxr"
+    },
+    "bravadogaming": {
+        "name": "Bravado Gaming",
+        "steam": {
+            "name": "bravg"
+        },
+        "csgolounge": {
+            "name": "Bravado"
+        },
+        "gosugamers": {
+            "name": "Bravado Gaming",
+            "id": 9494
+        },
+        "identifier": "bravadogaming"
+    },
+    "cazesports": {
+        "name": "CAZ eSports",
+        "steam": {
+            "name": "cazes"
+        },
+        "identifier": "cazesports"
+    },
+    "check6": {
+        "name": "Check6",
+        "steam": {
+            "name": "check"
+        },
+        "gosugamers": {
+            "id": 10197,
+            "name": "Check6"
+        },
+        "csgolounge": {
+            "name": "Check6"
+        },
+        "identifier": "check6"
+    },
+    "clanmystik": {
+        "name": "Clan Mystik",
+        "steam": {
+            "name": "cm"
+        },
+        "csgolounge": {
+            "name": "Mystik"
+        },
+        "gosugamers": {
+            "name": "Clan-Mystik",
+            "id": 7410
+        },
+        "identifier": "clanmystik"
+    },
+    "cloud9": {
+        "name": "Cloud9",
+        "steam": {
+            "name": "c9"
+        },
+        "csgolounge": {
+            "name": "Cloud9"
+        },
+        "gosugamers": {
+            "name": "Cloud9.CS",
+            "id": 8843
+        },
+        "identifier": "cloud9"
+    },
+    "cmstorm": {
+        "name": "CM Storm",
+        "steam": {
+            "name": "cmsto"
+        },
+        "gosugamers": {
+            "id": 11110,
+            "name": "CMStorm Female"
+        },
+        "identifier": "cmstorm"
+    },
+    "complexity": {
+        "name": "compLexity",
+        "steam": {
+            "name": "col"
+        },
+        "csgolounge": {
+            "name": "coL"
+        },
+        "gosugamers": {
+            "name": "compLexity Gaming",
+            "id": 8604
+        },
+        "identifier": "complexity"
+    },
+    "controlesports": {
+        "name": "Control eSports",
+        "steam": {
+            "name": "contr"
+        },
+        "identifier": "controlesports"
+    },
+    "copenhagenwolves": {
+        "name": "Copenhagen Wolves",
+        "steam": {
+            "name": "cw"
+        },
+        "csgolounge": {
+            "name": "CW"
+        },
+        "gosugamers": {
+            "name": "CPH Wolves",
+            "id": 7396
+        },
+        "identifier": "copenhagenwolves"
+    },
+    "counterlogicgaming": {
+        "name": "Counter Logic Gaming",
+        "steam": {
+            "name": "clg"
+        },
+        "csgolounge": {
+            "name": "CLG"
+        },
+        "gosugamers": {
+            "name": "Counter Logic Gaming.CS",
+            "id": 10569
+        },
+        "identifier": "counterlogicgaming"
+    },
+    "cplay": {
+        "name": "CPLAY",
+        "steam": {
+            "name": "cplay"
+        },
+        "gosugamers": {
+            "name": "CPLAY",
+            "id": 7437
+        },
+        "csgolounge": {
+            "name": "CPlay"
+        },
+        "identifier": "cplay"
+    },
+    "datteam": {
+        "name": "dAT Team",
+        "steam": {
+            "name": "dat"
+        },
+        "csgolounge": {
+            "name": "dAT"
+        },
+        "gosugamers": {
+            "name": "dAT team",
+            "id": 7456
+        },
+        "identifier": "datteam"
+    },
+    "denialesports": {
+        "name": "Denial eSports",
+        "steam": {
+            "name": "denia"
+        },
+        "csgolounge": {
+            "name": "Denial"
+        },
+        "gosugamers": {
+            "name": "Denial eSports",
+            "id": "8827"
+        },
+        "identifier": "denialesports"
+    },
+    "elevate": {
+        "name": "eLevate",
+        "steam": {
+            "name": "eleva"
+        },
+        "csgolounge": {
+            "name": "eLevate"
+        },
+        "gosugamers": {
+            "name": "eLevate",
+            "id": 9011
+        },
+        "identifier": "elevate"
+    },
+    "epsilonesports": {
+        "name": "Epsilon eSports",
+        "steam": {
+            "name": "eps"
+        },
+        "csgolounge": {
+            "name": "Epsilon"
+        },
+        "gosugamers": {
+            "name": "Epsilon",
+            "id": 8494
+        },
+        "identifier": "epsilonesports"
+    },
+    "escgaming": {
+        "name": "ESC Gaming",
+        "steam": {
+            "name": "esc"
+        },
+        "csgolounge": {
+            "name": "ESC"
+        },
+        "gosugamers": {
+            "name": "ESC Gaming",
+            "id": 7428
+        },
+        "identifier": "escgaming"
+    },
+    "esportengine": {
+        "name": "eSport Engine",
+        "steam": {
+            "name": "espen"
+        },
+        "identifier": "esportengine"
+    },
+    "fenixfire": {
+        "name": "Fenix Fire",
+        "steam": {
+            "name": "fnxfr"
+        },
+        "gosugamers": {
+            "id": 10852,
+            "name": "Fenix Fire"
+        },
+        "csgolounge": {
+            "name": "FenixFr"
+        },
+        "identifier": "fenixfire"
+    },
+    "flipsid3tactics": {
+        "name": "Flipsid3 Tactics",
+        "steam": {
+            "name": "flip"
+        },
+        "csgolounge": {
+            "name": "FSid3"
+        },
+        "gosugamers": {
+            "name": "Flipsid3 Tactics",
+            "id": 8564
+        },
+        "identifier": "flipsid3tactics"
+    },
+    "fmesports": {
+        "name": "fm-eSports",
+        "steam": {
+            "name": "fme"
+        },
+        "csgolounge": {
+            "name": "FM"
+        },
+        "gosugamers": {
+            "id": 8806,
+            "name": "FM eSports"
+        },
+        "identifier": "fmesports"
+    },
+    "fnatic": {
+        "name": "Fnatic",
+        "steam": {
+            "name": "fntc"
+        },
+        "csgolounge": {
+            "name": "fnatic"
+        },
+        "gosugamers": {
+            "name": "fnatic",
+            "id": 7386
+        },
+        "identifier": "fnatic"
+    },
+    "gamers2": {
+        "name": "Gamers2",
+        "steam": {
+            "name": "g2"
+        },
+        "csgolounge": {
+            "name": "G2"
+        },
+        "gosugamers": {
+            "name": "Gamers2",
+            "id": 10804
+        },
+        "identifier": "gamers2"
+    },
+    "games4u": {
+        "name": "Games4u",
+        "steam": {
+            "name": "g4u"
+        },
+        "csgolounge": {
+            "name": "G4U"
+        },
+        "gosugamers": {
+            "name": "Games4u.se",
+            "id": 8814
+        },
+        "identifier": "games4u"
+    },
+    "ggwp": {
+        "name": "GGWP",
+        "steam": {
+            "name": "ggwp"
+        },
+        "gosugamers": {
+            "id": 10544,
+            "name": "GGWP"
+        },
+        "csgolounge": {
+            "name": "GGWP"
+        },
+        "identifier": "ggwp"
+    },
+    "gplay": {
+        "name": "GPlay",
+        "steam": {
+            "name": "gplay"
+        },
+        "csgolounge": {
+            "name": "GPlay"
+        },
+        "gosugamers": {
+            "name": "Gplay",
+            "id": 9261
+        },
+        "identifier": "gplay"
+    },
+    "headshotbg": {
+        "name": "HEADSHOTBG",
+        "steam": {
+            "name": "hsbg"
+        },
+        "gosugamers": {
+            "id": 8667,
+            "name": "HeadshotBG.CS"
+        },
+        "csgolounge": {
+            "name": "HSBG"
+        },
+        "identifier": "headshotbg"
+    },
+    "heat": {
+        "name": "HEAT",
+        "steam": {
+            "name": "heat"
+        },
+        "gosugamers": {
+            "id": 9400,
+            "name": "HEAT"
+        },
+        "csgolounge": {
+            "name": "HEAT"
+        },
+        "identifier": "heat"
+    },
+    "heatesports": {
+        "name": "Heat eSports",
+        "steam": {
+            "name": "heate"
+        },
+        "identifier": "heatesports"
+    },
+    "hellraisers": {
+        "name": "HellRaisers",
+        "steam": {
+            "name": "hlr"
+        },
+        "csgolounge": {
+            "name": "HR"
+        },
+        "gosugamers": {
+            "name": "HellRaisers",
+            "id": 8481
+        },
+        "identifier": "hellraisers"
+    },
+    "hungryhungryhippos": {
+        "name": "Hungry Hungry Hippos",
+        "steam": {
+            "name": "hungr"
+        },
+        "identifier": "hungryhungryhippos"
+    },
+    "ibuypower": {
+        "name": "iBUYPOWER",
+        "steam": {
+            "name": "ibp"
+        },
+        "csgolounge": {
+            "name": "IBP"
+        },
+        "gosugamers": {
+            "name": "iBUYPOWER",
+            "id": 7414
+        },
+        "identifier": "ibuypower"
+    },
+    "igamerz": {
+        "name": "iGamerz",
+        "steam": {
+            "name": "igame"
+        },
+        "gosugamers": {
+            "id": 9389,
+            "name": "Infernal Gamerz"
+        },
+        "identifier": "igamerz"
+    },
+    "imaginarygaming": {
+        "name": "Imaginary Gaming",
+        "steam": {
+            "name": "imagi"
+        },
+        "gosugamers": {
+            "id": 10142,
+            "name": "Imaginary Gaming Female"
+        },
+        "identifier": "imaginarygaming"
+    },
+    "immersiveesports": {
+        "name": "Immersive eSports",
+        "gosugamers": {
+            "id": 11228,
+            "name": "Immersive eSports"
+        },
+        "steam": {
+            "name": "immer"
+        },
+        "csgolounge": {
+            "name": "Ims"
+        },
+        "identifier": "immersiveesports"
+    },
+    "immunity": {
+        "name": "Immunity",
+        "steam": {
+            "name": "immun"
+        },
+        "csgolounge": {
+            "name": "Imm"
+        },
+        "gosugamers": {
+            "name": "Team Immunity.CS",
+            "id": 10845
+        },
+        "identifier": "immunity"
+    },
+    "ination": {
+        "name": "iNation",
+        "steam": {
+            "name": "inati"
+        },
+        "gosugamers": {
+            "id": 10527,
+            "name": "iNation"
+        },
+        "csgolounge": {
+            "name": "Ination"
+        },
+        "identifier": "ination"
+    },
+    "incursion": {
+        "name": "Incursion",
+        "steam": {
+            "name": "incur"
+        },
+        "gosugamers": {
+            "id": 10789,
+            "name": "Incursion"
+        },
+        "csgolounge": {
+            "name": "Incursion"
+        },
+        "identifier": "incursion"
+    },
+    "inshock": {
+        "name": "INSHOCK",
+        "steam": {
+            "name": "insho"
+        },
+        "csgolounge": {
+            "name": "InShock"
+        },
+        "gosugamers": {
+            "name": "INShock",
+            "id": 8587
+        },
+        "identifier": "inshock"
+    },
+    "invidious": {
+        "name": "InVidious",
+        "steam": {
+            "name": "invid"
+        },
+        "identifier": "invidious"
+    },
+    "k1ck": {
+        "name": "K1CK",
+        "steam": {
+            "name": "k1ck"
+        },
+        "csgolounge": {
+            "name": "K1CK"
+        },
+        "gosugamers": {
+            "name": "k1ck eSports Club",
+            "id": 7405
+        },
+        "identifier": "k1ck"
+    },
+    "kabumtd": {
+        "name": "KaBuM.TD",
+        "steam": {
+            "name": "kabum"
+        },
+        "csgolounge": {
+            "name": "Kabum"
+        },
+        "gosugamers": {
+            "name": "Team KaBuM",
+            "id": 9195
+        },
+        "identifier": "kabumtd"
+    },
+    "keydstars": {
+        "name": "Keyd Stars",
+        "steam": {
+            "name": "keyd"
+        },
+        "gosugamers": {
+            "name": "Keyd Stars.",
+            "id": 10897
+        },
+        "identifier": "keydstars"
+    },
+    "killerfishesport": {
+        "name": "KILLERFISH eSport",
+        "steam": {
+            "name": "killer"
+        },
+        "gosugamers": {
+            "name": "KILLERFISH eSport e.V.",
+            "id": 9245
+        },
+        "identifier": "killerfishesport"
+    },
+    "lemondogs": {
+        "name": "Lemondogs",
+        "gosugamers": {
+            "id": 7441,
+            "name": "Lemondogs CS"
+        },
+        "steam": {
+            "name": "lemon"
+        },
+        "identifier": "lemondogs"
+    },
+    "lgbesports": {
+        "name": "LGB eSports",
+        "steam": {
+            "name": "lgb"
+        },
+        "csgolounge": {
+            "name": "LGB"
+        },
+        "gosugamers": {
+            "name": "LGB eSports",
+            "id": 7413
+        },
+        "identifier": "lgbesports"
+    },
+    "lions": {
+        "name": "Lions",
+        "steam": {
+            "name": "lions"
+        },
+        "gosugamers": {
+            "id": 10901,
+            "name": "Lions"
+        },
+        "identifier": "lions"
+    },
+    "londonconspiracy": {
+        "name": "London Conspiracy",
+        "steam": {
+            "name": "lc"
+        },
+        "csgolounge": {
+            "name": "LC"
+        },
+        "gosugamers": {
+            "name": "London Conspiracy.CS",
+            "id": 8493
+        },
+        "identifier": "londonconspiracy"
+    },
+    "luminositygaming": {
+        "name": "Luminosity Gaming",
+        "steam": {
+            "name": "lumin"
+        },
+        "gosugamers": {
+            "id": 10920,
+            "name": "Luminosity Gaming"
+        },
+        "identifier": "luminositygaming"
+    },
+    "lunatikesports": {
+        "name": "LunatiK eSports",
+        "steam": {
+            "name": "lunat"
+        },
+        "csgolounge": {
+            "name": "Lunatik"
+        },
+        "gosugamers": {
+            "name": "LunatiK",
+            "id": "9618"
+        },
+        "identifier": "lunatikesports"
+    },
+    "makewarnotlove": {
+        "name": "Make War Not Love",
+        "gosugamers": {
+            "id": 8829,
+            "name": "Make War Not Love"
+        },
+        "steam": {
+            "name": "makew"
+        },
+        "csgolounge": {
+            "name": "MWNL"
+        },
+        "identifier": "makewarnotlove"
+    },
+    "malikesports": {
+        "name": "MALIK eSports",
+        "steam": {
+            "name": "malik"
+        },
+        "csgolounge": {
+            "name": "MALIK"
+        },
+        "identifier": "malikesports"
+    },
+    "meltyesportclub": {
+        "name": "melty eSport Club",
+        "steam": {
+            "name": "melty"
+        },
+        "identifier": "meltyesportclub"
+    },
+    "molotovsandmarshmallows": {
+        "name": "Molotovs and Marshmallows",
+        "steam": {
+            "name": "mnm"
+        },
+        "gosugamers": {
+            "id": 10191,
+            "name": "MnM"
+        },
+        "identifier": "molotovsandmarshmallows"
+    },
+    "moscowfive": {
+        "name": "Moscow Five",
+        "steam": {
+            "name": "m5"
+        },
+        "csgolounge": {
+            "name": "M5"
+        },
+        "gosugamers": {
+            "id": 9344,
+            "name": "Moscow 5"
+        },
+        "identifier": "moscowfive"
+    },
+    "mousespaz": {
+        "name": "mouseSpaz",
+        "gosugamers": {
+            "id": 8617,
+            "name": "mouseSpaz"
+        },
+        "steam": {
+            "name": "spaz"
+        },
+        "csgolounge": {
+            "name": "mS"
+        },
+        "identifier": "mousespaz"
+    },
+    "mousesports": {
+        "name": "mousesports",
+        "steam": {
+            "name": "mss"
+        },
+        "csgolounge": {
+            "name": "mouz"
+        },
+        "gosugamers": {
+            "name": "mousesports.CS",
+            "id": 7395
+        },
+        "identifier": "mousesports"
+    },
+    "mykpv": {
+        "name": "myKPV",
+        "steam": {
+            "name": "mykpv"
+        },
+        "csgolounge": {
+            "name": "KPV"
+        },
+        "identifier": "mykpv"
+    },
+    "mythic": {
+        "name": "Mythic",
+        "steam": {
+            "name": "mythi"
+        },
+        "csgolounge": {
+            "name": "Mythic"
+        },
+        "gosugamers": {
+            "name": "Mythic",
+            "id": 9402
+        },
+        "identifier": "mythic"
+    },
+    "myxmg": {
+        "name": "MyXMG",
+        "steam": {
+            "name": "myxmg"
+        },
+        "csgolounge": {
+            "name": "myXMG"
+        },
+        "gosugamers": {
+            "name": "myXMG",
+            "id": 8577
+        },
+        "identifier": "myxmg"
+    },
+    "napalmesports": {
+        "name": "Napalm eSports",
+        "steam": {
+            "name": "napal"
+        },
+        "identifier": "napalmesports"
+    },
+    "natusvincere": {
+        "name": "Natus Vincere",
+        "steam": {
+            "name": "navi"
+        },
+        "csgolounge": {
+            "name": "Na'Vi"
+        },
+        "gosugamers": {
+            "name": "Natus Vincere",
+            "id": 7397
+        },
+        "identifier": "natusvincere"
+    },
+    "neophyte": {
+        "name": "nEophyte",
+        "steam": {
+            "name": "neoph"
+        },
+        "gosugamers": {
+            "id": 8701,
+            "name": "nEophyte eSports"
+        },
+        "csgolounge": {
+            "name": "nEophyte"
+        },
+        "identifier": "neophyte"
+    },
+    "netcodeguides": {
+        "name": "Netcodeguides",
+        "steam": {
+            "name": "netco"
+        },
+        "csgolounge": {
+            "name": "NetCode"
+        },
+        "gosugamers": {
+            "name": "Netcode",
+            "id": 8642
+        },
+        "identifier": "netcodeguides"
+    },
+    "nextplease!": {
+        "name": "neXtPlease!",
+        "steam": {
+            "name": "nextp"
+        },
+        "gosugamers": {
+            "id": 8666,
+            "name": "neXtPlease!"
+        },
+        "identifier": "nextplease!"
+    },
+    "nface": {
+        "name": "nFace",
+        "steam": {
+            "name": "nface"
+        },
+        "gosugamers": {
+            "id": 8610,
+            "name": "Nface Gaming"
+        },
+        "csgolounge": {
+            "name": "nFace"
+        },
+        "identifier": "nface"
+    },
+    "nihilum": {
+        "name": "Nihilum",
+        "steam": {
+            "name": "nihil"
+        },
+        "identifier": "nihilum"
+    },
+    "ninjasinpyjamas": {
+        "name": "Ninjas in Pyjamas",
+        "steam": {
+            "name": "nip"
+        },
+        "csgolounge": {
+            "name": "NiP"
+        },
+        "gosugamers": {
+            "name": "Ninjas in Pyjamas",
+            "id": 7384
+        },
+        "identifier": "ninjasinpyjamas"
+    },
+    "onlinebots": {
+        "name": "OnlineBOTS",
+        "steam": {
+            "name": "ob"
+        },
+        "csgolounge": {
+            "name": "OB"
+        },
+        "gosugamers": {
+            "name": "OnlineBOTS",
+            "id": 8595
+        },
+        "identifier": "onlinebots"
+    },
+    "pentasports": {
+        "name": "PENTA Sports",
+        "steam": {
+            "name": "penta"
+        },
+        "csgolounge": {
+            "name": "Penta"
+        },
+        "gosugamers": {
+            "name": "PENTA Sports",
+            "id": 8816
+        },
+        "identifier": "pentasports"
+    },
+    "perilousrage": {
+        "name": "Perilous Rage",
+        "steam": {
+            "name": "peril"
+        },
+        "csgolounge": {
+            "name": "PRage"
+        },
+        "gosugamers": {
+            "id": 9716,
+            "name": "PerilousRAGE"
+        },
+        "identifier": "perilousrage"
+    },
+    "piter": {
+        "name": "PiTER",
+        "steam": {
+            "name": "piter"
+        },
+        "csgolounge": {
+            "name": "Piter"
+        },
+        "gosugamers": {
+            "name": "Piter",
+            "id": 10199
+        },
+        "identifier": "piter"
+    },
+    "planetkeydynamics": {
+        "name": "Planetkey Dynamics",
+        "steam": {
+            "name": "pkd"
+        },
+        "csgolounge": {
+            "name": "Planetkey"
+        },
+        "gosugamers": {
+            "name": "Planetkey Dynamics",
+            "id": 8578
+        },
+        "identifier": "planetkeydynamics"
+    },
+    "play5": {
+        "name": "PLAY5",
+        "steam": {
+            "name": "play5"
+        },
+        "identifier": "play5"
+    },
+    "playingducks": {
+        "name": "Playing Ducks",
+        "steam": {
+            "name": "playin"
+        },
+        "csgolounge": {
+            "name": "Ducks"
+        },
+        "gosugamers": {
+            "name": "Playing-Ducks",
+            "id": 8858
+        },
+        "identifier": "playingducks"
+    },
+    "publiclirse": {
+        "name": "Publiclir.se",
+        "steam": {
+            "name": "publi"
+        },
+        "csgolounge": {
+            "name": "Publiclir"
+        },
+        "gosugamers": {
+            "name": "Publiclir.se",
+            "id": 8565
+        },
+        "identifier": "publiclirse"
+    },
+    "qlimaxcrew": {
+        "name": "Qlimax Crew",
+        "steam": {
+            "name": "qlima"
+        },
+        "identifier": "qlimaxcrew"
+    },
+    "reasongaming": {
+        "name": "Reason Gaming",
+        "steam": {
+            "name": "rgg"
+        },
+        "csgolounge": {
+            "name": "Reason"
+        },
+        "gosugamers": {
+            "name": "Reason Gaming CS",
+            "id": 7407
+        },
+        "identifier": "reasongaming"
+    },
+    "resilience5": {
+        "name": "Resilience5",
+        "steam": {
+            "name": "res5"
+        },
+        "identifier": "resilience5"
+    },
+    "richgang": {
+        "name": "Rich Gang",
+        "steam": {
+            "name": "richg"
+        },
+        "identifier": "richgang"
+    },
+    "rizegaming": {
+        "name": "rizeGaming",
+        "steam": {
+            "name": "rizeg"
+        },
+        "csgolounge": {
+            "name": "Rize"
+        },
+        "gosugamers": {
+            "id": 8736,
+            "name": "Rize Gaming"
+        },
+        "identifier": "rizegaming"
+    },
+    "sapphirekelownadotcom": {
+        "name": "SapphireKelownaDotCom",
+        "steam": {
+            "name": "skdc"
+        },
+        "csgolounge": {
+            "name": "SKDC"
+        },
+        "gosugamers": {
+            "name": "SapphireKelownaDotCom",
+            "id": 8826
+        },
+        "identifier": "sapphirekelownadotcom"
+    },
+    "skgaming": {
+        "name": "SK Gaming",
+        "gosugamers": {
+            "id": 7400,
+            "name": "SK Gaming"
+        },
+        "steam": {
+            "name": "sk"
+        },
+        "csgolounge": {
+            "name": "SK"
+        },
+        "identifier": "skgaming"
+    },
+    "skyred": {
+        "name": "Skyred",
+        "gosugamers": {
+            "id": 11500,
+            "name": "Skyred"
+        },
+        "steam": {
+            "name": "skyre"
+        },
+        "identifier": "skyred"
+    },
+    "spacesoldiers": {
+        "name": "Space Soldiers",
+        "steam": {
+            "name": "space"
+        },
+        "gosugamers": {
+            "id": 9642,
+            "name": "Space Soldiers Black"
+        },
+        "identifier": "spacesoldiers"
+    },
+    "streamline": {
+        "name": "Streamline",
+        "steam": {
+            "name": "stream"
+        },
+        "gosugamers": {
+            "name": "Streamline",
+            "id": 10848
+        },
+        "csgolounge": {
+            "name": "SLine"
+        },
+        "identifier": "streamline"
+    },
+    "suddenfear": {
+        "name": "Sudden Fear",
+        "steam": {
+            "name": "sudde"
+        },
+        "identifier": "suddenfear"
+    },
+    "summagg": {
+        "name": "SUMMA.GG",
+        "steam": {
+            "name": "summa"
+        },
+        "identifier": "summagg"
+    },
+    "teamacer": {
+        "name": "Team Acer",
+        "steam": {
+            "name": "acer"
+        },
+        "gosugamers": {
+            "name": "Team Acer.",
+            "id": 10962
+        },
+        "identifier": "teamacer"
+    },
+    "teamagent": {
+        "name": "Team Agent",
+        "steam": {
+            "name": "agent"
+        },
+        "csgolounge": {
+            "name": "Agent"
+        },
+        "gosugamers": {
+            "name": "Agent",
+            "id": 10701
+        },
+        "identifier": "teamagent"
+    },
+    "teamalternate": {
+        "name": "Team Alternate",
+        "steam": {
+            "name": "alter"
+        },
+        "gosugamers": {
+            "id": 7398,
+            "name": "Team Alternate.CS"
+        },
+        "csgolounge": {
+            "name": "ATN"
+        },
+        "identifier": "teamalternate"
+    },
+    "teamcaseking": {
+        "name": "Team Caseking",
+        "steam": {
+            "name": "casek"
+        },
+        "gosugamers": {
+            "name": "Caseking Gaming",
+            "id": 10954
+        },
+        "identifier": "teamcaseking"
+    },
+    "teamdignitas": {
+        "name": "Team Dignitas",
+        "steam": {
+            "name": "dig"
+        },
+        "csgolounge": {
+            "name": "Dignitas"
+        },
+        "gosugamers": {
+            "name": "Team Dignitas.CS",
+            "id": 8431
+        },
+        "identifier": "teamdignitas"
+    },
+    "teamenvyus": {
+        "name": "Team EnVyUs",
+        "steam": {
+            "name": "envy"
+        },
+        "csgolounge": {
+            "name": "EnVyUs"
+        },
+        "gosugamers": {
+            "name": "Team EnVyUs",
+            "id": 10705
+        },
+        "identifier": "teamenvyus"
+    },
+    "teamexile5": {
+        "name": "Team Exile5",
+        "steam": {
+            "name": "exile"
+        },
+        "identifier": "teamexile5"
+    },
+    "teaminfused": {
+        "name": "Team Infused",
+        "steam": {
+            "name": "infus"
+        },
+        "csgolounge": {
+            "name": "Infused"
+        },
+        "gosugamers": {
+            "name": "Team Infused.CS",
+            "id": 8684
+        },
+        "identifier": "teaminfused"
+    },
+    "teamkinguin": {
+        "name": "Team Kinguin",
+        "gosugamers": {
+            "id": 11916,
+            "name": "Team Kinguin CS:GO"
+        },
+        "steam": {
+            "name": "kingu"
+        },
+        "identifier": "teamkinguin"
+    },
+    "teamldlccom": {
+        "name": "Team LDLC.com",
+        "steam": {
+            "name": "ldlc"
+        },
+        "csgolounge": {
+            "name": "LDLC"
+        },
+        "gosugamers": {
+            "name": "Team LDLC",
+            "id": 7443
+        },
+        "identifier": "teamldlccom"
+    },
+    "teamliquid": {
+        "name": "Team Liquid",
+        "steam": {
+            "name": "liqui"
+        },
+        "csgolounge": {
+            "name": "Liquid"
+        },
+        "gosugamers": {
+            "name": "Team Liquid.CS",
+            "id": 10561
+        },
+        "identifier": "teamliquid"
+    },
+    "teammenacefi": {
+        "name": "Team Menace.fi",
+        "steam": {
+            "name": "menac"
+        },
+        "csgolounge": {
+            "name": "Menace"
+        },
+        "identifier": "teammenacefi"
+    },
+    "teamorbit": {
+        "name": "Team Orbit",
+        "steam": {
+            "name": "orbit"
+        },
+        "gosugamers": {
+            "id": 8981,
+            "name": "Team Orbit"
+        },
+        "csgolounge": {
+            "name": "Orbit"
+        },
+        "identifier": "teamorbit"
+    },
+    "teamproperty": {
+        "name": "Team Property",
+        "steam": {
+            "name": "prope"
+        },
+        "csgolounge": {
+            "name": "Property"
+        },
+        "gosugamers": {
+            "name": "Team Property.CS",
+            "id": 8664
+        },
+        "identifier": "teamproperty"
+    },
+    "teamrock": {
+        "name": "Team ROCK",
+        "steam": {
+            "name": "trock"
+        },
+        "csgolounge": {
+            "name": "Rock"
+        },
+        "gosugamers": {
+            "id": 11696,
+            "name": "ROCK"
+        },
+        "identifier": "teamrock"
+    },
+    "teamsteelseries": {
+        "name": "Team SteelSeries",
+        "steam": {
+            "name": "steel"
+        },
+        "identifier": "teamsteelseries"
+    },
+    "teamstorm": {
+        "name": "Team Storm",
+        "steam": {
+            "name": "storm"
+        },
+        "identifier": "teamstorm"
+    },
+    "teamvirtual": {
+        "name": "Team Virtual",
+        "steam": {
+            "name": "virtu"
+        },
+        "identifier": "teamvirtual"
+    },
+    "teamwolf": {
+        "name": "Team Wolf",
+        "steam": {
+            "name": "indw"
+        },
+        "csgolounge": {
+            "name": "Wolf"
+        },
+        "gosugamers": {
+            "name": "Wolf",
+            "id": 8844
+        },
+        "identifier": "teamwolf"
+    },
+    "teamxenex": {
+        "name": "Team XENEX",
+        "steam": {
+            "name": "xenex"
+        },
+        "csgolounge": {
+            "name": "Xenex"
+        },
+        "identifier": "teamxenex"
+    },
+    "tempogaming": {
+        "name": "Tempo Gaming",
+        "steam": {
+            "name": "tempo"
+        },
+        "gosugamers": {
+            "id": 8828,
+            "name": "Tempo Gaming"
+        },
+        "csgolounge": {
+            "name": "TMP"
+        },
+        "identifier": "tempogaming"
+    },
+    "tempostorm": {
+        "name": "Tempo Storm",
+        "gosugamers": {
+            "id": 11379,
+            "name": "Tempo Storm."
+        },
+        "steam": {
+            "name": "tmps"
+        },
+        "identifier": "tempostorm"
+    },
+    "thechiefs": {
+        "name": "The Chiefs",
+        "steam": {
+            "name": "chief"
+        },
+        "gosugamers": {
+            "name": "The Chiefs",
+            "id": 10849
+        },
+        "identifier": "thechiefs"
+    },
+    "titan": {
+        "name": "Titan",
+        "steam": {
+            "name": "tit"
+        },
+        "csgolounge": {
+            "name": "Titan"
+        },
+        "gosugamers": {
+            "name": "Titan.CS",
+            "id": 8436
+        },
+        "identifier": "titan"
+    },
+    "torqued": {
+        "name": "Torqued",
+        "steam": {
+            "name": "torqu"
+        },
+        "gosugamers": {
+            "id": 9459,
+            "name": "Torqued"
+        },
+        "csgolounge": {
+            "name": "Torqued"
+        },
+        "identifier": "torqued"
+    },
+    "trickedesport": {
+        "name": "TRICKED eSport",
+        "steam": {
+            "name": "trick"
+        },
+        "gosugamers": {
+            "id": 8742,
+            "name": "tRICKED"
+        },
+        "identifier": "trickedesport"
+    },
+    "trident": {
+        "name": "TRIDENT",
+        "steam": {
+            "name": "tride"
+        },
+        "gosugamers": {
+            "name": "TRIDENT",
+            "id": 10846
+        },
+        "identifier": "trident"
+    },
+    "tyloo": {
+        "name": "TyLoo",
+        "steam": {
+            "name": "tyloo"
+        },
+        "gosugamers": {
+            "id": 8612,
+            "name": "TyLoo.CS"
+        },
+        "csgolounge": {
+            "name": "Tyloo"
+        },
+        "identifier": "tyloo"
+    },
+    "ubinited": {
+        "name": "Ubinited",
+        "steam": {
+            "name": "ubini"
+        },
+        "csgolounge": {
+            "name": "Ubinited"
+        },
+        "gosugamers": {
+            "name": "Ubinited",
+            "id": 9322
+        },
+        "identifier": "ubinited"
+    },
+    "uniain": {
+        "name": "uni.AiN",
+        "steam": {
+            "name": "uniai"
+        },
+        "csgolounge": {
+            "name": "uni.AiN"
+        },
+        "gosugamers": {
+            "name": "uni.AiN",
+            "id": 8801
+        },
+        "identifier": "uniain"
+    },
+    "ussr": {
+        "name": "USSR",
+        "steam": {
+            "name": "ussr"
+        },
+        "gosugamers": {
+            "id": 8584,
+            "name": "USSR"
+        },
+        "csgolounge": {
+            "name": "USSR"
+        },
+        "identifier": "ussr"
+    },
+    "vegasquadron": {
+        "name": "Vega Squadron",
+        "gosugamers": {
+            "id": 11357,
+            "name": "Vega Squadron."
+        },
+        "steam": {
+            "name": "vegas"
+        },
+        "identifier": "vegasquadron"
+    },
+    "vendetta": {
+        "name": "Vendetta",
+        "steam": {
+            "name": "vende"
+        },
+        "identifier": "vendetta"
+    },
+    "verygames": {
+        "name": "VeryGames",
+        "steam": {
+            "name": "vg"
+        },
+        "csgolounge": {
+            "name": "VG"
+        },
+        "gosugamers": {
+            "name": "Team VeryGames",
+            "id": 7385
+        },
+        "identifier": "verygames"
+    },
+    "vexitusesports": {
+        "name": "Vexitus E-Sports",
+        "steam": {
+            "name": "vexit"
+        },
+        "identifier": "vexitusesports"
+    },
+    "vicegaming": {
+        "name": "Vice Gaming",
+        "steam": {
+            "name": "viceg"
+        },
+        "identifier": "vicegaming"
+    },
+    "virtuspro": {
+        "name": "Virtus.Pro",
+        "steam": {
+            "name": "vp"
+        },
+        "csgolounge": {
+            "name": "VP"
+        },
+        "gosugamers": {
+            "name": "Virtus.Pro.CS",
+            "id": 7455
+        },
+        "identifier": "virtuspro"
+    },
+    "volgare": {
+        "name": "VOLGARE",
+        "steam": {
+            "name": "volga"
+        },
+        "csgolounge": {
+            "name": "Volgare"
+        },
+        "gosugamers": {
+            "name": "VOLGARE",
+            "id": 9635
+        },
+        "identifier": "volgare"
+    },
+    "voxeminor": {
+        "name": "Vox Eminor",
+        "steam": {
+            "name": "ve"
+        },
+        "csgolounge": {
+            "name": "VOX"
+        },
+        "gosugamers": {
+            "name": "VOX EMINOR",
+            "id": 8602
+        },
+        "identifier": "voxeminor"
+    },
+    "vvvgaming": {
+        "name": "vVv Gaming",
+        "gosugamers": {
+            "id": 11463,
+            "name": "vVv Gaming."
+        },
+        "steam": {
+            "name": "vvvga"
+        },
+        "identifier": "vvvgaming"
+    },
+    "webspell": {
+        "name": "webSPELL",
+        "steam": {
+            "name": "websp"
+        },
+        "csgolounge": {
+            "name": "webSpell"
+        },
+        "gosugamers": {
+            "name": "webSPELL",
+            "id": 8765
+        },
+        "identifier": "webspell"
+    },
+    "weplay": {
+        "name": "WePlay",
+        "gosugamers": {
+            "id": 11631,
+            "name": "WEPLAY"
+        },
+        "steam": {
+            "name": "wepla"
+        },
+        "identifier": "weplay"
+    },
+    "wild": {
+        "name": "WiLD",
+        "steam": {
+            "name": "wild"
+        },
+        "gosugamers": {
+            "id": 9636,
+            "name": "WiLD.CM"
+        },
+        "csgolounge": {
+            "name": "WiLD"
+        },
+        "identifier": "wild"
+    },
+    "winout": {
+        "name": "WinOut",
+        "steam": {
+            "name": "winou"
+        },
+        "gosugamers": {
+            "id": 10675,
+            "name": "WinOut.NET"
+        },
+        "csgolounge": {
+            "name": "Winout"
+        },
+        "identifier": "winout"
+    },
+    "wizards": {
+        "name": "Wizards",
+        "steam": {
+            "name": "wizar"
+        },
+        "csgolounge": {
+            "name": "Wizards"
+        },
+        "gosugamers": {
+            "name": "Wizards",
+            "id": 8450
+        },
+        "identifier": "wizards"
+    },
+    "x6tence": {
+        "name": "x6tence",
+        "steam": {
+            "name": "x6ten"
+        },
+        "csgolounge": {
+            "name": "X6tence"
+        },
+        "gosugamers": {
+            "name": "x6tence",
+            "id": 7420
+        },
+        "identifier": "x6tence"
+    },
+    "xgamekz": {
+        "name": "xGame.kz",
+        "steam": {
+            "name": "xgame"
+        },
+        "csgolounge": {
+            "name": "xGame"
+        },
+        "identifier": "xgamekz"
+    },
+    "xpcgaming": {
+        "name": "XPC Gaming",
+        "steam": {
+            "name": "xpcga"
+        },
+        "csgolounge": {
+            "name": "XPC"
+        },
+        "gosugamers": {
+            "id": 10919,
+            "name": "XPC"
+        },
+        "identifier": "xpcgaming"
+    },
+    "zbrilo": {
+        "name": "Zbrilo",
+        "steam": {
+            "name": "zbril"
+        },
+        "gosugamers": {
+            "id": 10201,
+            "name": "Zbrilo"
+        },
+        "csgolounge": {
+            "name": "Zbrilo"
+        },
+        "identifier": "zbrilo"
+    }
+}

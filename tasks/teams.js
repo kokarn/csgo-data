@@ -1,9 +1,9 @@
 module.exports = function( grunt ) {
     'use strict';
-    var fs = require( 'fs' ),
+    var fs = require( 'fs-extra' ),
         archiver = require( 'archiver' ),
         jf = require( 'jsonfile' ),
-        skipFiles = [ '.DS_Store' ],
+        skipFiles = [ '.DS_Store', 'all.json' ],
         done,
         doneJobs = 0,
         totalJobs,
@@ -90,12 +90,19 @@ module.exports = function( grunt ) {
             sortedList[ identifierList[ index ] ] = teamList[ identifierList[ index ] ];
         }
 
-        fs.writeFile( 'web/resources/teamlist.json', JSON.stringify( sortedList, null, 4 ), function( error ){
+        fs.writeFile( 'teams/all.json', JSON.stringify( sortedList, null, 4 ), function( error ){
             if( error ){
                 console.log( error );
                 done( false );
             } else {
-                done();
+                fs.copy( 'teams/all.json', 'web/resources/teamlist.json', function( error ){
+                    if( error ) {
+                        console.log( error );
+                        done( false );
+                    } else {
+                        done();
+                    }
+                });
             }
         });
     }
@@ -119,7 +126,7 @@ module.exports = function( grunt ) {
                         throw error;
                     } else {
                         teamData = checkIdentifier( teamData );
-                        teamList[ teamData.identifier ] = teamData.name;
+                        teamList[ teamData.identifier ] = teamData;
                         createCfg( teamData );
                     }
                 });
