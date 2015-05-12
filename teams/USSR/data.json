@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "USSR"
     },
-    "identifier": "ussr"
+    "identifier": "ussr",
+    "hltv": {
+        "name": "USSR",
+        "id": "2438"
+    }
 }

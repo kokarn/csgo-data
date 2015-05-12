@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "KPV"
     },
-    "identifier": "mykpv"
+    "identifier": "mykpv",
+    "hltv": {
+        "name": "myKPV.de",
+        "id": "5355"
+    }
 }

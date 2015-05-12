@@ -10,5 +10,9 @@
         "name": "Team EnVyUs",
         "id": 10705
     },
-    "identifier": "teamenvyus"
+    "identifier": "teamenvyus",
+    "hltv": {
+        "name": "EnVyUs",
+        "id": "5991"
+    }
 }

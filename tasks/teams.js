@@ -116,11 +116,11 @@ module.exports = function( grunt ) {
         totalJobs = teams.length;
 
         for( index in teams ){
-            if( skipFiles.indexOf( teams[ index ] ) !== -1 ){
-                continue;
-            }
-
             if( teams.hasOwnProperty( index ) ){
+                if( skipFiles.indexOf( teams[ index ] ) !== -1 ){
+                    continue;
+                }
+
                 jf.readFile( 'teams/' + teams[ index ] + '/data.json', function( error, teamData ){
                     if( error ){
                         throw error;

@@ -10,5 +10,9 @@
         "name": "Mythic",
         "id": 9402
     },
-    "identifier": "mythic"
+    "identifier": "mythic",
+    "hltv": {
+        "name": "Mythic",
+        "id": "5479"
+    }
 }

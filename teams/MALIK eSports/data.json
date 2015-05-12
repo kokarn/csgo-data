@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "MALIK"
     },
-    "identifier": "malikesports"
+    "identifier": "malikesports",
+    "hltv": {
+        "name": "MALIK",
+        "id": "6092"
+    }
 }

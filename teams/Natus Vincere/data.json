@@ -10,5 +10,9 @@
         "name": "Natus Vincere",
         "id": 7397
     },
-    "identifier": "natusvincere"
+    "identifier": "natusvincere",
+    "hltv": {
+        "name": "Natus Vincere",
+        "id": "4608"
+    }
 }

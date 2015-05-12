@@ -3,5 +3,9 @@
     "steam": {
         "name": "espen"
     },
-    "identifier": "esportengine"
+    "identifier": "esportengine",
+    "hltv": {
+        "name": "eSport Engine",
+        "id": "5771"
+    }
 }

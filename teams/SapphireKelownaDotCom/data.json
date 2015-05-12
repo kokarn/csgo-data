@@ -10,5 +10,9 @@
         "name": "SapphireKelownaDotCom",
         "id": 8826
     },
-    "identifier": "sapphirekelownadotcom"
+    "identifier": "sapphirekelownadotcom",
+    "hltv": {
+        "name": "SKDC",
+        "id": "5454"
+    }
 }

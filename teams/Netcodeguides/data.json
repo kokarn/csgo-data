@@ -10,5 +10,9 @@
         "name": "Netcode",
         "id": 8642
     },
-    "identifier": "netcodeguides"
+    "identifier": "netcodeguides",
+    "hltv": {
+        "name": "NetcodeGuides.com",
+        "id": "5543"
+    }
 }

@@ -7,5 +7,9 @@
         "id": 10920,
         "name": "Luminosity Gaming"
     },
-    "identifier": "luminositygaming"
+    "identifier": "luminositygaming",
+    "hltv": {
+        "name": "Luminosity",
+        "id": "6021"
+    }
 }

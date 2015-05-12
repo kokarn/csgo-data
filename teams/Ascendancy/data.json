@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "ASC"
     },
-    "identifier": "ascendancy"
+    "identifier": "ascendancy",
+    "hltv": {
+        "name": "Ascendancy",
+        "id": "5921"
+    }
 }

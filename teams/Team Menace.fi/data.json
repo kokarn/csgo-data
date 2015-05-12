@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "Menace"
     },
-    "identifier": "teammenacefi"
+    "identifier": "teammenacefi",
+    "hltv": {
+        "name": "Menace",
+        "id": "4576"
+    }
 }

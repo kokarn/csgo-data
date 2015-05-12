@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Winout"
     },
-    "identifier": "winout"
+    "identifier": "winout",
+    "hltv": {
+        "name": "WinOut",
+        "id": "3168"
+    }
 }

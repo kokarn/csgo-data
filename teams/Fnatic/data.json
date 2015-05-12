@@ -10,5 +10,9 @@
         "name": "fnatic",
         "id": 7386
     },
-    "identifier": "fnatic"
+    "identifier": "fnatic",
+    "hltv": {
+        "name": "fnatic",
+        "id": "160"
+    }
 }

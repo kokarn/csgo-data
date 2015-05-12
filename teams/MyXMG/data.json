@@ -10,5 +10,9 @@
         "name": "myXMG",
         "id": 8577
     },
-    "identifier": "myxmg"
+    "identifier": "myxmg",
+    "hltv": {
+        "name": "myXMG",
+        "id": "6005"
+    }
 }

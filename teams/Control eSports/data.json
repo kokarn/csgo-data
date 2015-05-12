@@ -3,5 +3,9 @@
     "steam": {
         "name": "contr"
     },
-    "identifier": "controlesports"
+    "identifier": "controlesports",
+    "hltv": {
+        "name": "Control eSports",
+        "id": "5603"
+    }
 }

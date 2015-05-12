@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "AffNity"
     },
-    "identifier": "affnity"
+    "identifier": "affnity",
+    "hltv": {
+        "name": "affNity",
+        "id": "5998"
+    }
 }

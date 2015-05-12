@@ -10,5 +10,9 @@
         "name": "PENTA Sports",
         "id": 8816
     },
-    "identifier": "pentasports"
+    "identifier": "pentasports",
+    "hltv": {
+        "name": "PENTA",
+        "id": "5395"
+    }
 }

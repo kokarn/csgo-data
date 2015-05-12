@@ -7,5 +7,9 @@
     "steam": {
         "name": "skyre"
     },
-    "identifier": "skyred"
+    "identifier": "skyred",
+    "hltv": {
+        "name": "Skyred",
+        "id": "5978"
+    }
 }

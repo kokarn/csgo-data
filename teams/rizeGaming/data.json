@@ -10,5 +10,9 @@
         "id": 8736,
         "name": "Rize Gaming"
     },
-    "identifier": "rizegaming"
+    "identifier": "rizegaming",
+    "hltv": {
+        "name": "rizeGaming",
+        "id": "5185"
+    }
 }

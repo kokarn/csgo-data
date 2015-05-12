@@ -7,5 +7,9 @@
         "id": 8742,
         "name": "tRICKED"
     },
-    "identifier": "trickedesport"
+    "identifier": "trickedesport",
+    "hltv": {
+        "name": "tRICKED",
+        "id": "4602"
+    }
 }

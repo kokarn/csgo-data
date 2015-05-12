@@ -10,5 +10,9 @@
         "name": "ESC Gaming",
         "id": 7428
     },
-    "identifier": "escgaming"
+    "identifier": "escgaming",
+    "hltv": {
+        "name": "ESC Gaming",
+        "id": "4104"
+    }
 }

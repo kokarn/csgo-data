@@ -10,5 +10,9 @@
         "name": "dAT team",
         "id": 7456
     },
-    "identifier": "datteam"
+    "identifier": "datteam",
+    "hltv": {
+        "name": "dAT",
+        "id": "4592"
+    }
 }

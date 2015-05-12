@@ -10,5 +10,9 @@
         "name": "Team Property.CS",
         "id": 8664
     },
-    "identifier": "teamproperty"
+    "identifier": "teamproperty",
+    "hltv": {
+        "name": "Property",
+        "id": "5319"
+    }
 }

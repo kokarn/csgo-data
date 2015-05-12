@@ -7,5 +7,9 @@
     "steam": {
         "name": "vvvga"
     },
-    "identifier": "vvvgaming"
+    "identifier": "vvvgaming",
+    "hltv": {
+        "name": "vVv Gaming",
+        "id": "2655"
+    }
 }

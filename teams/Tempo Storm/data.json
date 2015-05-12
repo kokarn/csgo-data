@@ -7,5 +7,9 @@
     "steam": {
         "name": "tmps"
     },
-    "identifier": "tempostorm"
+    "identifier": "tempostorm",
+    "hltv": {
+        "name": "Tempo Storm",
+        "id": "6118"
+    }
 }

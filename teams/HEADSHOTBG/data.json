@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "HSBG"
     },
-    "identifier": "headshotbg"
+    "identifier": "headshotbg",
+    "hltv": {
+        "name": "HEADSHOTBG",
+        "id": "2927"
+    }
 }

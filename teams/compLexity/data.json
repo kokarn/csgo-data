@@ -10,5 +10,9 @@
         "name": "compLexity Gaming",
         "id": 8604
     },
-    "identifier": "complexity"
+    "identifier": "complexity",
+    "hltv": {
+        "name": "compLexity",
+        "id": "5005"
+    }
 }

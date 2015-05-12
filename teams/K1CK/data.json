@@ -10,5 +10,9 @@
         "name": "k1ck eSports Club",
         "id": 7405
     },
-    "identifier": "k1ck"
+    "identifier": "k1ck",
+    "hltv": {
+        "name": "k1ck",
+        "id": "449"
+    }
 }

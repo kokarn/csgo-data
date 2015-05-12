@@ -10,5 +10,9 @@
         "name": "VOX EMINOR",
         "id": 8602
     },
-    "identifier": "voxeminor"
+    "identifier": "voxeminor",
+    "hltv": {
+        "name": "Vox Eminor",
+        "id": "4784"
+    }
 }

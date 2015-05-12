@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "nEophyte"
     },
-    "identifier": "neophyte"
+    "identifier": "neophyte",
+    "hltv": {
+        "name": "nEophyte",
+        "id": "665"
+    }
 }

@@ -7,5 +7,9 @@
         "id": 9642,
         "name": "Space Soldiers Black"
     },
-    "identifier": "spacesoldiers"
+    "identifier": "spacesoldiers",
+    "hltv": {
+        "name": "Space Soldiers",
+        "id": "5929"
+    }
 }

@@ -7,5 +7,9 @@
         "id": 10142,
         "name": "Imaginary Gaming Female"
     },
-    "identifier": "imaginarygaming"
+    "identifier": "imaginarygaming",
+    "hltv": {
+        "name": "Imaginary",
+        "id": "4615"
+    }
 }

@@ -7,5 +7,9 @@
     "steam": {
         "name": "wepla"
     },
-    "identifier": "weplay"
+    "identifier": "weplay",
+    "hltv": {
+        "name": "WEPLAY",
+        "id": "5337"
+    }
 }

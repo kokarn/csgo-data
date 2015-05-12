@@ -10,5 +10,9 @@
         "name": "Gamers2",
         "id": 10804
     },
-    "identifier": "gamers2"
+    "identifier": "gamers2",
+    "hltv": {
+        "name": "Gamers2",
+        "id": "5995"
+    }
 }

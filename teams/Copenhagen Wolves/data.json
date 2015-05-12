@@ -10,5 +10,9 @@
         "name": "CPH Wolves",
         "id": 7396
     },
-    "identifier": "copenhagenwolves"
+    "identifier": "copenhagenwolves",
+    "hltv": {
+        "name": "CPH Wolves",
+        "id": "3334"
+    }
 }

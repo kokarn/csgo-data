@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "SLine"
     },
-    "identifier": "streamline"
+    "identifier": "streamline",
+    "hltv": {
+        "name": "Streamline",
+        "id": "5869"
+    }
 }

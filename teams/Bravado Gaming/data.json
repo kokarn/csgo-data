@@ -10,5 +10,9 @@
         "name": "Bravado Gaming",
         "id": 9494
     },
-    "identifier": "bravadogaming"
+    "identifier": "bravadogaming",
+    "hltv": {
+        "name": "Bravado",
+        "id": "5158"
+    }
 }

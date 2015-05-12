@@ -10,5 +10,9 @@
         "name": "Planetkey Dynamics",
         "id": 8578
     },
-    "identifier": "planetkeydynamics"
+    "identifier": "planetkeydynamics",
+    "hltv": {
+        "name": "Planetkey",
+        "id": "5195"
+    }
 }

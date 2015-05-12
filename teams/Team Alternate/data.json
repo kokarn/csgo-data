@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "ATN"
     },
-    "identifier": "teamalternate"
+    "identifier": "teamalternate",
+    "hltv": {
+        "name": "Alternate",
+        "id": "61"
+    }
 }

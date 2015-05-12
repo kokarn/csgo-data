@@ -10,5 +10,9 @@
         "name": "Team LDLC",
         "id": 7443
     },
-    "identifier": "teamldlccom"
+    "identifier": "teamldlccom",
+    "hltv": {
+        "name": "LDLC",
+        "id": "4674"
+    }
 }

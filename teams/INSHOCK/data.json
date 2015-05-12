@@ -10,5 +10,9 @@
         "name": "INShock",
         "id": 8587
     },
-    "identifier": "inshock"
+    "identifier": "inshock",
+    "hltv": {
+        "name": "INSHOCK",
+        "id": "5613"
+    }
 }

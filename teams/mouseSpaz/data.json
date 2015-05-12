@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "mS"
     },
-    "identifier": "mousespaz"
+    "identifier": "mousespaz",
+    "hltv": {
+        "name": "mouseSpaz",
+        "id": "4749"
+    }
 }

@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Torqued"
     },
-    "identifier": "torqued"
+    "identifier": "torqued",
+    "hltv": {
+        "name": "Torqued",
+        "id": "5906"
+    }
 }

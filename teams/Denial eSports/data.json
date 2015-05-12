@@ -10,5 +10,9 @@
         "name": "Denial eSports",
         "id": "8827"
     },
-    "identifier": "denialesports"
+    "identifier": "denialesports",
+    "hltv": {
+        "name": "Denial",
+        "id": "4643"
+    }
 }

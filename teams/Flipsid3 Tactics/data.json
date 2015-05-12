@@ -10,5 +10,9 @@
         "name": "Flipsid3 Tactics",
         "id": 8564
     },
-    "identifier": "flipsid3tactics"
+    "identifier": "flipsid3tactics",
+    "hltv": {
+        "name": "FlipSid3",
+        "id": "5988"
+    }
 }

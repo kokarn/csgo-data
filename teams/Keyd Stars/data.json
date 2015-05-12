@@ -7,5 +7,9 @@
         "name": "Keyd Stars.",
         "id": 10897
     },
-    "identifier": "keydstars"
+    "identifier": "keydstars",
+    "hltv": {
+        "name": "Keyd Stars",
+        "id": "6033"
+    }
 }

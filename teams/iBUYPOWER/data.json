@@ -10,5 +10,9 @@
         "name": "iBUYPOWER",
         "id": 7414
     },
-    "identifier": "ibuypower"
+    "identifier": "ibuypower",
+    "hltv": {
+        "name": "iBUYPOWER",
+        "id": "5231"
+    }
 }

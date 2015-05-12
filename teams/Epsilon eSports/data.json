@@ -10,5 +10,9 @@
         "name": "Epsilon",
         "id": 8494
     },
-    "identifier": "epsilonesports"
+    "identifier": "epsilonesports",
+    "hltv": {
+        "name": "Epsilon",
+        "id": "4456"
+    }
 }

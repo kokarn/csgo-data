@@ -10,5 +10,9 @@
         "name": "Games4u.se",
         "id": 8814
     },
-    "identifier": "games4u"
+    "identifier": "games4u",
+    "hltv": {
+        "name": "Games4u",
+        "id": "5745"
+    }
 }

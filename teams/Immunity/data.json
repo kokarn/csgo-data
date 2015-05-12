@@ -10,5 +10,9 @@
         "name": "Team Immunity.CS",
         "id": 10845
     },
-    "identifier": "immunity"
+    "identifier": "immunity",
+    "hltv": {
+        "name": "Immunity",
+        "id": "846"
+    }
 }

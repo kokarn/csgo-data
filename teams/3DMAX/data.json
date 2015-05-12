@@ -10,5 +10,9 @@
         "name": "3DMAX.CS",
         "id": 7399
     },
-    "identifier": "3dmax"
+    "identifier": "3dmax",
+    "hltv": {
+        "name": "3DMAX",
+        "id": "5789"
+    }
 }

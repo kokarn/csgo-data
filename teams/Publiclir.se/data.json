@@ -10,5 +10,9 @@
         "name": "Publiclir.se",
         "id": 8565
     },
-    "identifier": "publiclirse"
+    "identifier": "publiclirse",
+    "hltv": {
+        "name": "Publiclir.se",
+        "id": "4477"
+    }
 }

@@ -7,5 +7,9 @@
         "id": 8666,
         "name": "neXtPlease!"
     },
-    "identifier": "nextplease!"
+    "identifier": "nextplease!",
+    "hltv": {
+        "name": "neXtPlease!",
+        "id": "2303"
+    }
 }

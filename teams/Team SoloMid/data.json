@@ -10,5 +10,9 @@
         "name": "Team Solomid.CS",
         "id": 10649
     },
-    "identifier": "teamsolomid"
+    "identifier": "teamsolomid",
+    "hltv": {
+        "name": "TSM",
+        "id": "5996"
+    }
 }

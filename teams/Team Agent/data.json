@@ -10,5 +10,9 @@
         "name": "Agent",
         "id": 10701
     },
-    "identifier": "teamagent"
+    "identifier": "teamagent",
+    "hltv": {
+        "name": "AGENT",
+        "id": "5053"
+    }
 }

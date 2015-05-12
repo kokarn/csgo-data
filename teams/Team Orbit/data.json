@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Orbit"
     },
-    "identifier": "teamorbit"
+    "identifier": "teamorbit",
+    "hltv": {
+        "name": "Orbit",
+        "id": "5766"
+    }
 }

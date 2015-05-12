@@ -10,5 +10,9 @@
         "name": "Virtus.Pro.CS",
         "id": 7455
     },
-    "identifier": "virtuspro"
+    "identifier": "virtuspro",
+    "hltv": {
+        "name": "Virtus.pro",
+        "id": "5378"
+    }
 }

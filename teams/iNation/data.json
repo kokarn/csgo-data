@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "Ination"
     },
-    "identifier": "ination"
+    "identifier": "ination",
+    "hltv": {
+        "name": "iNation",
+        "id": "3419"
+    }
 }

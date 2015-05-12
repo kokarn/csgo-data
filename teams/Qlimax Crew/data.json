@@ -3,5 +3,9 @@
     "steam": {
         "name": "qlima"
     },
-    "identifier": "qlimaxcrew"
+    "identifier": "qlimaxcrew",
+    "hltv": {
+        "name": "Qlimax Crew",
+        "id": "5297"
+    }
 }

@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "SK"
     },
-    "identifier": "skgaming"
+    "identifier": "skgaming",
+    "hltv": {
+        "name": "SK Gaming",
+        "id": "69"
+    }
 }

@@ -6,5 +6,9 @@
     "csgolounge": {
         "name": "Xenex"
     },
-    "identifier": "teamxenex"
+    "identifier": "teamxenex",
+    "hltv": {
+        "name": "XENEX",
+        "id": "6091"
+    }
 }

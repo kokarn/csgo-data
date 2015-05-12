@@ -10,5 +10,9 @@
         "name": "Team Infused.CS",
         "id": 8684
     },
-    "identifier": "teaminfused"
+    "identifier": "teaminfused",
+    "hltv": {
+        "name": "Infused",
+        "id": "4554"
+    }
 }

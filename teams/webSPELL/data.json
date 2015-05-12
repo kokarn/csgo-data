@@ -10,5 +10,9 @@
         "name": "webSPELL",
         "id": 8765
     },
-    "identifier": "webspell"
+    "identifier": "webspell",
+    "hltv": {
+        "name": "webSPELL",
+        "id": "4449"
+    }
 }
