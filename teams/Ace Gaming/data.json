@@ -7,5 +7,9 @@
     "gosugamers": {
         "name": "Ace Gaming.",
         "id": 11847
+    },
+    "hltv": {
+        "name": "ACE",
+        "id": 6117
     }
 }

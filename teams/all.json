@@ -26,6 +26,10 @@
         "gosugamers": {
             "name": "Ace Gaming.",
             "id": 11847
+        },
+        "hltv": {
+            "name": "ACE",
+            "id": 6117
         }
     },
     "affnity": {
@@ -1637,6 +1641,9 @@
         "hltv": {
             "name": "Acer",
             "id": "6031"
+        },
+        "csgolounge": {
+            "name": "TA"
         }
     },
     "teamagent": {
@@ -1965,7 +1972,11 @@
         "csgolounge": {
             "name": "TMP"
         },
-        "identifier": "tempogaming"
+        "identifier": "tempogaming",
+        "hltv": {
+            "name": "Tempo",
+            "id": 5709
+        }
     },
     "tempostorm": {
         "name": "Tempo Storm",

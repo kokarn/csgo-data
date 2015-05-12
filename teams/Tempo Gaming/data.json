@@ -10,5 +10,9 @@
     "csgolounge": {
         "name": "TMP"
     },
-    "identifier": "tempogaming"
+    "identifier": "tempogaming",
+    "hltv": {
+        "name": "Tempo",
+        "id": 5709
+    }
 }
