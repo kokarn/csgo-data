@@ -11,7 +11,6 @@ class AvailableTeams {
         'nip' => 'ninjasinpyjamas',
         'navi' => 'natusvincere',
         'tsm' => 'teamsolomid',
-        'envyus' => 'teamenvyus',
         'penta' => 'pentasports'
     );
 
@@ -23,6 +22,11 @@ class AvailableTeams {
         $list = array();
         foreach( $teamListData as $identifier => $teamData ) :
             $list[ $identifier ] = $teamData[ 'name' ];
+
+            // Add all teams without the "team" prefix to the list of available teams
+            if( stripos( $identifier, 'team' ) !== 'false' ) :
+                $this->alternateTeamNames[ str_ireplace( 'team', '', $identifier ) ] = $identifier;
+            endif;
         endforeach;
         return $list;
     }
@@ -42,11 +46,18 @@ class AvailableTeams {
     }
 
     private function filterTeams( $teams ){
-        if( count( $teams ) == 2 ) :
-            return $teams;
+        //echo "pre\n\r";
+        //print_r( $teams );
+        $estimatedTeams = array_slice( $teams, 0, 2 );
+        if( isset( $estimatedTeams[ 1 ] ) ) :
+            if( $estimatedTeams[ 0 ][ 'identifier' ] == $estimatedTeams[ 1 ][ 'identifier' ] ) :
+                $estimatedTeams[ 1 ] = array(
+                    'identifier' => $this->unknownTeamIdentifier,
+                    'position' => 1000
+                );
+            endif;
         endif;
 
-        $estimatedTeams = array_slice( $teams, 0, 2 );
         foreach( $teams as $team ) :
             if( $estimatedTeams[ 0 ][ 'identifier' ] == $team[ 'identifier' ] ):
                 if( $estimatedTeams[ 0 ][ 'position' ] > $team[ 'position' ] ) :
@@ -64,13 +75,13 @@ class AvailableTeams {
                 continue;
             endif;
 
-            if( $estimatedTeams[ 0 ][ 'position' ] > $team[ 'position' ] ):
-                $estimatedTeams[ 0 ] = $team;
+            if( $estimatedTeams[ 1 ][ 'position' ] > $team[ 'position' ] ):
+                $estimatedTeams[ 1 ] = $team;
                 continue;
             endif;
 
-            if( $estimatedTeams[ 1 ][ 'position' ] > $team[ 'position' ] ):
-                $estimatedTeams[ 1 ] = $team;
+            if( $estimatedTeams[ 0 ][ 'position' ] > $team[ 'position' ] ):
+                $estimatedTeams[ 0 ] = $team;
                 continue;
             endif;
         endforeach;
@@ -81,6 +92,8 @@ class AvailableTeams {
                 'name' => '???'
             );
         endif;
+        //echo "post\n\r";
+        //print_r( $estimatedTeams );
 
         return $estimatedTeams;
     }
