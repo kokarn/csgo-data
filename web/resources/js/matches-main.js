@@ -57,6 +57,8 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                 for( var i = 0; i < this.data.length; i = i + 1 ){
                     this.$matchesList.append( this.template( this.data[ i ] ) );
                 }
+
+                $( '[data-toggle="popover"]' ).popover();
             }
         };
 

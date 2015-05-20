@@ -15,7 +15,7 @@
             {{/each}}
         </div>
         {{#each streams}}
-            <div class="row stream-row">
+            <div class="row stream-row" data-toggle="popover" data-trigger="click hover" data-content="{{status}}" data-placement="top">
                 <div class="panel-background">
                     <img src="{{previewImage}}">
                 </div>
