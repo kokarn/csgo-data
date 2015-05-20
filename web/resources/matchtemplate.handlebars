@@ -1,0 +1,58 @@
+<div class="panel panel-default">
+    <div class="panel-body live-match-panel-body">
+        <div class="row teams-row">
+            {{#each teams}}
+            <div class="col-md-6 text-center">
+                {{#ifCond name '==' '???'}}
+                    <img src="resources/design/images/unknown-team.png">
+                {{else}}
+                    <img src="resources/teams/{{identifier}}-500x500.png">
+                {{/ifCond}}
+                <h2>
+                    {{name}}
+                </h2>
+            </div>
+            {{/each}}
+        </div>
+        {{#each streams}}
+            <div class="row stream-row">
+                <div class="panel-background">
+                    <img src="{{previewImage}}">
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-default btn-lg disabled">
+                        {{#ifCond quality '>=' 720}}
+                            <span class="glyphicon glyphicon-hd-video" aria-hidden="true"></span>
+                        {{else}}
+                            <span class="glyphicon glyphicon-sd-video" aria-hidden="true"></span>
+                        {{/ifCond}}
+                        {{quality}}P
+                    </button>
+                    <button type="button" class="btn btn-default btn-lg disabled">
+                        <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                        {{averageFps}} FPS
+                    </button>
+                    <button type="button" class="btn btn-default btn-lg disabled">
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        {{broadcasterLanguage}}
+                    </button>
+                    <button type="button" class="btn btn-default btn-lg disabled">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        {{viewers}}
+                    </button>
+                    <!--
+                    <small>
+                        {{status}}
+                    </small>
+                    -->
+                </div>
+                <div class="col-md-6">
+                    <a href="{{link}}" type="button" class="btn btn-primary btn-lg pull-right">
+                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        Watch {{name}}
+                    </a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
