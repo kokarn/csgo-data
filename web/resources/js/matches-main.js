@@ -31,6 +31,7 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
             $progressBar : $( '.js-progress-bar' ),
             init : function(){
                 this.loadTemplate();
+                this.loadData();
             },
             loadTemplate : function(){
                 var _this = this,
@@ -45,7 +46,6 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                         });
                     }
                     _this.template = Handlebars.compile( response );
-                    _this.loadData();
                 });
             },
             loadData : function(){
@@ -65,8 +65,12 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                 });
             },
             updateData : function(){
-                for( var i = 0; i < this.data.length; i = i + 1 ){
-                    this.$matchesList.append( this.template( this.data[ i ] ) );
+                if( this.data === false && this.template === false ){
+                    setTimeout( function(){
+                        matches.updateData();
+                    }, 50 );
+
+                    return false;
                 }
 
                 $( '[data-toggle="popover"]' ).popover();
