@@ -1,8 +1,14 @@
 <?php
 include( 'includes/default.php' );
 
-$twitchApi = new TwitchApi();
-$streams = $twitchApi->getStreamsByGame( 'Counter-Strike: Global Offensive' );
+if( $_GET[ 'site' ] == 'hitbox' ) :
+    $hitboxApi = new HitboxApi();
+    $streams = $hitboxApi->getStreamsByGame( 'Counter-Strike: Global Offensive' );
+else :
+    $twitchApi = new TwitchApi();
+    $streams = $twitchApi->getStreamsByGame( 'Counter-Strike: Global Offensive' );
+endif;
+
 $teamList = new AvailableTeams();
 
 $matches = array();
