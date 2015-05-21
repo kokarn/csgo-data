@@ -29,9 +29,12 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
             template : false,
             $matchesList : $( '.js-matches' ),
             $progressBar : $( '.js-progress-bar' ),
+            requestsSent : 0,
+            requestsDone : 0,
             init : function(){
                 this.loadTemplate();
-                this.loadData();
+                this.loadData( 'hitbox' );
+                this.loadData( 'twitch' );
             },
             loadTemplate : function(){
                 var _this = this,
@@ -39,28 +42,44 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                         url: 'resources/matchtemplate.handlebars'
                     });
 
+                this.requestsSent = this.requestsSent + 1;
+
                 xhr.done(function( response ){
+                    _this.requestsDone = _this.requestsDone + 1;
+
                     if( _this.$progressBar.length > 0 ){
                         _this.$progressBar.css({
-                            width: '50%'
+                            width: ( _this.requestsDone / _this.requestsSent * 100 ).toString() + '%'
                         });
                     }
                     _this.template = Handlebars.compile( response );
                 });
             },
-            loadData : function(){
+            loadData : function( service ){
                 var _this = this,
                     xhr = $.ajax({
-                        url: 'matches-ajax.php'
+                        url: 'matches-ajax.php',
+                        data: {
+                            'site': service
+                        }
                     });
 
+                this.requestsSent = this.requestsSent + 1;
+
                 xhr.done(function( response ){
+                    _this.requestsDone = _this.requestsDone + 1;
+
                     if( _this.$progressBar.length > 0 ){
                         _this.$progressBar.css({
-                            width: '50%'
+                            width: ( _this.requestsDone / _this.requestsSent * 100 ).toString() + '%'
                         });
                     }
-                    _this.data = response;
+
+                    if( _this.data === false ) {
+                        _this.data = response;
+                    } else {
+                        _this.data = _this.data.concat( response );
+                    }
                     _this.updateData();
                 });
             },
@@ -73,11 +92,16 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                     return false;
                 }
 
-                this.$progressBar.remove();
+                if( this.requestsSent == this.requestsDone ) {
+                    this.$progressBar.remove();
 
-                if( this.data.length === 0 ){
-                    this.$matchesList.html( '<h1>Sorry, no livestreamed matches at the moment</h1>' );
-                } else {
+                    if( this.data.length === 0 ){
+                        this.$matchesList.html( '<h1>Sorry, no livestreamed matches at the moment</h1>' );
+                    }
+                }
+
+                if( this.data.length > 0 ){
+                    this.$matchesList.html( ' ' );
                     for( var i = 0; i < this.data.length; i = i + 1 ){
                         this.$matchesList.append( this.template( this.data[ i ] ) );
                     }
