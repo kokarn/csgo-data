@@ -73,8 +73,17 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                     return false;
                 }
 
-                $( '[data-toggle="popover"]' ).popover();
                 this.$progressBar.remove();
+
+                if( this.data.length === 0 ){
+                    this.$matchesList.html( '<h1>Sorry, no livestreamed matches at the moment</h1>' );
+                } else {
+                    for( var i = 0; i < this.data.length; i = i + 1 ){
+                        this.$matchesList.append( this.template( this.data[ i ] ) );
+                    }
+
+                    $( '[data-toggle="popover"]' ).popover();
+                }
             }
         };
 
