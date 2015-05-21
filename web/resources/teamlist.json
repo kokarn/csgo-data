@@ -1664,6 +1664,24 @@
             "id": "5053"
         }
     },
+    "teamalientech": {
+        "name": "Team AlienTech",
+        "steam": {
+            "name": "alien"
+        },
+        "csgolounge": {
+            "name": "AT"
+        },
+        "gosugamers": {
+            "name": "AlienTech Black",
+            "id": 11947
+        },
+        "hltv": {
+            "name": "AlienTech.Black",
+            "id": "6130"
+        },
+        "identifier": "teamalientech"
+    },
     "teamalternate": {
         "name": "Team Alternate",
         "steam": {
