@@ -28,6 +28,7 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
             data : false,
             template : false,
             $matchesList : $( '.js-matches' ),
+            $progressBar : $( '.js-progress-bar' ),
             init : function(){
                 this.loadTemplate();
             },
@@ -38,6 +39,11 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                     });
 
                 xhr.done(function( response ){
+                    if( _this.$progressBar.length > 0 ){
+                        _this.$progressBar.css({
+                            width: '50%'
+                        });
+                    }
                     _this.template = Handlebars.compile( response );
                     _this.loadData();
                 });
@@ -49,6 +55,11 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                     });
 
                 xhr.done(function( response ){
+                    if( _this.$progressBar.length > 0 ){
+                        _this.$progressBar.css({
+                            width: '50%'
+                        });
+                    }
                     _this.data = response;
                     _this.updateData();
                 });
@@ -59,6 +70,7 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                 }
 
                 $( '[data-toggle="popover"]' ).popover();
+                this.$progressBar.remove();
             }
         };
 
