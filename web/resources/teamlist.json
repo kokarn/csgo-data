@@ -636,6 +636,24 @@
             "id": "5817"
         }
     },
+    "h2k": {
+        "name": "H2K",
+        "steam": {
+            "name": "h2k"
+        },
+        "csgolounge": {
+            "name": "H2K"
+        },
+        "hltv": {
+            "name": "H2k",
+            "id": "4904"
+        },
+        "gosugamers": {
+            "name": "H2K Gaming.CS",
+            "id": 8652
+        },
+        "identifier": "h2k"
+    },
     "headshotbg": {
         "name": "HEADSHOTBG",
         "steam": {
@@ -908,6 +926,9 @@
         "name": "KILLERFISH eSport",
         "steam": {
             "name": "killer"
+        },
+        "csgolounge": {
+            "name": "KFish"
         },
         "gosugamers": {
             "name": "KILLERFISH eSport e.V.",
@@ -1663,6 +1684,24 @@
             "name": "AGENT",
             "id": "5053"
         }
+    },
+    "teamalientech": {
+        "name": "Team AlienTech",
+        "steam": {
+            "name": "alien"
+        },
+        "csgolounge": {
+            "name": "AT"
+        },
+        "gosugamers": {
+            "name": "AlienTech Black",
+            "id": 11947
+        },
+        "hltv": {
+            "name": "AlienTech.Black",
+            "id": "6130"
+        },
+        "identifier": "teamalientech"
     },
     "teamalternate": {
         "name": "Team Alternate",

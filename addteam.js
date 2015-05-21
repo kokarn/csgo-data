@@ -68,9 +68,11 @@ var http = require( 'http' ),
                         answer = readline.question( 'Please enter a search term ' );
                         addTeam.searchHltv( answer );
                     } else {
+                        // Use the index, not the actual number we put
+                        i = answer - 1;
                         addTeam.teamData.hltv = {
-                            name : teams[ answer ].name,
-                            id : teams[ answer ].id
+                            name : teams[ i ].name,
+                            id : teams[ i ].id
                         };
 
                         addTeam.finish();
@@ -111,7 +113,9 @@ var http = require( 'http' ),
                         answer = readline.question( 'Please enter a search term ' );
                         addTeam.searchGosugamers( answer );
                     } else {
-                        addTeam.teamData.gosugamers = teams[ answer ];
+                        // Use the index, not the actual number we put
+                        i = answer - 1;
+                        addTeam.teamData.gosugamers = teams[ i ];
                         addTeam.finish();
                     }
                 }

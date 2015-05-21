@@ -1,20 +1,14 @@
 <?php
 class AvailableTeams {
-    private static $teamListFilename = 'resources/teamlist.json';
+    private $teamListFilename = 'resources/teamlist.json';
     private $list;
     private $parsedList = array();
     private $unknownTeamIdentifier = '-unknown-';
 
-    private $alternateTeamNames = array(
-        'hr' => 'hellraisers',
-        'm5' => 'moscowfive',
-        'nip' => 'ninjasinpyjamas',
-        'navi' => 'natusvincere',
-        'tsm' => 'teamsolomid',
-        'penta' => 'pentasports'
-    );
+    private $alternateTeamNames = array();
 
-    public function __construct(){
+    public function __construct( $teamListFilenamePrefix = '' ){
+        $this->teamListFilenamePrefix = $teamListFilenamePrefix;
         $this->loadFromFile();
     }
 
@@ -23,17 +17,25 @@ class AvailableTeams {
         foreach( $teamListData as $identifier => $teamData ) :
             $list[ $identifier ] = $teamData[ 'name' ];
 
+            // Add all csgolounge names to the list of available teams
+            if( isset( $teamData[ 'csgolounge' ] ) ) :
+                if( !isset( $this->alternateTeamNames[ strtolower( $teamData[ 'csgolounge' ][ 'name' ] ) ] ) ) :
+                    $this->alternateTeamNames[ strtolower( $teamData[ 'csgolounge' ][ 'name' ] ) ] = $identifier;
+                endif;
+            endif;
+
             // Add all teams without the "team" prefix to the list of available teams
             if( stripos( $identifier, 'team' ) !== 'false' ) :
                 $this->alternateTeamNames[ str_ireplace( 'team', '', $identifier ) ] = $identifier;
             endif;
         endforeach;
+
         return $list;
     }
 
     private function loadFromFile(){
         $kurl = new Kurl();
-        $data = json_decode( $kurl->loadData( self::$teamListFilename ), true );
+        $data = json_decode( $kurl->loadData( $this->teamListFilenamePrefix . $this->teamListFilename ), true );
         $this->list = $this->parseTeamList( $data );
         $this->list[ $this->unknownTeamIdentifier ] = '???';
         $this->setParsedList();
@@ -45,60 +47,47 @@ class AvailableTeams {
         endforeach;
     }
 
-    private function filterTeams( $teams ){
-        //echo "pre\n\r";
-        //print_r( $teams );
-        $estimatedTeams = array_slice( $teams, 0, 2 );
-        if( isset( $estimatedTeams[ 1 ] ) ) :
-            if( $estimatedTeams[ 0 ][ 'identifier' ] == $estimatedTeams[ 1 ][ 'identifier' ] ) :
-                $estimatedTeams[ 1 ] = array(
-                    'identifier' => $this->unknownTeamIdentifier,
-                    'position' => 1000
-                );
-            endif;
+    private function filterTeams( $teams, $closestToWhat ){
+        if( !isset( $teams[ 0 ] ) ) :
+            return array(
+                'identifier' => $this->unknownTeamIdentifier,
+                'position' => false
+            );
         endif;
 
+        //print_r( $teams );
+
+        $closestTeam = $teams[ 0 ];
+
         foreach( $teams as $team ) :
-            if( $estimatedTeams[ 0 ][ 'identifier' ] == $team[ 'identifier' ] ):
-                if( $estimatedTeams[ 0 ][ 'position' ] > $team[ 'position' ] ) :
-                    $estimatedTeams[ 0 ] = $team;
+            if( $closestToWhat == 'end' ) :
+                if( $team[ 'position' ] > $closestTeam[ 'position' ] ) :
+                    $closestTeam = $team;
                 endif;
-
-                continue;
-            endif;
-
-            if( $estimatedTeams[ 1 ][ 'identifier' ] == $team[ 'identifier' ] ):
-                if( $estimatedTeams[ 1 ][ 'position' ] > $team[ 'position' ] ) :
-                    $estimatedTeams[ 1 ] = $team;
+            else:
+                if( $team[ 'position' ] <  $closestTeam[ 'position' ] ) :
+                    $closestTeam = $team;
                 endif;
-
-                continue;
-            endif;
-
-            if( $estimatedTeams[ 1 ][ 'position' ] > $team[ 'position' ] ):
-                $estimatedTeams[ 1 ] = $team;
-                continue;
-            endif;
-
-            if( $estimatedTeams[ 0 ][ 'position' ] > $team[ 'position' ] ):
-                $estimatedTeams[ 0 ] = $team;
-                continue;
             endif;
         endforeach;
 
-        if( count( $estimatedTeams ) < 2 ) :
-            $estimatedTeams[] = array(
-                'identifier' => $this->unknownTeamIdentifier,
-                'name' => '???'
-            );
-        endif;
-        //echo "post\n\r";
-        //print_r( $estimatedTeams );
-
-        return $estimatedTeams;
+        return $closestTeam;
     }
 
     public function getTeamsInString( $string ){
+        $stringParts = explode( 'vs', strtolower( $string ) );
+        $teams = array();
+
+        // In the first part we want to find the team closes to the end of the string
+        $teams[] = $this->findTeam( $stringParts[ 0 ], 'end');
+
+        // In the second part we want to find the team closes to the beginning of the string
+        $teams[] = $this->findTeam( $stringParts[ 1 ], 'beginning' );
+
+        return $teams;
+    }
+
+    private function findTeam( $string, $closestToWhat ){
         $teams = $this->alternateTeamsInString( $string );
 
         foreach( $this->list as $identifier => $name ):
@@ -135,22 +124,30 @@ class AvailableTeams {
 
         endforeach;
 
-        $teams = $this->filterTeams( $teams );
+        $team = $this->filterTeams( $teams, $closestToWhat );
 
-        return $teams;
+        return $team;
     }
 
     public function getNameFromIdentifier( $identifier ){
         return $this->list[ $identifier ];
     }
 
+    private function stripSpecialChars( $string ){
+        return preg_replace( '#[^a-zA-Z0-9\- \.]#', '', $string );
+    }
+
     private function alternateTeamsInString( $string ){
         $teamsInString = array();
 
-        $normalizedString = preg_replace( '#[^a-zA-Z0-9\- \.]#', '', $string );
+        $normalizedString = preg_replace( '#[\.\-]#', ' ', $string );
+        $normalizedString = $this->stripSpecialChars( $normalizedString );
+
+        $normalizedString = ' ' . $normalizedString . ' ';
 
         foreach( $this->alternateTeamNames as $checkString => $identifier ) :
-            $position = stripos( $normalizedString, $checkString );
+            $position = stripos( $normalizedString, ' ' . $this->stripSpecialChars( $checkString ) . ' ' );
+
             if( $position !== false ) :
                 $teamsInString[] = array(
                     'identifier' => $identifier,

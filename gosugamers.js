@@ -7,9 +7,15 @@ module.exports = {
     baseUrl : 'http://www.gosugamers.net/counterstrike/rankings?tunranked=0&tunranked=1&tname=',
     search : function( searchPhrase, callback ){
         'use strict';
-        var _this = this;
+        var _this = this,
+            options = {
+                url: _this.baseUrl + searchPhrase,
+                headers: {
+                    'User-Agent': 'CLI REQUEST for csgo-data (https://github.com/kokarn/csgo-data/)'
+                }
+            };
 
-        request( _this.baseUrl + searchPhrase, function( error, response, html ){
+        request( options, function( error, response, html ){
             var $ = cheerio.load( html ),
                 $teams,
                 teamList = [];

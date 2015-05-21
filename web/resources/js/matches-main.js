@@ -28,8 +28,10 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
             data : false,
             template : false,
             $matchesList : $( '.js-matches' ),
+            $progressBar : $( '.js-progress-bar' ),
             init : function(){
                 this.loadTemplate();
+                this.loadData();
             },
             loadTemplate : function(){
                 var _this = this,
@@ -38,8 +40,12 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                     });
 
                 xhr.done(function( response ){
+                    if( _this.$progressBar.length > 0 ){
+                        _this.$progressBar.css({
+                            width: '50%'
+                        });
+                    }
                     _this.template = Handlebars.compile( response );
-                    _this.loadData();
                 });
             },
             loadData : function(){
@@ -49,16 +55,35 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
                     });
 
                 xhr.done(function( response ){
+                    if( _this.$progressBar.length > 0 ){
+                        _this.$progressBar.css({
+                            width: '50%'
+                        });
+                    }
                     _this.data = response;
                     _this.updateData();
                 });
             },
             updateData : function(){
-                for( var i = 0; i < this.data.length; i = i + 1 ){
-                    this.$matchesList.append( this.template( this.data[ i ] ) );
+                if( this.data === false && this.template === false ){
+                    setTimeout( function(){
+                        matches.updateData();
+                    }, 50 );
+
+                    return false;
                 }
 
-                $( '[data-toggle="popover"]' ).popover();
+                this.$progressBar.remove();
+
+                if( this.data.length === 0 ){
+                    this.$matchesList.html( '<h1>Sorry, no livestreamed matches at the moment</h1>' );
+                } else {
+                    for( var i = 0; i < this.data.length; i = i + 1 ){
+                        this.$matchesList.append( this.template( this.data[ i ] ) );
+                    }
+
+                    $( '[data-toggle="popover"]' ).popover();
+                }
             }
         };
 
