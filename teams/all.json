@@ -636,6 +636,24 @@
             "id": "5817"
         }
     },
+    "h2k": {
+        "name": "H2K",
+        "steam": {
+            "name": "h2k"
+        },
+        "csgolounge": {
+            "name": "H2K"
+        },
+        "hltv": {
+            "name": "H2k",
+            "id": "4904"
+        },
+        "gosugamers": {
+            "name": "H2K Gaming.CS",
+            "id": 8652
+        },
+        "identifier": "h2k"
+    },
     "headshotbg": {
         "name": "HEADSHOTBG",
         "steam": {
