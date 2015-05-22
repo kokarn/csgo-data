@@ -42,6 +42,16 @@ class AvailableTeams {
             if( stripos( $identifier, 'team' ) !== false ) :
                 $this->alternateTeamNames[ str_ireplace( 'team', '', $identifier ) ] = $identifier;
             endif;
+
+            // Special cases for team names with dots in them
+            if( stripos( $teamData[ 'name' ], '.' ) !== false ) :
+                // Add all teams with dot's replaced with space to the list of available teams
+                $this->alternateTeamNames[ $this->normalizeString( str_ireplace( '.', ' ', $teamData[ 'name' ] ) ) ] = $identifier;
+
+                // Add first part of team names with dots in them to the list of available teams
+                $nameParts = explode( '.', $teamData[ 'name' ] );
+                $this->alternateTeamNames[ $this->normalizeString( $nameParts[ 0 ] ) ] = $identifier;
+            endif;
         endforeach;
 
         return $list;
