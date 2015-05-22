@@ -124,6 +124,67 @@ function array_equal( $a, $b ) {
                             '-unknown-',
                             'teamalientech'
                         )
+                    ),
+                    array(
+                        'status' => '[FR] - CounterPit - Team Dignitas vs Virtus Pro',
+                        'teams' => array(
+                            'teamdignitas',
+                            'virtuspro'
+                        )
+                    )
+                    ,
+                    array(
+                        'status' => 'Patrick матч FlipSid3 vs. LDLC White',
+                        'teams' => array(
+                            'flipsid3tactics',
+                            'teamldlccom'
+                        )
+                    )
+                    ,
+                    array(
+                        'status' => 'FlipSid3 vs. LDLC.White | StarSeries S13 | sL4M',
+                        'teams' => array(
+                            'flipsid3tactics',
+                            'teamldlccom'
+                        )
+                    )
+                    ,
+                    array(
+                        'status' => '[ESL /w KeitaTV] (Starts 21.30) LGB eSports vs. KillerFish (Acer Predator Master)',
+                        'teams' => array(
+                            'lgbesports',
+                            'killerfishesports'
+                        )
+                    )
+                    ,
+                    array(
+                        'status' => 'LGB vs KillerFish @ Acer Predator Masters powered by Intel',
+                        'teams' => array(
+                            'lgbesports',
+                            'killerfishesports'
+                        )
+                    )
+                    ,
+                    array(
+                        'status' => 'ESL Spain: LGB eSports vs KillerFish - TakeTV Acer Predator Master',
+                        'teams' => array(
+                            'lgbesports',
+                            'killerfishesports'
+                        )
+                    ),
+                    array(
+                        'status' => 'Acer Predator Masters LIVE 21:30 LGB vs. KILLERFISH www.cmtv.eu #Giveaway‬',
+                        'teams' => array(
+                            'lgbesports',
+                            'killerfishesports'
+                        )
+                    ),
+                    array(
+                        'status' => 'Kibicujemy Polakom G2 vs Virtus',
+                        'teams' => array(
+                            'gamers2',
+                            'virtuspro'
+                        )
                     )
                 );
 
