@@ -79,8 +79,6 @@ class AvailableTeams {
             );
         endif;
 
-        //print_r( $teams );
-
         $closestTeam = $teams[ 0 ];
 
         foreach( $teams as $team ) :
