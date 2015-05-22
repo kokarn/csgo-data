@@ -153,7 +153,7 @@ function array_equal( $a, $b ) {
                         'status' => '[ESL /w KeitaTV] (Starts 21.30) LGB eSports vs. KillerFish (Acer Predator Master)',
                         'teams' => array(
                             'lgbesports',
-                            'killerfishesports'
+                            'killerfishesport'
                         )
                     )
                     ,
@@ -161,7 +161,7 @@ function array_equal( $a, $b ) {
                         'status' => 'LGB vs KillerFish @ Acer Predator Masters powered by Intel',
                         'teams' => array(
                             'lgbesports',
-                            'killerfishesports'
+                            'killerfishesport'
                         )
                     )
                     ,
@@ -169,14 +169,14 @@ function array_equal( $a, $b ) {
                         'status' => 'ESL Spain: LGB eSports vs KillerFish - TakeTV Acer Predator Master',
                         'teams' => array(
                             'lgbesports',
-                            'killerfishesports'
+                            'killerfishesport'
                         )
                     ),
                     array(
                         'status' => 'Acer Predator Masters LIVE 21:30 LGB vs. KILLERFISH www.cmtv.eu #Giveaway‬',
                         'teams' => array(
                             'lgbesports',
-                            'killerfishesports'
+                            'killerfishesport'
                         )
                     ),
                     array(
