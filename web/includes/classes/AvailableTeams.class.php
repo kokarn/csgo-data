@@ -39,7 +39,7 @@ class AvailableTeams {
             endif;
 
             // Add all teams without the "team" prefix to the list of available teams
-            if( stripos( $identifier, 'team' ) !== 'false' ) :
+            if( stripos( $identifier, 'team' ) !== false ) :
                 $this->alternateTeamNames[ str_ireplace( 'team', '', $identifier ) ] = $identifier;
             endif;
         endforeach;
