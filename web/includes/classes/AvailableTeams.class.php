@@ -97,7 +97,7 @@ class AvailableTeams {
     }
 
     public function getTeamsInString( $string ){
-        $stringParts = explode( 'vs', strtolower( $string ) );
+        $stringParts = explode( 'vs', $this->normalizeString( $string ) );
         $teams = array();
 
         // In the first part we want to find the team closes to the end of the string
