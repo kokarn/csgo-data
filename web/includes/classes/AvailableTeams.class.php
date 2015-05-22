@@ -19,14 +19,38 @@ class AvailableTeams {
 
             // Add all csgolounge names to the list of available teams
             if( isset( $teamData[ 'csgolounge' ] ) ) :
-                if( !isset( $this->alternateTeamNames[ strtolower( $teamData[ 'csgolounge' ][ 'name' ] ) ] ) ) :
-                    $this->alternateTeamNames[ strtolower( $teamData[ 'csgolounge' ][ 'name' ] ) ] = $identifier;
+                if( !isset( $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'csgolounge' ][ 'name' ] ) ] ) ) :
+                    $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'csgolounge' ][ 'name' ] ) ] = $identifier;
+                endif;
+            endif;
+
+            // Add all gosugamers names to the list of available teams
+            if( isset( $teamData[ 'gosugamers' ] ) ) :
+                if( !isset( $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'gosugamers' ][ 'name' ] ) ] ) ) :
+                    $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'gosugamers' ][ 'name' ] ) ] = $identifier;
+                endif;
+            endif;
+
+            // Add all hltv names to the list of available teams
+            if( isset( $teamData[ 'hltv' ] ) ) :
+                if( !isset( $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'hltv' ][ 'name' ] ) ] ) ) :
+                    $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'hltv' ][ 'name' ] ) ] = $identifier;
                 endif;
             endif;
 
             // Add all teams without the "team" prefix to the list of available teams
-            if( stripos( $identifier, 'team' ) !== 'false' ) :
+            if( stripos( $identifier, 'team' ) !== false ) :
                 $this->alternateTeamNames[ str_ireplace( 'team', '', $identifier ) ] = $identifier;
+            endif;
+
+            // Special cases for team names with dots in them
+            if( stripos( $teamData[ 'name' ], '.' ) !== false ) :
+                // Add all teams with dot's replaced with space to the list of available teams
+                $this->alternateTeamNames[ $this->normalizeString( str_ireplace( '.', ' ', $teamData[ 'name' ] ) ) ] = $identifier;
+
+                // Add first part of team names with dots in them to the list of available teams
+                $nameParts = explode( '.', $teamData[ 'name' ] );
+                $this->alternateTeamNames[ $this->normalizeString( $nameParts[ 0 ] ) ] = $identifier;
             endif;
         endforeach;
 
@@ -135,6 +159,11 @@ class AvailableTeams {
 
     private function stripSpecialChars( $string ){
         return preg_replace( '#[^a-zA-Z0-9\- \.]#', '', $string );
+    }
+
+    private function normalizeString( $string ){
+        $string = strtolower( $string );
+        return $this->stripSpecialChars( $string );
     }
 
     private function alternateTeamsInString( $string ){
