@@ -185,6 +185,13 @@ function array_equal( $a, $b ) {
                             'gamers2',
                             'virtuspro'
                         )
+                    ),
+                    array(
+                        'status' => '(RU)NAVI vs VEGA by MCS|Oldkinder',
+                        'teams' => array(
+                            'natusvincere',
+                            'vegasquadron'
+                        )
                     )
                 );
 

@@ -79,8 +79,6 @@ class AvailableTeams {
             );
         endif;
 
-        //print_r( $teams );
-
         $closestTeam = $teams[ 0 ];
 
         foreach( $teams as $team ) :
@@ -99,7 +97,7 @@ class AvailableTeams {
     }
 
     public function getTeamsInString( $string ){
-        $stringParts = explode( 'vs', strtolower( $string ) );
+        $stringParts = explode( 'vs', $this->normalizeString( $string ) );
         $teams = array();
 
         // In the first part we want to find the team closes to the end of the string
@@ -158,6 +156,7 @@ class AvailableTeams {
     }
 
     private function stripSpecialChars( $string ){
+        $string = preg_replace( '#[\(\)\[\]]#', ' ', $string );
         return preg_replace( '#[^a-zA-Z0-9\- \.]#', '', $string );
     }
 
