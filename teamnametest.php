@@ -192,6 +192,41 @@ function array_equal( $a, $b ) {
                             'natusvincere',
                             'vegasquadron'
                         )
+                    ),
+                    array(
+                        'status' => 'ESWC Khabarovsk',
+                        'teams' => array(
+                            '-unknown-',
+                            '-unknown-'
+                        )
+                    ),
+                    array(
+                        'status' => '[FR] ESL ESEA Pro League / 20:45 NiP vs. f3 / 21:45 NiP vs. f3 / 22:45 Dignitas vs. Na\'Vi',
+                        'teams' => array(
+                            'ninjasinpyjamas',
+                            'flipsid3tactics'
+                        )
+                    ),
+                    array(
+                        'status' => 'F3ide vs. NiP on de_inferno @  ESL ESEA by Flife',
+                        'teams' => array(
+                            'ninjasinpyjamas',
+                            'flipsid3tactics'
+                        )
+                    ),
+                    array(
+                        'status' => 'ESL ESEA Pro League - Method vs Tempo Storm',
+                        'teams' => array(
+                            'method',
+                            'tempostorm'
+                        )
+                    ),
+                    array(
+                        'status' => '[RETRANSMISSÃO] Keyd vs. CLG --Próximo jogo: Keyd Stars vs. Team Liquid às 20:00 - ESL ESEA Pro League [NA]',
+                        'teams' => array(
+                            'keydstars',
+                            'counterlogicgaming'
+                        )
                     )
                 );
 
