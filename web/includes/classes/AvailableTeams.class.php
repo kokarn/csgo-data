@@ -4,6 +4,11 @@ class AvailableTeams {
     private $list;
     private $parsedList = array();
     private $unknownTeamIdentifier = '-unknown-';
+    private $blacklisteadTeamNameParts = array(
+        'esports',
+        'gaming',
+        'team'
+    );
 
     private $alternateTeamNames = array();
 
@@ -52,6 +57,16 @@ class AvailableTeams {
                 $nameParts = explode( '.', $teamData[ 'name' ] );
                 $this->alternateTeamNames[ $this->normalizeString( $nameParts[ 0 ] ) ] = $identifier;
             endif;
+
+            // Add all parts except for some blacklisted ones for team names with spaces in them
+            if( stripos( $teamData[ 'name' ], ' ' ) !== false ) :
+                $teamParts = explode( ' ', $this->normalizeString( $teamData[ 'name' ] ) );
+                $teamParts = array_filter( $teamParts, array( $this, 'isNotBlacklisteadTeamPart' ) );
+
+                foreach( $teamParts as $teamIdentifier ) :
+                    $this->alternateTeamNames[ $teamIdentifier ] = $identifier;
+                endforeach;
+            endif;
         endforeach;
 
         return $list;
@@ -63,6 +78,14 @@ class AvailableTeams {
         $this->list = $this->parseTeamList( $data );
         $this->list[ $this->unknownTeamIdentifier ] = '???';
         $this->setParsedList();
+    }
+
+    private function isNotBlacklisteadTeamPart( $string ){
+        if( in_array( $string, $this->blacklisteadTeamNameParts ) ):
+            return false;
+        endif;
+
+        return true;
     }
 
     private function setParsedList(){
