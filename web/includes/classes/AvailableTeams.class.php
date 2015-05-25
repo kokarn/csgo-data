@@ -85,10 +85,18 @@ class AvailableTeams {
             if( $closestToWhat == 'end' ) :
                 if( $team[ 'position' ] > $closestTeam[ 'position' ] ) :
                     $closestTeam = $team;
+                elseif( $team[ 'position' ] == $closestTeam[ 'position' ] ) :
+                    if( $team[ 'priority' ] > $closestTeam[ 'priority' ] ):
+                        $closestTeam = $team;
+                    endif;
                 endif;
             else:
                 if( $team[ 'position' ] <  $closestTeam[ 'position' ] ) :
                     $closestTeam = $team;
+                elseif( $team[ 'position' ] == $closestTeam[ 'position' ] ) :
+                    if( $team[ 'priority' ] > $closestTeam[ 'priority' ] ):
+                        $closestTeam = $team;
+                    endif;
                 endif;
             endif;
         endforeach;
@@ -124,7 +132,8 @@ class AvailableTeams {
             if( $position !== false ):
                 $teams[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 1
                 );
                 continue;
             endif;
@@ -134,7 +143,8 @@ class AvailableTeams {
             if( $position !== false ):
                 $teams[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 1
                 );
                 continue;
             endif;
@@ -144,7 +154,8 @@ class AvailableTeams {
             if( $position !== false ):
                 $teams[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 1
                 );
                 continue;
             endif;
@@ -184,7 +195,8 @@ class AvailableTeams {
             if( $position !== false ) :
                 $teamsInString[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 0
                 );
             endif;
         endforeach;
