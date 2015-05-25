@@ -106,6 +106,11 @@ class AvailableTeams {
         // In the second part we want to find the team closes to the beginning of the string
         $teams[] = $this->findTeam( $stringParts[ 1 ], 'beginning' );
 
+        // Make sure we don't return an array with identical identified teams
+        if( $teams[ 0 ][ 'identifier' ] == $teams[ 1 ][ 'identifier' ] ) :
+            $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+        endif;
+
         return $teams;
     }
 
