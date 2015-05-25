@@ -2391,6 +2391,24 @@
             "id": "2587"
         }
     },
+    "wreckinggaming": {
+        "name": "Wrecking Gaming",
+        "steam": {
+            "name": "wreck"
+        },
+        "csgolounge": {
+            "name": "Wrecking"
+        },
+        "gosugamers": {
+            "name": "Wrecking Gaming",
+            "id": 10875
+        },
+        "hltv": {
+            "name": "Wrecking",
+            "id": "6103"
+        },
+        "identifier": "wreckinggaming"
+    },
     "x6tence": {
         "name": "x6tence",
         "steam": {
