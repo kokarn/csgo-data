@@ -193,6 +193,7 @@ function array_equal( $a, $b ) {
                             'vegasquadron'
                         )
                     ),
+                    // This shouldn't be matched at all
                     array(
                         'status' => 'ESWC Khabarovsk',
                         'teams' => array(
