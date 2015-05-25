@@ -1,0 +1,18 @@
+{
+    "name": "Wrecking Gaming",
+    "steam": {
+        "name": "wreck"
+    },
+    "csgolounge": {
+        "name": "Wrecking"
+    },
+    "gosugamers": {
+        "name": "Wrecking Gaming",
+        "id": 10875
+    },
+    "hltv": {
+        "name": "Wrecking",
+        "id": "6103"
+    },
+    "identifier": "wreckinggaming"
+}

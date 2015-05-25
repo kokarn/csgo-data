@@ -4,6 +4,11 @@ class AvailableTeams {
     private $list;
     private $parsedList = array();
     private $unknownTeamIdentifier = '-unknown-';
+    private $blacklisteadTeamNameParts = array(
+        'esports',
+        'gaming',
+        'team'
+    );
 
     private $alternateTeamNames = array();
 
@@ -52,6 +57,16 @@ class AvailableTeams {
                 $nameParts = explode( '.', $teamData[ 'name' ] );
                 $this->alternateTeamNames[ $this->normalizeString( $nameParts[ 0 ] ) ] = $identifier;
             endif;
+
+            // Add all parts except for some blacklisted ones for team names with spaces in them
+            if( stripos( $teamData[ 'name' ], ' ' ) !== false ) :
+                $teamParts = explode( ' ', $this->normalizeString( $teamData[ 'name' ] ) );
+                $teamParts = array_filter( $teamParts, array( $this, 'isNotBlacklisteadTeamPart' ) );
+
+                foreach( $teamParts as $teamIdentifier ) :
+                    $this->alternateTeamNames[ $teamIdentifier ] = $identifier;
+                endforeach;
+            endif;
         endforeach;
 
         return $list;
@@ -63,6 +78,14 @@ class AvailableTeams {
         $this->list = $this->parseTeamList( $data );
         $this->list[ $this->unknownTeamIdentifier ] = '???';
         $this->setParsedList();
+    }
+
+    private function isNotBlacklisteadTeamPart( $string ){
+        if( in_array( $string, $this->blacklisteadTeamNameParts ) ):
+            return false;
+        endif;
+
+        return true;
     }
 
     private function setParsedList(){
@@ -85,10 +108,18 @@ class AvailableTeams {
             if( $closestToWhat == 'end' ) :
                 if( $team[ 'position' ] > $closestTeam[ 'position' ] ) :
                     $closestTeam = $team;
+                elseif( $team[ 'position' ] == $closestTeam[ 'position' ] ) :
+                    if( $team[ 'priority' ] > $closestTeam[ 'priority' ] ):
+                        $closestTeam = $team;
+                    endif;
                 endif;
             else:
                 if( $team[ 'position' ] <  $closestTeam[ 'position' ] ) :
                     $closestTeam = $team;
+                elseif( $team[ 'position' ] == $closestTeam[ 'position' ] ) :
+                    if( $team[ 'priority' ] > $closestTeam[ 'priority' ] ):
+                        $closestTeam = $team;
+                    endif;
                 endif;
             endif;
         endforeach;
@@ -106,6 +137,11 @@ class AvailableTeams {
         // In the second part we want to find the team closes to the beginning of the string
         $teams[] = $this->findTeam( $stringParts[ 1 ], 'beginning' );
 
+        // Make sure we don't return an array with identical identified teams
+        if( $teams[ 0 ][ 'identifier' ] == $teams[ 1 ][ 'identifier' ] ) :
+            $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+        endif;
+
         return $teams;
     }
 
@@ -119,7 +155,8 @@ class AvailableTeams {
             if( $position !== false ):
                 $teams[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 1
                 );
                 continue;
             endif;
@@ -129,7 +166,8 @@ class AvailableTeams {
             if( $position !== false ):
                 $teams[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 1
                 );
                 continue;
             endif;
@@ -139,7 +177,8 @@ class AvailableTeams {
             if( $position !== false ):
                 $teams[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 1
                 );
                 continue;
             endif;
@@ -179,7 +218,8 @@ class AvailableTeams {
             if( $position !== false ) :
                 $teamsInString[] = array(
                     'identifier' => $identifier,
-                    'position' => $position
+                    'position' => $position,
+                    'priority' => 0
                 );
             endif;
         endforeach;
