@@ -26,7 +26,7 @@ If you can't find any resources on the team, just [open an
 issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into adding it ASAP.
 
 ## How do I get team logos in a different size?
-Glad you asked! 
+Glad you asked!
 
 There is a supersimple node app that does that for you.
 
@@ -66,6 +66,10 @@ If you use apache, this is a .htaccess file that goes in the '/teams/' directory
     Header set Content-Disposition attachment
 </FilesMatch>
 ```
+
+## Low hanging fruit
+[These are the teams currently missing a highres version of the logo](logos-missing.md)
+
 ## Legal
 
 #### __All logos and trademarks are the property of their respective owners!__
