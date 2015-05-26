@@ -197,7 +197,7 @@
         <p class="lead">
             Yes, you want the high resolution logos, we get it.
             For performance and hotlinking reasons we don't have them hosted here.
-            Buy you can easily get them from the <a href="https://github.com/kokarn/csgo-data/">GitHub repository</a>.
+            But you can easily get them from the <a href="https://github.com/kokarn/csgo-data/">GitHub repository</a>.
         </p>
     </div>
     <a href="https://github.com/kokarn/csgo-data">
