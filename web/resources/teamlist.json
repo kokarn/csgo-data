@@ -427,6 +427,13 @@
             "id": "4643"
         }
     },
+    "detonator": {
+        "name": "DeToNator",
+        "steam": {
+            "name": "deton"
+        },
+        "identifier": "detonator"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
