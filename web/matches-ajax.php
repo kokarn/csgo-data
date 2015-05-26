@@ -2,12 +2,14 @@
 include( 'includes/default.php' );
 
 if( $_GET[ 'site' ] == 'hitbox' ) :
-    $hitboxApi = new HitboxApi();
-    $streams = $hitboxApi->getStreamsByGame( 'Counter-Strike: Global Offensive' );
+    $apiWrapper = new HitboxApi();
+elseif( $_GET[ 'site' ] == 'azubu' ) :
+    $apiWrapper = new AzubuApi();
 else :
-    $twitchApi = new TwitchApi();
-    $streams = $twitchApi->getStreamsByGame( 'Counter-Strike: Global Offensive' );
+    $apiWrapper = new TwitchApi();
 endif;
+
+$streams = $apiWrapper->getStreamsByGame( 'Counter-Strike: Global Offensive' );
 
 $teamList = new AvailableTeams();
 

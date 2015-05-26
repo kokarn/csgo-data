@@ -23,7 +23,9 @@ class Stream {
     private function dataFromObject( $object ){
         $this->rawObjectData = $object;
 
-        if( isset( $object->viewers ) ) :
+        if( isset( $object->url_thumbnail ) ) :
+            $this->dataFromAzubuObject( $object );
+        elseif( isset( $object->viewers ) ) :
             $this->dataFromTwitchObject( $object );
         else :
             $this->dataFromHitboxObject( $object );
@@ -71,6 +73,25 @@ class Stream {
 
             $this->isCast = $this->setIsCast();
         endif;
+    }
+
+    private function dataFromAzubuObject( $object ){
+        $this->viewers = $object->view_count;
+        $this->previewImage = $object->url_thumbnail;
+
+        $this->broadcasterLanguage = $object->language;
+        $this->language = $object->language;
+
+        $this->status = $object->title;
+        $this->name = $object->user->username;
+        $this->link = $object->url_channel;
+
+        /*
+        $this->quality = $object->video_height;
+        $this->setAverageFps( $object->average_fps );
+        */
+
+        $this->isCast = $this->setIsCast();
     }
 
     private function setIsCast(){
