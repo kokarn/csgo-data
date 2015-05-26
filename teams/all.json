@@ -434,6 +434,17 @@
         },
         "identifier": "detonator"
     },
+    "dynastyesports": {
+        "name": "Dynasty eSports",
+        "steam": {
+            "name": "dynas"
+        },
+        "hltv": {
+            "name": "Dynasty",
+            "id": "5611"
+        },
+        "identifier": "dynastyesports"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
