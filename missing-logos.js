@@ -28,7 +28,7 @@ var fs = require( 'fs' ),
                 files.forEach( function( filename ){
                     var size;
 
-                    if( filename.substr( 0, 4 ) === 'logo' ){
+                    if( filename.substr( 0, 4 ) === 'logo' && filename.substr( -4 ) == '.png' ){
                         size = filename.substr( 5, 3 );
                         if( size !== 'hig' ){
                             _this.lowresLogos.push({
