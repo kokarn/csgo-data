@@ -53,6 +53,9 @@ class AvailableTeams {
                 // Add all teams with dot's replaced with space to the list of available teams
                 $this->alternateTeamNames[ $this->normalizeString( str_ireplace( '.', ' ', $teamData[ 'name' ] ) ) ] = $identifier;
 
+                // Add all teams with dot's removed to the list of available teams
+                $this->alternateTeamNames[ $this->normalizeString( str_ireplace( '.', '', $teamData[ 'name' ] ) ) ] = $identifier;
+
                 // Add first part of team names with dots in them to the list of available teams
                 $nameParts = explode( '.', $teamData[ 'name' ] );
                 $this->alternateTeamNames[ $this->normalizeString( $nameParts[ 0 ] ) ] = $identifier;
@@ -223,6 +226,25 @@ class AvailableTeams {
                 );
             endif;
         endforeach;
+
+        if( empty( $teamsInString ) ):
+            $normalizedString = preg_replace( '#[\.\-]#', '', $string );
+            $normalizedString = $this->stripSpecialChars( $normalizedString );
+
+            $normalizedString = ' ' . $normalizedString . ' ';
+
+            foreach( $this->alternateTeamNames as $checkString => $identifier ) :
+                $position = stripos( $normalizedString, ' ' . $this->stripSpecialChars( $checkString ) . ' ' );
+
+                if( $position !== false ) :
+                    $teamsInString[] = array(
+                        'identifier' => $identifier,
+                        'position' => $position,
+                        'priority' => 0
+                    );
+                endif;
+            endforeach;
+        endif;
 
         return $teamsInString;
     }
