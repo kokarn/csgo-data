@@ -427,6 +427,24 @@
             "id": "4643"
         }
     },
+    "detonator": {
+        "name": "DeToNator",
+        "steam": {
+            "name": "deton"
+        },
+        "identifier": "detonator"
+    },
+    "dynastyesports": {
+        "name": "Dynasty eSports",
+        "steam": {
+            "name": "dynas"
+        },
+        "hltv": {
+            "name": "Dynasty",
+            "id": "5611"
+        },
+        "identifier": "dynastyesports"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
@@ -1519,6 +1537,24 @@
             "id": "4822"
         }
     },
+    "recursiveesports": {
+        "name": "Recursive eSports",
+        "steam": {
+            "name": "recur"
+        },
+        "csgolounge": {
+            "name": "Recursive"
+        },
+        "gosugamers": {
+            "name": "Recursive eSports",
+            "id": 8605
+        },
+        "hltv": {
+            "name": "Recursive",
+            "id": "4680"
+        },
+        "identifier": "recursiveesports"
+    },
     "resilience5": {
         "name": "Resilience5",
         "steam": {
@@ -1920,6 +1956,17 @@
             "id": "6059"
         }
     },
+    "teamskyfire": {
+        "name": "Team Skyfire",
+        "steam": {
+            "name": "skyfi"
+        },
+        "hltv": {
+            "name": "Skyfire",
+            "id": "6161"
+        },
+        "identifier": "teamskyfire"
+    },
     "teamsolomid": {
         "name": "Team SoloMid",
         "steam": {
@@ -2234,6 +2281,24 @@
             "name": "viceg"
         },
         "identifier": "vicegaming"
+    },
+    "vination": {
+        "name": "Vination",
+        "steam": {
+            "name": "vinat"
+        },
+        "csgolounge": {
+            "name": "Vination"
+        },
+        "hltv": {
+            "name": "Vination",
+            "id": "5814"
+        },
+        "gosugamers": {
+            "name": "Vination eSports",
+            "id": 10046
+        },
+        "identifier": "vination"
     },
     "virtuspro": {
         "name": "Virtus.Pro",
