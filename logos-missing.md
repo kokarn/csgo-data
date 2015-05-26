@@ -1,6 +1,5 @@
 |Team|Current size|
 |---|---|
-|Luminosity Gaming|99|
 |Team ROCK|116|
 |Immersive eSports|124|
 |HEAT|131|
