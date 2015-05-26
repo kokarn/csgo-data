@@ -2242,6 +2242,24 @@
         },
         "identifier": "vicegaming"
     },
+    "vination": {
+        "name": "Vination",
+        "steam": {
+            "name": "vinat"
+        },
+        "csgolounge": {
+            "name": "Vination"
+        },
+        "hltv": {
+            "name": "Vination",
+            "id": "5814"
+        },
+        "gosugamers": {
+            "name": "Vination eSports",
+            "id": 10046
+        },
+        "identifier": "vination"
+    },
     "virtuspro": {
         "name": "Virtus.Pro",
         "steam": {
