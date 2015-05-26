@@ -77,7 +77,6 @@
 |Playing Ducks|436|
 |Team Caseking|447|
 |BOXR|450|
-|Gamers2|NaN|
 |PLAY5|461|
 |mouseSpaz|462|
 |Keyd Stars|480|
