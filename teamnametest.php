@@ -228,6 +228,34 @@ function array_equal( $a, $b ) {
                             'keydstars',
                             'counterlogicgaming'
                         )
+                    ),
+                    array(
+                        'status' => 'Virtus.PRO vs FlipSide on de_mirage @  ESL ESEA by ceh9',
+                        'teams' => array(
+                            'flipsid3tactics',
+                            'virtuspro'
+                        )
+                    ),
+                    array(
+                        'status' => 'Fragbite Masters S4 LIVE : 19:00 Natus Vincerevs. vs Hellraisers #GIVEAWAY www.cmtv.eu',
+                        'teams' => array(
+                            'natusvincere',
+                            'hellraisers'
+                        )
+                    ),
+                    array(
+                        'status' => 'CZ/SK DEV1S.com @ fragbite nEph vs. LGB o 22CET',
+                        'teams' => array(
+                            'neophyte',
+                            'lgbesports'
+                        )
+                    ),
+                    array(
+                        'status' => 'Headshot.bg vs. Tricked - Balkan Championship #2 - Best of 3 Visit CSGOCasino.net 18+ only!',
+                        'teams' => array(
+                            'headshotbg',
+                            'trickedesport'
+                        )
                     )
                 );
 
