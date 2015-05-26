@@ -1,0 +1,18 @@
+{
+    "name": "Recursive eSports",
+    "steam": {
+        "name": "recur"
+    },
+    "csgolounge": {
+        "name": "Recursive"
+    },
+    "gosugamers": {
+        "name": "Recursive eSports",
+        "id": 8605
+    },
+    "hltv": {
+        "name": "Recursive",
+        "id": "4680"
+    },
+    "identifier": "recursiveesports"
+}
