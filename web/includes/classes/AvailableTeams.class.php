@@ -74,6 +74,12 @@ class AvailableTeams {
                 $teamParts = array_filter( $teamParts, array( $this, 'isNotBlacklisteadTeamPart' ) );
 
                 foreach( $teamParts as $teamIdentifier ) :
+
+                    // Special case for team name parts ending in "3", eg "flipsid3"
+                    if( substr( $teamIdentifier, -1 ) == '3' ) :
+                        $this->alternateTeamNames[ substr( $teamIdentifier, 0, strlen( $teamIdentifier ) - 1 ) . 'e' ] = $identifier;
+                    endif;
+
                     $this->alternateTeamNames[ $teamIdentifier ] = $identifier;
                 endforeach;
             endif;
