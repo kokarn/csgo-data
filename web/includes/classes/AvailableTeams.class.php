@@ -2,7 +2,6 @@
 class AvailableTeams {
     private $teamListFilename = 'resources/teamlist.json';
     private $list;
-    private $parsedList = array();
     private $unknownTeamIdentifier = '-unknown-';
     private $blacklisteadTeamNameParts = array(
         'esports',
@@ -93,7 +92,6 @@ class AvailableTeams {
         $data = json_decode( $kurl->loadData( $this->teamListFilenamePrefix . $this->teamListFilename ), true );
         $this->list = $this->parseTeamList( $data );
         $this->list[ $this->unknownTeamIdentifier ] = '???';
-        $this->setParsedList();
     }
 
     private function isNotBlacklisteadTeamPart( $string ){
@@ -102,12 +100,6 @@ class AvailableTeams {
         endif;
 
         return true;
-    }
-
-    private function setParsedList(){
-        foreach( $this->list as $identifier => $name ):
-            $this->parsedList[ $identifier ] = str_ireplace( 'team', '', $name );
-        endforeach;
     }
 
     private function filterTeams( $teams, $closestToWhat ){
@@ -145,8 +137,31 @@ class AvailableTeams {
         return $closestTeam;
     }
 
-    public function getTeamsInString( $string ){
+    private function guessStrings( $strings ){
+        $guessedStrings = array();
+
+        foreach( $strings as $stringPart ) :
+            $parsedString = trim( preg_replace( '#\.#', '', $stringPart ) );
+
+            if( strlen( $parsedString ) > 0 ) :
+                $guessedStrings[] = $stringPart;
+            endif;
+        endforeach;
+
+        return $guessedStrings;
+    }
+
+    private function splitString( $string ){
         $this->stringParts = explode( 'vs', $this->normalizeString( $string ) );
+
+        if( count( $this->stringParts ) > 2 ) :
+            $this->stringParts = $this->guessStrings( $this->stringParts );
+        endif;
+    }
+
+    public function getTeamsInString( $string ){
+        $this->splitString( $string );
+
         $teams = array();
 
         // Find the first team
@@ -245,18 +260,6 @@ class AvailableTeams {
                 );
                 continue;
             endif;
-
-            // Check if the parsed name is in the string
-            $position = stripos( $string, $this->parsedList[ $identifier ] );
-            if( $position !== false ):
-                $teams[] = array(
-                    'identifier' => $identifier,
-                    'position' => $position,
-                    'priority' => 1
-                );
-                continue;
-            endif;
-
         endforeach;
 
         return $teams;
