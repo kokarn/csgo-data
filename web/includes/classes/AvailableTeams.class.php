@@ -137,8 +137,31 @@ class AvailableTeams {
         return $closestTeam;
     }
 
-    public function getTeamsInString( $string ){
+    private function guessStrings( $strings ){
+        $guessedStrings = array();
+
+        foreach( $strings as $stringPart ) :
+            $parsedString = trim( preg_replace( '#\.#', '', $stringPart ) );
+
+            if( strlen( $parsedString ) > 0 ) :
+                $guessedStrings[] = $stringPart;
+            endif;
+        endforeach;
+
+        return $guessedStrings;
+    }
+
+    private function splitString( $string ){
         $this->stringParts = explode( 'vs', $this->normalizeString( $string ) );
+
+        if( count( $this->stringParts ) > 2 ) :
+            $this->stringParts = $this->guessStrings( $this->stringParts );
+        endif;
+    }
+
+    public function getTeamsInString( $string ){
+        $this->splitString( $string );
+
         $teams = array();
 
         // Find the first team
