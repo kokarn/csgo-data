@@ -14,6 +14,10 @@ class AvailableTeams {
     );
 
     private $alternateTeamNames = array();
+    private $skipTeams = array(
+        array(),
+        array()
+    );
 
     public function __construct( $teamListFilenamePrefix = '' ){
         $this->teamListFilenamePrefix = $teamListFilenamePrefix;
@@ -101,6 +105,8 @@ class AvailableTeams {
     }
 
     private function filterTeams( $teams, $closestToWhat ){
+        $teams = array_values( $teams );
+
         if( !isset( $teams[ 0 ] ) ) :
             return array(
                 'identifier' => $this->unknownTeamIdentifier,
@@ -152,9 +158,23 @@ class AvailableTeams {
             if( !isset( $teams[ 0 ][ 'priority' ] ) || !isset( $teams[ 1 ][ 'priority' ] ) ) :
                 $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
             elseif( $teams[ 0 ][ 'priority' ] > $teams[ 1 ][ 'priority' ] ) :
-                $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+                $this->skipTeams[ 1 ][] = $teams[ 1 ][ 'identifier' ];
+                $alternateTeam = $this->findTeam( 1 );
+
+                if( isset( $alternateTeam[ 'identifier' ] ) ) :
+                    $teams[ 1 ] = $alternateTeam;
+                else :
+                    $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+                endif;
             else :
-                $teams[ 0 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+                $this->skipTeams[ 0 ][] = $teams[ 0 ][ 'identifier' ];
+                $alternateTeam = $this->findTeam( 0 );
+
+                if( isset( $alternateTeam[ 'identifier' ] ) ) :
+                    $teams[ 0 ] = $alternateTeam;
+                else :
+                    $teams[ 0 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+                endif;
             endif;
         endif;
 
@@ -174,6 +194,19 @@ class AvailableTeams {
 
         $teams = array_merge( $teams, $this->teamInString( $this->stringParts[ $stringPartIndex ] ) );
 
+        if( !empty( $this->skipTeams[ $stringPartIndex ] ) ) :
+
+            // Loop over all the skip teams
+            foreach( $this->skipTeams[ $stringPartIndex ] as $skipTeam ) :
+
+                // Loop over all found teams and remove the ones we should skip
+                foreach( $teams as $key => $team ) :
+                    if( $team[ 'identifier' ] == $skipTeam ) :
+                        unset( $teams[ $key ] );
+                    endif;
+                endforeach;
+            endforeach;
+        endif;
 
         $team = $this->filterTeams( $teams, $closestToWhat );
 
