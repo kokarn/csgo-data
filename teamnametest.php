@@ -256,6 +256,41 @@ function array_equal( $a, $b ) {
                             'headshotbg',
                             'trickedesport'
                         )
+                    ),
+                    array(
+                        'status' => 'Starladder 13 - Na\'Vi [0] vs [0] FlipSide (BO3)',
+                        'teams' => array(
+                            'natusvincere',
+                            'flipsid3tactics'
+                        )
+                    ),
+                    array(
+                        'status' => 'Druidz vs Circadian in the ESL Majors!',
+                        'teams' => array(
+                            '-unknown-',
+                            '-unknown-'
+                        )
+                    ),
+                    array(
+                        'status' => '[FR] TEAM LEGEND vs GamersLeague eSport 21h cevo',
+                        'teams' => array(
+                            '-unknown-',
+                            '-unknown-'
+                        )
+                    ),
+                    array(
+                        'status' => 'TSM Kinguin vs Kinguin - Alienware Area51 CS:GO Cup 2 Finals',
+                        'teams' => array(
+                            'teamsolomid',
+                            'teamkinguin'
+                        )
+                    ),
+                    array(
+                        'status' => 'CSGOcup.pl - FINAŁ Boys in Suits vs NEVER-LUCKY',
+                        'teams' => array(
+                            '-unknown-',
+                            '-unknown-'
+                        )
                     )
                 );
 

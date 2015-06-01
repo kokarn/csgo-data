@@ -6,11 +6,18 @@ class AvailableTeams {
     private $unknownTeamIdentifier = '-unknown-';
     private $blacklisteadTeamNameParts = array(
         'esports',
+        'esport',
         'gaming',
-        'team'
+        'team',
+        'in',
+        'the'
     );
 
     private $alternateTeamNames = array();
+    private $skipTeams = array(
+        array(),
+        array()
+    );
 
     public function __construct( $teamListFilenamePrefix = '' ){
         $this->teamListFilenamePrefix = $teamListFilenamePrefix;
@@ -67,6 +74,12 @@ class AvailableTeams {
                 $teamParts = array_filter( $teamParts, array( $this, 'isNotBlacklisteadTeamPart' ) );
 
                 foreach( $teamParts as $teamIdentifier ) :
+
+                    // Special case for team name parts ending in "3", eg "flipsid3"
+                    if( substr( $teamIdentifier, -1 ) == '3' ) :
+                        $this->alternateTeamNames[ substr( $teamIdentifier, 0, strlen( $teamIdentifier ) - 1 ) . 'e' ] = $identifier;
+                    endif;
+
                     $this->alternateTeamNames[ $teamIdentifier ] = $identifier;
                 endforeach;
             endif;
@@ -98,6 +111,8 @@ class AvailableTeams {
     }
 
     private function filterTeams( $teams, $closestToWhat ){
+        $teams = array_values( $teams );
+
         if( !isset( $teams[ 0 ] ) ) :
             return array(
                 'identifier' => $this->unknownTeamIdentifier,
@@ -131,25 +146,81 @@ class AvailableTeams {
     }
 
     public function getTeamsInString( $string ){
-        $stringParts = explode( 'vs', $this->normalizeString( $string ) );
+        $this->stringParts = explode( 'vs', $this->normalizeString( $string ) );
         $teams = array();
 
-        // In the first part we want to find the team closes to the end of the string
-        $teams[] = $this->findTeam( $stringParts[ 0 ], 'end');
+        // Find the first team
+        $teams[] = $this->findTeam( 0 );
 
-        // In the second part we want to find the team closes to the beginning of the string
-        $teams[] = $this->findTeam( $stringParts[ 1 ], 'beginning' );
+        // Find the second team
+        $teams[] = $this->findTeam( 1 );
 
+        return $this->validateTeams( $teams );
+    }
+
+    private function validateTeams( $teams ){
         // Make sure we don't return an array with identical identified teams
         if( $teams[ 0 ][ 'identifier' ] == $teams[ 1 ][ 'identifier' ] ) :
-            $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+            if( !isset( $teams[ 0 ][ 'priority' ] ) || !isset( $teams[ 1 ][ 'priority' ] ) ) :
+                $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+            elseif( $teams[ 0 ][ 'priority' ] > $teams[ 1 ][ 'priority' ] ) :
+                $this->skipTeams[ 1 ][] = $teams[ 1 ][ 'identifier' ];
+                $alternateTeam = $this->findTeam( 1 );
+
+                if( isset( $alternateTeam[ 'identifier' ] ) ) :
+                    $teams[ 1 ] = $alternateTeam;
+                else :
+                    $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+                endif;
+            else :
+                $this->skipTeams[ 0 ][] = $teams[ 0 ][ 'identifier' ];
+                $alternateTeam = $this->findTeam( 0 );
+
+                if( isset( $alternateTeam[ 'identifier' ] ) ) :
+                    $teams[ 0 ] = $alternateTeam;
+                else :
+                    $teams[ 0 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+                endif;
+            endif;
         endif;
 
         return $teams;
     }
 
-    private function findTeam( $string, $closestToWhat ){
-        $teams = $this->alternateTeamsInString( $string );
+    private function findTeam( $stringPartIndex ){
+        $teams = $this->alternateTeamsInString( $this->stringParts[ $stringPartIndex ] );
+
+        if( $stringPartIndex == 0 ) :
+            // In the first part we want to find the team closes to the end of the string
+            $closestToWhat = 'end';
+        else :
+            // In the second part we want to find the team closes to the beginning of the string
+            $closestToWhat = 'beginning';
+        endif;
+
+        $teams = array_merge( $teams, $this->teamInString( $this->stringParts[ $stringPartIndex ] ) );
+
+        if( !empty( $this->skipTeams[ $stringPartIndex ] ) ) :
+
+            // Loop over all the skip teams
+            foreach( $this->skipTeams[ $stringPartIndex ] as $skipTeam ) :
+
+                // Loop over all found teams and remove the ones we should skip
+                foreach( $teams as $key => $team ) :
+                    if( $team[ 'identifier' ] == $skipTeam ) :
+                        unset( $teams[ $key ] );
+                    endif;
+                endforeach;
+            endforeach;
+        endif;
+
+        $team = $this->filterTeams( $teams, $closestToWhat );
+
+        return $team;
+    }
+
+    private function teamInString( $string ){
+        $teams = array();
 
         foreach( $this->list as $identifier => $name ):
 
@@ -188,9 +259,7 @@ class AvailableTeams {
 
         endforeach;
 
-        $team = $this->filterTeams( $teams, $closestToWhat );
-
-        return $team;
+        return $teams;
     }
 
     public function getNameFromIdentifier( $identifier ){
