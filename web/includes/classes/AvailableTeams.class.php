@@ -6,8 +6,11 @@ class AvailableTeams {
     private $unknownTeamIdentifier = '-unknown-';
     private $blacklisteadTeamNameParts = array(
         'esports',
+        'esport',
         'gaming',
-        'team'
+        'team',
+        'in',
+        'the'
     );
 
     private $alternateTeamNames = array();
