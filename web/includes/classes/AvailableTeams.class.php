@@ -145,7 +145,15 @@ class AvailableTeams {
 
         // Make sure we don't return an array with identical identified teams
         if( $teams[ 0 ][ 'identifier' ] == $teams[ 1 ][ 'identifier' ] ) :
-            $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+            if( !isset( $teams[ 0 ][ 'priority' ] ) || !isset( $teams[ 1 ][ 'priority' ] ) ) :
+                $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+            elseif( $teams[ 0 ][ 'priority' ] > $teams[ 1 ][ 'priority' ] ) :
+                print_r( $teams );
+                $teams[ 1 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+            else :
+                print_r( $teams );
+                $teams[ 0 ][ 'identifier' ] = $this->unknownTeamIdentifier;
+            endif;
         endif;
 
         return $teams;
