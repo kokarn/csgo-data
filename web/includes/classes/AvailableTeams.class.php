@@ -134,15 +134,19 @@ class AvailableTeams {
     }
 
     public function getTeamsInString( $string ){
-        $stringParts = explode( 'vs', $this->normalizeString( $string ) );
+        $this->stringParts = explode( 'vs', $this->normalizeString( $string ) );
         $teams = array();
 
-        // In the first part we want to find the team closes to the end of the string
-        $teams[] = $this->findTeam( $stringParts[ 0 ], 'end');
+        // Find the first team
+        $teams[] = $this->findTeam( 0 );
 
-        // In the second part we want to find the team closes to the beginning of the string
-        $teams[] = $this->findTeam( $stringParts[ 1 ], 'beginning' );
+        // Find the second team
+        $teams[] = $this->findTeam( 1 );
 
+        return $this->validateTeams( $teams );
+    }
+
+    private function validateTeams( $teams ){
         // Make sure we don't return an array with identical identified teams
         if( $teams[ 0 ][ 'identifier' ] == $teams[ 1 ][ 'identifier' ] ) :
             if( !isset( $teams[ 0 ][ 'priority' ] ) || !isset( $teams[ 1 ][ 'priority' ] ) ) :
@@ -157,8 +161,27 @@ class AvailableTeams {
         return $teams;
     }
 
-    private function findTeam( $string, $closestToWhat ){
-        $teams = $this->alternateTeamsInString( $string );
+    private function findTeam( $stringPartIndex ){
+        $teams = $this->alternateTeamsInString( $this->stringParts[ $stringPartIndex ] );
+
+        if( $stringPartIndex == 0 ) :
+            // In the first part we want to find the team closes to the end of the string
+            $closestToWhat = 'end';
+        else :
+            // In the second part we want to find the team closes to the beginning of the string
+            $closestToWhat = 'beginning';
+        endif;
+
+        $teams = array_merge( $teams, $this->teamInString( $this->stringParts[ $stringPartIndex ] ) );
+
+
+        $team = $this->filterTeams( $teams, $closestToWhat );
+
+        return $team;
+    }
+
+    private function teamInString( $string ){
+        $teams = array();
 
         foreach( $this->list as $identifier => $name ):
 
@@ -197,9 +220,7 @@ class AvailableTeams {
 
         endforeach;
 
-        $team = $this->filterTeams( $teams, $closestToWhat );
-
-        return $team;
+        return $teams;
     }
 
     public function getNameFromIdentifier( $identifier ){
