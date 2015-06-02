@@ -10,7 +10,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/publi.png)|Publiclir.se|161|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/x6ten.png)|x6tence|170|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/k1ck.png)|K1CK|171|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nextp.png)|neXtPlease!|175|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alien.png)|Team AlienTech|177|
