@@ -1,11 +1,12 @@
 'use strict';
 
 var fs = require( 'fs' ),
+    jsonfile = require( 'jsonfile' ),
     missingLogos = {
         lowresLogos : [],
         sortedLogos : [],
         teamsChecked : 0,
-        markdown : '|Team|Current size|\n|---|---|\n',
+        markdown : '|Image|Team|Current size|\n|---|---|\n',
         start: function(){
             this.teams = fs.readdirSync( 'teams/' );
             this.checkAllLogoSizes();
@@ -26,14 +27,17 @@ var fs = require( 'fs' ),
                 }
 
                 files.forEach( function( filename ){
-                    var size;
+                    var size,
+                        data;
 
                     if( filename.substr( 0, 4 ) === 'logo' && filename.substr( -4 ) == '.png' ){
                         size = filename.substr( 5, 3 );
                         if( size !== 'hig' ){
+                            data = jsonfile.readFileSync( 'teams/' + teamName + '/data.json' );
                             _this.lowresLogos.push({
                                 name: teamName,
-                                size: parseInt( size, 10 )
+                                size: parseInt( size, 10 ),
+                                image: '![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/' + data.steam.name + '.png)'
                             });
                         }
                     }
@@ -65,7 +69,7 @@ var fs = require( 'fs' ),
                 });
 
                 _this.sortedLogos.forEach( function( data ){
-                    _this.markdown = _this.markdown + '|' + data.name + '|' + data.size + '|\n';
+                    _this.markdown = _this.markdown + '|' + data.image + '|' + data.name + '|' + data.size + '|\n';
                 });
 
                 fs.writeFile( 'logos-missing.md', _this.markdown, function( error ){
