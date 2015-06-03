@@ -159,7 +159,17 @@ class AvailableTeams {
         endif;
     }
 
+    private function cleanClass(){
+        $this->skipTeams = array(
+            array(),
+            array()
+        );
+        
+        $this->stringParts = false;
+    }
+
     public function getTeamsInString( $string ){
+        $this->cleanClass();
         $this->splitString( $string );
 
         $teams = array();
