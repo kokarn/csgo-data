@@ -6,7 +6,7 @@ var fs = require( 'fs' ),
         lowresLogos : [],
         sortedLogos : [],
         teamsChecked : 0,
-        markdown : '|Image|Team|Current size|\n|---|---|\n',
+        markdown : '|Image|Team|Current size|\n|---|---|---|\n',
         start: function(){
             this.teams = fs.readdirSync( 'teams/' );
             this.checkAllLogoSizes();
