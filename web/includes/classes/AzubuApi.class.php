@@ -11,7 +11,7 @@ class AzubuApi {
             if( $channel->category->title !== $game ) :
                 continue;
             endif;
-            $channelList[] = new Stream( $channel );
+            $channelList[] = $this->streamFromData( $channel );
         endforeach;
 
         return $channelList;
@@ -24,6 +24,27 @@ class AzubuApi {
             default:
                 return $gameName;
         endswitch;
+    }
+
+    private function streamFromData( $data ){
+        $stream = new Stream();
+
+        $stream->setViewers( $data->view_count );
+        $stream->setPreviewImage( $data->url_thumbnail );
+
+        $stream->setBroadcasterLanguage( $data->language );
+        $stream->setLanguage( $data->language );
+
+        $stream->setStatus( $data->title );
+        $stream->setName( $data->user->username );
+        $stream->setLink( $data->url_channel );
+
+        /*
+        $this->quality = $object->video_height;
+        $this->setAverageFps( $object->average_fps );
+        */
+
+        return $stream;
     }
 
     private function loadUrl( $url ){
