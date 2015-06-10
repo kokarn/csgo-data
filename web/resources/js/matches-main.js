@@ -216,7 +216,10 @@ if (!Object.keys) {
                 }
 
                 if( Object.keys( this.matches ).length > 0 ){
+                    // Reset the page layout
                     this.$matchesList.html( ' ' );
+                    $( '.popover' ).remove();
+                    
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
                             this.$matchesList.append( this.template( this.matches[ matchIdentifier ] ) );
