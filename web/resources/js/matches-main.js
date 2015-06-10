@@ -103,9 +103,15 @@ if (!Object.keys) {
                         offset = -( ( windowHeight - elementHeight ) / 2 )
                     }
 
-                    $element.velocity( 'scroll', {
-                        offset : offset
-                    } );
+                    $element
+                        .velocity( 'stop' )
+                        .velocity({
+                            scale: '1'
+                        }, 300 )
+                        .velocity( 'scroll', {
+                            offset : offset,
+                            queue : false
+                        });
                 });
 
                 $( 'body' ).on( 'mouseenter', '.js-match-wrapper', function(){
@@ -119,7 +125,7 @@ if (!Object.keys) {
                 });
 
                 $( 'body' ).on( 'mouseleave', '.js-match-wrapper', function(){
-                    $( this ).velocity( 'stop' ).velocity({
+                    $( this ).velocity({
                         scale: '1'
                     }, 300 );
                 });
