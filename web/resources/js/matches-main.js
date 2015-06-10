@@ -81,6 +81,26 @@ if (!Object.keys) {
                 setInterval( function(){
                     _this.loadStreams();
                 }, 60000 );
+
+                $( 'body' ).on( 'click touchstart', '.js-match-wrapper', function(){
+                    var $element = $( this ),
+                        windowHeight = $( window ).height(),
+                        elementHeight,
+                        offset = 0;
+
+                    $( '.active' ).removeClass( 'active' );
+                    $element.addClass( 'active' );
+
+                    elementHeight = $element.height();
+
+                    if( windowHeight > elementHeight ){
+                        offset = -( ( windowHeight - elementHeight ) / 2 )
+                    }
+
+                    $element.velocity( 'scroll', {
+                        offset : offset
+                    } );
+                });
             },
             loadStreams : function(){
                 this.loadData( 'hitbox' );
@@ -161,6 +181,11 @@ if (!Object.keys) {
 
                 // Loop over all matches
                 $.each( _this.matches, function( matchIndex, matchData ){
+                    // If a match doesn't have any streams any more, remove it
+                    if( matchData.streams.length === 0 ){
+                        _this.matches.splice( matchIndex, 1 );
+                        return true;
+                    }
                     // Loop over all a matchs streams
                     $.each( matchData.streams, function( streamIndex, streamData ){
                         // Check if the stream matches the service and isn't live
@@ -216,14 +241,21 @@ if (!Object.keys) {
                 }
 
                 if( Object.keys( this.matches ).length > 0 ){
+                    // Reset the page layout
                     this.$matchesList.html( ' ' );
+                    $( '.popover' ).remove();
+
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
                             this.$matchesList.append( this.template( this.matches[ matchIdentifier ] ) );
                         }
                     }
 
-                    $( '[data-toggle="popover"]' ).popover();
+                    $( '[data-toggle="popover"]' ).popover({
+                        container: 'body',
+                        mouseOffset: 20,
+                        followMouse: true
+                    });
                 }
             }
         };
