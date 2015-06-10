@@ -100,7 +100,7 @@ if (!Object.keys) {
                     _this.requestsDone = _this.requestsDone + 1;
 
                     _this.updateProgressbar();
-                    
+
                     _this.template = Handlebars.compile( response );
                 });
             },
@@ -120,24 +120,47 @@ if (!Object.keys) {
 
                     _this.updateProgressbar();
 
-                    _this.handleResponse( response );
+                    _this.handleResponse( response, service );
                 });
             },
-            handleResponse : function( response ){
+            handleResponse : function( response, service ){
                 var _this = this;
 
-                $.each( response, function( index, data ){
-                    var identifiers = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ],
-                        identifier;
+                if( response.length === 0 ){
+                    // This service has no live streams, loop over all matches and remove potential streams
+                    $.each( _this.matches, function( matchIndex, matchData ){
+                        $.each( matchData.streams, function( streamIndex, streamData ){
+                            if( streamData.service === service ){
+                                matchData.streams.splice( streamIndex, 1 );
+                            }
+                        });
+                    })
+                } else {
+                    // We need to check what service we got a response from and then check all those streams
+                    $.each( response, function( index, data ){
+                        var identifier = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ].sort().toString();
 
-                    identifier = identifiers.sort().toString();
+                        if( _this.matches[ identifier ] === undefined ){
+                            _this.matches[ identifier ] = data;
+                        } else {
+                            $.each( _this.matches[ identifier ].streams, function( streamIndex, streamData ){
+                                // Check if the stream is already listed for that particular match
+                                $.each( data.streams, function( dataStreamIndex, dataStreamData ){
+                                    if( streamData.name == dataStreamData.name ){
+                                        _this.matches[ identifier ].streams[ streamIndex ] = dataStreamData;
+                                        data.streams.splice( dataStreamIndex, 1 );
+                                        return false;
+                                    }
+                                });
+                            });
 
-                    if( _this.matches[ identifier ] === undefined ){
-                        _this.matches[ identifier ] = data;
-                    } else {
-                        _this.matches[ identifier ].streams.concat( data.streams );
-                    }
-                });
+                            // Data streams should only hold streams that are not already listed, so add them
+                            _this.matches[ identifier ].streams = _this.matches[ identifier ].streams.concat( data.streams );
+                        }
+                    });
+
+                    // TODO: Remove streams that are no longer live
+                }
 
                 this.updateData();
             },
