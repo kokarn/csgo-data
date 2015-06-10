@@ -12,6 +12,7 @@
 }
 
 .panel.active {
+    background-color: transparent;
     height: auto;
     width: 100%;
     transition: none;
