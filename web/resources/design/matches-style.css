@@ -65,3 +65,7 @@
     right: 10px;
     top: 50%;
 }
+
+.service-wrapper img {
+    max-height: 18px;
+}
