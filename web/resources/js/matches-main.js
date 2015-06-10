@@ -217,7 +217,7 @@ if (!Object.keys) {
                 $.each( _this.matches, function( matchIndex, matchData ){
                     // If a match doesn't have any streams any more, remove it
                     if( matchData.streams.length === 0 ){
-                        _this.matches.splice( matchIndex, 1 );
+                        delete _this.matches[ matchIndex ];
                         return true;
                     }
                     // Loop over all a matchs streams
