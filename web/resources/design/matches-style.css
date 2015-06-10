@@ -17,6 +17,18 @@
     transition: none;
 }
 
+.close {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.panel.active .close {
+    display: block;
+}
+
 .panel.active:hover {
     cursor: default;
     transform: none;

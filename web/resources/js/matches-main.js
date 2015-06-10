@@ -82,6 +82,12 @@ if (!Object.keys) {
                     _this.loadStreams();
                 }, 60000 );
 
+                $( 'body' ).on( 'click touchstart', '.js-close', function( event ){
+                    event.preventDefault();
+                    event.stopImmediatePropagation();
+                    $( this ).parents( '.js-match-wrapper' ).removeClass( 'active' );
+                });
+
                 $( 'body' ).on( 'click touchstart', '.js-match-wrapper', function(){
                     var $element = $( this ),
                         windowHeight = $( window ).height(),
