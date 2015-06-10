@@ -8,7 +8,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wild.png)|WiLD|143|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/bravg.png)|Bravado Gaming|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/publi.png)|Publiclir.se|161|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/k1ck.png)|K1CK|171|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nextp.png)|neXtPlease!|175|
@@ -21,6 +21,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ascen.png)|Ascendancy|187|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wizar.png)|Wizards|188|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vinat.png)|Vination|193|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/publi.png)|Publiclir.se|197|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/volga.png)|VOLGARE|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/espen.png)|eSport Engine|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/torqu.png)|Torqued|214|
@@ -31,10 +32,8 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/denia.png)|Denial eSports|231|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skyre.png)|Skyred|233|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g4u.png)|Games4u|234|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/chief.png)|The Chiefs|236|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/melty.png)|melty eSport Club|237|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/area5.png)|Area51|245|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nihil.png)|Nihilum|250|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/malik.png)|MALIK eSports|254|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/hungr.png)|Hungry Hungry Hippos|256|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/dat.png)|dAT Team|257|
@@ -42,14 +41,12 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/contr.png)|Control eSports|265|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ob.png)|OnlineBOTS|265|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/summa.png)|SUMMA.GG|271|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/affni.png)|affNity|271|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mythi.png)|Mythic|272|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/uniai.png)|uni.AiN|276|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ggwp.png)|GGWP|287|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/richg.png)|Rich Gang|287|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/avant.png)|Avant Garde|292|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|298|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vegas.png)|Vega Squadron|298|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alter.png)|Team Alternate|300|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
@@ -79,4 +76,3 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/play5.png)|PLAY5|461|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/keyd.png)|Keyd Stars|480|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/metho.png)|Method|490|
