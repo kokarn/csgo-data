@@ -35,6 +35,7 @@ Handlebars.registerHelper( 'ifCond', function( v1, operator, v2, options ){
                 this.loadData( 'hitbox' );
                 this.loadData( 'twitch' );
                 this.loadData( 'azubu' );
+                this.loadData( 'mlg' );
             },
             loadTemplate : function(){
                 var _this = this,
