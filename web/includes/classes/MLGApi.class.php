@@ -1,4 +1,7 @@
 <?php
+// Another implementation with some other links
+// https://github.com/xKairu/MLG.tv-API
+
 class MLGApi {
     private static $allChannelsLiveStatus = 'http://streamapi.majorleaguegaming.com/service/streams/all';
     private static $allChannelsUrl = 'http://www.majorleaguegaming.com/api/channels/all.js?fields=id,name,slug,subtitle,game_id,stream_name,type,is_hidden,image_1_1,image_16_9,image_16_9_small,image_16_9_medium,image_background,url,embed_code,stream_featured,stream_sort_order,tags,tag_names,description';
@@ -56,7 +59,7 @@ class MLGApi {
         if( isset( $data->viewers ) ) :
             $stream->setViewers( $data->viewers );
         endif;
-        
+
         $stream->setPreviewImage( $data->image_16_9 );
         $stream->setStatus( $data->subtitle );
         $stream->setName( $data->name );
