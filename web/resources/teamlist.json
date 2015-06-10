@@ -510,6 +510,20 @@
             "id": "5771"
         }
     },
+    "esuba": {
+        "name": "eSuba",
+        "steam": {
+            "name": "esuba"
+        },
+        "csgolounge": {
+            "name": "Esuba"
+        },
+        "hltv": {
+            "name": "eSuba",
+            "id": "1847"
+        },
+        "identifier": "esuba"
+    },
     "fenixfire": {
         "name": "Fenix Fire",
         "steam": {

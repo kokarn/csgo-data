@@ -82,6 +82,12 @@ if (!Object.keys) {
                     _this.loadStreams();
                 }, 60000 );
 
+                $( 'body' ).on( 'click touchstart', '.js-close', function( event ){
+                    event.preventDefault();
+                    event.stopImmediatePropagation();
+                    $( this ).parents( '.js-match-wrapper' ).removeClass( 'active' );
+                });
+
                 $( 'body' ).on( 'click touchstart', '.js-match-wrapper', function(){
                     var $element = $( this ),
                         windowHeight = $( window ).height(),
@@ -97,9 +103,43 @@ if (!Object.keys) {
                         offset = -( ( windowHeight - elementHeight ) / 2 )
                     }
 
-                    $element.velocity( 'scroll', {
-                        offset : offset
-                    } );
+                    $element
+                        .velocity( 'stop' )
+                        .velocity({
+                            scale: '1'
+                        }, 300 )
+                        .velocity( 'scroll', {
+                            offset : offset,
+                            queue : false
+                        });
+                });
+
+                $( 'body' ).on( 'mouseenter', '.js-match-wrapper', function(){
+                    var $element = $( this );
+
+                    if( !$element.hasClass( 'active' ) ){
+                        $( this ).velocity( 'stop' ).velocity({
+                            scale: '1.1'
+                        }, 300 );
+                    }
+                });
+
+                $( 'body' ).on( 'mouseleave', '.js-match-wrapper', function(){
+                    $( this ).velocity({
+                        scale: '1'
+                    }, 300 );
+                });
+
+                $( 'body' ).on( 'mouseenter', '.js-stream-row', function(){
+                    $( this ).find( '.js-panel-background' ).velocity( 'stop' ).velocity({
+                        opacity: '0.2'
+                    }, 300 );
+                });
+
+                $( 'body' ).on( 'mouseleave', '.js-stream-row', function(){
+                    $( this ).find( '.js-panel-background' ).velocity( 'stop' ).velocity({
+                        opacity: '0'
+                    }, 300 );
                 });
             },
             loadStreams : function(){
@@ -183,7 +223,7 @@ if (!Object.keys) {
                 $.each( _this.matches, function( matchIndex, matchData ){
                     // If a match doesn't have any streams any more, remove it
                     if( matchData.streams.length === 0 ){
-                        _this.matches.splice( matchIndex, 1 );
+                        delete _this.matches[ matchIndex ];
                         return true;
                     }
                     // Loop over all a matchs streams

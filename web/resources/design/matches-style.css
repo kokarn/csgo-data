@@ -2,24 +2,35 @@
     background-color: white;
     float: left;
     height: 180px;
-    transition: transform 0.3s ease;
     width: 33.33333%;
 }
 
 .panel:hover {
     cursor: pointer;
-    transform: scale( 1.1 );
+    position: relative;
+    z-index: 1;
 }
 
 .panel.active {
+    background-color: transparent;
     height: auto;
     width: 100%;
-    transition: none;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.panel.active .close {
+    display: block;
 }
 
 .panel.active:hover {
     cursor: default;
-    transform: none;
 }
 
 .panel h2 {
@@ -55,13 +66,8 @@
     overflow: hidden;
     position: absolute;
     top: 0;
-    transition: opacity 0.3s ease;
     width: 100%;
     z-index: -1;
-}
-
-.row:hover .panel-background {
-    opacity: 0.2;
 }
 
 .panel-background img {
