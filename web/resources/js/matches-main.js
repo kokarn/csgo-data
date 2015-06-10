@@ -107,6 +107,18 @@ if (!Object.keys) {
                         offset : offset
                     } );
                 });
+
+                $( 'body' ).on( 'mouseenter', '.js-match-wrapper', function(){
+                    $( this ).velocity( 'stop' ).velocity({
+                        scale: '1.1'
+                    }, 300 );
+                });
+
+                $( 'body' ).on( 'mouseleave', '.js-match-wrapper', function(){
+                    $( this ).velocity( 'stop' ).velocity({
+                        scale: '1'
+                    }, 300 );
+                });
             },
             loadStreams : function(){
                 this.loadData( 'hitbox' );

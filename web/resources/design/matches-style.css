@@ -2,14 +2,12 @@
     background-color: white;
     float: left;
     height: 180px;
-    transition: transform 0.3s ease;
     width: 33.33333%;
 }
 
 .panel:hover {
     cursor: pointer;
     position: relative;
-    transform: scale( 1.1 );
     z-index: 1;
 }
 
@@ -17,7 +15,6 @@
     background-color: transparent;
     height: auto;
     width: 100%;
-    transition: none;
 }
 
 .close {
@@ -34,7 +31,6 @@
 
 .panel.active:hover {
     cursor: default;
-    transform: none;
 }
 
 .panel h2 {
