@@ -161,6 +161,11 @@ if (!Object.keys) {
 
                 // Loop over all matches
                 $.each( _this.matches, function( matchIndex, matchData ){
+                    // If a match doesn't have any streams any more, remove it
+                    if( matchData.streams.length === 0 ){
+                        _this.matches.splice( matchIndex, 1 );
+                        return true;
+                    }
                     // Loop over all a matchs streams
                     $.each( matchData.streams, function( streamIndex, streamData ){
                         // Check if the stream matches the service and isn't live
@@ -219,7 +224,7 @@ if (!Object.keys) {
                     // Reset the page layout
                     this.$matchesList.html( ' ' );
                     $( '.popover' ).remove();
-                    
+
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
                             this.$matchesList.append( this.template( this.matches[ matchIdentifier ] ) );
