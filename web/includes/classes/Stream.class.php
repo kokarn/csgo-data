@@ -14,96 +14,56 @@ class Stream {
     private $rawObjectData;
     private $previewImageTemplate;
 
-    public function __construct( $object = false ){
-        if( $object ):
-            $this->dataFromObject( $object );
-        endif;
-    }
-
-    private function dataFromObject( $object ){
-        $this->rawObjectData = $object;
-
-        if( isset( $object->url_thumbnail ) ) :
-            $this->dataFromAzubuObject( $object );
-        elseif( isset( $object->viewers ) ) :
-            $this->dataFromTwitchObject( $object );
+    public function isCast( $string = false ){
+        if( $string ) :
+            $checkString = $string;
         else :
-            $this->dataFromHitboxObject( $object );
-        endif;
-    }
-
-    private function dataFromHitboxObject( $object ){
-        // set quality
-        $quality = json_decode( $object->media_profiles );
-        if( $quality !== null ) :
-            $quality = end( $quality );
-            $this->quality = $quality->height;
+            $checkString = $this->status;
         endif;
 
-        $this->viewers = $object->media_views;
-        $this->previewImage = 'http://hitbox.tv' . $object->media_thumbnail_large;
-        $this->status = $object->media_status;
-        $this->name = $object->media_name;
-        $this->link = $object->channel->channel_link;
-
-        /*
-        $this->setAverageFps( $object->average_fps );
-
-        $this->broadcasterLanguage = $object->channel->broadcaster_language;
-        $this->language = $object->channel->language;
-        */
-
-        $this->isCast = $this->setIsCast();
+        return preg_match( '# vs[ \.]#', $checkString );
     }
 
-    private function dataFromTwitchObject( $object ){
-        $this->viewers = $object->viewers;
-        $this->quality = $object->video_height;
-        $this->setAverageFps( $object->average_fps );
-
-        $this->previewImage = $object->preview->large;
-        $this->previewImageTemplate = $object->preview->template;
-
-        if( isset( $object->channel->broadcaster_language ) ):
-            $this->broadcasterLanguage = $object->channel->broadcaster_language;
-            $this->language = $object->channel->language;
-            $this->status = $object->channel->status;
-            $this->name = $object->channel->display_name;
-            $this->link = 'http://www.twitch.tv/' . $this->name;
-
-            $this->isCast = $this->setIsCast();
-        endif;
-    }
-
-    private function dataFromAzubuObject( $object ){
-        $this->viewers = $object->view_count;
-        $this->previewImage = $object->url_thumbnail;
-
-        $this->broadcasterLanguage = $object->language;
-        $this->language = $object->language;
-
-        $this->status = $object->title;
-        $this->name = $object->user->username;
-        $this->link = $object->url_channel;
-
-        /*
-        $this->quality = $object->video_height;
-        $this->setAverageFps( $object->average_fps );
-        */
-
-        $this->isCast = $this->setIsCast();
-    }
-
-    private function setIsCast(){
-        return preg_match( '#vs#', $this->status );
-    }
-
-    private function setAverageFps( $averageFps ){
+    public function setAverageFps( $averageFps ){
         if( round( $averageFps ) % 5 === 0 ) :
             $this->averageFps = round( $averageFps );
         else:
             $this->averageFps = round( ( $averageFps + 5 / 2 ) / 5 ) * 5;
         endif;
+    }
+
+    public function setName( $name ){
+        $this->name = $name;
+    }
+
+    public function setStatus( $status ){
+        $this->status = $status;
+
+        $this->isCast = $this->isCast();
+    }
+
+    public function setQuality( $quality ){
+        $this->quality = $quality;
+    }
+
+    public function setViewers( $viewers ){
+        $this->viewers = $viewers;
+    }
+
+    public function setPreviewImage( $previewImage ){
+        $this->previewImage = $previewImage;
+    }
+
+    public function setLink( $link ){
+        $this->link = $link;
+    }
+
+    public function setBroadcasterLanguage( $broadcasterLanguage ){
+        $this->broadcasterLanguage = $broadcasterLanguage;
+    }
+
+    public function setLanguage( $language ){
+        $this->language = $language;
     }
 
     public function getStatus(){

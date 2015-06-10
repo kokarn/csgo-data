@@ -1,5 +1,5 @@
 |Image|Team|Current size|
-|---|---|
+|---|---|---|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/trock.png)|Team ROCK|116|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/immer.png)|Immersive eSports|124|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/heat.png)|HEAT|131|

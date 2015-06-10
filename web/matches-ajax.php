@@ -5,6 +5,8 @@ if( $_GET[ 'site' ] == 'hitbox' ) :
     $apiWrapper = new HitboxApi();
 elseif( $_GET[ 'site' ] == 'azubu' ) :
     $apiWrapper = new AzubuApi();
+elseif( $_GET[ 'site' ] == 'mlg' ) :
+    $apiWrapper = new MLGApi();
 else :
     $apiWrapper = new TwitchApi();
 endif;
