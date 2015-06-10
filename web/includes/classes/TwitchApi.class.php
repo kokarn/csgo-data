@@ -16,6 +16,7 @@ class TwitchApi {
     private function streamFromData( $data ){
         $stream = new Stream();
 
+        $stream->setService( 'twitch' );
         $stream->setViewers( $data->viewers );
         $stream->setQuality( $data->video_height );
         $stream->setAverageFps( $data->average_fps );

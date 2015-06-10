@@ -100,7 +100,7 @@ if (!Object.keys) {
                     _this.requestsDone = _this.requestsDone + 1;
 
                     _this.updateProgressbar();
-                    
+
                     _this.template = Handlebars.compile( response );
                 });
             },
@@ -120,23 +120,56 @@ if (!Object.keys) {
 
                     _this.updateProgressbar();
 
-                    _this.handleResponse( response );
+                    _this.handleResponse( response, service );
                 });
             },
-            handleResponse : function( response ){
+            handleResponse : function( response, service ){
                 var _this = this;
 
+                // Add live status to each match
+                $.each( response, function( matchIndex, matchData ){
+                    $.each( matchData.streams, function( streamIndex, streamData ){
+                        response[ matchIndex ].streams[ streamIndex ].live = 1;
+                    });
+                });
+
+                // Loop over all matches we got in the response
                 $.each( response, function( index, data ){
-                    var identifiers = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ],
-                        identifier;
+                    var identifier = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ].sort().toString();
 
-                    identifier = identifiers.sort().toString();
-
+                    // The match isn't listed, just add the data from the response
                     if( _this.matches[ identifier ] === undefined ){
                         _this.matches[ identifier ] = data;
                     } else {
-                        _this.matches[ identifier ].streams.concat( data.streams );
+                        // Loop over all the matches streams
+                        $.each( _this.matches[ identifier ].streams, function( streamIndex, streamData ){
+                            // Check if the stream is already listed for that particular match
+                            $.each( data.streams, function( dataStreamIndex, dataStreamData ){
+                                if( streamData.name == dataStreamData.name ){
+                                    // The stream is listed, update data and remove it from the raw response
+                                    _this.matches[ identifier ].streams[ streamIndex ] = dataStreamData;
+                                    data.streams.splice( dataStreamIndex, 1 );
+                                    return false;
+                                }
+                            });
+                        });
+
+                        // Data streams should only hold streams that are not already listed, so add them
+                        _this.matches[ identifier ].streams = _this.matches[ identifier ].streams.concat( data.streams );
                     }
+                });
+
+                // Loop over all matches
+                $.each( _this.matches, function( matchIndex, matchData ){
+                    // Loop over all a matchs streams
+                    $.each( matchData.streams, function( streamIndex, streamData ){
+                        // Check if the stream matches the service and isn't live
+                        if( streamData.service === service && !streamData.live ){
+                            _this.matches[ matchIndex ].streams.splice( streamIndex, 1 );
+                        } else if( streamData.service === service ){
+                            _this.matches[ matchIndex ].streams[ streamIndex ].live = false;
+                        }
+                    });
                 });
 
                 this.updateData();

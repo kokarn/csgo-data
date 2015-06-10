@@ -29,6 +29,7 @@ class AzubuApi {
     private function streamFromData( $data ){
         $stream = new Stream();
 
+        $stream->setService( 'azubu' );
         $stream->setViewers( $data->view_count );
         $stream->setPreviewImage( $data->url_thumbnail );
 

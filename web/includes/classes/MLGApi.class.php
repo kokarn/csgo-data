@@ -56,6 +56,7 @@ class MLGApi {
     private function streamFromData( $data ){
         $stream = new Stream();
 
+        $stream->setService( 'mlg' );
         if( isset( $data->viewers ) ) :
             $stream->setViewers( $data->viewers );
         endif;
