@@ -66,13 +66,8 @@
     overflow: hidden;
     position: absolute;
     top: 0;
-    transition: opacity 0.3s ease;
     width: 100%;
     z-index: -1;
-}
-
-.row:hover .panel-background {
-    opacity: 0.2;
 }
 
 .panel-background img {

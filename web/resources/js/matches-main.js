@@ -123,6 +123,18 @@ if (!Object.keys) {
                         scale: '1'
                     }, 300 );
                 });
+
+                $( 'body' ).on( 'mouseenter', '.js-stream-row', function(){
+                    $( this ).find( '.js-panel-background' ).velocity( 'stop' ).velocity({
+                        opacity: '0.2'
+                    }, 300 );
+                });
+
+                $( 'body' ).on( 'mouseleave', '.js-stream-row', function(){
+                    $( this ).find( '.js-panel-background' ).velocity( 'stop' ).velocity({
+                        opacity: '0'
+                    }, 300 );
+                });
             },
             loadStreams : function(){
                 this.loadData( 'hitbox' );
