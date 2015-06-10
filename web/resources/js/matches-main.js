@@ -109,9 +109,13 @@ if (!Object.keys) {
                 });
 
                 $( 'body' ).on( 'mouseenter', '.js-match-wrapper', function(){
-                    $( this ).velocity( 'stop' ).velocity({
-                        scale: '1.1'
-                    }, 300 );
+                    var $element = $( this );
+
+                    if( !$element.hasClass( 'active' ) ){
+                        $( this ).velocity( 'stop' ).velocity({
+                            scale: '1.1'
+                        }, 300 );
+                    }
                 });
 
                 $( 'body' ).on( 'mouseleave', '.js-match-wrapper', function(){
