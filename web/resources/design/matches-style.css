@@ -1,9 +1,37 @@
 .panel {
-    background-color: transparent;
+    background-color: white;
+    float: left;
+    height: 180px;
+    transition: transform 0.3s ease;
+    width: 33.33333%;
 }
 
-.panel:first-child {
-    margin-top: 20px;
+.panel:hover {
+    cursor: pointer;
+    transform: scale( 1.1 );
+}
+
+.panel.active {
+    height: auto;
+    width: 100%;
+    transition: none;
+}
+
+.panel.active:hover {
+    cursor: default;
+    transform: none;
+}
+
+.panel h2 {
+    font-size: 20px;
+}
+
+.teams-row img {
+    max-width: 100px;
+}
+
+.stream-row {
+    display: none;
 }
 
 .live-match-panel-body {
@@ -42,11 +70,12 @@
     min-width: 100%;
 }
 
-.stream-row {
+.active .stream-row {
+    display: block;
     margin-bottom: 15px;
 }
 
-.teams-row img {
+.active .teams-row img {
     max-width: 400px;
 }
 

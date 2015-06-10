@@ -81,6 +81,26 @@ if (!Object.keys) {
                 setInterval( function(){
                     _this.loadStreams();
                 }, 60000 );
+
+                $( 'body' ).on( 'click touchstart', '.js-match-wrapper', function(){
+                    var $element = $( this ),
+                        windowHeight = $( window ).height(),
+                        elementHeight,
+                        offset = 0;
+
+                    $( '.active' ).removeClass( 'active' );
+                    $element.addClass( 'active' );
+
+                    elementHeight = $element.height();
+
+                    if( windowHeight > elementHeight ){
+                        offset = -( ( windowHeight - elementHeight ) / 2 )
+                    }
+
+                    $element.velocity( 'scroll', {
+                        offset : offset
+                    } );
+                });
             },
             loadStreams : function(){
                 this.loadData( 'hitbox' );
