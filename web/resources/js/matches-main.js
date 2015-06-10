@@ -223,7 +223,11 @@ if (!Object.keys) {
                         }
                     }
 
-                    $( '[data-toggle="popover"]' ).popover();
+                    $( '[data-toggle="popover"]' ).popover({
+                        container: 'body',
+                        mouseOffset: 20,
+                        followMouse: true
+                    });
                 }
             }
         };
