@@ -14,8 +14,14 @@ class Stream {
     private $rawObjectData;
     private $previewImageTemplate;
 
-    private function isCast(){
-        return preg_match( '#vs#', $this->status );
+    public function isCast( $string = false ){
+        if( $string ) :
+            $checkString = $string;
+        else :
+            $checkString = $this->status;
+        endif;
+
+        return preg_match( '#vs#', $checkString );
     }
 
     public function setAverageFps( $averageFps ){

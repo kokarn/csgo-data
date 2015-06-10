@@ -24,10 +24,10 @@ function array_equal( $a, $b ) {
                         Status
                     </th>
                     <th>
-                        Correct teams
+                        Mock value
                     </th>
                     <th>
-                        Found teams
+                        Match
                     </th>
                 </tr>
             </thead>
@@ -196,10 +196,7 @@ function array_equal( $a, $b ) {
                     // This shouldn't be matched at all
                     array(
                         'status' => 'ESWC Khabarovsk',
-                        'teams' => array(
-                            '-unknown-',
-                            '-unknown-'
-                        )
+                        'teams' => false
                     ),
                     array(
                         'status' => '[FR] ESL ESEA Pro League / 20:45 NiP vs. f3 / 21:45 NiP vs. f3 / 22:45 Dignitas vs. Na\'Vi',
@@ -291,17 +288,40 @@ function array_equal( $a, $b ) {
                             '-unknown-',
                             '-unknown-'
                         )
+                    ),
+                    array(
+                        'status' => 'FACEIT 2015 League - EU Stage 2 - TSM.Kinguin vs Flipsid3 Tactics',
+                        'teams' => array(
+                            'teamsolomid',
+                            'flipsid3tactics'
+                        )
                     )
                 );
 
                 $teamList = new AvailableTeams( 'web/' );
 
+                $streamMock = new Stream();
+
                 foreach( $mockDataList as $mockData ) :
-                    $teams = $teamList->getTeamsInString( $mockData[ 'status' ] );
-                    $teamIdentifiers = array( $teams[ 0 ][ 'identifier' ], $teams[ 1 ][ 'identifier' ] );
+                    if( $mockData[ 'teams' ] == false ) :
+                        if( !$streamMock->isCast( $mockData[ 'status' ] ) ) :
+                            $passed = true;
+                        else :
+                            $passed = false;
+                        endif;
+                    else:
+                        $teams = $teamList->getTeamsInString( $mockData[ 'status' ] );
+                        $teamIdentifiers = array( $teams[ 0 ][ 'identifier' ], $teams[ 1 ][ 'identifier' ] );
+                        if( array_equal( $teamIdentifiers, $mockData[ 'teams' ] ) ) :
+                            $passed = true;
+                        else :
+                            $passed = false;
+                        endif;
+                    endif;
+
                     ?>
                     <tr <?php
-                    if( array_equal( $teamIdentifiers, $mockData[ 'teams' ] ) ) :
+                    if( $passed ) :
                         echo 'class="success"';
                     else :
                         echo 'class="danger"';
@@ -312,16 +332,37 @@ function array_equal( $a, $b ) {
                             echo $mockData[ 'status' ];
                             ?>
                         </td>
-                        <td>
-                            <?php
-                            echo implode( ' vs ', $mockData[ 'teams' ] );
+                        <?php
+                        if( $mockData[ 'teams' ] ) :
                             ?>
-                        </td>
-                        <td>
+                            <td>
+                                <?php
+                                echo implode( ' vs ', $mockData[ 'teams' ] );
+                                ?>
+                            </td>
+                            <td>
+                                <?php
+                                echo $teams[ 0 ][ 'identifier' ], ' vs ', $teams[ 1 ][ 'identifier' ];
+                                ?>
+                            </td>
                             <?php
-                            echo $teams[ 0 ][ 'identifier' ], ' vs ', $teams[ 1 ][ 'identifier' ];
+                        else:
                             ?>
-                        </td>
+                            <td>
+                                Is not a cast
+                            </td>
+                            <td>
+                                <?php
+                                if( $passed ) :
+                                    echo 'Is not a cast';
+                                else :
+                                    echo 'Is cast';
+                                endif;
+                                ?>            
+                            </td>
+                            <?php
+                        endif;
+                        ?>
                     </tr>
                     <?php
                     //print_r( $teams );
