@@ -21,7 +21,7 @@ class Stream {
             $checkString = $this->status;
         endif;
 
-        return preg_match( '#vs#', $checkString );
+        return preg_match( '# vs[ \.]#', $checkString );
     }
 
     public function setAverageFps( $averageFps ){
