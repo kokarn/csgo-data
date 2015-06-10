@@ -48,11 +48,8 @@ Handlebars.registerHelper( 'ifCond', function( v1, operator, v2, options ){
                 xhr.done(function( response ){
                     _this.requestsDone = _this.requestsDone + 1;
 
-                    if( _this.$progressBar.length > 0 ){
-                        _this.$progressBar.css({
-                            width: ( _this.requestsDone / _this.requestsSent * 100 ).toString() + '%'
-                        });
-                    }
+                    _this.updateProgressbar();
+                    
                     _this.template = Handlebars.compile( response );
                 });
             },
@@ -70,11 +67,7 @@ Handlebars.registerHelper( 'ifCond', function( v1, operator, v2, options ){
                 xhr.done(function( response ){
                     _this.requestsDone = _this.requestsDone + 1;
 
-                    if( _this.$progressBar.length > 0 ){
-                        _this.$progressBar.css({
-                            width: ( _this.requestsDone / _this.requestsSent * 100 ).toString() + '%'
-                        });
-                    }
+                    _this.updateProgressbar();
 
                     if( _this.data === false ) {
                         _this.data = response;
@@ -83,6 +76,26 @@ Handlebars.registerHelper( 'ifCond', function( v1, operator, v2, options ){
                     }
                     _this.updateData();
                 });
+            updateProgressbar : function(){
+                var _this = this;
+
+                if( this.$progressBar.length > 0 ){
+                    if( this.requestsSent == this.requestsDone ) {
+                        this.$progressBar.css({
+                            width: '100%'
+                        });
+
+                        // Try to wait until the progressbar is filled before removing it
+                        setTimeout( function(){
+                            _this.$progressBar.remove();
+                        }, 600 );
+                    } else {
+                        this.$progressBar.css({
+                            width: ( _this.requestsDone / _this.requestsSent * 100 ).toString() + '%'
+                        });
+                    }
+                }
+
             },
             updateData : function(){
                 if( this.data === false && this.template === false ){
@@ -94,7 +107,7 @@ Handlebars.registerHelper( 'ifCond', function( v1, operator, v2, options ){
                 }
 
                 if( this.requestsSent == this.requestsDone ) {
-                    this.$progressBar.remove();
+                    this.updateProgressbar();
 
                     if( this.data.length === 0 ){
                         this.$matchesList.html( '<h1>Sorry, no livestreamed matches at the moment</h1>' );
