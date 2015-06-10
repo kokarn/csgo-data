@@ -126,41 +126,51 @@ if (!Object.keys) {
             handleResponse : function( response, service ){
                 var _this = this;
 
-                if( response.length === 0 ){
-                    // This service has no live streams, loop over all matches and remove potential streams
-                    $.each( _this.matches, function( matchIndex, matchData ){
-                        $.each( matchData.streams, function( streamIndex, streamData ){
-                            if( streamData.service === service ){
-                                matchData.streams.splice( streamIndex, 1 );
-                            }
-                        });
-                    })
-                } else {
-                    // We need to check what service we got a response from and then check all those streams
-                    $.each( response, function( index, data ){
-                        var identifier = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ].sort().toString();
+                // Add live status to each match
+                $.each( response, function( matchIndex, matchData ){
+                    $.each( matchData.streams, function( streamIndex, streamData ){
+                        response[ matchIndex ].streams[ streamIndex ].live = 1;
+                    });
+                });
 
-                        if( _this.matches[ identifier ] === undefined ){
-                            _this.matches[ identifier ] = data;
-                        } else {
-                            $.each( _this.matches[ identifier ].streams, function( streamIndex, streamData ){
-                                // Check if the stream is already listed for that particular match
-                                $.each( data.streams, function( dataStreamIndex, dataStreamData ){
-                                    if( streamData.name == dataStreamData.name ){
-                                        _this.matches[ identifier ].streams[ streamIndex ] = dataStreamData;
-                                        data.streams.splice( dataStreamIndex, 1 );
-                                        return false;
-                                    }
-                                });
+                // Loop over all matches we got in the response
+                $.each( response, function( index, data ){
+                    var identifier = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ].sort().toString();
+
+                    // The match isn't listed, just add the data from the response
+                    if( _this.matches[ identifier ] === undefined ){
+                        _this.matches[ identifier ] = data;
+                    } else {
+                        // Loop over all the matches streams
+                        $.each( _this.matches[ identifier ].streams, function( streamIndex, streamData ){
+                            // Check if the stream is already listed for that particular match
+                            $.each( data.streams, function( dataStreamIndex, dataStreamData ){
+                                if( streamData.name == dataStreamData.name ){
+                                    // The stream is listed, update data and remove it from the raw response
+                                    _this.matches[ identifier ].streams[ streamIndex ] = dataStreamData;
+                                    data.streams.splice( dataStreamIndex, 1 );
+                                    return false;
+                                }
                             });
+                        });
 
-                            // Data streams should only hold streams that are not already listed, so add them
-                            _this.matches[ identifier ].streams = _this.matches[ identifier ].streams.concat( data.streams );
+                        // Data streams should only hold streams that are not already listed, so add them
+                        _this.matches[ identifier ].streams = _this.matches[ identifier ].streams.concat( data.streams );
+                    }
+                });
+
+                // Loop over all matches
+                $.each( _this.matches, function( matchIndex, matchData ){
+                    // Loop over all a matchs streams
+                    $.each( matchData.streams, function( streamIndex, streamData ){
+                        // Check if the stream matches the service and isn't live
+                        if( streamData.service === service && !streamData.live ){
+                            _this.matches[ matchIndex ].streams.splice( streamIndex, 1 );
+                        } else if( streamData.service === service ){
+                            _this.matches[ matchIndex ].streams[ streamIndex ].live = false;
                         }
                     });
-
-                    // TODO: Remove streams that are no longer live
-                }
+                });
 
                 this.updateData();
             },
