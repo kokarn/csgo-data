@@ -8,7 +8,9 @@
 
 .panel:hover {
     cursor: pointer;
+    position: relative;
     transform: scale( 1.1 );
+    z-index: 1;
 }
 
 .panel.active {
