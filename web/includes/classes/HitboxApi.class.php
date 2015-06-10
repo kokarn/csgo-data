@@ -19,7 +19,8 @@ class HitboxApi {
 
     private function streamFromData( $data ){
         $stream = new Stream();
-        
+
+        $stream->setService( 'hitbox' );
         // set quality
         $quality = json_decode( $data->media_profiles );
         if( $quality !== null ) :

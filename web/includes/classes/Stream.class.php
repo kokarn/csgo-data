@@ -9,6 +9,7 @@ class Stream {
     public $language;
     public $status;
     public $link;
+    public $service;
 
     private $isCast = false;
     private $rawObjectData;
@@ -104,5 +105,9 @@ class Stream {
 
     public function getPreviewImage(){
         return $this->previewImage;
+    }
+
+    public function setService( $service ){
+        $this->service = $service;
     }
 }
