@@ -49,3 +49,19 @@
 .teams-row img {
     max-width: 400px;
 }
+
+.watch-stream-button {
+    overflow: hidden;
+    padding-right: 35px;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.watch-stream-button span {
+    margin-top: -9px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
