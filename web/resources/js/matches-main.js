@@ -276,7 +276,7 @@ if (!Object.keys) {
                     this.updateProgressbar();
 
                     if( Object.keys( this.matches ).length === 0 ){
-                        this.$matchesList.html( '<h1>Sorry, no livestreamed matches at the moment</h1>' );
+                        this.$matchesList.html( '<h1 class="text-center">Sorry, no livestreamed matches at the moment</h1>' );
                     }
                 }
 

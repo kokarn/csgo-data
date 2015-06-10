@@ -1699,6 +1699,24 @@
         },
         "identifier": "summagg"
     },
+    "synrgygaming": {
+        "name": "SYNRGY Gaming",
+        "steam": {
+            "name": "synrg"
+        },
+        "csgolounge": {
+            "name": "SYN"
+        },
+        "gosugamers": {
+            "name": "SYNRGY Gaming",
+            "id": 10945
+        },
+        "hltv": {
+            "name": "SYNRGY",
+            "id": "6034"
+        },
+        "identifier": "synrgygaming"
+    },
     "teamacer": {
         "name": "Team Acer",
         "steam": {

@@ -29,7 +29,7 @@ class HitboxApi {
         endif;
 
         $stream->setViewers( $data->media_views );
-        $stream->setPreviewImage( 'http://hitbox.tv' . $data->media_thumbnail_large );
+        $stream->setPreviewImage( 'http://edge.sf.hitbox.tv' . $data->media_thumbnail_large );
         $stream->setStatus( $data->media_status );
         $stream->setName( $data->media_name );
         $stream->setLink( $data->channel->channel_link );
