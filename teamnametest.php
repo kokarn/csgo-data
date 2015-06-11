@@ -302,6 +302,13 @@ function array_equal( $a, $b ) {
                             'cloud9',
                             'nihilum'
                         )
+                    ),
+                    array(
+                        'status' => 'GO:CL: VP vs dig w/ follower giveaways! [EN]',
+                        'teams' => array(
+                            'viruspro',
+                            'teamdignitas'
+                        )
                     )
                 );
 
