@@ -298,6 +298,10 @@ if (!Object.keys) {
                         followMouse: true
                     });
                 }
+
+                if( numberOfMatches === 1 ){
+                    $( '.js-match-wrapper' ).addClass( 'active' );
+                }
             }
         };
 
