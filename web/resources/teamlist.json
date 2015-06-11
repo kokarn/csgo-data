@@ -1966,6 +1966,21 @@
             "id": "5766"
         }
     },
+    "teamoutbreak": {
+        "name": "Team Outbreak",
+        "steam": {
+            "name": "outbr"
+        },
+        "gosugamers": {
+            "name": "Outbreak",
+            "id": 8768
+        },
+        "hltv": {
+            "name": "Outbreak",
+            "id": "5708"
+        },
+        "identifier": "teamoutbreak"
+    },
     "teamproperty": {
         "name": "Team Property",
         "steam": {

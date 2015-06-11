@@ -47,6 +47,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/richg.png)|Rich Gang|287|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/avant.png)|Avant Garde|292|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/energ.png)|Energy eSports|297|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vegas.png)|Vega Squadron|298|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alter.png)|Team Alternate|300|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
@@ -76,3 +77,4 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/play5.png)|PLAY5|461|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/keyd.png)|Keyd Stars|480|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
