@@ -70,6 +70,7 @@ if (!Object.keys) {
             template : false,
             $matchesList : $( '.js-matches' ),
             $progressBar : $( '.js-progress-bar' ),
+            $noMatches : $( '.js-no-matches' ),
             requestsSent : 0,
             requestsDone : 0,
             init : function(){
@@ -262,7 +263,8 @@ if (!Object.keys) {
             },
             updateData : function(){
                 var matchIdentifier,
-                    _this = this;
+                    _this = this,
+                    numberOfMatches = Object.keys( this.matches ).length;
 
                 if( this.matches === {} && this.template === false ){
                     setTimeout( function(){
@@ -275,15 +277,16 @@ if (!Object.keys) {
                 if( this.requestsSent == this.requestsDone ) {
                     this.updateProgressbar();
 
-                    if( Object.keys( this.matches ).length === 0 ){
-                        this.$matchesList.html( '<h1 class="text-center">Sorry, no livestreamed matches at the moment</h1>' );
+                    if( numberOfMatches === 0 ){
+                        this.$noMatches.show();
                     }
                 }
 
-                if( Object.keys( this.matches ).length > 0 ){
+                if( numberOfMatches > 0 ){
                     // Reset the page layout
                     this.$matchesList.html( ' ' );
                     $( '.popover' ).remove();
+                    this.$noMatches.hide();
 
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
@@ -296,6 +299,10 @@ if (!Object.keys) {
                         mouseOffset: 20,
                         followMouse: true
                     });
+                }
+
+                if( numberOfMatches === 1 ){
+                    $( '.js-match-wrapper' ).addClass( 'active' );
                 }
             }
         };

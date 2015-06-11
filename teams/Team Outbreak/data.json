@@ -1,0 +1,15 @@
+{
+    "name": "Team Outbreak",
+    "steam": {
+        "name": "outbr"
+    },
+    "gosugamers": {
+        "name": "Outbreak",
+        "id": 8768
+    },
+    "hltv": {
+        "name": "Outbreak",
+        "id": "5708"
+    },
+    "identifier": "teamoutbreak"
+}

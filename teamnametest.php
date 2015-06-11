@@ -295,6 +295,20 @@ function array_equal( $a, $b ) {
                             'teamsolomid',
                             'flipsid3tactics'
                         )
+                    ),
+                    array(
+                        'status' => '[PT-BR] Nihilum vs. Cloud 9 - ESL ESEA Pro League (NA)',
+                        'teams' => array(
+                            'cloud9',
+                            'nihilum'
+                        )
+                    ),
+                    array(
+                        'status' => 'GO:CL: VP vs dig w/ follower giveaways! [EN]',
+                        'teams' => array(
+                            'viruspro',
+                            'teamdignitas'
+                        )
                     )
                 );
 
@@ -358,7 +372,7 @@ function array_equal( $a, $b ) {
                                 else :
                                     echo 'Is cast';
                                 endif;
-                                ?>            
+                                ?>
                             </td>
                             <?php
                         endif;

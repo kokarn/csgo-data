@@ -9,7 +9,8 @@ class AvailableTeams {
         'gaming',
         'team',
         'in',
-        'the'
+        'the',
+        'playing'
     );
 
     private $alternateTeamNames = array();
@@ -164,7 +165,7 @@ class AvailableTeams {
             array(),
             array()
         );
-        
+
         $this->stringParts = false;
     }
 

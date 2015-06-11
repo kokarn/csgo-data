@@ -463,6 +463,20 @@
             "id": "5775"
         }
     },
+    "energyesports": {
+        "name": "Energy eSports",
+        "steam": {
+            "name": "energ"
+        },
+        "csgolounge": {
+            "name": "Energy"
+        },
+        "gosugamers": {
+            "name": "Energy eSports",
+            "id": 9220
+        },
+        "identifier": "energyesports"
+    },
     "epsilonesports": {
         "name": "Epsilon eSports",
         "steam": {
@@ -1951,6 +1965,21 @@
             "name": "Orbit",
             "id": "5766"
         }
+    },
+    "teamoutbreak": {
+        "name": "Team Outbreak",
+        "steam": {
+            "name": "outbr"
+        },
+        "gosugamers": {
+            "name": "Outbreak",
+            "id": 8768
+        },
+        "hltv": {
+            "name": "Outbreak",
+            "id": "5708"
+        },
+        "identifier": "teamoutbreak"
     },
     "teamproperty": {
         "name": "Team Property",
