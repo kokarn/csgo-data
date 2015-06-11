@@ -1,0 +1,14 @@
+{
+    "name": "Energy eSports",
+    "steam": {
+        "name": "energ"
+    },
+    "csgolounge": {
+        "name": "Energy"
+    },
+    "gosugamers": {
+        "name": "Energy eSports",
+        "id": 9220
+    },
+    "identifier": "energyesports"
+}
