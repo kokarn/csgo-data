@@ -70,6 +70,7 @@ if (!Object.keys) {
             template : false,
             $matchesList : $( '.js-matches' ),
             $progressBar : $( '.js-progress-bar' ),
+            $noMatches : $( '.js-no-matches' ),
             requestsSent : 0,
             requestsDone : 0,
             init : function(){
@@ -276,8 +277,8 @@ if (!Object.keys) {
                 if( this.requestsSent == this.requestsDone ) {
                     this.updateProgressbar();
 
-                        this.$matchesList.html( '<h1 class="text-center">Sorry, no livestreamed matches at the moment</h1>' );
                     if( numberOfMatches === 0 ){
+                        this.$noMatches.show();
                     }
                 }
 
@@ -285,6 +286,7 @@ if (!Object.keys) {
                     // Reset the page layout
                     this.$matchesList.html( ' ' );
                     $( '.popover' ).remove();
+                    this.$noMatches.hide();
 
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
