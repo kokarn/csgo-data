@@ -6,7 +6,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/netco.png)|Netcodeguides|137|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mykpv.png)|myKPV|138|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wild.png)|WiLD|143|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/bravg.png)|Bravado Gaming|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
@@ -34,6 +33,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g4u.png)|Games4u|234|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/melty.png)|melty eSport Club|237|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/area5.png)|Area51|245|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/bravg.png)|Bravado Gaming|245|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/malik.png)|MALIK eSports|254|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/hungr.png)|Hungry Hungry Hippos|256|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/dat.png)|dAT Team|257|
