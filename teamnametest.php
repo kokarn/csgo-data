@@ -121,7 +121,7 @@ function array_equal( $a, $b ) {
                     array(
                         'status' => 'nerdRage vs. AlienTech.black || FBM S4 || @sL4Mtv @sltvstrike',
                         'teams' => array(
-                            '-unknown-',
+                            'nerdrage',
                             'teamalientech'
                         )
                     ),
