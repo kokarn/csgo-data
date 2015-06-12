@@ -263,7 +263,11 @@ if (!Object.keys) {
                     // If a match doesn't have any streams any more, remove it
                     if( matchData.streams.length === 0 ){
                         delete _this.matches[ matchIndex ];
-                        $( '[data-identifier="' + _this.getMatchIdentifier( matchData ) + '"]' ).remove();
+                        $( '[data-identifier="' + _this.getMatchIdentifier( matchData ) + '"]' ).velocity( 'transition.fadeOut', {
+                            complete : function( element ){
+                                $( element ).remove();
+                            }
+                        })
                         return true;
                     }
                     // Loop over all a matchs streams
