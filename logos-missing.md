@@ -48,7 +48,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/avant.png)|Avant Garde|292|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/energ.png)|Energy eSports|297|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vegas.png)|Vega Squadron|298|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alter.png)|Team Alternate|300|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/menac.png)|Team Menace.fi|322|
