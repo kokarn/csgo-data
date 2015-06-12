@@ -1,6 +1,7 @@
 <?php
 class AvailableTeams {
     private $teamListFilename = 'resources/teamlist.json';
+    private $countryListFilename = 'resources/countries.json';
     private $list;
     private $unknownTeamIdentifier = '-unknown-';
     private $blacklisteadTeamNameParts = array(
@@ -88,10 +89,25 @@ class AvailableTeams {
         return $list;
     }
 
+    private function parseCountryList( $countryList ){
+        $countries = array();
+
+        foreach( $countryList as $country ):
+            $countries[ strtolower( $country[ 'name' ] ) ] = $country[ 'name' ];
+        endforeach;
+
+        return $countries;
+    }
+
     private function loadFromFile(){
         $kurl = new Kurl();
+
         $data = json_decode( $kurl->loadData( $this->teamListFilenamePrefix . $this->teamListFilename ), true );
         $this->list = $this->parseTeamList( $data );
+
+        $data = json_decode( $kurl->loadData( $this->teamListFilenamePrefix . $this->countryListFilename ), true );
+        $this->list = array_merge( $this->list, $this->parseCountryList( $data ) );
+
         $this->list[ $this->unknownTeamIdentifier ] = '???';
     }
 

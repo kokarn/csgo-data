@@ -4,11 +4,15 @@
         <div class="row teams-row">
             {{#each teams}}
             <div class="col-md-6 text-center">
-                {{#ifCond name '==' '???'}}
-                    <img src="resources/design/images/unknown-team.png">
+                {{#if country}}
+                    <img src="resources/flags/{{country}}.svg">
                 {{else}}
-                    <img src="resources/teams/{{identifier}}-500x500.png">
-                {{/ifCond}}
+                    {{#ifCond name '==' '???'}}
+                        <img src="resources/design/images/unknown-team.png">
+                    {{else}}
+                        <img src="resources/teams/{{identifier}}-500x500.png">
+                    {{/ifCond}}
+                {{/if}}
                 <h2>
                     {{name}}
                 </h2>

@@ -121,7 +121,7 @@ function array_equal( $a, $b ) {
                     array(
                         'status' => 'nerdRage vs. AlienTech.black || FBM S4 || @sL4Mtv @sltvstrike',
                         'teams' => array(
-                            '-unknown-',
+                            'nerdrage',
                             'teamalientech'
                         )
                     ),
@@ -308,6 +308,13 @@ function array_equal( $a, $b ) {
                         'teams' => array(
                             'viruspro',
                             'teamdignitas'
+                        )
+                    ),
+                    array(
+                        'status' => 'King of Nordic Finland vs Denmark',
+                        'teams' => array(
+                            'finland',
+                            'denmark'
                         )
                     )
                 );

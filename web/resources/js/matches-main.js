@@ -68,6 +68,7 @@ if (!Object.keys) {
     var matches = {
             matches : {},
             templates : {},
+            countries : {},
             $matchesList : $( '.js-matches' ),
             $progressBar : $( '.js-progress-bar' ),
             $noMatches : $( '.js-no-matches' ),
@@ -78,6 +79,7 @@ if (!Object.keys) {
 
                 this.loadTemplates();
                 this.loadStreams();
+                this.loadCountries();
 
                 setInterval( function(){
                     _this.loadStreams();
@@ -153,6 +155,29 @@ if (!Object.keys) {
                 this.loadTemplate( 'match' );
                 this.loadTemplate( 'stream' );
             },
+            loadCountries : function(){
+                var _this = this,
+                    xhr = $.ajax({
+                        url: 'resources/countries.json'
+                    });
+
+                this.requestsSent = this.requestsSent + 1;
+
+                xhr.done(function( response ){
+                    _this.requestsDone = _this.requestsDone + 1;
+
+                    _this.updateProgressbar();
+
+                    _this.handleCountriesLoad( response );
+                });
+            },
+            handleCountriesLoad : function( countriesData ){
+                var i;
+
+                for( i = 0; i < countriesData.length; i = i + 1 ){
+                    this.countries[ countriesData[ i ].name.toLowerCase() ] = countriesData[ i ][ 'alpha-2' ].toLowerCase();
+                }
+            },
             loadTemplate : function( template ){
                 var _this = this,
                     xhr = $.ajax({
@@ -194,10 +219,16 @@ if (!Object.keys) {
             handleResponse : function( response, service ){
                 var _this = this;
 
-                // Add live status to each match
+                // Add frontend data to each match
                 $.each( response, function( matchIndex, matchData ){
                     $.each( matchData.streams, function( streamIndex, streamData ){
                         response[ matchIndex ].streams[ streamIndex ].live = 1;
+                    });
+
+                    $.each( matchData.teams, function( teamIndex, teamData ){
+                        if( _this.countries[ teamData.identifier ] !== undefined ){
+                            response[ matchIndex ].teams[ teamIndex ].country = _this.countries[ teamData.identifier ];
+                        }
                     });
                 });
 
