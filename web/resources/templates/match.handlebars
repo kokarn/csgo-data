@@ -1,0 +1,19 @@
+<div class="panel panel-default js-match-wrapper">
+    <div class="panel-body live-match-panel-body js-streams-wrapper">
+        <button type="button" class="close js-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="row teams-row">
+            {{#each teams}}
+            <div class="col-md-6 text-center">
+                {{#ifCond name '==' '???'}}
+                    <img src="resources/design/images/unknown-team.png">
+                {{else}}
+                    <img src="resources/teams/{{identifier}}-500x500.png">
+                {{/ifCond}}
+                <h2>
+                    {{name}}
+                </h2>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

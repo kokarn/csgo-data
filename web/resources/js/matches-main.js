@@ -67,7 +67,7 @@ if (!Object.keys) {
     'use strict';
     var matches = {
             matches : {},
-            template : false,
+            templates : {},
             $matchesList : $( '.js-matches' ),
             $progressBar : $( '.js-progress-bar' ),
             $noMatches : $( '.js-no-matches' ),
@@ -76,7 +76,7 @@ if (!Object.keys) {
             init : function(){
                 var _this = this;
 
-                this.loadTemplate();
+                this.loadTemplates();
                 this.loadStreams();
 
                 setInterval( function(){
@@ -149,10 +149,14 @@ if (!Object.keys) {
                 this.loadData( 'azubu' );
                 this.loadData( 'mlg' );
             },
-            loadTemplate : function(){
+            loadTemplates : function(){
+                this.loadTemplate( 'match' );
+                this.loadTemplate( 'stream' );
+            },
+            loadTemplate : function( template ){
                 var _this = this,
                     xhr = $.ajax({
-                        url: 'resources/matchtemplate.handlebars'
+                        url: 'resources/templates/' + template + '.handlebars'
                     });
 
                 this.requestsSent = this.requestsSent + 1;
@@ -162,7 +166,7 @@ if (!Object.keys) {
 
                     _this.updateProgressbar();
 
-                    _this.template = Handlebars.compile( response );
+                    _this.templates[ template ] = Handlebars.compile( response );
                 });
             },
             loadData : function( service ){
@@ -184,6 +188,9 @@ if (!Object.keys) {
                     _this.handleResponse( response, service );
                 });
             },
+            getMatchIdentifier : function( match ){
+                return [ match.teams[ 0 ].identifier, match.teams[ 1 ].identifier ].sort().toString();
+            },
             handleResponse : function( response, service ){
                 var _this = this;
 
@@ -196,7 +203,7 @@ if (!Object.keys) {
 
                 // Loop over all matches we got in the response
                 $.each( response, function( index, data ){
-                    var identifier = [ data.teams[ 0 ].identifier, data.teams[ 1 ].identifier ].sort().toString();
+                    var identifier = _this.getMatchIdentifier( data );
 
                     // The match isn't listed, just add the data from the response
                     if( _this.matches[ identifier ] === undefined ){
@@ -225,6 +232,7 @@ if (!Object.keys) {
                     // If a match doesn't have any streams any more, remove it
                     if( matchData.streams.length === 0 ){
                         delete _this.matches[ matchIndex ];
+                        $( '[data-identifier="' + _this.getMatchIdentifier( matchData ) + '"]' ).remove();
                         return true;
                     }
                     // Loop over all a matchs streams
@@ -261,6 +269,61 @@ if (!Object.keys) {
                 }
 
             },
+            renderMatch : function( match ){
+                var $markup,
+                    streamIndex,
+                    _this = this,
+                    $streamsWrapper;
+
+                if( !match.rendered ){
+                    $markup = $( this.templates[ 'match' ]( match ) )
+                        .attr( 'data-identifier', _this.getMatchIdentifier( match ) )
+                        .css({
+                            opacity: 0
+                        });
+                } else {
+                    $markup = $( '[data-identifier="' + _this.getMatchIdentifier( match ) + '"]' );
+                }
+
+                $streamsWrapper = $markup.find( '.js-streams-wrapper' );
+
+                for( streamIndex = 0; streamIndex < match.streams.length; streamIndex = streamIndex + 1 ){
+                    this.renderStream( match.streams[ streamIndex ], $streamsWrapper );
+                }
+
+                if( !match.rendered ){
+                    this.$matchesList.append( $markup );
+                    $markup.velocity( 'transition.slideRightBigIn', {
+                        stagger: 250
+                    });
+
+                    match.rendered = true;
+                }
+
+                // Remove streams that are no longer live
+                $markup.find( '.js-stream-row' ).not( '[data-live="yes"]' ).remove().end().removeAttr( 'data-live' );
+            },
+            renderStream : function( stream, $wrapperMarkup ){
+                var $streamMarkup,
+                    streamIdentifier = stream.service + '.' + stream.name,
+                    $renderedStream = $wrapperMarkup.find( '[data-identifier="' + streamIdentifier + '"]' );
+
+                $streamMarkup = $( this.templates[ 'stream' ]( stream ) )
+                    .attr( 'data-identifier', streamIdentifier )
+                    .attr( 'data-live', 'yes' );
+
+                $streamMarkup.popover({
+                    container: 'body',
+                    mouseOffset: 20,
+                    followMouse: true
+                });
+
+                if( $renderedStream.length > 0 ){
+                    $renderedStream.replaceWith( $streamMarkup );
+                } else {
+                    $wrapperMarkup.append( $streamMarkup );
+                }
+            },
             updateData : function(){
                 var matchIdentifier,
                     _this = this,
@@ -283,26 +346,14 @@ if (!Object.keys) {
                 }
 
                 if( numberOfMatches > 0 ){
-                    // Reset the page layout
-                    this.$matchesList.html( ' ' );
                     $( '.popover' ).remove();
                     this.$noMatches.hide();
 
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
-                            this.$matchesList.append( this.template( this.matches[ matchIdentifier ] ) );
+                            this.renderMatch( this.matches[ matchIdentifier ] );
                         }
                     }
-
-                    $( '[data-toggle="popover"]' ).popover({
-                        container: 'body',
-                        mouseOffset: 20,
-                        followMouse: true
-                    });
-                }
-
-                if( numberOfMatches === 1 ){
-                    $( '.js-match-wrapper' ).addClass( 'active' );
                 }
             }
         };
