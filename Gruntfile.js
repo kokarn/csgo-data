@@ -92,6 +92,14 @@ module.exports = function( grunt ) {
                     dest: 'web/resources/teams/'
                 }]
             }
+        },
+        run: {
+            missingLogos: {
+                cmd: 'node',
+                args: [
+                    'missing-logos.js'
+                ]
+            }
         }
     });
 
@@ -101,6 +109,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-responsive-images' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+    grunt.loadNpmTasks( 'grunt-run' );
 
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:responsive_images:match', 'newer:imagemin:ingame', 'newer:imagemin:teams', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:responsive_images:match', 'newer:imagemin:ingame', 'newer:imagemin:teams', 'run:missingLogos', 'teams', 'teams_zip' ] );
 };
