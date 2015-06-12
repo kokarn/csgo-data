@@ -260,13 +260,7 @@ if (!Object.keys) {
 
                 // Loop over all matches
                 $.each( _this.matches, function( matchIndex, matchData ){
-                    // If a match doesn't have any streams any more, remove it
-                    if( matchData.streams.length === 0 ){
-                        delete _this.matches[ matchIndex ];
-                        $( '[data-identifier="' + _this.getMatchIdentifier( matchData ) + '"]' ).remove();
-                        return true;
-                    }
-                    // Loop over all a matchs streams
+                    // Loop over all a match's streams
                     $.each( matchData.streams, function( streamIndex, streamData ){
                         // Check if the stream matches the service and isn't live
                         if( streamData.service === service && !streamData.live ){
@@ -275,6 +269,18 @@ if (!Object.keys) {
                             _this.matches[ matchIndex ].streams[ streamIndex ].live = false;
                         }
                     });
+
+                    // If a match doesn't have any streams any more, remove it
+                    if( matchData.streams.length === 0 ){
+                        delete _this.matches[ matchIndex ];
+                        $( '[data-identifier="' + _this.getMatchIdentifier( matchData ) + '"]' ).velocity( 'transition.fadeOut', {
+                            complete : function( element ){
+                                $( element ).remove();
+                            }
+                        });
+
+                        return true;
+                    }
                 });
 
                 this.updateData();
@@ -324,7 +330,7 @@ if (!Object.keys) {
 
                 if( !match.rendered ){
                     this.$matchesList.append( $markup );
-                    $markup.velocity( 'transition.slideRightBigIn', {
+                    $markup.velocity( 'transition.fadeIn', {
                         stagger: 250
                     });
 
