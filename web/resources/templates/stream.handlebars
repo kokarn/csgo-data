@@ -1,0 +1,47 @@
+<div class="row stream-row js-stream-row" data-toggle="popover" data-trigger="click hover" data-content="{{status}}" data-placement="top">
+    <div class="panel-background js-panel-background">
+        <img src="{{previewImage}}">
+    </div>
+    <div class="col-md-9">
+        <button type="button" class="btn btn-default btn-lg disabled service-wrapper">
+            <img src="resources/design/images/icon-{{service}}.png">
+        </button>
+        {{#if quality}}
+            <button type="button" class="btn btn-default btn-lg disabled">
+                {{#ifCond quality '>=' 720}}
+                    <span class="glyphicon glyphicon-hd-video" aria-hidden="true"></span>
+                {{else}}
+                    <span class="glyphicon glyphicon-sd-video" aria-hidden="true"></span>
+                {{/ifCond}}
+                {{quality}}P
+            </button>
+        {{/if}}
+        {{#if averageFps}}
+            <button type="button" class="btn btn-default btn-lg disabled">
+                <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                {{averageFps}} FPS
+            </button>
+        {{/if}}
+        {{#if broadcasterLanguage}}
+            <button type="button" class="btn btn-default btn-lg disabled">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                {{broadcasterLanguage}}
+            </button>
+        {{/if}}
+        <button type="button" class="btn btn-default btn-lg disabled">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            {{viewers}}
+        </button>
+        <!--
+        <small>
+            {{status}}
+        </small>
+        -->
+    </div>
+    <div class="col-md-3">
+        <a href="{{link}}" type="button" class="btn btn-primary btn-lg pull-right watch-stream-button">
+            {{name}}
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
