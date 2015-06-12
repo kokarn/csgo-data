@@ -4,7 +4,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/immer.png)|Immersive eSports|124|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/heat.png)|HEAT|131|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/netco.png)|Netcodeguides|137|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mykpv.png)|myKPV|138|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wild.png)|WiLD|143|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
