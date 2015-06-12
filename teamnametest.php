@@ -309,6 +309,13 @@ function array_equal( $a, $b ) {
                             'viruspro',
                             'teamdignitas'
                         )
+                    ),
+                    array(
+                        'status' => 'King of Nordic Finland vs Denmark',
+                        'teams' => array(
+                            'finland',
+                            'denmark'
+                        )
                     )
                 );
 
