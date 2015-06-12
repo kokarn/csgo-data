@@ -71,6 +71,5 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/playin.png)|Playing Ducks|436|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/play5.png)|PLAY5|461|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
