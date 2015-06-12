@@ -330,7 +330,7 @@ if (!Object.keys) {
 
                 if( !match.rendered ){
                     this.$matchesList.append( $markup );
-                    $markup.velocity( 'transition.slideRightBigIn', {
+                    $markup.velocity( 'transition.fadeIn', {
                         stagger: 250
                     });
 
