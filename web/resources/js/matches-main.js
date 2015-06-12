@@ -260,15 +260,17 @@ if (!Object.keys) {
 
                 // Loop over all matches
                 $.each( _this.matches, function( matchIndex, matchData ){
-                    // Loop over all a match's streams
-                    $.each( matchData.streams, function( streamIndex, streamData ){
-                        // Check if the stream matches the service and isn't live
-                        if( streamData.service === service && !streamData.live ){
-                            _this.matches[ matchIndex ].streams.splice( streamIndex, 1 );
-                        } else if( streamData.service === service ){
-                            _this.matches[ matchIndex ].streams[ streamIndex ].live = false;
-                        }
-                    });
+                    if( matchData.streams.length > 0 ){
+                        // Loop over all a match's streams
+                        $.each( matchData.streams, function( streamIndex, streamData ){
+                            // Check if the stream matches the service and isn't live
+                            if( streamData.service === service && !streamData.live ){
+                                _this.matches[ matchIndex ].streams.splice( streamIndex, 1 );
+                            } else if( streamData.service === service ){
+                                _this.matches[ matchIndex ].streams[ streamIndex ].live = false;
+                            }
+                        });
+                    }
 
                     // If a match doesn't have any streams any more, remove it
                     if( matchData.streams.length === 0 ){
