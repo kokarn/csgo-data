@@ -41,6 +41,11 @@
     max-width: 100px;
 }
 
+.country-flag {
+    margin-bottom: 12.5px;
+    margin-top: 12.5px;
+}
+
 .stream-row {
     display: none;
 }
@@ -83,6 +88,11 @@
 
 .active .teams-row img {
     max-width: 400px;
+}
+
+.active .country-flag {
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .watch-stream-button {
