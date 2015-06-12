@@ -34,7 +34,16 @@
 }
 
 .panel h2 {
+    display: table;
     font-size: 20px;
+    height: 48px;
+    margin: 0;
+    width: 100%;
+}
+
+.teamname-wrapper {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .teams-row img {
