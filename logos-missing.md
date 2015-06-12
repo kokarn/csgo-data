@@ -66,7 +66,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexit.png)|Vexitus E-Sports|391|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|Planetkey Dynamics|394|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/rgg.png)|Reason Gaming|397|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/trick.png)|TRICKED eSport|400|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/playin.png)|Playing Ducks|436|
