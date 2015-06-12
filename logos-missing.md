@@ -68,7 +68,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/rgg.png)|Reason Gaming|397|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/playin.png)|Playing Ducks|436|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
