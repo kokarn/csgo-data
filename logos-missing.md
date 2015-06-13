@@ -62,7 +62,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/deton.png)|DeToNator|367|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ubini.png)|Ubinited|375|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/atlan.png)|Atlantis|376|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vvvga.png)|vVv Gaming|387|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexit.png)|Vexitus E-Sports|391|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
