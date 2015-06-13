@@ -73,6 +73,7 @@ if (!Object.keys) {
             $progressBar : $( '.js-progress-bar' ),
             $noMatches : $( '.js-no-matches' ),
             requestsSent : 0,
+            unknownTeamIdentifier : '-unknown-',
             requestsDone : 0,
             init : function(){
                 var _this = this;
@@ -133,7 +134,7 @@ if (!Object.keys) {
                     }, 300 );
                 });
 
-                $( 'body' ).on( 'mouseenter', '.js-stream-row', function(){
+                $( 'body' ).on( 'mouseenter', '.js-match-wrapper .js-stream-row', function(){
                     $( this ).find( '.js-panel-background' ).velocity( 'stop' ).velocity({
                         opacity: '0.2'
                     }, 300 );
@@ -221,6 +222,8 @@ if (!Object.keys) {
 
                 // Add frontend data to each match
                 $.each( response, function( matchIndex, matchData ){
+                    var numberOfCountries = 0;
+
                     $.each( matchData.streams, function( streamIndex, streamData ){
                         response[ matchIndex ].streams[ streamIndex ].live = 1;
                     });
@@ -228,8 +231,21 @@ if (!Object.keys) {
                     $.each( matchData.teams, function( teamIndex, teamData ){
                         if( _this.countries[ teamData.identifier ] !== undefined ){
                             response[ matchIndex ].teams[ teamIndex ].country = _this.countries[ teamData.identifier ];
+                            numberOfCountries = numberOfCountries + 1;
                         }
                     });
+
+                    // Special case when we actually match only one country
+                    if( numberOfCountries > 0 && numberOfCountries < matchData.teams.length ){
+                        $.each( matchData.teams, function( teamIndex, teamData ){
+                            if( response[ matchIndex ].teams[ teamIndex ].country ) {
+                                delete response[ matchIndex ].teams[ teamIndex ].country;
+                            }
+
+                            response[ matchIndex ].teams[ teamIndex ].identifier = _this.unknownTeamIdentifier;
+                            response[ matchIndex ].teams[ teamIndex ].name = '???';
+                        });
+                    }
                 });
 
                 // Loop over all matches we got in the response
@@ -312,16 +328,22 @@ if (!Object.keys) {
                 var $markup,
                     streamIndex,
                     _this = this,
-                    $streamsWrapper;
+                    $streamsWrapper,
+                    matchIdentifier = _this.getMatchIdentifier( match );
 
                 if( !match.rendered ){
-                    $markup = $( this.templates[ 'match' ]( match ) )
-                        .attr( 'data-identifier', _this.getMatchIdentifier( match ) )
-                        .css({
-                            opacity: 0
-                        });
+                    if( matchIdentifier === this.unknownTeamIdentifier + ',' + this.unknownTeamIdentifier ){
+                        $markup = $( '.js-unknown-matches' ).attr( 'data-identifier', matchIdentifier  );
+                        match.rendered = true;
+                    } else {
+                        $markup = $( this.templates[ 'match' ]( match ) )
+                            .attr( 'data-identifier', matchIdentifier  )
+                            .css({
+                                opacity: 0
+                            });
+                    }
                 } else {
-                    $markup = $( '[data-identifier="' + _this.getMatchIdentifier( match ) + '"]' );
+                    $markup = $( '[data-identifier="' + matchIdentifier + '"]' );
                 }
 
                 $streamsWrapper = $markup.find( '.js-streams-wrapper' );
@@ -347,6 +369,8 @@ if (!Object.keys) {
                     streamIdentifier = stream.service + '.' + stream.name,
                     $renderedStream = $wrapperMarkup.find( '[data-identifier="' + streamIdentifier + '"]' );
 
+                console.log( $wrapperMarkup );
+
                 $streamMarkup = $( this.templates[ 'stream' ]( stream ) )
                     .attr( 'data-identifier', streamIdentifier )
                     .attr( 'data-live', 'yes' );
@@ -368,7 +392,7 @@ if (!Object.keys) {
                     _this = this,
                     numberOfMatches = Object.keys( this.matches ).length;
 
-                if( this.matches === {} && this.template === false ){
+                if( this.matches === {} && this.templates === false ){
                     setTimeout( function(){
                         matches.updateData();
                     }, 50 );
@@ -388,11 +412,34 @@ if (!Object.keys) {
                     $( '.popover' ).remove();
                     this.$noMatches.hide();
 
+
+
                     for( matchIdentifier in this.matches ){
                         if( this.matches.hasOwnProperty( matchIdentifier ) ){
                             this.renderMatch( this.matches[ matchIdentifier ] );
                         }
                     }
+                }
+
+                // Show and hide headers as neccesary
+                if( $( '.js-matches' ).find( '.js-stream-row' ).length > 0 ){
+                    $( '.js-matches' ).find( 'h1' ).css({
+                        display: 'block'
+                    });
+                } else {
+                    $( '.js-matches' ).find( 'h1' ).css({
+                        display: 'none'
+                    });
+                }
+
+                if( $( '.js-unknown-matches' ).find( '.js-stream-row' ).length > 0 ){
+                    $( '.js-unknown-matches' ).find( 'h2' ).css({
+                        display: 'block'
+                    });
+                } else {
+                    $( '.js-unknown-matches' ).find( 'h2' ).css({
+                        display: 'none'
+                    });
                 }
             }
         };

@@ -1,8 +1,24 @@
+h1 {
+    margin-top: 0;
+}
+
+.unknown-matches-wrapper h2 {
+    margin-top: 100px;
+}
+
+.matches-wrapper h1,
+.matches-wrapper h2,
+.unknown-matches-wrapper h1,
+.unknown-matches-wrapper h2 {
+    display: none;
+}
+
 .panel {
     background-color: white;
     float: left;
     height: 180px;
     width: 33.33333%;
+    -webkit-backface-visibility: hidden;
 }
 
 .panel:hover {
@@ -25,12 +41,27 @@
     z-index: 1;
 }
 
+.progress {
+    background-color: #fff;
+}
+
 .panel.active .close {
     display: block;
 }
 
 .panel.active:hover {
     cursor: default;
+}
+
+.no-matches {
+    text-align: center;
+}
+
+.no-matches ul {
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left;
+    width: 480px;
 }
 
 .panel h2 {
@@ -57,6 +88,11 @@
 
 .stream-row {
     display: none;
+    margin-bottom: 15px;
+}
+
+.unknown-matches-wrapper .stream-row {
+    display: block;
 }
 
 .live-match-panel-body {
@@ -92,7 +128,6 @@
 
 .active .stream-row {
     display: block;
-    margin-bottom: 15px;
 }
 
 .active .teams-row img {
