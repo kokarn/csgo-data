@@ -217,11 +217,12 @@ if (!Object.keys) {
                 return [ match.teams[ 0 ].identifier, match.teams[ 1 ].identifier ].sort().toString();
             },
             handleResponse : function( response, service ){
-                var _this = this,
-                    numberOfCountries = 0;
+                var _this = this;
 
                 // Add frontend data to each match
                 $.each( response, function( matchIndex, matchData ){
+                    var numberOfCountries = 0;
+                    
                     $.each( matchData.streams, function( streamIndex, streamData ){
                         response[ matchIndex ].streams[ streamIndex ].live = 1;
                     });
