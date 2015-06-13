@@ -26,6 +26,10 @@
     z-index: 1;
 }
 
+.progress {
+    background-color: #fff;
+}
+
 .panel.active .close {
     display: block;
 }
