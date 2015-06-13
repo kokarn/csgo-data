@@ -11,7 +11,8 @@ class AvailableTeams {
         'team',
         'in',
         'the',
-        'playing'
+        'playing',
+        'counter'
     );
 
     private $alternateTeamNames = array();
