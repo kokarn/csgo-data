@@ -52,7 +52,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/imagi.png)|Imaginary Gaming|323|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/cplay.png)|CPLAY|330|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vende.png)|Vendetta|331|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/xenex.png)|Team XENEX|340|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/space.png)|Space Soldiers|341|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nface.png)|nFace|343|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
