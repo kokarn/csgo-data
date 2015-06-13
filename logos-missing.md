@@ -48,7 +48,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/energ.png)|Energy eSports|297|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alter.png)|Team Alternate|300|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/menac.png)|Team Menace.fi|322|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/imagi.png)|Imaginary Gaming|323|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vende.png)|Vendetta|331|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/space.png)|Space Soldiers|341|
