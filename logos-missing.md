@@ -27,7 +27,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/winou.png)|WinOut|229|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/viceg.png)|Vice Gaming|230|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/denia.png)|Denial eSports|231|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skyre.png)|Skyred|233|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g4u.png)|Games4u|234|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/melty.png)|melty eSport Club|237|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nextp.png)|neXtPlease!|237|
