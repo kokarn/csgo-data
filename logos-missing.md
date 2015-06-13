@@ -42,7 +42,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mythi.png)|Mythic|272|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/uniai.png)|uni.AiN|276|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ggwp.png)|GGWP|287|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/richg.png)|Rich Gang|287|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/avant.png)|Avant Garde|292|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/energ.png)|Energy eSports|297|
