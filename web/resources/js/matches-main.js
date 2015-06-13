@@ -217,7 +217,8 @@ if (!Object.keys) {
                 return [ match.teams[ 0 ].identifier, match.teams[ 1 ].identifier ].sort().toString();
             },
             handleResponse : function( response, service ){
-                var _this = this;
+                var _this = this,
+                    numberOfCountries = 0;
 
                 // Add frontend data to each match
                 $.each( response, function( matchIndex, matchData ){
@@ -228,8 +229,21 @@ if (!Object.keys) {
                     $.each( matchData.teams, function( teamIndex, teamData ){
                         if( _this.countries[ teamData.identifier ] !== undefined ){
                             response[ matchIndex ].teams[ teamIndex ].country = _this.countries[ teamData.identifier ];
+                            numberOfCountries = numberOfCountries + 1;
                         }
                     });
+
+                    // Special case when we actually match only one country
+                    if( numberOfCountries > 0 && numberOfCountries < matchData.teams.length ){
+                        $.each( matchData.teams, function( teamIndex, teamData ){
+                            if( response[ matchIndex ].teams[ teamIndex ].country ) {
+                                delete response[ matchIndex ].teams[ teamIndex ].country;
+                            }
+
+                            response[ matchIndex ].teams[ teamIndex ].identifier = '-unknown-';
+                            response[ matchIndex ].teams[ teamIndex ].name = '???';
+                        });
+                    }
                 });
 
                 // Loop over all matches we got in the response
