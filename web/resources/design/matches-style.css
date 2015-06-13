@@ -3,6 +3,7 @@
     float: left;
     height: 180px;
     width: 33.33333%;
+    -webkit-backface-visibility: hidden;
 }
 
 .panel:hover {
