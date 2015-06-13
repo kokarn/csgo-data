@@ -33,6 +33,17 @@
     cursor: default;
 }
 
+.no-matches {
+    text-align: center;
+}
+
+.no-matches ul {
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left;
+    width: 480px;
+}
+
 .panel h2 {
     display: table;
     font-size: 20px;
