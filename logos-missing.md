@@ -56,7 +56,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/xenex.png)|Team XENEX|340|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/space.png)|Space Soldiers|341|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nface.png)|nFace|343|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/inati.png)|iNation|353|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tempo.png)|Tempo Gaming|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/deton.png)|DeToNator|367|
