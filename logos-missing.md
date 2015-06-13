@@ -35,7 +35,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/malik.png)|MALIK eSports|254|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/hungr.png)|Hungry Hungry Hippos|256|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/dat.png)|dAT Team|257|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/rctic.png)|RCTIC eSports|259|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/contr.png)|Control eSports|265|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ob.png)|OnlineBOTS|265|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mythi.png)|Mythic|272|
