@@ -35,60 +35,64 @@ class AvailableTeams {
             // Add all csgolounge names to the list of available teams
             if( isset( $teamData[ 'csgolounge' ] ) ) :
                 if( !isset( $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'csgolounge' ][ 'name' ] ) ] ) ) :
-                    $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'csgolounge' ][ 'name' ] ) ] = $identifier;
+                    $this->addAlternateTeamName( $this->normalizeString( $teamData[ 'csgolounge' ][ 'name' ] ), $identifier );
                 endif;
             endif;
 
             // Add all gosugamers names to the list of available teams
             if( isset( $teamData[ 'gosugamers' ] ) ) :
                 if( !isset( $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'gosugamers' ][ 'name' ] ) ] ) ) :
-                    $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'gosugamers' ][ 'name' ] ) ] = $identifier;
+                    $this->addAlternateTeamName( $this->normalizeString( $teamData[ 'gosugamers' ][ 'name' ] ), $identifier );
                 endif;
             endif;
 
             // Add all hltv names to the list of available teams
             if( isset( $teamData[ 'hltv' ] ) ) :
                 if( !isset( $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'hltv' ][ 'name' ] ) ] ) ) :
-                    $this->alternateTeamNames[ $this->normalizeString( $teamData[ 'hltv' ][ 'name' ] ) ] = $identifier;
+                    $this->addAlternateTeamName( $this->normalizeString( $teamData[ 'hltv' ][ 'name' ] ), $identifier );
                 endif;
             endif;
 
             // Add all teams without the "team" prefix to the list of available teams
             if( stripos( $identifier, 'team' ) !== false ) :
-                $this->alternateTeamNames[ str_ireplace( 'team', '', $identifier ) ] = $identifier;
+                $this->addAlternateTeamName( str_ireplace( 'team', '', $identifier ), $identifier );
             endif;
 
             // Special cases for team names with dots in them
             if( stripos( $teamData[ 'name' ], '.' ) !== false ) :
                 // Add all teams with dot's replaced with space to the list of available teams
-                $this->alternateTeamNames[ $this->normalizeString( str_ireplace( '.', ' ', $teamData[ 'name' ] ) ) ] = $identifier;
+                $this->addAlternateTeamName( $this->normalizeString( str_ireplace( '.', ' ', $teamData[ 'name' ] ) ), $identifier );
 
                 // Add all teams with dot's removed to the list of available teams
-                $this->alternateTeamNames[ $this->normalizeString( str_ireplace( '.', '', $teamData[ 'name' ] ) ) ] = $identifier;
+                $this->addAlternateTeamName( $this->normalizeString( str_ireplace( '.', '', $teamData[ 'name' ] ) ), $identifier );
 
                 // Add first part of team names with dots in them to the list of available teams
                 $nameParts = explode( '.', $teamData[ 'name' ] );
-                $this->alternateTeamNames[ $this->normalizeString( $nameParts[ 0 ] ) ] = $identifier;
+                $this->addAlternateTeamName( $this->normalizeString( $nameParts[ 0 ] ), $identifier );
             endif;
 
             // Add all parts except for some blacklisted ones for team names with spaces in them
             if( stripos( $teamData[ 'name' ], ' ' ) !== false ) :
                 $teamParts = explode( ' ', $this->normalizeString( $teamData[ 'name' ] ) );
-                $teamParts = array_filter( $teamParts, array( $this, 'isNotBlacklisteadTeamPart' ) );
 
                 foreach( $teamParts as $teamIdentifier ) :
-
                     // Special case for team name parts ending in "3", eg "flipsid3"
                     if( substr( $teamIdentifier, -1 ) == '3' ) :
-                        $this->alternateTeamNames[ substr( $teamIdentifier, 0, strlen( $teamIdentifier ) - 1 ) . 'e' ] = $identifier;
+                        $this->addAlternateTeamName( substr( $teamIdentifier, 0, strlen( $teamIdentifier ) - 1 ) . 'e', $identifier );
                     endif;
 
-                    $this->alternateTeamNames[ $teamIdentifier ] = $identifier;
+                    $this->addAlternateTeamName( $teamIdentifier, $identifier );
                 endforeach;
             endif;
         endforeach;
 
         return $list;
+    }
+
+    private function addAlternateTeamName( $alternateIdentifier, $teamIdentifier ){
+        if( $this->isNotBlacklisteadTeamPart( $alternateIdentifier ) ) :
+            $this->alternateTeamNames[ $alternateIdentifier ] = $teamIdentifier;
+        endif;
     }
 
     private function parseCountryList( $countryList ){

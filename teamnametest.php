@@ -316,6 +316,13 @@ function array_equal( $a, $b ) {
                             'finland',
                             'denmark'
                         )
+                    ),
+                    array(
+                        'status' => 'TeamKinguin vs. Wyvern | DreamHack Open Summer 2015 BYOC | Giveaway at https://goo.gl/GsT6d5',
+                        'teams' => array(
+                            'teamkinguin',
+                            '-unknown-'
+                        )
                     )
                 );
 

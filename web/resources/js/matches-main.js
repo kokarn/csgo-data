@@ -369,8 +369,6 @@ if (!Object.keys) {
                     streamIdentifier = stream.service + '.' + stream.name,
                     $renderedStream = $wrapperMarkup.find( '[data-identifier="' + streamIdentifier + '"]' );
 
-                console.log( $wrapperMarkup );
-
                 $streamMarkup = $( this.templates[ 'stream' ]( stream ) )
                     .attr( 'data-identifier', streamIdentifier )
                     .attr( 'data-live', 'yes' );
