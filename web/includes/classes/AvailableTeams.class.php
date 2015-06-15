@@ -90,8 +90,18 @@ class AvailableTeams {
     }
 
     private function addAlternateTeamName( $alternateIdentifier, $teamIdentifier ){
-        if( $this->isNotBlacklisteadTeamPart( $alternateIdentifier ) ) :
-            $this->alternateTeamNames[ $alternateIdentifier ] = $teamIdentifier;
+        // Check if the alternate identifier is already used
+        if( isset( $this->alternateTeamNames[ $alternateIdentifier ] ) ) :
+            // It's already used and will cause collisions, we can't use it
+            if( $this->alternateTeamNames[ $alternateIdentifier ] !== $teamIdentifier ) :
+                // Only remove the item if there is an actual collision
+                $this->blacklisteadTeamNameParts[] = $alternateIdentifier;
+                unset( $this->alternateTeamNames[ $alternateIdentifier ] );
+            endif;
+        else :
+            if( $this->isNotBlacklisteadTeamPart( $alternateIdentifier ) ) :
+                $this->alternateTeamNames[ $alternateIdentifier ] = $teamIdentifier;
+            endif;
         endif;
     }
 
