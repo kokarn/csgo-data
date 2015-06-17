@@ -2,12 +2,12 @@
     <div class="panel-background js-panel-background">
         <img src="{{previewImage}}">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-9">
+    <div class="col-xs-12 col-sm-12 col-md-9 stats-wrapper">
         <button type="button" class="btn btn-default btn-lg disabled service-wrapper">
             <img src="resources/design/images/icon-{{service}}.png">
         </button>
         {{#if quality}}
-            <button type="button" class="btn btn-default btn-lg disabled">
+            <button type="button" class="btn btn-default btn-lg disabled quality-wrapper">
                 {{#ifCond quality '>=' 720}}
                     <span class="glyphicon glyphicon-hd-video" aria-hidden="true"></span>
                 {{else}}
@@ -17,23 +17,23 @@
             </button>
         {{/if}}
         {{#if averageFps}}
-            <button type="button" class="btn btn-default btn-lg disabled">
+            <button type="button" class="btn btn-default btn-lg disabled fps-wrapper">
                 <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
                 {{averageFps}} FPS
             </button>
         {{/if}}
         {{#if broadcasterLanguage}}
-            <button type="button" class="btn btn-default btn-lg disabled">
+            <button type="button" class="btn btn-default btn-lg disabled language-wrapper">
                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                 {{broadcasterLanguage}}
             </button>
         {{/if}}
-        <button type="button" class="btn btn-default btn-lg disabled">
+        <button type="button" class="btn btn-default btn-lg disabled viewers-wrapper">
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
             {{viewers}}
         </button>
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-xs-offset-3 col-sm-offset-3 col-md-offset-0">
+    <div class="col-xs-12 col-sm-6 col-md-3 col-sm-offset-3 col-md-offset-0 watch-stream-button-wrapper">
         <a href="{{link}}" type="button" class="btn btn-primary btn-lg pull-right watch-stream-button">
             {{name}}
             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
