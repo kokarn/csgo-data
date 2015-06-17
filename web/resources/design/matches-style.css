@@ -159,7 +159,7 @@ h1 {
     max-height: 18px;
 }
 
-@media screen and ( max-width: 1000px ){
+@media screen and ( max-width: 992px ){
     .panel {
         width: 50%;
     }
@@ -169,7 +169,7 @@ h1 {
     }
 }
 
-@media screen and ( max-width: 750px ){
+@media screen and ( max-width: 768px ){
     .panel {
         width: 100%;
     }
