@@ -16,7 +16,6 @@ h1 {
 .panel {
     background-color: white;
     float: left;
-    height: 180px;
     width: 33.33333%;
     -webkit-backface-visibility: hidden;
 }
@@ -159,7 +158,7 @@ h1 {
     max-height: 18px;
 }
 
-@media screen and ( max-width: 1000px ){
+@media screen and ( max-width: 992px ){
     .panel {
         width: 50%;
     }
@@ -167,10 +166,41 @@ h1 {
     .active .teams-row img {
         max-width: 70%;
     }
+
+    .stats-wrapper {
+        text-align: center;
+    }
+
+    .watch-stream-button-wrapper {
+        margin-top: 15px;
+    }
 }
 
-@media screen and ( max-width: 750px ){
+@media screen and ( max-width: 768px ){
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
     .panel {
         width: 100%;
+    }
+
+    .panel-body {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+
+    .fps-wrapper,
+    .quality-wrapper {
+        display: none;
     }
 }
