@@ -32,6 +32,24 @@
             "id": 6117
         }
     },
+    "aces": {
+        "name": "ACES",
+        "steam": {
+            "name": "aces"
+        },
+        "csgolounge": {
+            "name": "Aces"
+        },
+        "hltv": {
+            "name": "ACES",
+            "id": "5218"
+        },
+        "gosugamers": {
+            "name": "ACES",
+            "id": 8582
+        },
+        "identifier": "aces"
+    },
     "affnity": {
         "name": "affNity",
         "steam": {
