@@ -1,0 +1,18 @@
+{
+    "name": "beGenius",
+    "steam": {
+        "name": "begen"
+    },
+    "csgolounge": {
+        "name": "beGenius"
+    },
+    "hltv": {
+        "name": "beGenius",
+        "id": "6131"
+    },
+    "gosugamers": {
+        "name": "beGenius",
+        "id": 11458
+    },
+    "identifier": "begenius"
+}
