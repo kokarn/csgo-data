@@ -1973,6 +1973,24 @@
             "id": "4554"
         }
     },
+    "teamkarma": {
+        "name": "Team Karma",
+        "steam": {
+            "name": "karma"
+        },
+        "csgolounge": {
+            "name": "Karma"
+        },
+        "gosugamers": {
+            "name": "Team Karma",
+            "id": 9325
+        },
+        "hltv": {
+            "name": "Karma",
+            "id": "5866"
+        },
+        "identifier": "teamkarma"
+    },
     "teamkinguin": {
         "name": "Team Kinguin",
         "gosugamers": {
