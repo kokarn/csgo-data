@@ -1572,6 +1572,24 @@
             "id": "4477"
         }
     },
+    "qeeyou": {
+        "name": "QeeYou",
+        "steam": {
+            "name": "qeeyo"
+        },
+        "csgolounge": {
+            "name": "QueeYou"
+        },
+        "hltv": {
+            "name": "QeeYou",
+            "id": "6195"
+        },
+        "gosugamers": {
+            "name": "QeeYou",
+            "id": 12330
+        },
+        "identifier": "qeeyou"
+    },
     "qlimaxcrew": {
         "name": "Qlimax Crew",
         "steam": {
