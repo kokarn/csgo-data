@@ -470,6 +470,24 @@
         },
         "identifier": "detonator"
     },
+    "dexterityteam": {
+        "name": "Dexterity Team",
+        "steam": {
+            "name": "dexte"
+        },
+        "csgolounge": {
+            "name": "Dexterity"
+        },
+        "gosugamers": {
+            "name": "Dexterity Team",
+            "id": 12539
+        },
+        "hltv": {
+            "name": "Dexterity",
+            "id": "5951"
+        },
+        "identifier": "dexterityteam"
+    },
     "dynastyesports": {
         "name": "Dynasty eSports",
         "steam": {
