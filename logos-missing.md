@@ -58,5 +58,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|Planetkey Dynamics|475|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|

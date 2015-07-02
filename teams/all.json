@@ -470,6 +470,24 @@
         },
         "identifier": "detonator"
     },
+    "dexterityteam": {
+        "name": "Dexterity Team",
+        "steam": {
+            "name": "dexte"
+        },
+        "csgolounge": {
+            "name": "Dexterity"
+        },
+        "gosugamers": {
+            "name": "Dexterity Team",
+            "id": 12539
+        },
+        "hltv": {
+            "name": "Dexterity",
+            "id": "5951"
+        },
+        "identifier": "dexterityteam"
+    },
     "dynastyesports": {
         "name": "Dynasty eSports",
         "steam": {
@@ -1572,6 +1590,24 @@
             "id": "4477"
         }
     },
+    "qeeyou": {
+        "name": "QeeYou",
+        "steam": {
+            "name": "qeeyo"
+        },
+        "csgolounge": {
+            "name": "QueeYou"
+        },
+        "hltv": {
+            "name": "QeeYou",
+            "id": "6195"
+        },
+        "gosugamers": {
+            "name": "QeeYou",
+            "id": 12330
+        },
+        "identifier": "qeeyou"
+    },
     "qlimaxcrew": {
         "name": "Qlimax Crew",
         "steam": {
@@ -1636,6 +1672,24 @@
             "id": "4680"
         },
         "identifier": "recursiveesports"
+    },
+    "renegades": {
+        "name": "Renegades",
+        "steam": {
+            "name": "reneg"
+        },
+        "csgolounge": {
+            "name": "Renegades"
+        },
+        "hltv": {
+            "name": "Renegades",
+            "id": "6211"
+        },
+        "gosugamers": {
+            "name": "Renegades",
+            "id": 12427
+        },
+        "identifier": "renegades"
     },
     "resilience5": {
         "name": "Resilience5",
@@ -1936,6 +1990,24 @@
             "name": "Infused",
             "id": "4554"
         }
+    },
+    "teamkarma": {
+        "name": "Team Karma",
+        "steam": {
+            "name": "karma"
+        },
+        "csgolounge": {
+            "name": "Karma"
+        },
+        "gosugamers": {
+            "name": "Team Karma",
+            "id": 9325
+        },
+        "hltv": {
+            "name": "Karma",
+            "id": "5866"
+        },
+        "identifier": "teamkarma"
     },
     "teamkinguin": {
         "name": "Team Kinguin",
