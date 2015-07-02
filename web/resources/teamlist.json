@@ -1637,6 +1637,24 @@
         },
         "identifier": "recursiveesports"
     },
+    "renegades": {
+        "name": "Renegades",
+        "steam": {
+            "name": "reneg"
+        },
+        "csgolounge": {
+            "name": "Renegades"
+        },
+        "hltv": {
+            "name": "Renegades",
+            "id": "6211"
+        },
+        "gosugamers": {
+            "name": "Renegades",
+            "id": 12427
+        },
+        "identifier": "renegades"
+    },
     "resilience5": {
         "name": "Resilience5",
         "steam": {
