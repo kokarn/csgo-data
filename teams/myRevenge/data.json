@@ -1,0 +1,18 @@
+{
+    "name": "myRevenge",
+    "steam": {
+        "name": "myrev"
+    },
+    "csgolounge": {
+        "name": "myRev.kr"
+    },
+    "hltv": {
+        "name": "myRevenge",
+        "id": "6194"
+    },
+    "gosugamers": {
+        "name": "myRevenge",
+        "id": 8589
+    },
+    "identifier": "myrevenge"
+}

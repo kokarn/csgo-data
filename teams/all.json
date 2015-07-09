@@ -1266,6 +1266,24 @@
             "id": "60"
         }
     },
+    "mvpkarnal": {
+        "name": "MVP.Karnal",
+        "steam": {
+            "name": "mvpka"
+        },
+        "csgolounge": {
+            "name": "MVPG"
+        },
+        "hltv": {
+            "name": "MVP.karnal",
+            "id": "6109"
+        },
+        "gosugamers": {
+            "name": "MVP.karnal",
+            "id": 11503
+        },
+        "identifier": "mvpkarnal"
+    },
     "mykpv": {
         "name": "myKPV",
         "steam": {
@@ -1279,6 +1297,24 @@
             "name": "myKPV.de",
             "id": "5355"
         }
+    },
+    "myrevenge": {
+        "name": "myRevenge",
+        "steam": {
+            "name": "myrev"
+        },
+        "csgolounge": {
+            "name": "myRev.kr"
+        },
+        "hltv": {
+            "name": "myRevenge",
+            "id": "6194"
+        },
+        "gosugamers": {
+            "name": "myRevenge",
+            "id": 8589
+        },
+        "identifier": "myrevenge"
     },
     "mythic": {
         "name": "Mythic",
@@ -1340,6 +1376,13 @@
             "name": "Natus Vincere",
             "id": "4608"
         }
+    },
+    "neckbreak": {
+        "name": "NeckBREAK",
+        "steam": {
+            "name": "neckb"
+        },
+        "identifier": "neckbreak"
     },
     "neophyte": {
         "name": "nEophyte",
