@@ -1266,6 +1266,24 @@
             "id": "60"
         }
     },
+    "mvpkarnal": {
+        "name": "MVP.Karnal",
+        "steam": {
+            "name": "mvpka"
+        },
+        "csgolounge": {
+            "name": "MVPG"
+        },
+        "hltv": {
+            "name": "MVP.karnal",
+            "id": "6109"
+        },
+        "gosugamers": {
+            "name": "MVP.karnal",
+            "id": 11503
+        },
+        "identifier": "mvpkarnal"
+    },
     "mykpv": {
         "name": "myKPV",
         "steam": {
