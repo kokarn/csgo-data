@@ -30,6 +30,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g4u.png)|Games4u|234|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/melty.png)|melty eSport Club|237|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nextp.png)|neXtPlease!|237|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neckb.png)|NeckBREAK|239|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/area5.png)|Area51|245|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/bravg.png)|Bravado Gaming|245|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mvpka.png)|MVP.Karnal|245|

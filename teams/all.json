@@ -1359,6 +1359,13 @@
             "id": "4608"
         }
     },
+    "neckbreak": {
+        "name": "NeckBREAK",
+        "steam": {
+            "name": "neckb"
+        },
+        "identifier": "neckbreak"
+    },
     "neophyte": {
         "name": "nEophyte",
         "steam": {
