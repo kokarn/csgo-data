@@ -32,7 +32,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nextp.png)|neXtPlease!|237|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/area5.png)|Area51|245|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/bravg.png)|Bravado Gaming|245|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mvpka.png)|MVP.Karnal|245|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/malik.png)|MALIK eSports|254|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/hungr.png)|Hungry Hungry Hippos|256|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/dat.png)|dAT Team|257|
