@@ -1,0 +1,14 @@
+{
+    "name": "ZAC Gaming",
+    "steam": {
+        "name": "zacga"
+    },
+    "csgolounge": {
+        "name": "ZAC"
+    },
+    "hltv": {
+        "name": "ZAC",
+        "id": "6230"
+    },
+    "identifier": "zacgaming"
+}
