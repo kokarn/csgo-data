@@ -2324,6 +2324,13 @@
             "id": "6010"
         }
     },
+    "themongolz": {
+        "name": "The MongolZ",
+        "steam": {
+            "name": "mongo"
+        },
+        "identifier": "themongolz"
+    },
     "titan": {
         "name": "Titan",
         "steam": {
