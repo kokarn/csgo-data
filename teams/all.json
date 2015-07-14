@@ -2324,6 +2324,13 @@
             "id": "6010"
         }
     },
+    "themongolz": {
+        "name": "The MongolZ",
+        "steam": {
+            "name": "mongo"
+        },
+        "identifier": "themongolz"
+    },
     "titan": {
         "name": "Titan",
         "steam": {
@@ -2753,6 +2760,20 @@
             "name": "XPC",
             "id": "6025"
         }
+    },
+    "zacgaming": {
+        "name": "ZAC Gaming",
+        "steam": {
+            "name": "zacga"
+        },
+        "csgolounge": {
+            "name": "ZAC"
+        },
+        "hltv": {
+            "name": "ZAC",
+            "id": "6230"
+        },
+        "identifier": "zacgaming"
     },
     "zbrilo": {
         "name": "Zbrilo",
