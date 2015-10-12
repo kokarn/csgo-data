@@ -1,0 +1,11 @@
+{
+    "name": "Arcade eSports",
+    "steam": {
+        "name": "arcad"
+    },
+    "hltv": {
+        "name": "Arcade",
+        "id": "6408"
+    },
+    "identifier": "arcadeesports"
+}

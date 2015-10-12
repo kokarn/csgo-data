@@ -104,6 +104,17 @@
             "id": "3982"
         }
     },
+    "arcadeesports": {
+        "name": "Arcade eSports",
+        "steam": {
+            "name": "arcad"
+        },
+        "hltv": {
+            "name": "Arcade",
+            "id": "6408"
+        },
+        "identifier": "arcadeesports"
+    },
     "area51": {
         "name": "Area51",
         "steam": {
