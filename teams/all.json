@@ -2012,6 +2012,24 @@
             "id": "6030"
         }
     },
+    "teamconquest": {
+        "name": "Team Conquest",
+        "steam": {
+            "name": "conqu"
+        },
+        "csgolounge": {
+            "name": "Conquest"
+        },
+        "gosugamers": {
+            "name": "Conquest",
+            "id": 13285
+        },
+        "hltv": {
+            "name": "Conquest",
+            "id": "6292"
+        },
+        "identifier": "teamconquest"
+    },
     "teamdignitas": {
         "name": "Team Dignitas",
         "steam": {
