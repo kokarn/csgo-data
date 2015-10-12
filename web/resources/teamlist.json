@@ -2312,6 +2312,24 @@
             "id": "5319"
         }
     },
+    "teamroccat": {
+        "name": "Team Roccat",
+        "steam": {
+            "name": "rocca"
+        },
+        "csgolounge": {
+            "name": "Roccat"
+        },
+        "gosugamers": {
+            "name": "ROCCAT CS",
+            "id": 12780
+        },
+        "hltv": {
+            "name": "ROCCAT",
+            "id": "4475"
+        },
+        "identifier": "teamroccat"
+    },
     "teamrock": {
         "name": "Team ROCK",
         "steam": {
