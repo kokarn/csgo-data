@@ -2790,6 +2790,24 @@
             "id": "3168"
         }
     },
+    "winterfox": {
+        "name": "Winterfox",
+        "steam": {
+            "name": "winte"
+        },
+        "csgolounge": {
+            "name": "Winterfox"
+        },
+        "hltv": {
+            "name": "Winterfox",
+            "id": "6386"
+        },
+        "gosugamers": {
+            "name": "Winterfox.",
+            "id": 13379
+        },
+        "identifier": "winterfox"
+    },
     "wizards": {
         "name": "Wizards",
         "steam": {
