@@ -1,0 +1,18 @@
+{
+    "name": "gBots",
+    "steam": {
+        "name": "gbots"
+    },
+    "csgolounge": {
+        "name": "gB"
+    },
+    "hltv": {
+        "name": "gBots",
+        "id": "5435"
+    },
+    "gosugamers": {
+        "name": "gBots",
+        "id": 8770
+    },
+    "identifier": "gbots"
+}
