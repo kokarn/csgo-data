@@ -8,6 +8,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wild.png)|WiLD|143|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nerdr.png)|nerdRage|152|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/k1ck.png)|K1CK|171|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aimfa.png)|aimface|179|
@@ -51,6 +52,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tempo.png)|Tempo Gaming|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/deton.png)|DeToNator|367|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g3ner.png)|g3nerationX|372|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ubini.png)|Ubinited|375|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexit.png)|Vexitus E-Sports|391|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
@@ -61,4 +63,4 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|Planetkey Dynamics|475|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zagat.png)|Zaga Talent|497|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zagat.png)|ZAGA Talent|497|

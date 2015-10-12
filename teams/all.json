@@ -682,6 +682,13 @@
             "id": "160"
         }
     },
+    "g3nerationx": {
+        "name": "g3nerationX",
+        "steam": {
+            "name": "g3ner"
+        },
+        "identifier": "g3nerationx"
+    },
     "gamers2": {
         "name": "Gamers2",
         "steam": {
@@ -2794,7 +2801,7 @@
         "identifier": "zacgaming"
     },
     "zagatalent": {
-        "name": "Zaga Talent",
+        "name": "ZAGA Talent",
         "steam": {
             "name": "zagat"
         },
