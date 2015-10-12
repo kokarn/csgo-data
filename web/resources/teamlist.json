@@ -549,6 +549,24 @@
         },
         "identifier": "energyesports"
     },
+    "enervategaming": {
+        "name": "Enervate Gaming",
+        "steam": {
+            "name": "enerv"
+        },
+        "csgolounge": {
+            "name": "Enervate"
+        },
+        "hltv": {
+            "name": "Enervate",
+            "id": "5716"
+        },
+        "gosugamers": {
+            "name": "Enervate",
+            "id": 13405
+        },
+        "identifier": "enervategaming"
+    },
     "epsilonesports": {
         "name": "Epsilon eSports",
         "steam": {
