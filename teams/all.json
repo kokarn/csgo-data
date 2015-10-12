@@ -2359,6 +2359,20 @@
             "id": "5741"
         }
     },
+    "teamxapso": {
+        "name": "Team Xapso",
+        "steam": {
+            "name": "xapso"
+        },
+        "csgolounge": {
+            "name": "xapso"
+        },
+        "gosugamers": {
+            "name": "Xapso",
+            "id": 8606
+        },
+        "identifier": "teamxapso"
+    },
     "teamxenex": {
         "name": "Team XENEX",
         "steam": {
