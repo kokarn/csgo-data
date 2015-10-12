@@ -578,6 +578,24 @@
         },
         "identifier": "enervategaming"
     },
+    "epiphanybolt": {
+        "name": "Epiphany Bolt",
+        "steam": {
+            "name": "epiph"
+        },
+        "csgolounge": {
+            "name": "Epiphany"
+        },
+        "gosugamers": {
+            "name": "Epiphany Bolt",
+            "id": 12719
+        },
+        "hltv": {
+            "name": "Epiphany",
+            "id": "6220"
+        },
+        "identifier": "epiphanybolt"
+    },
     "epsilonesports": {
         "name": "Epsilon eSports",
         "steam": {
