@@ -1,0 +1,18 @@
+{
+    "name": "OverGaming",
+    "steam": {
+        "name": "overg"
+    },
+    "csgolounge": {
+        "name": "OverGaming"
+    },
+    "hltv": {
+        "name": "OverGaming",
+        "id": "4759"
+    },
+    "gosugamers": {
+        "name": "OverGaming",
+        "id": 11770
+    },
+    "identifier": "overgaming"
+}
