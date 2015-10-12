@@ -499,6 +499,24 @@
         },
         "identifier": "dynastyesports"
     },
+    "ebettle": {
+        "name": "eBettle",
+        "steam": {
+            "name": "ebett"
+        },
+        "csgolounge": {
+            "name": "eB"
+        },
+        "hltv": {
+            "name": "eBettle",
+            "id": "6245"
+        },
+        "gosugamers": {
+            "name": "Team eBettle",
+            "id": 12720
+        },
+        "identifier": "ebettle"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
