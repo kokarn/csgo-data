@@ -2793,6 +2793,13 @@
         },
         "identifier": "zacgaming"
     },
+    "zagatalent": {
+        "name": "Zaga Talent",
+        "steam": {
+            "name": "zagat"
+        },
+        "identifier": "zagatalent"
+    },
     "zbrilo": {
         "name": "Zbrilo",
         "steam": {

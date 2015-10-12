@@ -8,7 +8,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wild.png)|WiLD|143|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nerdr.png)|nerdRage|152|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/k1ck.png)|K1CK|171|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aimfa.png)|aimface|179|
@@ -62,3 +61,4 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|Planetkey Dynamics|475|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zagat.png)|Zaga Talent|497|
