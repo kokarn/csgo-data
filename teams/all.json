@@ -2584,6 +2584,24 @@
             "id": "4467"
         }
     },
+    "vexedgaming": {
+        "name": "Vexed Gaming",
+        "steam": {
+            "name": "vexed"
+        },
+        "csgolounge": {
+            "name": "Vexed"
+        },
+        "gosugamers": {
+            "name": "Vexed Gaming",
+            "id": 13322
+        },
+        "hltv": {
+            "name": "Vexed",
+            "id": "6375"
+        },
+        "identifier": "vexedgaming"
+    },
     "vexitusesports": {
         "name": "Vexitus E-Sports",
         "steam": {

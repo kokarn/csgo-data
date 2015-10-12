@@ -65,4 +65,5 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|Planetkey Dynamics|475|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexed.png)|Vexed Gaming|490|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zagat.png)|ZAGA Talent|497|
