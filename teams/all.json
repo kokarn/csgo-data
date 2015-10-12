@@ -104,6 +104,17 @@
             "id": "3982"
         }
     },
+    "arcadeesports": {
+        "name": "Arcade eSports",
+        "steam": {
+            "name": "arcad"
+        },
+        "hltv": {
+            "name": "Arcade",
+            "id": "6408"
+        },
+        "identifier": "arcadeesports"
+    },
     "area51": {
         "name": "Area51",
         "steam": {
@@ -499,6 +510,24 @@
         },
         "identifier": "dynastyesports"
     },
+    "ebettle": {
+        "name": "eBettle",
+        "steam": {
+            "name": "ebett"
+        },
+        "csgolounge": {
+            "name": "eB"
+        },
+        "hltv": {
+            "name": "eBettle",
+            "id": "6245"
+        },
+        "gosugamers": {
+            "name": "Team eBettle",
+            "id": 12720
+        },
+        "identifier": "ebettle"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
@@ -530,6 +559,42 @@
             "id": 9220
         },
         "identifier": "energyesports"
+    },
+    "enervategaming": {
+        "name": "Enervate Gaming",
+        "steam": {
+            "name": "enerv"
+        },
+        "csgolounge": {
+            "name": "Enervate"
+        },
+        "hltv": {
+            "name": "Enervate",
+            "id": "5716"
+        },
+        "gosugamers": {
+            "name": "Enervate",
+            "id": 13405
+        },
+        "identifier": "enervategaming"
+    },
+    "epiphanybolt": {
+        "name": "Epiphany Bolt",
+        "steam": {
+            "name": "epiph"
+        },
+        "csgolounge": {
+            "name": "Epiphany"
+        },
+        "gosugamers": {
+            "name": "Epiphany Bolt",
+            "id": 12719
+        },
+        "hltv": {
+            "name": "Epiphany",
+            "id": "6220"
+        },
+        "identifier": "epiphanybolt"
     },
     "epsilonesports": {
         "name": "Epsilon eSports",
@@ -664,6 +729,13 @@
             "id": "160"
         }
     },
+    "g3nerationx": {
+        "name": "g3nerationX",
+        "steam": {
+            "name": "g3ner"
+        },
+        "identifier": "g3nerationx"
+    },
     "gamers2": {
         "name": "Gamers2",
         "steam": {
@@ -699,6 +771,24 @@
             "name": "Games4u",
             "id": "5745"
         }
+    },
+    "gbots": {
+        "name": "gBots",
+        "steam": {
+            "name": "gbots"
+        },
+        "csgolounge": {
+            "name": "gB"
+        },
+        "hltv": {
+            "name": "gBots",
+            "id": "5435"
+        },
+        "gosugamers": {
+            "name": "gBots",
+            "id": 8770
+        },
+        "identifier": "gbots"
     },
     "ggwp": {
         "name": "GGWP",
@@ -1518,6 +1608,24 @@
         },
         "identifier": "onlinebots"
     },
+    "overgaming": {
+        "name": "OverGaming",
+        "steam": {
+            "name": "overg"
+        },
+        "csgolounge": {
+            "name": "OverGaming"
+        },
+        "hltv": {
+            "name": "OverGaming",
+            "id": "4759"
+        },
+        "gosugamers": {
+            "name": "OverGaming",
+            "id": 11770
+        },
+        "identifier": "overgaming"
+    },
     "pentasports": {
         "name": "PENTA Sports",
         "steam": {
@@ -1969,6 +2077,42 @@
             "id": "6030"
         }
     },
+    "teamcoast": {
+        "name": "Team Coast",
+        "steam": {
+            "name": "coast"
+        },
+        "csgolounge": {
+            "name": "Coast"
+        },
+        "gosugamers": {
+            "name": "Team Coast.",
+            "id": 13323
+        },
+        "hltv": {
+            "name": "Coast",
+            "id": "6321"
+        },
+        "identifier": "teamcoast"
+    },
+    "teamconquest": {
+        "name": "Team Conquest",
+        "steam": {
+            "name": "conqu"
+        },
+        "csgolounge": {
+            "name": "Conquest"
+        },
+        "gosugamers": {
+            "name": "Conquest",
+            "id": 13285
+        },
+        "hltv": {
+            "name": "Conquest",
+            "id": "6292"
+        },
+        "identifier": "teamconquest"
+    },
     "teamdignitas": {
         "name": "Team Dignitas",
         "steam": {
@@ -2168,6 +2312,24 @@
             "id": "5319"
         }
     },
+    "teamroccat": {
+        "name": "Team Roccat",
+        "steam": {
+            "name": "rocca"
+        },
+        "csgolounge": {
+            "name": "Roccat"
+        },
+        "gosugamers": {
+            "name": "ROCCAT CS",
+            "id": 12780
+        },
+        "hltv": {
+            "name": "ROCCAT",
+            "id": "4475"
+        },
+        "identifier": "teamroccat"
+    },
     "teamrock": {
         "name": "Team ROCK",
         "steam": {
@@ -2261,6 +2423,20 @@
             "name": "Wolf",
             "id": "5741"
         }
+    },
+    "teamxapso": {
+        "name": "Team Xapso",
+        "steam": {
+            "name": "xapso"
+        },
+        "csgolounge": {
+            "name": "xapso"
+        },
+        "gosugamers": {
+            "name": "Xapso",
+            "id": 8606
+        },
+        "identifier": "teamxapso"
     },
     "teamxenex": {
         "name": "Team XENEX",
@@ -2505,6 +2681,24 @@
             "id": "4467"
         }
     },
+    "vexedgaming": {
+        "name": "Vexed Gaming",
+        "steam": {
+            "name": "vexed"
+        },
+        "csgolounge": {
+            "name": "Vexed"
+        },
+        "gosugamers": {
+            "name": "Vexed Gaming",
+            "id": 13322
+        },
+        "hltv": {
+            "name": "Vexed",
+            "id": "6375"
+        },
+        "identifier": "vexedgaming"
+    },
     "vexitusesports": {
         "name": "Vexitus E-Sports",
         "steam": {
@@ -2675,6 +2869,24 @@
             "id": "3168"
         }
     },
+    "winterfox": {
+        "name": "Winterfox",
+        "steam": {
+            "name": "winte"
+        },
+        "csgolounge": {
+            "name": "Winterfox"
+        },
+        "hltv": {
+            "name": "Winterfox",
+            "id": "6386"
+        },
+        "gosugamers": {
+            "name": "Winterfox.",
+            "id": 13379
+        },
+        "identifier": "winterfox"
+    },
     "wizards": {
         "name": "Wizards",
         "steam": {
@@ -2774,6 +2986,13 @@
             "id": "6230"
         },
         "identifier": "zacgaming"
+    },
+    "zagatalent": {
+        "name": "ZAGA Talent",
+        "steam": {
+            "name": "zagat"
+        },
+        "identifier": "zagatalent"
     },
     "zbrilo": {
         "name": "Zbrilo",

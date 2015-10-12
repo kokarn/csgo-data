@@ -10,7 +10,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nerdr.png)|nerdRage|152|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/k1ck.png)|K1CK|171|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aimfa.png)|aimface|179|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/agent.png)|Team Agent|180|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zbril.png)|Zbrilo|180|
@@ -43,6 +42,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/energ.png)|Energy eSports|297|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alter.png)|Team Alternate|300|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/conqu.png)|Team Conquest|307|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mongo.png)|The MongolZ|310|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/imagi.png)|Imaginary Gaming|323|
@@ -52,13 +52,18 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tempo.png)|Tempo Gaming|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/deton.png)|DeToNator|367|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/epiph.png)|Epiphany Bolt|370|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g3ner.png)|g3nerationX|372|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ubini.png)|Ubinited|375|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexit.png)|Vexitus E-Sports|391|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gbots.png)|gBots|439|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|Planetkey Dynamics|475|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexed.png)|Vexed Gaming|490|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zagat.png)|ZAGA Talent|497|
