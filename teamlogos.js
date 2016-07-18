@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-var lwip = require( 'lwip' ),
+var jimp = require( 'jimp' ),
     readline = require( 'readline' ),
     fs = require( 'fs' ),
     teamLogos = {
@@ -37,21 +37,17 @@ var lwip = require( 'lwip' ),
                 }
 
                 teamLogos.teams.forEach( function( teamData ){
-                    lwip.open( teamData.logoPath, function( error, image ){
+                    jimp.read( teamData.logoPath, function( error, image ){
+                        var targetFilename = teamLogos.outputPath + teamLogos.createIdentifier( teamData.teamName ) + '-' + teamLogos.size + 'x' + teamLogos.size + teamData.extension;
                         if( error ){
+                            console.log( teamData );
                             throw error;
                         } else {
-                            image.resize( teamLogos.size, function( error, resizedImage ){
-                                var targetFilename = teamLogos.outputPath + teamLogos.createIdentifier( teamData.teamName ) + '-' + teamLogos.size + 'x' + teamLogos.size + teamData.extension;
-                                resizedImage.writeFile( targetFilename, function( error ){
-                                    if( error ){
-                                        throw error;
-                                    }
+                            image.resize( teamLogos.size, teamLogos.size )
+                                .write( targetFilename );
 
-                                    teamLogos.logosDone = teamLogos.logosDone + 1;
-                                    teamLogos.followProgress();
-                                });
-                            });
+                            teamLogos.logosDone = teamLogos.logosDone + 1;
+                            teamLogos.followProgress();
                         }
                     });
                 });
@@ -68,20 +64,29 @@ var lwip = require( 'lwip' ),
                         return false;
                     }
 
-                    fs.readdir( teamPath, function( error, teamFiles ){
-                        if( error ){
-                            throw error
-                        } else {
-                            teamFiles.forEach( function( filename ){
-                                if( filename.indexOf( 'logo' ) > -1 ){
-                                    teamLogos.teams.push( {
-                                        logoPath: teamPath + '/' + filename,
-                                        teamName: teamName,
-                                        extension: filename.substr( filename.lastIndexOf( '.') )
-                                    });
-                                }
-                            });
+                    fs.lstat( teamPath, function( error, stats ){
+                        if( !stats.isDirectory() ){
+                            return false;
                         }
+
+                        fs.readdir( teamPath, function( error, teamFiles ){
+                            if( error ){
+                                throw error
+                            } else {
+                                teamFiles.forEach( function( filename ){
+                                    var extension = filename.substr( filename.lastIndexOf( '.' ) );
+
+                                    if( filename.indexOf( 'logo' ) > -1 && extension !== '.svg' ){
+                                        teamLogos.teams.push( {
+                                            logoPath: teamPath + '/' + filename,
+                                            teamName: teamName,
+                                            extension: extension
+                                        });
+                                    }
+                                });
+                            }
+                        });
+
                     });
                 });
             });
