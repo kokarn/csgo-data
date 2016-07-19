@@ -2167,6 +2167,24 @@
             "id": "5422"
         }
     },
+    "teamempire": {
+        "name": "Team Empire",
+        "steam": {
+            "name": "empir"
+        },
+        "csgolounge": {
+            "name": "Empire"
+        },
+        "gosugamers": {
+            "name": "Team Empire.",
+            "id": 14464
+        },
+        "hltv": {
+            "name": "Empire",
+            "id": "6684"
+        },
+        "identifier": "teamempire"
+    },
     "teamenvyus": {
         "name": "Team EnVyUs",
         "steam": {
