@@ -47,6 +47,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mongo.png)|The MongolZ|310|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/imagi.png)|Imaginary Gaming|323|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/giant.png)|GIANT5|330|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vende.png)|Vendetta|331|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nface.png)|nFace|343|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|

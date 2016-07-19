@@ -922,6 +922,20 @@
             "id": "5970"
         }
     },
+    "giant5": {
+        "name": "GIANT5",
+        "steam": {
+            "name": "giant"
+        },
+        "csgolounge": {
+            "name": "Giant5"
+        },
+        "hltv": {
+            "name": "GIANT5",
+            "id": "6099"
+        },
+        "identifier": "giant5"
+    },
     "godsent": {
         "name": "GODSENT",
         "steam": {
