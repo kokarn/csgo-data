@@ -808,6 +808,24 @@
         },
         "identifier": "g3nerationx"
     },
+    "gambitgaming": {
+        "name": "Gambit Gaming",
+        "steam": {
+            "name": "gambi"
+        },
+        "csgolounge": {
+            "name": "Gambit"
+        },
+        "gosugamers": {
+            "name": "Gambit",
+            "id": 14346
+        },
+        "hltv": {
+            "name": "Gambit",
+            "id": "6651"
+        },
+        "identifier": "gambitgaming"
+    },
     "gamers2": {
         "name": "Gamers2",
         "steam": {
