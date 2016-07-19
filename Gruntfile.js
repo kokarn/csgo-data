@@ -64,5 +64,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-run' );
 
-    grunt.registerTask( 'default', [ 'newer:jimp:ingame', 'newer:jimp:match', 'run:missingLogos', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'run:missingLogos', 'newer:jimp:ingame', 'newer:jimp:match', 'teams', 'teams_zip' ] );
 };
