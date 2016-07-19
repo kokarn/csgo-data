@@ -582,6 +582,24 @@
             "id": "5775"
         }
     },
+    "enceesports": {
+        "name": "ENCE eSports",
+        "steam": {
+            "name": "ence"
+        },
+        "csgolounge": {
+            "name": "Ence"
+        },
+        "gosugamers": {
+            "name": "ENCE eSports",
+            "id": 7411
+        },
+        "hltv": {
+            "name": "ENCE",
+            "id": "4869"
+        },
+        "identifier": "enceesports"
+    },
     "energyesports": {
         "name": "Energy eSports",
         "steam": {
