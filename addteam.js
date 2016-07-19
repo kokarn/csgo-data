@@ -153,17 +153,7 @@ var http = require( 'http' ),
                     console.log( error );
                 } else {
                     console.log( 'Team data written successfully' );
-                    answer = readline.question( 'Open logo for editing (Y/N)? ' );
-                    switch( answer ){
-                        case 'y':
-                        case 'Y':
-                            addTeam.watchLogo();
-                            exec.execSync( 'open "' + addTeam.logoFilename + '"' );
-                            break;
-                        default:
-                            addTeam.runGrunt();
-                            break;
-                    }
+                    process.exit();
                 }
             });
         },
@@ -181,13 +171,6 @@ var http = require( 'http' ),
                     addTeam.writeData();
                     break;
             }
-        },
-        runGrunt: function(){
-            var child = exec.spawn( 'grunt', [], { stdio: 'inherit' } );
-
-            child.on( 'exit', function(){
-                process.exit();
-            });
         },
         csGoLoungeName: function(){
             var answer;
