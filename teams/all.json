@@ -169,6 +169,24 @@
             "id": "4984"
         }
     },
+    "astralis": {
+        "name": "Astralis",
+        "steam": {
+            "name": "astrl"
+        },
+        "csgolounge": {
+            "name": "Astralis"
+        },
+        "hltv": {
+            "name": "Astralis",
+            "id": "6665"
+        },
+        "gosugamers": {
+            "name": "Astralis",
+            "id": 13976
+        },
+        "identifier": "astralis"
+    },
     "atlantis": {
         "name": "Atlantis",
         "steam": {
