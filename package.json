@@ -28,7 +28,6 @@
     "file-type": "^2.4.0",
     "fs-extra": "^0.18.3",
     "grunt": "^1.0.0",
-    "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.11.0",
     "grunt-jimp": "kokarn/grunt-jimp",
     "grunt-newer": "^1.1.0",
