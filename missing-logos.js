@@ -27,8 +27,7 @@ var fs = require( 'fs' ),
                 }
 
                 files.forEach( function( filename ){
-                    var size,
-                        data,
+                    var data,
                         dimensionString,
                         properFilename,
                         dimensions,
@@ -54,12 +53,11 @@ var fs = require( 'fs' ),
                         filename = properFilename;
                     }
 
-                    size = filename.substr( 5, 3 );
-                    if( size !== 'hig' ){
+                    if( filename.indexOf( 'highres' ) === -1 ){
                         data = jsonfile.readFileSync( 'teams/' + teamName + '/data.json' );
                         _this.lowresLogos.push({
                             name: teamName,
-                            size: parseInt( size, 10 ),
+                            size: dimensions.width,
                             image: '![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/' + data.steam.name + '.png)'
                         });
                     }
@@ -102,8 +100,6 @@ var fs = require( 'fs' ),
                     } else {
                         console.log( 'Missing logos updated' );
                     }
-
-                    _this.teamsChecked = _this.teamsChecked + 1;
                 });
             }
 
