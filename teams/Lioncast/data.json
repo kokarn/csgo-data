@@ -1,0 +1,14 @@
+{
+    "name": "Lioncast",
+    "steam": {
+        "name": "lionc"
+    },
+    "csgolounge": {
+        "name": "LionCast"
+    },
+    "hltv": {
+        "name": "Lioncast",
+        "id": "6740"
+    },
+    "identifier": "lioncast"
+}

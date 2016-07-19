@@ -1199,6 +1199,20 @@
             "id": "5962"
         }
     },
+    "lioncast": {
+        "name": "Lioncast",
+        "steam": {
+            "name": "lionc"
+        },
+        "csgolounge": {
+            "name": "LionCast"
+        },
+        "hltv": {
+            "name": "Lioncast",
+            "id": "6740"
+        },
+        "identifier": "lioncast"
+    },
     "lions": {
         "name": "Lions",
         "steam": {
@@ -2408,7 +2422,7 @@
             "name": "secre"
         },
         "csgolounge": {
-            "name": "Secret"
+            "name": "Secret.Fe"
         },
         "gosugamers": {
             "name": "Secret Female",

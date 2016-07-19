@@ -20,6 +20,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vinat.png)|Vination|193|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/publi.png)|Publiclir.se|197|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/espen.png)|eSport Engine|200|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lionc.png)|Lioncast|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/volga.png)|VOLGARE|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/torqu.png)|Torqued|214|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alsen.png)|ALSEN|220|
