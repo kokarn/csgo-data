@@ -22,8 +22,6 @@ var fs = require( 'fs' ),
             var _this = this;
 
             fs.readdir( 'teams/' + teamName, function( error, files ){
-                _this.teamsChecked = _this.teamsChecked + 1;
-
                 if( files === undefined ){
                     return false;
                 }
@@ -65,6 +63,8 @@ var fs = require( 'fs' ),
                             image: '![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/' + data.steam.name + '.png)'
                         });
                     }
+
+                    _this.teamsChecked = _this.teamsChecked + 1;
                 });
 
                 _this.checkDone();
@@ -102,6 +102,8 @@ var fs = require( 'fs' ),
                     } else {
                         console.log( 'Missing logos updated' );
                     }
+
+                    _this.teamsChecked = _this.teamsChecked + 1;
                 });
             }
 
