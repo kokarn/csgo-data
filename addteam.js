@@ -12,6 +12,8 @@ var http = require( 'http' ),
     hltv = require( './hltv' ),
     logoFilename = '',
     addTeam = {
+        hasCheckedGosugamers: false,
+        hasCheckedHLTV: false,
         teamData : {},
         ensureExists: function( path, mask, callback ) {
             if( typeof mask == 'function' ) { // allow the `mask` parameter to be optional
@@ -39,6 +41,7 @@ var http = require( 'http' ),
                         id : teams[ 0 ].id
                     };
                 }
+                addTeam.hasCheckedHLTV = true;
             } );
         },
         searchHltv : function( searchPhrase ){
@@ -84,6 +87,7 @@ var http = require( 'http' ),
                 if( teams.length > 0 ){
                     addTeam.teamData.gosugamers = teams[ 0 ];
                 }
+                addTeam.hasCheckedGosugamers = true;
             } );
         },
         searchGosugamers : function( searchPhrase ){
@@ -158,6 +162,22 @@ var http = require( 'http' ),
         },
         finish: function(){
             var answer;
+            var waitingFor = [];
+
+            if( !addTeam.hasCheckedHLTV || !addTeam.hasCheckedGosugamers ){
+                if( !addTeam.hasCheckedHLTV ){
+                    waitingFor.push( 'HLTV' );
+                }
+
+                if( !addTeam.hasCheckedGosugamers ){
+                    waitingFor.push( 'GosuGamers' );
+                }
+
+                console.log( 'Waiting for', waitingFor.join( ', ' ) );
+                setTimeout( addTeam.finish, 250 );
+                return false;
+            }
+
             console.log( JSON.stringify( addTeam.teamData, null, 4 ) );
             answer = readline.question( 'Is this correct? (Y/N) ' );
             switch( answer ){
