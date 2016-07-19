@@ -1748,6 +1748,24 @@
             "id": "5195"
         }
     },
+    "platiniumesport": {
+        "name": "Platinium eSport",
+        "steam": {
+            "name": "plati"
+        },
+        "csgolounge": {
+            "name": "Platinium"
+        },
+        "gosugamers": {
+            "name": "Platinium",
+            "id": 8772
+        },
+        "hltv": {
+            "name": "Platinium",
+            "id": "5596"
+        },
+        "identifier": "platiniumesport"
+    },
     "play5": {
         "name": "PLAY5",
         "steam": {
