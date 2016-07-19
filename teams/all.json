@@ -675,6 +675,24 @@
         },
         "identifier": "esuba"
     },
+    "fazeclan": {
+        "name": "FaZe Clan",
+        "steam": {
+            "name": "faze"
+        },
+        "csgolounge": {
+            "name": "FaZe"
+        },
+        "gosugamers": {
+            "name": "FaZe Clan",
+            "id": 14371
+        },
+        "hltv": {
+            "name": "FaZe",
+            "id": "6667"
+        },
+        "identifier": "fazeclan"
+    },
     "fenixfire": {
         "name": "Fenix Fire",
         "steam": {
