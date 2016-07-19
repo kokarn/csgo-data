@@ -2470,6 +2470,24 @@
             "id": "5319"
         }
     },
+    "teamrefuse": {
+        "name": "Team Refuse",
+        "steam": {
+            "name": "refus"
+        },
+        "csgolounge": {
+            "name": "Refuse"
+        },
+        "hltv": {
+            "name": "Team Refuse",
+            "id": "4660"
+        },
+        "gosugamers": {
+            "name": "Team Refuse",
+            "id": 8648
+        },
+        "identifier": "teamrefuse"
+    },
     "teamroccat": {
         "name": "Team Roccat",
         "steam": {

@@ -1,0 +1,18 @@
+{
+    "name": "Team Refuse",
+    "steam": {
+        "name": "refus"
+    },
+    "csgolounge": {
+        "name": "Refuse"
+    },
+    "hltv": {
+        "name": "Team Refuse",
+        "id": "4660"
+    },
+    "gosugamers": {
+        "name": "Team Refuse",
+        "id": 8648
+    },
+    "identifier": "teamrefuse"
+}
