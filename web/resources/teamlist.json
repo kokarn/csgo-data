@@ -1220,6 +1220,24 @@
             "id": "5093"
         }
     },
+    "legacyesports": {
+        "name": "Legacy eSports",
+        "steam": {
+            "name": "legac"
+        },
+        "csgolounge": {
+            "name": "Legacy"
+        },
+        "gosugamers": {
+            "name": "Legacy",
+            "id": 13823
+        },
+        "hltv": {
+            "name": "Legacy",
+            "id": "6468"
+        },
+        "identifier": "legacyesports"
+    },
     "lemondogs": {
         "name": "Lemondogs",
         "gosugamers": {
