@@ -2112,6 +2112,24 @@
             "id": "5053"
         }
     },
+    "teamagg": {
+        "name": "Team AGG",
+        "steam": {
+            "name": "agg"
+        },
+        "csgolounge": {
+            "name": "AGG"
+        },
+        "gosugamers": {
+            "name": "Team AGG",
+            "id": 14473
+        },
+        "hltv": {
+            "name": "AGG",
+            "id": "6686"
+        },
+        "identifier": "teamagg"
+    },
     "teamalientech": {
         "name": "Team AlienTech",
         "steam": {
