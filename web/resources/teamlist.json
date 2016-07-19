@@ -2402,6 +2402,24 @@
             "id": "6059"
         }
     },
+    "teamsecret": {
+        "name": "Team Secret",
+        "steam": {
+            "name": "secre"
+        },
+        "csgolounge": {
+            "name": "Secret"
+        },
+        "gosugamers": {
+            "name": "Secret Female",
+            "id": 14819
+        },
+        "hltv": {
+            "name": "Secret fe",
+            "id": "6871"
+        },
+        "identifier": "teamsecret"
+    },
     "teamskyfire": {
         "name": "Team Skyfire",
         "steam": {
