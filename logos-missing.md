@@ -48,7 +48,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/imagi.png)|Imaginary Gaming|323|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vende.png)|Vendetta|331|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/space.png)|Space Soldiers|341|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nface.png)|nFace|343|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tempo.png)|Tempo Gaming|355|
