@@ -12,19 +12,12 @@ module.exports = function( grunt ) {
                 'tasks/*.js'
             ]
         },
-        responsive_images: {
-            options : {
-                newFilesOnly: false,
-            },
+        jimp: {
             ingame : {
                 options : {
-                    sizes : [{
-                        name : 'ingame',
-                        height : 64,
-                        width: 64,
-                        rename: false,
-                        aspectRatio: false
-                    }]
+                    actions : {
+                        resize: [ 64, 64 ]
+                    }
                 },
                 files : [{
                     expand: true,
@@ -39,13 +32,9 @@ module.exports = function( grunt ) {
             },
             match : {
                 options : {
-                    sizes : [{
-                        name : '500x500',
-                        height : 500,
-                        width: 500,
-                        rename: false,
-                        aspectRatio: false
-                    }]
+                    actions : {
+                        resize: [ 500, 500 ]
+                    }
                 },
                 files : [{
                     expand: true,
@@ -55,41 +44,6 @@ module.exports = function( grunt ) {
                     rename: function( dest, src ){
                         return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '-500x500.png';
                     }
-                }]
-            }
-        },
-        imagemin: {
-            source: {
-                options: {
-                    optimizationLevel: 4
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'teams/',
-                    src: [ '**/*.png' ],
-                    dest: 'teams/'
-                }]
-            },
-            ingame: {
-                options: {
-                    optimizationLevel: 4
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'web/resources/ingame/',
-                    src: [ '*.png' ],
-                    dest: 'web/resources/ingame/'
-                }]
-            },
-            teams: {
-                options: {
-                    optimizationLevel: 4
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'web/resources/teams/',
-                    src: [ '*.png' ],
-                    dest: 'web/resources/teams/'
                 }]
             }
         },
@@ -106,10 +60,9 @@ module.exports = function( grunt ) {
     grunt.loadTasks( 'tasks' );
 
     grunt.loadNpmTasks( 'grunt-newer' );
-    grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
-    grunt.loadNpmTasks( 'grunt-responsive-images' );
+    grunt.loadNpmTasks( 'grunt-jimp' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-run' );
 
-    grunt.registerTask( 'default', [ 'newer:imagemin:source', 'newer:responsive_images:ingame', 'newer:responsive_images:match', 'newer:imagemin:ingame', 'newer:imagemin:teams', 'run:missingLogos', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:jimp:ingame', 'newer:jimp:match', 'run:missingLogos', 'teams', 'teams_zip' ] );
 };
