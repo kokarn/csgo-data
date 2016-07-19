@@ -236,10 +236,13 @@ var http = require( 'http' ),
                 }
 
                 request = protocol.get( url, function( response ) {
-
                     response.once( 'data', function( chunk ) {
-                        extension = fileType( chunk ).ext;
-                        addTeam.logoFilename = writeTarget + '.' + extension;
+                        var filetype = fileType( chunk );
+                        if( filetype ){
+                            addTeam.logoFilename = writeTarget + '.' + filetype.ext;
+                        } else {
+                            addTeam.logoFilename = writeTarget + '.png';
+                        }
                     });
 
                     response.on( 'end', function() {
