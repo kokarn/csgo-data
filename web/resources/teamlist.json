@@ -1790,6 +1790,24 @@
         },
         "identifier": "onlinebots"
     },
+    "opticgaming": {
+        "name": "OpTic Gaming",
+        "steam": {
+            "name": "optic"
+        },
+        "csgolounge": {
+            "name": "OG"
+        },
+        "gosugamers": {
+            "name": "OpTic Gaming",
+            "id": 14263
+        },
+        "hltv": {
+            "name": "OpTic",
+            "id": "6615"
+        },
+        "identifier": "opticgaming"
+    },
     "overgaming": {
         "name": "OverGaming",
         "steam": {
