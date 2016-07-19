@@ -546,6 +546,24 @@
         },
         "identifier": "ebettle"
     },
+    "echofox": {
+        "name": "Echo Fox",
+        "steam": {
+            "name": "echof"
+        },
+        "csgolounge": {
+            "name": "EchoFox"
+        },
+        "hltv": {
+            "name": "Echo Fox",
+            "id": "6680"
+        },
+        "gosugamers": {
+            "name": "Echo Fox.",
+            "id": 14469
+        },
+        "identifier": "echofox"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
