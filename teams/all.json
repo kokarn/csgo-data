@@ -2126,6 +2126,24 @@
             "id": "5929"
         }
     },
+    "splyce": {
+        "name": "Splyce",
+        "steam": {
+            "name": "splyc"
+        },
+        "csgolounge": {
+            "name": "Splyce"
+        },
+        "hltv": {
+            "name": "Splyce",
+            "id": "6301"
+        },
+        "gosugamers": {
+            "name": "SPLYCE",
+            "id": 13990
+        },
+        "identifier": "splyce"
+    },
     "streamline": {
         "name": "Streamline",
         "steam": {
