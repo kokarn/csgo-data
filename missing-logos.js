@@ -2,6 +2,7 @@
 
 var fs = require( 'fs' ),
     jsonfile = require( 'jsonfile' ),
+    sizeOf = require( 'image-size' ),
     missingLogos = {
         lowresLogos : [],
         sortedLogos : [],
@@ -16,6 +17,7 @@ var fs = require( 'fs' ),
                 this.checkLogoSize( this.teams[ i ] );
             }
         },
+
         checkLogoSize: function( teamName ){
             var _this = this;
 
@@ -28,18 +30,40 @@ var fs = require( 'fs' ),
 
                 files.forEach( function( filename ){
                     var size,
-                        data;
+                        data,
+                        dimensionString,
+                        properFilename,
+                        dimensions,
+                        filenameFullPath = 'teams/' + teamName + '/' + filename;
 
-                    if( filename.substr( 0, 4 ) === 'logo' && filename.substr( -4 ) == '.png' ){
-                        size = filename.substr( 5, 3 );
-                        if( size !== 'hig' ){
-                            data = jsonfile.readFileSync( 'teams/' + teamName + '/data.json' );
-                            _this.lowresLogos.push({
-                                name: teamName,
-                                size: parseInt( size, 10 ),
-                                image: '![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/' + data.steam.name + '.png)'
-                            });
-                        }
+                    if( filename.substr( 0, 4 ) !== 'logo' || filename.substr( -4 ) !== '.png' ){
+                        return false;
+                    }
+
+                    dimensions = sizeOf( filenameFullPath );
+
+                    if( dimensions.width >= 500 && dimensions.height >= 500 ) {
+                        dimensionString = 'highres';
+                    } else {
+                        dimensionString = dimensions.width + 'x' + dimensions.height;
+                    }
+
+                    properFilename = 'logo-' + dimensionString + '.png';
+
+                    if( properFilename !== filename ){
+                        console.log( 'Renaming', filenameFullPath, 'to',  'teams/' + teamName + '/' + properFilename );
+                        fs.renameSync( filenameFullPath, 'teams/' + teamName + '/' + properFilename );
+                        filename = properFilename;
+                    }
+
+                    size = filename.substr( 5, 3 );
+                    if( size !== 'hig' ){
+                        data = jsonfile.readFileSync( 'teams/' + teamName + '/data.json' );
+                        _this.lowresLogos.push({
+                            name: teamName,
+                            size: parseInt( size, 10 ),
+                            image: '![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/' + data.steam.name + '.png)'
+                        });
                     }
                 });
 

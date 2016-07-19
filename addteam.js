@@ -236,37 +236,6 @@ var http = require( 'http' ),
                 addTeam.csGoLoungeName();
             }
         },
-        watchLogo : function(){
-            'use strict';
-            var sizeOf = require( 'image-size' ),
-                dimensions,
-                newFilename,
-                dimensionString = '';
-
-            console.log( 'watching ' + addTeam.logoFilename );
-
-            fs.watch( addTeam.logoFilename, function( event, filename ) {
-                console.log( 'Logo changed, setting new logo name.' );
-
-                dimensions = sizeOf( addTeam.logoFilename );
-
-                if( dimensions.width >= 500 && dimensions.height >= 500 ) {
-                    dimensionString = 'highres';
-                } else {
-                    dimensionString = dimensions.width + 'x' + dimensions.height;
-                }
-
-                newFilename = addTeam.logoFilename.replace( 'logo.', 'logo-' + dimensionString + '.' );
-
-                fs.rename( addTeam.logoFilename, newFilename , function( error ) {
-                    if( error ) {
-                        console.log( 'ERROR: ' + error );
-                    }
-
-                    addTeam.runGrunt();
-                });
-            });
-        },
         createTeam : function( teamName ){
             'use strict';
 
