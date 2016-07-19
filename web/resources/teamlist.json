@@ -711,6 +711,16 @@
         },
         "identifier": "esuba"
     },
+    "excelesports": {
+        "name": "exceL eSports",
+        "steam": {
+            "name": "excel"
+        },
+        "csgolounge": {
+            "name": "execeL"
+        },
+        "identifier": "excelesports"
+    },
     "fazeclan": {
         "name": "FaZe Clan",
         "steam": {

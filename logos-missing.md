@@ -61,6 +61,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gbots.png)|gBots|439|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/excel.png)|exceL eSports|459|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|PlanetKey Dynamics|475|
