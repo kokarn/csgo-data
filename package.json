@@ -5,7 +5,8 @@
   "main": "\"\"",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "grunt": "grunt"
+    "grunt": "grunt",
+    "add": "node addteam.js"
   },
   "repository": {
     "type": "git",
