@@ -880,6 +880,24 @@
             "id": "5970"
         }
     },
+    "godsent": {
+        "name": "GODSENT",
+        "steam": {
+            "name": "godse"
+        },
+        "csgolounge": {
+            "name": "Godsent"
+        },
+        "hltv": {
+            "name": "GODSENT",
+            "id": "6902"
+        },
+        "gosugamers": {
+            "name": "GODSENT",
+            "id": 15057
+        },
+        "identifier": "godsent"
+    },
     "gplay": {
         "name": "GPlay",
         "steam": {
