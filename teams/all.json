@@ -86,6 +86,24 @@
             "id": "5722"
         }
     },
+    "aligon": {
+        "name": "AliGon",
+        "steam": {
+            "name": "aligo"
+        },
+        "csgolounge": {
+            "name": "AliGon"
+        },
+        "hltv": {
+            "name": "AliGon",
+            "id": "4166"
+        },
+        "gosugamers": {
+            "name": "AliGon",
+            "id": 8487
+        },
+        "identifier": "aligon"
+    },
     "alsen": {
         "name": "ALSEN",
         "steam": {
