@@ -1,0 +1,14 @@
+{
+    "name": "Athletico",
+    "steam": {
+        "name": "athle"
+    },
+    "csgolounge": {
+        "name": "Athletico"
+    },
+    "hltv": {
+        "name": "Athletico BH",
+        "id": "5680"
+    },
+    "identifier": "athletico"
+}
