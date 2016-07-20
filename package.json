@@ -22,6 +22,7 @@
   },
   "homepage": "http://csgo-data.com",
   "devDependencies": {
+    "adm-zip": "^0.4.7",
     "archiver": "^1.0.0",
     "chalk": "^1.0.0",
     "cheerio": "^0.20.0",

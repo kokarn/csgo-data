@@ -1,6 +1,7 @@
 module.exports = function( grunt ) {
     'use strict';
     var fs = require( 'fs-extra' ),
+        AdmZip = require( 'adm-zip' ),
         archiver = require( 'archiver' ),
         jf = require( 'jsonfile' ),
         skipFiles = [ '.DS_Store', 'all.json' ],
@@ -124,11 +125,44 @@ module.exports = function( grunt ) {
                 jf.readFile( 'teams/' + teams[ index ] + '/data.json', function( error, teamData ){
                     if( error ){
                         throw error;
-                    } else {
-                        teamData = checkIdentifier( teamData );
-                        teamList[ teamData.identifier ] = teamData;
-                        createCfg( teamData );
                     }
+                    teamData = checkIdentifier( teamData );
+                    teamList[ teamData.identifier ] = teamData;
+
+                    let zipfilename = 'web/resources/ingame/' + teamData.steam.name + '.zip';
+
+                    fs.stat( zipfilename, function( error, stats ){
+                        if( error ){
+                            // File doesn't exist
+                            createCfg( teamData );
+
+                            return true;
+                        }
+
+                        var zip = new AdmZip( zipfilename );
+                        var zipEntries = zip.getEntries();
+
+                        zipEntries.forEach( function( zipEntry ) {
+                            if ( zipEntry.entryName === teamData.steam.name + '.png' ) {
+                                zip.readFileAsync( zipEntry, function( zipLogo ){
+                                    fs.readFile( 'web/resources/ingame/' + teamData.steam.name + '.png', function( error, storedLogo ){
+                                        if( error ){
+                                            throw error;
+                                        }
+
+                                        if( zipLogo.equals( storedLogo ) ){
+                                            return true;
+                                        }
+
+                                        // Logos are not equal
+                                        createCfg( teamData );
+
+                                        return true;
+                                    });
+                                });
+                            }
+                        });
+                    })
                 });
             }
         }
