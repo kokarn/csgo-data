@@ -53,6 +53,10 @@ var fs = require( 'fs' ),
                         filename = properFilename;
                     }
 
+                    if( dimensions.width !== dimensions.height ){
+                        console.log( filenameFullPath, 'is not square! It\'s ' + dimensions.width + 'x' + dimensions.height );
+                    }
+
                     if( filename.indexOf( 'highres' ) === -1 ){
                         data = jsonfile.readFileSync( 'teams/' + teamName + '/data.json' );
                         _this.lowresLogos.push({
