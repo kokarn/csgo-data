@@ -15,9 +15,9 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/agent.png)|Team Agent|180|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/indw.png)|Team Wolf|180|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zbril.png)|Zbrilo|180|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/fnxfr.png)|Fenix Fire|183|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ascen.png)|Ascendancy|187|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wizar.png)|Wizards|188|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/fnxfr.png)|Fenix Fire|193|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vinat.png)|Vination|193|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/publi.png)|Publiclir.se|197|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/espen.png)|eSport Engine|200|
