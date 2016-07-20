@@ -1,6 +1,7 @@
 
 const fs = require( 'fs' );
 const archiver = require( 'archiver' );
+const chalk = require( 'chalk' );
 
 class AllTeams {
     constructor (){
@@ -100,11 +101,14 @@ class AllTeams {
     }
 
     run (){
+        console.log( 'Starting all teams build' );
         let files = fs.readdirSync( 'web/resources/ingame/' );
 
         this.generateZip( files );
 
         this.generateFastdl( files );
+
+        console.log( chalk.green( 'Done with all teams build' ) );
     }
 }
 

@@ -2,6 +2,7 @@ const fs = require( 'fs-extra' );
 const AdmZip = require( 'adm-zip' );
 const archiver = require( 'archiver' );
 const jf = require( 'jsonfile' );
+const chalk = require( 'chalk' );
 
 class Teams {
     constructor (){
@@ -26,6 +27,7 @@ class Teams {
     }
 
     checkAllDone(){
+        console.log( 'Done', this.doneJobs, '/', this.totalJobs );
         if( this.doneJobs === this.totalJobs ){
             this.writeTeamList();
         }
@@ -73,8 +75,6 @@ class Teams {
         let cfgData = teamData.name + "\n";
 
         this.writeCfg( teamData.steam.name, cfgData );
-
-        this.doneJobs = this.doneJobs + 1;
     }
 
     writeTeamList(){
@@ -102,11 +102,14 @@ class Teams {
                 if( error ) {
                     throw error;
                 }
+
+                console.log( chalk.green( 'Done with teambuilding!' ) );
             });
         });
     }
 
-    start (){
+    run (){
+        console.log( 'Starting teams' );
         let _this = this;
         let teamList = fs.readdirSync( 'teams' );
 
@@ -115,6 +118,7 @@ class Teams {
         for( let index in teamList ){
             if( teamList.hasOwnProperty( index ) ){
                 if( this.skipFiles.indexOf( teamList[ index ] ) !== -1 ){
+                    this.totalJobs = this.totalJobs - 1;
                     continue;
                 }
 
@@ -151,6 +155,8 @@ class Teams {
                                     }
 
                                     if( zipLogo.equals( storedLogo ) ){
+                                        _this.doneJobs = _this.doneJobs + 1;
+                                        _this.checkAllDone();
                                         return true;
                                     }
 
@@ -170,4 +176,4 @@ class Teams {
 
 let currentTeams = new Teams();
 
-currentTeams.start();
+currentTeams.run();
