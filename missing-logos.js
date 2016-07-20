@@ -3,6 +3,7 @@
 var fs = require( 'fs' ),
     jsonfile = require( 'jsonfile' ),
     sizeOf = require( 'image-size' ),
+    chalk = require( 'chalk' ),
     missingLogos = {
         lowresLogos : [],
         sortedLogos : [],
@@ -48,13 +49,13 @@ var fs = require( 'fs' ),
                     properFilename = 'logo-' + dimensionString + '.png';
 
                     if( properFilename !== filename ){
-                        console.log( 'Renaming', filenameFullPath, 'to',  'teams/' + teamName + '/' + properFilename );
+                        console.log( chalk.yellow( 'Renaming', filenameFullPath, 'to',  'teams/' + teamName + '/' + properFilename ) );
                         fs.renameSync( filenameFullPath, 'teams/' + teamName + '/' + properFilename );
                         filename = properFilename;
                     }
 
                     if( dimensions.width !== dimensions.height ){
-                        console.log( filenameFullPath, 'is not square! It\'s ' + dimensions.width + 'x' + dimensions.height );
+                        console.log( chalk.red( filenameFullPath, 'is not square! It\'s ' + dimensions.width + 'x' + dimensions.height ) );
                     }
 
                     if( filename.indexOf( 'highres' ) === -1 ){
@@ -100,9 +101,9 @@ var fs = require( 'fs' ),
 
                 fs.writeFile( 'logos-missing.md', _this.markdown, function( error ){
                     if( error ){
-                        console.log( error );
+                        console.log( chalk.red( error ) );
                     } else {
-                        console.log( 'Missing logos updated' );
+                        console.log( chalk.green( 'Missing logos updated' ) );
                     }
                 });
             }
