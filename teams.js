@@ -3,6 +3,7 @@ const AdmZip = require( 'adm-zip' );
 const archiver = require( 'archiver' );
 const jf = require( 'jsonfile' );
 const chalk = require( 'chalk' );
+const ProgressBar = require( 'progress' );
 
 class Teams {
     constructor (){
@@ -26,8 +27,10 @@ class Teams {
         return teamData;
     }
 
-    checkAllDone(){
-        console.log( 'Done', this.doneJobs, '/', this.totalJobs );
+    done(){
+        this.doneJobs = this.doneJobs + 1;
+        this.bar.tick();
+        //console.log( 'Done', this.doneJobs, '/', this.totalJobs );
         if( this.doneJobs === this.totalJobs ){
             this.writeTeamList();
         }
@@ -54,9 +57,7 @@ class Teams {
             )
             .finalize();
 
-        this.doneJobs = this.doneJobs + 1;
-
-        this.checkAllDone();
+        this.done();
     }
 
     writeCfg( identifier, cfgData ){
@@ -103,7 +104,7 @@ class Teams {
                     throw error;
                 }
 
-                console.log( chalk.green( 'Done with teambuilding!' ) );
+                console.log( chalk.green( '\nDone with teambuilding!' ) );
             });
         });
     }
@@ -155,8 +156,7 @@ class Teams {
                                     }
 
                                     if( zipLogo.equals( storedLogo ) ){
-                                        _this.doneJobs = _this.doneJobs + 1;
-                                        _this.checkAllDone();
+                                        _this.done();
                                         return true;
                                     }
 
@@ -171,6 +171,11 @@ class Teams {
                 });
             }
         }
+
+        this.bar = new ProgressBar( ':bar', {
+            total: this.totalJobs,
+            width: 80
+        } );
     }
 }
 

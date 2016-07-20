@@ -38,6 +38,7 @@
     "jimp": "^0.2.24",
     "jsonfile": "^2.0.0",
     "normalize-for-search": "^2.0.1",
+    "progress": "^1.1.8",
     "readline-sync": "^1.2.14",
     "request": "^2.53.0"
   }
