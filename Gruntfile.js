@@ -46,14 +46,6 @@ module.exports = function( grunt ) {
                     }
                 }]
             }
-        },
-        run: {
-            logoCheck: {
-                cmd: 'node',
-                args: [
-                    'logos.js'
-                ]
-            }
         }
     });
 
@@ -62,7 +54,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-newer' );
     grunt.loadNpmTasks( 'grunt-jimp' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-    grunt.loadNpmTasks( 'grunt-run' );
 
-    grunt.registerTask( 'default', [ 'run:logoCheck', 'newer:jimp:ingame', 'newer:jimp:match', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:jimp:ingame', 'newer:jimp:match', 'teams', 'teams_zip' ] );
 };
