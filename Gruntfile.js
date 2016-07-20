@@ -48,10 +48,10 @@ module.exports = function( grunt ) {
             }
         },
         run: {
-            missingLogos: {
+            logoCheck: {
                 cmd: 'node',
                 args: [
-                    'missing-logos.js'
+                    'logos.js'
                 ]
             }
         }
@@ -64,5 +64,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-run' );
 
-    grunt.registerTask( 'default', [ 'run:missingLogos', 'newer:jimp:ingame', 'newer:jimp:match', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'run:logoCheck', 'newer:jimp:ingame', 'newer:jimp:match', 'teams', 'teams_zip' ] );
 };
