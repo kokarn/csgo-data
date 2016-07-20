@@ -49,11 +49,9 @@ module.exports = function( grunt ) {
         }
     });
 
-    grunt.loadTasks( 'tasks' );
-
     grunt.loadNpmTasks( 'grunt-newer' );
     grunt.loadNpmTasks( 'grunt-jimp' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
-    grunt.registerTask( 'default', [ 'newer:jimp:ingame', 'newer:jimp:match', 'teams', 'teams_zip' ] );
+    grunt.registerTask( 'default', [ 'newer:jimp:ingame', 'newer:jimp:match' ] );
 };

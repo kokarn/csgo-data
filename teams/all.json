@@ -1624,6 +1624,24 @@
         },
         "identifier": "mvpkarnal"
     },
+    "mvpproject": {
+        "name": "MVP Project",
+        "steam": {
+            "name": "mvppr"
+        },
+        "csgolounge": {
+            "name": "MVP"
+        },
+        "hltv": {
+            "name": "MVP project ",
+            "id": "6474"
+        },
+        "gosugamers": {
+            "name": "MVP Project",
+            "id": 13747
+        },
+        "identifier": "mvpproject"
+    },
     "mykpv": {
         "name": "myKPV",
         "steam": {

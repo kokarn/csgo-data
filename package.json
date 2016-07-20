@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "grunt",
     "add": "node addteam.js",
-    "build": "node logos.js && grunt"
+    "build": "node logos.js && grunt && node teams.js && node allteams.js"
   },
   "repository": {
     "type": "git",

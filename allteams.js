@@ -1,13 +1,15 @@
-module.exports = function( grunt ) {
-    'use strict';
-    var fs = require( 'fs' ),
-        archiver = require( 'archiver' ),
-        skipFiles = [ '.DS_Store' ];
 
-    function generateZip( files ){
-        var output = fs.createWriteStream( 'web/resources/all.zip' ),
-            archive = archiver( 'zip' ),
-            index;
+const fs = require( 'fs' );
+const archiver = require( 'archiver' );
+
+class AllTeams {
+    constructor (){
+        this.skipFiles = [ '.DS_Store' ];
+    }
+
+    generateZip( files ){
+        let output = fs.createWriteStream( 'web/resources/all.zip' );
+        let archive = archiver( 'zip' );
 
         archive.on( 'error', function( error ) {
             throw error;
@@ -15,8 +17,8 @@ module.exports = function( grunt ) {
 
         archive.pipe( output );
 
-        for( index in files ){
-            if( skipFiles.indexOf( files[ index ] ) !== -1 ){
+        for( let index in files ){
+            if( this.skipFiles.indexOf( files[ index ] ) !== -1 ){
                 continue;
             }
 
@@ -38,20 +40,19 @@ module.exports = function( grunt ) {
         archive.finalize();
     }
 
-    function generateFastdl( files ){
-        var compressjs = require( 'compressjs' ),
-            algorithm = compressjs.Bzip2,
-            output,
-            archive = archiver( 'zip' ),
-            index,
-            data,
-            compressed,
-            compressedBuffer,
-            bzip2List = [],
-            bzip2Name;
+    generateFastdl( files ){
+        let compressjs = require( 'compressjs' );
+        let algorithm = compressjs.Bzip2;
+        let output;
+        let archive = archiver( 'zip' );
+        let data;
+        let compressed;
+        let compressedBuffer;
+        let bzip2List = [];
+        let bzip2Name;
 
-        for( index in files ){
-            if( skipFiles.indexOf( files[ index ] ) !== -1 ){
+        for( let index in files ){
+            if( this.skipFiles.indexOf( files[ index ] ) !== -1 ){
                 continue;
             }
 
@@ -77,7 +78,7 @@ module.exports = function( grunt ) {
 
         archive.pipe( output );
 
-        for( index in bzip2List ){
+        for( let index in bzip2List ){
             if( bzip2List.hasOwnProperty( index ) ){
                 archive.append(
                     fs.createReadStream(
@@ -91,19 +92,22 @@ module.exports = function( grunt ) {
 
         archive.finalize();
 
-        for( index in bzip2List ){
+        for( let index in bzip2List ){
             if( bzip2List.hasOwnProperty( index ) ){
                 fs.unlink( 'web/resources/ingame/' + bzip2List[ index ] );
             }
         }
     }
 
-    grunt.registerTask( 'teams_zip', function() {
-        var done = this.async(),
-            files = fs.readdirSync( 'web/resources/ingame/' );
+    run (){
+        let files = fs.readdirSync( 'web/resources/ingame/' );
 
-        generateZip( files );
+        this.generateZip( files );
 
-        generateFastdl( files );
-    });
-};
+        this.generateFastdl( files );
+    }
+}
+
+let currentAllTeams = new AllTeams();
+
+currentAllTeams.run();
