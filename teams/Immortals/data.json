@@ -1,0 +1,18 @@
+{
+    "name": "Immortals",
+    "steam": {
+        "name": "immor"
+    },
+    "csgolounge": {
+        "name": "Immortals"
+    },
+    "hltv": {
+        "name": "Immortals",
+        "id": "7010"
+    },
+    "gosugamers": {
+        "name": "Immortals.cs",
+        "id": 16258
+    },
+    "identifier": "immortals"
+}
