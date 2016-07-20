@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "grunt",
-    "add": "node addteam.js"
+    "add": "node addteam.js",
+    "build": "node logos.js && grunt"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,6 @@
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-jimp": "kokarn/grunt-jimp",
     "grunt-newer": "^1.1.0",
-    "grunt-run": "^0.6.0",
     "image-size": "^0.5.0",
     "jimp": "^0.2.24",
     "jsonfile": "^2.0.0",
