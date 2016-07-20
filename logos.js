@@ -103,7 +103,7 @@ var fs = require( 'fs' ),
                     if( error ){
                         console.log( chalk.red( error ) );
                     } else {
-                        console.log( chalk.green( 'Missing logos updated' ) );
+                        console.log( chalk.green( 'Logos updated' ) );
                     }
                 });
             }
