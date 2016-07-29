@@ -4,6 +4,7 @@ const archiver = require( 'archiver' );
 const jf = require( 'jsonfile' );
 const chalk = require( 'chalk' );
 const ProgressBar = require( 'progress' );
+const normalizeForSearch = require( 'normalize-for-search' );
 
 class Teams {
     constructor (){
@@ -11,6 +12,10 @@ class Teams {
         this.doneJobs = 0;
 
         this.teamList = {};
+    }
+
+    createIdentifier( name ){
+        return normalizeForSearch( name.replace( /[\s\.\-]+/g, '' ) );
     }
 
     checkIdentifier( teamData ){
