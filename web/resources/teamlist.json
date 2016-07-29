@@ -1348,6 +1348,24 @@
             "id": "5093"
         }
     },
+    "kkona": {
+        "name": "KKona",
+        "steam": {
+            "name": "kkona"
+        },
+        "csgolounge": {
+            "name": "KKona"
+        },
+        "hltv": {
+            "name": "KKona",
+            "id": "6794"
+        },
+        "gosugamers": {
+            "name": "KKona",
+            "id": 14952
+        },
+        "identifier": "kkona"
+    },
     "legacyesports": {
         "name": "Legacy eSports",
         "steam": {

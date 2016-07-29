@@ -56,6 +56,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/epiph.png)|Epiphany Bolt|370|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g3ner.png)|g3nerationX|372|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ubini.png)|Ubinited|375|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/kkona.png)|KKona|389|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexit.png)|Vexitus E-Sports|391|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
