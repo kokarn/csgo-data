@@ -2045,6 +2045,24 @@
             "id": "3396"
         }
     },
+    "pride": {
+        "name": "PRIDE",
+        "steam": {
+            "name": "pride"
+        },
+        "csgolounge": {
+            "name": "Pride"
+        },
+        "hltv": {
+            "name": "PRIDE",
+            "id": "6896"
+        },
+        "gosugamers": {
+            "name": "PRIDE.",
+            "id": 15365
+        },
+        "identifier": "pride"
+    },
     "publiclirse": {
         "name": "Publiclir.se",
         "steam": {
