@@ -4,8 +4,8 @@ var fs = require( 'fs' ),
     jsonfile = require( 'jsonfile' ),
     request = require( 'request' ),
     readlineSync = require( 'readline-sync' ),
-    gosugamers = require( './gosugamers' ),
-    hltv = require( './hltv' ),
+    gosugamers = require( '../modules/gosugamers' ),
+    hltv = require( '../modules/hltv' ),
     updateTeam = {
         skipFiles : [ '.DS_Store', 'all.json' ],
         teamsList : [],
@@ -76,7 +76,7 @@ var fs = require( 'fs' ),
                         i = parseInt( answer, 10 ) - 1;
 
                         updateTeam.teamsList[ identifier ].gosugamers = teams[ i ];
-                        
+
                         updateTeam.finish( identifier );
                     }
                 }
