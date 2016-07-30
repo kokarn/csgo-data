@@ -15,7 +15,8 @@
         "hltv": {
             "name": "3DMAX",
             "id": "5789"
-        }
+        },
+        "liquidpedia": "3DMAX"
     },
     "acegaming": {
         "name": "Ace Gaming",
@@ -30,7 +31,8 @@
         "hltv": {
             "name": "ACE",
             "id": 6117
-        }
+        },
+        "liquidpedia": "ACE_Gaming"
     },
     "aces": {
         "name": "ACES",
@@ -48,7 +50,8 @@
             "name": "ACES",
             "id": 8582
         },
-        "identifier": "aces"
+        "identifier": "aces",
+        "liquidpedia": "ACES"
     },
     "affnity": {
         "name": "affNity",
@@ -84,7 +87,8 @@
         "hltv": {
             "name": "aimface",
             "id": "5722"
-        }
+        },
+        "liquidpedia": "aimface"
     },
     "aligon": {
         "name": "AliGon",
@@ -102,7 +106,8 @@
             "name": "AliGon",
             "id": 8487
         },
-        "identifier": "aligon"
+        "identifier": "aligon",
+        "liquidpedia": "AliGon"
     },
     "alsen": {
         "name": "ALSEN",
@@ -120,7 +125,8 @@
         "hltv": {
             "name": "ALSEN",
             "id": "3982"
-        }
+        },
+        "liquidpedia": "ALSEN_Team"
     },
     "arcadeesports": {
         "name": "Arcade eSports",
@@ -131,7 +137,8 @@
             "name": "Arcade",
             "id": "6408"
         },
-        "identifier": "arcadeesports"
+        "identifier": "arcadeesports",
+        "liquidpedia": "Arcade_eSports"
     },
     "area51": {
         "name": "Area51",
@@ -149,7 +156,8 @@
         "hltv": {
             "name": "Area51",
             "id": "2967"
-        }
+        },
+        "liquidpedia": "Area51_Gaming"
     },
     "ascendancy": {
         "name": "Ascendancy",
@@ -185,7 +193,8 @@
         "hltv": {
             "name": "Astana Dragons",
             "id": "4984"
-        }
+        },
+        "liquidpedia": "Astana_Dragons"
     },
     "astralis": {
         "name": "Astralis",
@@ -203,7 +212,8 @@
             "name": "Astralis",
             "id": 13976
         },
-        "identifier": "astralis"
+        "identifier": "astralis",
+        "liquidpedia": "Astralis"
     },
     "athletico": {
         "name": "Athletico",
@@ -217,7 +227,8 @@
             "name": "Athletico BH",
             "id": "5680"
         },
-        "identifier": "athletico"
+        "identifier": "athletico",
+        "liquidpedia": "Athletico"
     },
     "atlantis": {
         "name": "Atlantis",
@@ -247,7 +258,8 @@
         "hltv": {
             "name": "AVANT GARDE",
             "id": "5293"
-        }
+        },
+        "liquidpedia": "Avant_Garde"
     },
     "badmonkeygaming": {
         "name": "Bad Monkey Gaming",
@@ -265,7 +277,8 @@
         "hltv": {
             "name": "Bad Monkey",
             "id": "5519"
-        }
+        },
+        "liquidpedia": "Bad_Monkey_Gaming"
     },
     "begenius": {
         "name": "beGenius",
@@ -283,7 +296,8 @@
             "name": "beGenius",
             "id": 11458
         },
-        "identifier": "begenius"
+        "identifier": "begenius",
+        "liquidpedia": "beGenius"
     },
     "bornoffire": {
         "name": "Born of Fire",
@@ -301,7 +315,8 @@
             "name": "Born of Fire",
             "id": 13830
         },
-        "identifier": "bornoffire"
+        "identifier": "bornoffire",
+        "liquidpedia": "Born_of_Fire"
     },
     "boxr": {
         "name": "BOXR",
@@ -337,7 +352,8 @@
         "hltv": {
             "name": "Bravado",
             "id": "5158"
-        }
+        },
+        "liquidpedia": "Bravado_Gaming"
     },
     "cazesports": {
         "name": "CAZ eSports",
@@ -352,7 +368,8 @@
         "gosugamers": {
             "name": "CAZ eSports",
             "id": 11208
-        }
+        },
+        "liquidpedia": "CAZ_eSports"
     },
     "check6": {
         "name": "Check6",
@@ -370,7 +387,8 @@
         "hltv": {
             "name": "Check6",
             "id": "5947"
-        }
+        },
+        "liquidpedia": "CheckSix_Gaming"
     },
     "clanmystik": {
         "name": "Clan Mystik",
@@ -388,7 +406,8 @@
         "hltv": {
             "name": "Clan-Mystik",
             "id": "4948"
-        }
+        },
+        "liquidpedia": "Clan_Mystik"
     },
     "cloud9": {
         "name": "Cloud9",
@@ -406,7 +425,8 @@
         "hltv": {
             "name": "Cloud9",
             "id": "5752"
-        }
+        },
+        "liquidpedia": "Cloud9"
     },
     "cmstorm": {
         "name": "CM Storm",
@@ -439,7 +459,8 @@
         "hltv": {
             "name": "compLexity",
             "id": "5005"
-        }
+        },
+        "liquidpedia": "compLexity"
     },
     "controlesports": {
         "name": "Control eSports",
@@ -468,7 +489,8 @@
         "hltv": {
             "name": "CPH Wolves",
             "id": "3334"
-        }
+        },
+        "liquidpedia": "Copenhagen_Wolves"
     },
     "counterlogicgaming": {
         "name": "Counter Logic Gaming",
@@ -486,7 +508,8 @@
         "hltv": {
             "name": "CLG",
             "id": "5974"
-        }
+        },
+        "liquidpedia": "Counter_Logic_Gaming"
     },
     "cplay": {
         "name": "CPLAY",
@@ -504,7 +527,8 @@
         "hltv": {
             "name": "CPLAY",
             "id": "4900"
-        }
+        },
+        "liquidpedia": "CPLAY"
     },
     "datteam": {
         "name": "dAT Team",
@@ -522,7 +546,8 @@
         "hltv": {
             "name": "dAT",
             "id": "4592"
-        }
+        },
+        "liquidpedia": "dAT_Team"
     },
     "denialesports": {
         "name": "Denial eSports",
@@ -540,7 +565,8 @@
         "hltv": {
             "name": "Denial",
             "id": "4643"
-        }
+        },
+        "liquidpedia": "Denial_eSports"
     },
     "detonator": {
         "name": "DeToNator",
@@ -565,7 +591,8 @@
             "name": "Dexterity",
             "id": "5951"
         },
-        "identifier": "dexterityteam"
+        "identifier": "dexterityteam",
+        "liquidpedia": "Dexterity_Team"
     },
     "dynastyesports": {
         "name": "Dynasty eSports",
@@ -594,7 +621,8 @@
             "name": "Team eBettle",
             "id": 12720
         },
-        "identifier": "ebettle"
+        "identifier": "ebettle",
+        "liquidpedia": "eBettle"
     },
     "echofox": {
         "name": "Echo Fox",
@@ -612,7 +640,8 @@
             "name": "Echo Fox.",
             "id": 14469
         },
-        "identifier": "echofox"
+        "identifier": "echofox",
+        "liquidpedia": "Echo_Fox"
     },
     "elevate": {
         "name": "eLevate",
@@ -630,7 +659,8 @@
         "hltv": {
             "name": "eLevate",
             "id": "5775"
-        }
+        },
+        "liquidpedia": "eLevate"
     },
     "enceesports": {
         "name": "ENCE eSports",
@@ -648,7 +678,8 @@
             "name": "ENCE",
             "id": "4869"
         },
-        "identifier": "enceesports"
+        "identifier": "enceesports",
+        "liquidpedia": "ENCE_eSports"
     },
     "energyesports": {
         "name": "Energy eSports",
@@ -662,7 +693,8 @@
             "name": "Energy eSports",
             "id": 9220
         },
-        "identifier": "energyesports"
+        "identifier": "energyesports",
+        "liquidpedia": "Energy_eSports"
     },
     "enervategaming": {
         "name": "Enervate Gaming",
@@ -680,7 +712,8 @@
             "name": "Enervate",
             "id": 13405
         },
-        "identifier": "enervategaming"
+        "identifier": "enervategaming",
+        "liquidpedia": "Enervate_Gaming"
     },
     "epiphanybolt": {
         "name": "Epiphany Bolt",
@@ -698,7 +731,8 @@
             "name": "Epiphany",
             "id": "6220"
         },
-        "identifier": "epiphanybolt"
+        "identifier": "epiphanybolt",
+        "liquidpedia": "Epiphany_Bolt"
     },
     "epsilonesports": {
         "name": "Epsilon eSports",
@@ -716,7 +750,8 @@
         "hltv": {
             "name": "Epsilon",
             "id": "4456"
-        }
+        },
+        "liquidpedia": "Epsilon_eSports"
     },
     "escgaming": {
         "name": "ESC Gaming",
@@ -734,7 +769,8 @@
         "hltv": {
             "name": "ESC Gaming",
             "id": "4104"
-        }
+        },
+        "liquidpedia": "ESC_Gaming"
     },
     "esportengine": {
         "name": "eSport Engine",
@@ -759,7 +795,8 @@
             "name": "eSuba",
             "id": "1847"
         },
-        "identifier": "esuba"
+        "identifier": "esuba",
+        "liquidpedia": "eSuba"
     },
     "excelesports": {
         "name": "exceL eSports",
@@ -769,7 +806,8 @@
         "csgolounge": {
             "name": "execeL"
         },
-        "identifier": "excelesports"
+        "identifier": "excelesports",
+        "liquidpedia": "exceL_eSports"
     },
     "fazeclan": {
         "name": "FaZe Clan",
@@ -787,7 +825,8 @@
             "name": "FaZe",
             "id": "6667"
         },
-        "identifier": "fazeclan"
+        "identifier": "fazeclan",
+        "liquidpedia": "FaZe_Clan"
     },
     "fenixfire": {
         "name": "Fenix Fire",
@@ -823,7 +862,8 @@
         "hltv": {
             "name": "FlipSid3",
             "id": "5988"
-        }
+        },
+        "liquidpedia": "Flipsid3_Tactics"
     },
     "fmesports": {
         "name": "fm-eSports",
@@ -841,7 +881,8 @@
         "hltv": {
             "name": "fm-eSports",
             "id": "4445"
-        }
+        },
+        "liquidpedia": "fm-eSports"
     },
     "fnatic": {
         "name": "Fnatic",
@@ -859,14 +900,16 @@
         "hltv": {
             "name": "fnatic",
             "id": "160"
-        }
+        },
+        "liquidpedia": "Fnatic"
     },
     "g3nerationx": {
         "name": "g3nerationX",
         "steam": {
             "name": "g3ner"
         },
-        "identifier": "g3nerationx"
+        "identifier": "g3nerationx",
+        "liquidpedia": "g3nerationX"
     },
     "gambitgaming": {
         "name": "Gambit Gaming",
@@ -884,7 +927,8 @@
             "name": "Gambit",
             "id": "6651"
         },
-        "identifier": "gambitgaming"
+        "identifier": "gambitgaming",
+        "liquidpedia": "Gambit_Gaming"
     },
     "gamers2": {
         "name": "Gamers2",
@@ -902,7 +946,8 @@
         "hltv": {
             "name": "Gamers2",
             "id": "5995"
-        }
+        },
+        "liquidpedia": "Gamers2"
     },
     "games4u": {
         "name": "Games4u",
@@ -920,7 +965,8 @@
         "hltv": {
             "name": "Games4u",
             "id": "5745"
-        }
+        },
+        "liquidpedia": "Games4u.se"
     },
     "gbots": {
         "name": "gBots",
@@ -938,7 +984,8 @@
             "name": "gBots",
             "id": 8770
         },
-        "identifier": "gbots"
+        "identifier": "gbots",
+        "liquidpedia": "gBots"
     },
     "ggwp": {
         "name": "GGWP",
@@ -956,7 +1003,8 @@
         "hltv": {
             "name": "GGWP",
             "id": "5970"
-        }
+        },
+        "liquidpedia": "GGWP"
     },
     "giant5": {
         "name": "GIANT5",
@@ -970,7 +1018,8 @@
             "name": "GIANT5",
             "id": "6099"
         },
-        "identifier": "giant5"
+        "identifier": "giant5",
+        "liquidpedia": "GIANT5"
     },
     "godsent": {
         "name": "GODSENT",
@@ -988,7 +1037,8 @@
             "name": "GODSENT",
             "id": 15057
         },
-        "identifier": "godsent"
+        "identifier": "godsent",
+        "liquidpedia": "GODSENT"
     },
     "gplay": {
         "name": "GPlay",
@@ -1006,7 +1056,8 @@
         "hltv": {
             "name": "GPlay",
             "id": "5817"
-        }
+        },
+        "liquidpedia": "GPlay"
     },
     "h2k": {
         "name": "H2K",
@@ -1024,7 +1075,8 @@
             "name": "H2K Gaming.CS",
             "id": 8652
         },
-        "identifier": "h2k"
+        "identifier": "h2k",
+        "liquidpedia": "H2K"
     },
     "headshotbg": {
         "name": "HEADSHOTBG",
@@ -1042,7 +1094,8 @@
         "hltv": {
             "name": "HEADSHOTBG",
             "id": "2927"
-        }
+        },
+        "liquidpedia": "HEADSHOTBG"
     },
     "heat": {
         "name": "HEAT",
@@ -1060,7 +1113,8 @@
         "hltv": {
             "name": "HEAT",
             "id": "5677"
-        }
+        },
+        "liquidpedia": "HEAT"
     },
     "heatesports": {
         "name": "Heat eSports",
@@ -1089,14 +1143,16 @@
         "hltv": {
             "name": "HellRaisers",
             "id": "5310"
-        }
+        },
+        "liquidpedia": "HellRaisers"
     },
     "hungryhungryhippos": {
         "name": "Hungry Hungry Hippos",
         "steam": {
             "name": "hungr"
         },
-        "identifier": "hungryhungryhippos"
+        "identifier": "hungryhungryhippos",
+        "liquidpedia": "Hungry_Hungry_Hippos"
     },
     "ibuypower": {
         "name": "iBUYPOWER",
@@ -1114,7 +1170,8 @@
         "hltv": {
             "name": "iBUYPOWER",
             "id": "5231"
-        }
+        },
+        "liquidpedia": "iBUYPOWER"
     },
     "igamerz": {
         "name": "iGamerz",
@@ -1144,7 +1201,8 @@
         "hltv": {
             "name": "Imaginary",
             "id": "4615"
-        }
+        },
+        "liquidpedia": "Imaginary_Gaming"
     },
     "immersiveesports": {
         "name": "Immersive eSports",
@@ -1180,7 +1238,8 @@
             "name": "Immortals.cs",
             "id": 16258
         },
-        "identifier": "immortals"
+        "identifier": "immortals",
+        "liquidpedia": "Immortals"
     },
     "immunity": {
         "name": "Immunity",
@@ -1198,7 +1257,8 @@
         "hltv": {
             "name": "Immunity",
             "id": "846"
-        }
+        },
+        "liquidpedia": "Team_Immunity"
     },
     "ination": {
         "name": "iNation",
@@ -1216,7 +1276,8 @@
         "hltv": {
             "name": "iNation",
             "id": "3419"
-        }
+        },
+        "liquidpedia": "iNation"
     },
     "incursion": {
         "name": "Incursion",
@@ -1252,7 +1313,8 @@
         "hltv": {
             "name": "INSHOCK",
             "id": "5613"
-        }
+        },
+        "liquidpedia": "INSHOCK"
     },
     "intzesportsclub": {
         "name": "INTZ e-Sports Club",
@@ -1270,7 +1332,8 @@
             "name": "INTZ",
             "id": "6619"
         },
-        "identifier": "intzesportsclub"
+        "identifier": "intzesportsclub",
+        "liquidpedia": "INTZ_eSports"
     },
     "invidious": {
         "name": "InVidious",
@@ -1295,7 +1358,8 @@
             "name": "iwku",
             "id": "1560"
         },
-        "identifier": "iwkugaming"
+        "identifier": "iwkugaming",
+        "liquidpedia": "Iwku_Gaming"
     },
     "k1ck": {
         "name": "K1CK",
@@ -1313,7 +1377,8 @@
         "hltv": {
             "name": "k1ck",
             "id": "449"
-        }
+        },
+        "liquidpedia": "K1ck_eSports_Club"
     },
     "kabumtd": {
         "name": "KaBuM.TD",
@@ -1331,7 +1396,8 @@
         "hltv": {
             "name": "KaBuM.TD",
             "id": "5822"
-        }
+        },
+        "liquidpedia": "KaBuM.TD"
     },
     "keydstars": {
         "name": "Keyd Stars",
@@ -1346,7 +1412,8 @@
         "hltv": {
             "name": "Keyd Stars",
             "id": "6033"
-        }
+        },
+        "liquidpedia": "Keyd_Stars"
     },
     "killerfishesport": {
         "name": "KILLERFISH eSport",
@@ -1364,7 +1431,8 @@
         "hltv": {
             "name": "KILLERFISH",
             "id": "5093"
-        }
+        },
+        "liquidpedia": "KILLERFISH_eSport"
     },
     "kkona": {
         "name": "KKona",
@@ -1382,7 +1450,8 @@
             "name": "KKona",
             "id": 14952
         },
-        "identifier": "kkona"
+        "identifier": "kkona",
+        "liquidpedia": "KKona"
     },
     "legacyesports": {
         "name": "Legacy eSports",
@@ -1400,7 +1469,8 @@
             "name": "Legacy",
             "id": "6468"
         },
-        "identifier": "legacyesports"
+        "identifier": "legacyesports",
+        "liquidpedia": "Legacy_eSports"
     },
     "lemondogs": {
         "name": "Lemondogs",
@@ -1415,7 +1485,8 @@
         "hltv": {
             "name": "Lemondogs",
             "id": "2990"
-        }
+        },
+        "liquidpedia": "Lemondogs"
     },
     "lgbesports": {
         "name": "LGB eSports",
@@ -1433,7 +1504,8 @@
         "hltv": {
             "name": "LGB",
             "id": "5962"
-        }
+        },
+        "liquidpedia": "LGB_eSports"
     },
     "lioncast": {
         "name": "Lioncast",
@@ -1447,7 +1519,8 @@
             "name": "Lioncast",
             "id": "6740"
         },
-        "identifier": "lioncast"
+        "identifier": "lioncast",
+        "liquidpedia": "Team_Lioncast"
     },
     "lions": {
         "name": "Lions",
@@ -1462,7 +1535,8 @@
         "hltv": {
             "name": "Lions",
             "id": "1705"
-        }
+        },
+        "liquidpedia": "Lions"
     },
     "londonconspiracy": {
         "name": "London Conspiracy",
@@ -1480,7 +1554,8 @@
         "hltv": {
             "name": "London Conspiracy",
             "id": "5569"
-        }
+        },
+        "liquidpedia": "London_Conspiracy"
     },
     "luminositygaming": {
         "name": "Luminosity Gaming",
@@ -1495,7 +1570,8 @@
         "hltv": {
             "name": "Luminosity",
             "id": "6021"
-        }
+        },
+        "liquidpedia": "Luminosity_Gaming"
     },
     "lunatikesports": {
         "name": "LunatiK eSports",
@@ -1513,7 +1589,8 @@
         "hltv": {
             "name": "LunatiK",
             "id": "5700"
-        }
+        },
+        "liquidpedia": "LunatiK_eSports"
     },
     "makewarnotlove": {
         "name": "Make War Not Love",
@@ -1556,7 +1633,8 @@
         "hltv": {
             "name": "melty",
             "id": "6073"
-        }
+        },
+        "liquidpedia": "Melty_eSport_Club"
     },
     "method": {
         "name": "Method",
@@ -1571,7 +1649,8 @@
         "hltv": {
             "name": "Method",
             "id": "6132"
-        }
+        },
+        "liquidpedia": "Method"
     },
     "molotovsandmarshmallows": {
         "name": "Molotovs and Marshmallows",
@@ -1586,7 +1665,8 @@
         "hltv": {
             "name": "MnM",
             "id": "5958"
-        }
+        },
+        "liquidpedia": "Molotovs_and_Marshmallows_Gaming"
     },
     "moscowfive": {
         "name": "Moscow Five",
@@ -1604,7 +1684,8 @@
         "hltv": {
             "name": "Moscow Five",
             "id": "3429"
-        }
+        },
+        "liquidpedia": "Moscow_Five"
     },
     "mousespaz": {
         "name": "mouseSpaz",
@@ -1622,7 +1703,8 @@
         "hltv": {
             "name": "mouseSpaz",
             "id": "4749"
-        }
+        },
+        "liquidpedia": "mouseSpaz"
     },
     "mousesports": {
         "name": "mousesports",
@@ -1640,7 +1722,8 @@
         "hltv": {
             "name": "mousesports",
             "id": "60"
-        }
+        },
+        "liquidpedia": "mousesports"
     },
     "mvpkarnal": {
         "name": "MVP.Karnal",
@@ -1658,7 +1741,8 @@
             "name": "MVP.karnal",
             "id": 11503
         },
-        "identifier": "mvpkarnal"
+        "identifier": "mvpkarnal",
+        "liquidpedia": "MVP_Karnal"
     },
     "mvpproject": {
         "name": "MVP Project",
@@ -1676,7 +1760,8 @@
             "name": "MVP Project",
             "id": 13747
         },
-        "identifier": "mvpproject"
+        "identifier": "mvpproject",
+        "liquidpedia": "MVP_Project"
     },
     "mykpv": {
         "name": "myKPV",
@@ -1690,7 +1775,8 @@
         "hltv": {
             "name": "myKPV.de",
             "id": "5355"
-        }
+        },
+        "liquidpedia": "Key-Preisvergleich.de"
     },
     "myrevenge": {
         "name": "myRevenge",
@@ -1708,7 +1794,8 @@
             "name": "myRevenge",
             "id": 8589
         },
-        "identifier": "myrevenge"
+        "identifier": "myrevenge",
+        "liquidpedia": "myRevenge"
     },
     "mythic": {
         "name": "Mythic",
@@ -1726,7 +1813,8 @@
         "hltv": {
             "name": "Mythic",
             "id": "5479"
-        }
+        },
+        "liquidpedia": "Mythic"
     },
     "myxmg": {
         "name": "MyXMG",
@@ -1744,7 +1832,8 @@
         "hltv": {
             "name": "myXMG",
             "id": "6005"
-        }
+        },
+        "liquidpedia": "MyXMG"
     },
     "napalmesports": {
         "name": "Napalm eSports",
@@ -1769,7 +1858,8 @@
         "hltv": {
             "name": "Natus Vincere",
             "id": "4608"
-        }
+        },
+        "liquidpedia": "Natus_Vincere"
     },
     "neckbreak": {
         "name": "NeckBREAK",
@@ -1794,7 +1884,8 @@
         "hltv": {
             "name": "nEophyte",
             "id": "665"
-        }
+        },
+        "liquidpedia": "nEophyte"
     },
     "nerdrage": {
         "name": "nerdRage",
@@ -1812,7 +1903,8 @@
             "name": "nerdRage",
             "id": 11732
         },
-        "identifier": "nerdrage"
+        "identifier": "nerdrage",
+        "liquidpedia": "nerdRage"
     },
     "netcodeguides": {
         "name": "Netcodeguides",
@@ -1830,7 +1922,8 @@
         "hltv": {
             "name": "NetcodeGuides.com",
             "id": "5543"
-        }
+        },
+        "liquidpedia": "NetcodeGuides.com"
     },
     "nextplease!": {
         "name": "neXtPlease!",
@@ -1845,7 +1938,8 @@
         "hltv": {
             "name": "neXtPlease!",
             "id": "2303"
-        }
+        },
+        "liquidpedia": "neXtPlease!"
     },
     "nface": {
         "name": "nFace",
@@ -1878,7 +1972,8 @@
         "gosugamers": {
             "name": "Nihilum Gaming",
             "id": 11485
-        }
+        },
+        "liquidpedia": "Nihilum"
     },
     "ninjasinpyjamas": {
         "name": "Ninjas in Pyjamas",
@@ -1896,7 +1991,8 @@
         "hltv": {
             "name": "NiP",
             "id": "157"
-        }
+        },
+        "liquidpedia": "Ninjas_in_Pyjamas"
     },
     "nxl": {
         "name": "nxl",
@@ -1914,7 +2010,8 @@
             "name": "Team nxl",
             "id": 8608
         },
-        "identifier": "nxl"
+        "identifier": "nxl",
+        "liquidpedia": "nxl"
     },
     "onlinebots": {
         "name": "OnlineBOTS",
@@ -1928,7 +2025,8 @@
             "name": "OnlineBOTS",
             "id": 8595
         },
-        "identifier": "onlinebots"
+        "identifier": "onlinebots",
+        "liquidpedia": "OnlineBOTS"
     },
     "opticgaming": {
         "name": "OpTic Gaming",
@@ -1946,7 +2044,8 @@
             "name": "OpTic",
             "id": "6615"
         },
-        "identifier": "opticgaming"
+        "identifier": "opticgaming",
+        "liquidpedia": "OpTic_Gaming"
     },
     "overgaming": {
         "name": "OverGaming",
@@ -1964,7 +2063,8 @@
             "name": "OverGaming",
             "id": 11770
         },
-        "identifier": "overgaming"
+        "identifier": "overgaming",
+        "liquidpedia": "OverGaming"
     },
     "pentasports": {
         "name": "PENTA Sports",
@@ -1982,7 +2082,8 @@
         "hltv": {
             "name": "PENTA",
             "id": "5395"
-        }
+        },
+        "liquidpedia": "PENTA_Sports"
     },
     "perilousrage": {
         "name": "Perilous Rage",
@@ -2018,7 +2119,8 @@
         "hltv": {
             "name": "PiTER",
             "id": "5949"
-        }
+        },
+        "liquidpedia": "PiTER"
     },
     "planetkeydynamics": {
         "name": "Planetkey Dynamics",
@@ -2036,7 +2138,8 @@
         "hltv": {
             "name": "Planetkey",
             "id": "5195"
-        }
+        },
+        "liquidpedia": "Planetkey_Dynamics"
     },
     "platiniumesport": {
         "name": "Platinium eSport",
@@ -2054,7 +2157,8 @@
             "name": "Platinium",
             "id": "5596"
         },
-        "identifier": "platiniumesport"
+        "identifier": "platiniumesport",
+        "liquidpedia": "Platinium-Servers"
     },
     "play5": {
         "name": "PLAY5",
@@ -2079,7 +2183,8 @@
         "hltv": {
             "name": "Playing Ducks",
             "id": "3396"
-        }
+        },
+        "liquidpedia": "Playing_Ducks"
     },
     "pride": {
         "name": "PRIDE",
@@ -2097,7 +2202,8 @@
             "name": "PRIDE.",
             "id": 15365
         },
-        "identifier": "pride"
+        "identifier": "pride",
+        "liquidpedia": "Pride_Gaming"
     },
     "publiclirse": {
         "name": "Publiclir.se",
@@ -2115,7 +2221,8 @@
         "hltv": {
             "name": "Publiclir.se",
             "id": "4477"
-        }
+        },
+        "liquidpedia": "Publiclir.se"
     },
     "qeeyou": {
         "name": "QeeYou",
@@ -2133,7 +2240,8 @@
             "name": "QeeYou",
             "id": 12330
         },
-        "identifier": "qeeyou"
+        "identifier": "qeeyou",
+        "liquidpedia": "QeeYou"
     },
     "qlimaxcrew": {
         "name": "Qlimax Crew",
@@ -2162,7 +2270,8 @@
         "hltv": {
             "name": "RCTIC",
             "id": "2971"
-        }
+        },
+        "liquidpedia": "RCTIC_eSports"
     },
     "reasongaming": {
         "name": "Reason Gaming",
@@ -2180,7 +2289,8 @@
         "hltv": {
             "name": "Reason Gaming",
             "id": "4822"
-        }
+        },
+        "liquidpedia": "Reason_Gaming"
     },
     "recursiveesports": {
         "name": "Recursive eSports",
@@ -2198,7 +2308,8 @@
             "name": "Recursive",
             "id": "4680"
         },
-        "identifier": "recursiveesports"
+        "identifier": "recursiveesports",
+        "liquidpedia": "Recursive_eSports"
     },
     "renegades": {
         "name": "Renegades",
@@ -2216,7 +2327,8 @@
             "name": "Renegades",
             "id": 12427
         },
-        "identifier": "renegades"
+        "identifier": "renegades",
+        "liquidpedia": "Renegades"
     },
     "resilience5": {
         "name": "Resilience5",
@@ -2248,7 +2360,8 @@
         "hltv": {
             "name": "rizeGaming",
             "id": "5185"
-        }
+        },
+        "liquidpedia": "rizeGaming"
     },
     "sapphirekelownadotcom": {
         "name": "SapphireKelownaDotCom",
@@ -2266,7 +2379,8 @@
         "hltv": {
             "name": "SKDC",
             "id": "5454"
-        }
+        },
+        "liquidpedia": "SapphireKelownaDotCom"
     },
     "selfless": {
         "name": "Selfless",
@@ -2284,7 +2398,8 @@
             "name": "Selfless Gaming",
             "id": 14731
         },
-        "identifier": "selfless"
+        "identifier": "selfless",
+        "liquidpedia": "Selfless"
     },
     "skgaming": {
         "name": "SK Gaming",
@@ -2302,7 +2417,8 @@
         "hltv": {
             "name": "SK Gaming",
             "id": "69"
-        }
+        },
+        "liquidpedia": "SK_Gaming"
     },
     "skyred": {
         "name": "Skyred",
@@ -2317,7 +2433,8 @@
         "hltv": {
             "name": "Skyred",
             "id": "5978"
-        }
+        },
+        "liquidpedia": "Skyred"
     },
     "spacesoldiers": {
         "name": "Space Soldiers",
@@ -2332,7 +2449,8 @@
         "hltv": {
             "name": "Space Soldiers",
             "id": "5929"
-        }
+        },
+        "liquidpedia": "Space_Soldiers"
     },
     "splyce": {
         "name": "Splyce",
@@ -2350,7 +2468,8 @@
             "name": "SPLYCE",
             "id": 13990
         },
-        "identifier": "splyce"
+        "identifier": "splyce",
+        "liquidpedia": "Splyce"
     },
     "streamline": {
         "name": "Streamline",
@@ -2382,7 +2501,8 @@
         "steam": {
             "name": "summa"
         },
-        "identifier": "summagg"
+        "identifier": "summagg",
+        "liquidpedia": "SUMMA.GG"
     },
     "synrgygaming": {
         "name": "SYNRGY Gaming",
@@ -2400,7 +2520,8 @@
             "name": "SYNRGY",
             "id": "6034"
         },
-        "identifier": "synrgygaming"
+        "identifier": "synrgygaming",
+        "liquidpedia": "SYNRGY_Gaming"
     },
     "teamacer": {
         "name": "Team Acer",
@@ -2418,7 +2539,8 @@
         },
         "csgolounge": {
             "name": "TA"
-        }
+        },
+        "liquidpedia": "Team_Acer"
     },
     "teamagent": {
         "name": "Team Agent",
@@ -2454,7 +2576,8 @@
             "name": "AGG",
             "id": "6686"
         },
-        "identifier": "teamagg"
+        "identifier": "teamagg",
+        "liquidpedia": "Team_AGG"
     },
     "teamalientech": {
         "name": "Team AlienTech",
@@ -2472,7 +2595,8 @@
             "name": "AlienTech.Black",
             "id": "6130"
         },
-        "identifier": "teamalientech"
+        "identifier": "teamalientech",
+        "liquidpedia": "Team_Alientech"
     },
     "teamalternate": {
         "name": "Team Alternate",
@@ -2490,7 +2614,8 @@
         "hltv": {
             "name": "Alternate",
             "id": "61"
-        }
+        },
+        "liquidpedia": "Team_Alternate"
     },
     "teamcaseking": {
         "name": "Team Caseking",
@@ -2505,7 +2630,8 @@
         "hltv": {
             "name": "Caseking",
             "id": "6030"
-        }
+        },
+        "liquidpedia": "Caseking_Gaming"
     },
     "teamcoast": {
         "name": "Team Coast",
@@ -2523,7 +2649,8 @@
             "name": "Coast",
             "id": "6321"
         },
-        "identifier": "teamcoast"
+        "identifier": "teamcoast",
+        "liquidpedia": "Team_Coast"
     },
     "teamconquest": {
         "name": "Team Conquest",
@@ -2541,7 +2668,8 @@
             "name": "Conquest",
             "id": "6292"
         },
-        "identifier": "teamconquest"
+        "identifier": "teamconquest",
+        "liquidpedia": "Team_Conquest"
     },
     "teamdignitas": {
         "name": "Team Dignitas",
@@ -2559,7 +2687,8 @@
         "hltv": {
             "name": "dignitas",
             "id": "5422"
-        }
+        },
+        "liquidpedia": "Team_Dignitas"
     },
     "teamempire": {
         "name": "Team Empire",
@@ -2577,7 +2706,8 @@
             "name": "Empire",
             "id": "6684"
         },
-        "identifier": "teamempire"
+        "identifier": "teamempire",
+        "liquidpedia": "Team_Empire"
     },
     "teamenvyus": {
         "name": "Team EnVyUs",
@@ -2595,7 +2725,8 @@
         "hltv": {
             "name": "EnVyUs",
             "id": "5991"
-        }
+        },
+        "liquidpedia": "Team_EnVyUs"
     },
     "teamexile5": {
         "name": "Team Exile5",
@@ -2606,7 +2737,8 @@
         "hltv": {
             "name": "Exile 5",
             "id": "3749"
-        }
+        },
+        "liquidpedia": "Team_Exile5"
     },
     "teaminfused": {
         "name": "Team Infused",
@@ -2624,7 +2756,8 @@
         "hltv": {
             "name": "Infused",
             "id": "4554"
-        }
+        },
+        "liquidpedia": "Team_Infused"
     },
     "teamkarma": {
         "name": "Team Karma",
@@ -2642,7 +2775,8 @@
             "name": "Karma",
             "id": "5866"
         },
-        "identifier": "teamkarma"
+        "identifier": "teamkarma",
+        "liquidpedia": "Team_Karma"
     },
     "teamkinguin": {
         "name": "Team Kinguin",
@@ -2653,7 +2787,8 @@
         "steam": {
             "name": "kingu"
         },
-        "identifier": "teamkinguin"
+        "identifier": "teamkinguin",
+        "liquidpedia": "Team_Kinguin"
     },
     "teamldlccom": {
         "name": "Team LDLC.com",
@@ -2671,7 +2806,8 @@
         "hltv": {
             "name": "LDLC",
             "id": "4674"
-        }
+        },
+        "liquidpedia": "Team_LDLC.com"
     },
     "teamliquid": {
         "name": "Team Liquid",
@@ -2689,7 +2825,8 @@
         "hltv": {
             "name": "Liquid",
             "id": "5973"
-        }
+        },
+        "liquidpedia": "Team_Liquid"
     },
     "teammenacefi": {
         "name": "Team Menace.fi",
@@ -2707,7 +2844,8 @@
         "gosugamers": {
             "name": "Team Menace.",
             "id": 8713
-        }
+        },
+        "liquidpedia": "Team_Menace.fi"
     },
     "teamorbit": {
         "name": "Team Orbit",
@@ -2725,7 +2863,8 @@
         "hltv": {
             "name": "Orbit",
             "id": "5766"
-        }
+        },
+        "liquidpedia": "Team_Orbit"
     },
     "teamoutbreak": {
         "name": "Team Outbreak",
@@ -2758,7 +2897,8 @@
         "hltv": {
             "name": "Property",
             "id": "5319"
-        }
+        },
+        "liquidpedia": "Team_Property"
     },
     "teamrefuse": {
         "name": "Team Refuse",
@@ -2776,7 +2916,8 @@
             "name": "Team Refuse",
             "id": 8648
         },
-        "identifier": "teamrefuse"
+        "identifier": "teamrefuse",
+        "liquidpedia": "Team_Refuse"
     },
     "teamroccat": {
         "name": "Team Roccat",
@@ -2794,7 +2935,8 @@
             "name": "ROCCAT",
             "id": "4475"
         },
-        "identifier": "teamroccat"
+        "identifier": "teamroccat",
+        "liquidpedia": "Team_ROCCAT"
     },
     "teamrock": {
         "name": "Team ROCK",
@@ -2812,7 +2954,8 @@
         "hltv": {
             "name": "Rock",
             "id": "6059"
-        }
+        },
+        "liquidpedia": "Team_ROCK"
     },
     "teamsecret": {
         "name": "Team Secret",
@@ -2830,7 +2973,8 @@
             "name": "Secret fe",
             "id": "6871"
         },
-        "identifier": "teamsecret"
+        "identifier": "teamsecret",
+        "liquidpedia": "Team_Secret"
     },
     "teamskyfire": {
         "name": "Team Skyfire",
@@ -2859,7 +3003,8 @@
         "hltv": {
             "name": "TSM",
             "id": "5996"
-        }
+        },
+        "liquidpedia": "Team_SoloMid"
     },
     "teamsteelseries": {
         "name": "Team SteelSeries",
@@ -2920,7 +3065,8 @@
             "name": "Xapso",
             "id": 8606
         },
-        "identifier": "teamxapso"
+        "identifier": "teamxapso",
+        "liquidpedia": "Xapso"
     },
     "teamxenex": {
         "name": "Team XENEX",
@@ -2934,7 +3080,8 @@
         "hltv": {
             "name": "XENEX",
             "id": "6091"
-        }
+        },
+        "liquidpedia": "Team_XENEX"
     },
     "tempogaming": {
         "name": "Tempo Gaming",
@@ -2952,7 +3099,8 @@
         "hltv": {
             "name": "Tempo",
             "id": 5709
-        }
+        },
+        "liquidpedia": "Tempo_Gaming"
     },
     "tempostorm": {
         "name": "Tempo Storm",
@@ -2967,7 +3115,8 @@
         "hltv": {
             "name": "Tempo Storm",
             "id": "6118"
-        }
+        },
+        "liquidpedia": "Tempo_Storm"
     },
     "thechiefs": {
         "name": "The Chiefs",
@@ -2982,14 +3131,16 @@
         "hltv": {
             "name": "The Chiefs",
             "id": "6010"
-        }
+        },
+        "liquidpedia": "Chiefs_eSports_Club"
     },
     "themongolz": {
         "name": "The MongolZ",
         "steam": {
             "name": "mongo"
         },
-        "identifier": "themongolz"
+        "identifier": "themongolz",
+        "liquidpedia": "The_MongolZ"
     },
     "titan": {
         "name": "Titan",
@@ -3007,7 +3158,8 @@
         "hltv": {
             "name": "Titan",
             "id": "5284"
-        }
+        },
+        "liquidpedia": "Titan"
     },
     "torqued": {
         "name": "Torqued",
@@ -3025,7 +3177,8 @@
         "hltv": {
             "name": "Torqued",
             "id": "5906"
-        }
+        },
+        "liquidpedia": "Torqued"
     },
     "trickedesport": {
         "name": "TRICKED eSport",
@@ -3040,7 +3193,8 @@
         "hltv": {
             "name": "tRICKED",
             "id": "4602"
-        }
+        },
+        "liquidpedia": "TRICKED_eSport"
     },
     "trident": {
         "name": "TRIDENT",
@@ -3073,7 +3227,8 @@
         "hltv": {
             "name": "TyLoo",
             "id": "2063"
-        }
+        },
+        "liquidpedia": "TyLoo"
     },
     "ubinited": {
         "name": "Ubinited",
@@ -3123,7 +3278,8 @@
         "hltv": {
             "name": "USSR",
             "id": "2438"
-        }
+        },
+        "liquidpedia": "USSR"
     },
     "vegasquadron": {
         "name": "Vega Squadron",
@@ -3138,7 +3294,8 @@
         "hltv": {
             "name": "Vega Squadron",
             "id": "6094"
-        }
+        },
+        "liquidpedia": "Vega_Squadron"
     },
     "vendetta": {
         "name": "Vendetta",
@@ -3163,7 +3320,8 @@
         "hltv": {
             "name": "VeryGames",
             "id": "4467"
-        }
+        },
+        "liquidpedia": "VeryGames"
     },
     "vexedgaming": {
         "name": "Vexed Gaming",
@@ -3181,7 +3339,8 @@
             "name": "Vexed",
             "id": "6375"
         },
-        "identifier": "vexedgaming"
+        "identifier": "vexedgaming",
+        "liquidpedia": "Vexed_Gaming"
     },
     "vexitusesports": {
         "name": "Vexitus E-Sports",
@@ -3213,7 +3372,8 @@
             "name": "Vination eSports",
             "id": 10046
         },
-        "identifier": "vination"
+        "identifier": "vination",
+        "liquidpedia": "Vination_eSports_e.V."
     },
     "virtuspro": {
         "name": "Virtus.Pro",
@@ -3231,7 +3391,8 @@
         "hltv": {
             "name": "Virtus.pro",
             "id": "5378"
-        }
+        },
+        "liquidpedia": "Virtus.Pro"
     },
     "volgare": {
         "name": "VOLGARE",
@@ -3249,7 +3410,8 @@
         "hltv": {
             "name": "volgare",
             "id": "2471"
-        }
+        },
+        "liquidpedia": "VOLGARE"
     },
     "voxeminor": {
         "name": "Vox Eminor",
@@ -3267,7 +3429,8 @@
         "hltv": {
             "name": "Vox Eminor",
             "id": "4784"
-        }
+        },
+        "liquidpedia": "Vox_Eminor"
     },
     "vvvgaming": {
         "name": "vVv Gaming",
@@ -3282,7 +3445,8 @@
         "hltv": {
             "name": "vVv Gaming",
             "id": "2655"
-        }
+        },
+        "liquidpedia": "vVv_Gaming"
     },
     "webspell": {
         "name": "webSPELL",
@@ -3300,7 +3464,8 @@
         "hltv": {
             "name": "webSPELL",
             "id": "4449"
-        }
+        },
+        "liquidpedia": "webSPELL"
     },
     "weplay": {
         "name": "WePlay",
@@ -3369,7 +3534,8 @@
             "name": "Winterfox.",
             "id": 13379
         },
-        "identifier": "winterfox"
+        "identifier": "winterfox",
+        "liquidpedia": "Winterfox"
     },
     "wizards": {
         "name": "Wizards",
@@ -3387,7 +3553,8 @@
         "hltv": {
             "name": "Wizards",
             "id": "2587"
-        }
+        },
+        "liquidpedia": "Wizards"
     },
     "wreckinggaming": {
         "name": "Wrecking Gaming",
@@ -3423,7 +3590,8 @@
         "hltv": {
             "name": "x6tence",
             "id": "156"
-        }
+        },
+        "liquidpedia": "x6tence"
     },
     "xgamekz": {
         "name": "xGame.kz",
@@ -3437,7 +3605,8 @@
         "hltv": {
             "name": "xGame.KZ",
             "id": "6020"
-        }
+        },
+        "liquidpedia": "xGame.kz"
     },
     "xpcgaming": {
         "name": "XPC Gaming",
@@ -3455,7 +3624,8 @@
         "hltv": {
             "name": "XPC",
             "id": "6025"
-        }
+        },
+        "liquidpedia": "XPC_Gaming"
     },
     "zacgaming": {
         "name": "ZAC Gaming",
@@ -3476,7 +3646,8 @@
         "steam": {
             "name": "zagat"
         },
-        "identifier": "zagatalent"
+        "identifier": "zagatalent",
+        "liquidpedia": "ZAGA_Talent_Gaming"
     },
     "zbrilo": {
         "name": "Zbrilo",
