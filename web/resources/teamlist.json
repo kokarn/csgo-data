@@ -1880,6 +1880,24 @@
             "id": "157"
         }
     },
+    "nxl": {
+        "name": "nxl",
+        "steam": {
+            "name": "nxl"
+        },
+        "csgolounge": {
+            "name": "Nxl"
+        },
+        "hltv": {
+            "name": "nxl",
+            "id": "5258"
+        },
+        "gosugamers": {
+            "name": "Team nxl",
+            "id": 8608
+        },
+        "identifier": "nxl"
+    },
     "onlinebots": {
         "name": "OnlineBOTS",
         "steam": {
