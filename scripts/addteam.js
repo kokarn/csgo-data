@@ -10,10 +10,12 @@ var http = require( 'http' ),
     request = require( 'request' ),
     gosugamers = require( '../modules/gosugamers' ),
     hltv = require( '../modules/hltv' ),
+    liquidPedia = require( '../modules/liquidpedia' ),
     logoFilename = '',
     addTeam = {
         hasCheckedGosugamers: false,
         hasCheckedHLTV: false,
+        hasCheckedLiquidPedia: false,
         teamData : {},
         ensureExists: function( path, mask, callback ) {
             if( typeof mask == 'function' ) { // allow the `mask` parameter to be optional
@@ -80,6 +82,15 @@ var http = require( 'http' ),
                         addTeam.finish();
                     }
                 }
+            } );
+        },
+        setLiquidPedia : function( searchPhrase ){
+            liquidpedia.exists( searchPhrase, function( team ){
+                if( team.exists ){
+                    addTeam.teamData.liquidpedia = team.name;
+                }
+
+                addTeam.hasCheckedLiquidPedia = true;
             } );
         },
         setInitialGosugamers : function( searchPhrase ){
@@ -164,13 +175,17 @@ var http = require( 'http' ),
             var answer;
             var waitingFor = [];
 
-            if( !addTeam.hasCheckedHLTV || !addTeam.hasCheckedGosugamers ){
+            if( !addTeam.hasCheckedHLTV || !addTeam.hasCheckedGosugamers || !addTeam.hasCheckedLiquidPedia ){
                 if( !addTeam.hasCheckedHLTV ){
                     waitingFor.push( 'HLTV' );
                 }
 
                 if( !addTeam.hasCheckedGosugamers ){
                     waitingFor.push( 'GosuGamers' );
+                }
+
+                if( !addTeam.hasCheckedLiquidPedia ){
+                    waitingFor.push( 'LiquidPedia' );
                 }
 
                 console.log( 'Waiting for', waitingFor.join( ', ' ) );
@@ -265,6 +280,7 @@ var http = require( 'http' ),
             addTeam.teamData.name = teamName;
             addTeam.setInitialGosugamers( addTeam.teamData.name );
             addTeam.setInitialHltv( addTeam.teamData.name );
+            addTeam.setLiquidPedia( addTeam.teamData.name );
             addTeam.ensureExists( 'teams/' + addTeam.teamData.name, function( error ) {
                 if( error ){
                     console.log( error );
