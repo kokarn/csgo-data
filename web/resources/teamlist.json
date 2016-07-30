@@ -285,6 +285,24 @@
         },
         "identifier": "begenius"
     },
+    "bornoffire": {
+        "name": "Born of Fire",
+        "steam": {
+            "name": "borno"
+        },
+        "csgolounge": {
+            "name": "BoF"
+        },
+        "hltv": {
+            "name": "Born Of Fire",
+            "id": "6502"
+        },
+        "gosugamers": {
+            "name": "Born of Fire",
+            "id": 13830
+        },
+        "identifier": "bornoffire"
+    },
     "boxr": {
         "name": "BOXR",
         "gosugamers": {

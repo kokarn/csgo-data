@@ -52,6 +52,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nface.png)|nFace|343|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tempo.png)|Tempo Gaming|355|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/borno.png)|Born of Fire|360|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/epiph.png)|Epiphany Bolt|370|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g3ner.png)|g3nerationX|372|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ubini.png)|Ubinited|375|
