@@ -52,7 +52,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nface.png)|nFace|343|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gplay.png)|GPlay|355|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tempo.png)|Tempo Gaming|355|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/deton.png)|DeToNator|367|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/epiph.png)|Epiphany Bolt|370|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g3ner.png)|g3nerationX|372|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ubini.png)|Ubinited|375|
@@ -69,6 +68,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/pkd.png)|PlanetKey Dynamics|475|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ad.png)|Astana Dragons|480|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/deton.png)|DeToNator|480|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/outbr.png)|Team Outbreak|490|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexed.png)|Vexed Gaming|490|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zagat.png)|ZAGA Talent|497|
