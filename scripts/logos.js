@@ -8,6 +8,7 @@ var fs = require( 'fs' ),
         lowresLogos : [],
         sortedLogos : [],
         teamsChecked : 0,
+        invalidImages : 0,
         markdown : '|Image|Team|Current size|\n|---|---|---|\n',
         start: function(){
             this.teams = fs.readdirSync( 'teams/' );
@@ -56,6 +57,7 @@ var fs = require( 'fs' ),
 
                     if( dimensions.width !== dimensions.height ){
                         console.log( chalk.red( filenameFullPath, 'is not square! It\'s ' + dimensions.width + 'x' + dimensions.height ) );
+                        _this.invalidImages = _this.invalidImages + 1;
                     }
 
                     if( filename.indexOf( 'highres' ) === -1 ){
@@ -103,7 +105,12 @@ var fs = require( 'fs' ),
                     if( error ){
                         console.log( chalk.red( error ) );
                     } else {
-                        console.log( chalk.green( 'Logos updated' ) );
+                        if( _this.invalidImages > 0 ){
+                            console.log( chalk.red( 'Found some invalid images. Please fix this and then re-run.' ) );
+                            process.exit( 1 );
+                        }
+
+                        console.log( chalk.green( 'Images done' ) );
                     }
                 });
             }
