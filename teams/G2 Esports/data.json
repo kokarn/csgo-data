@@ -1,5 +1,5 @@
 {
-    "name": "Gamers2",
+    "name": "G2 Esports",
     "steam": {
         "name": "g2"
     },
@@ -14,5 +14,6 @@
     "hltv": {
         "name": "Gamers2",
         "id": "5995"
-    }
+    },
+    "liquidpedia": "G2_Esports"
 }
