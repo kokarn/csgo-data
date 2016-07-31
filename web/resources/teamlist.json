@@ -3177,6 +3177,25 @@
         },
         "liquidpedia": "Titan"
     },
+    "torpedo": {
+        "name": "Torpedo",
+        "steam": {
+            "name": "torpe"
+        },
+        "csgolounge": {
+            "name": "Torpedo"
+        },
+        "hltv": {
+            "name": "Torpedo",
+            "id": "6287"
+        },
+        "liquidpedia": "Torpedo",
+        "gosugamers": {
+            "name": "Torpedo Gaming",
+            "id": 12944
+        },
+        "identifier": "torpedo"
+    },
     "torqued": {
         "name": "Torqued",
         "steam": {
