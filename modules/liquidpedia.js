@@ -7,9 +7,17 @@ class LiquidPedia {
 
     exists( searchPhrase, callback ){
         let _this = this;
+        let formattedName = searchPhrase.replace( /\s/g, '_' );
+        let options = {
+            url: _this.baseUrl + encodeURIComponent( formattedName )
+        };
 
-        let parsedPhrase = searchPhrase.replace( /\s/g, '_' );
-        request( _this.baseUrl + encodeURIComponent( parsedPhrase ), function( error, response, teams ) {
+        options.followRedirect = function( response ) {
+            formattedName = response.headers.location.replace( _this.baseUrl, '' );
+            return true;
+        };
+
+        request( options, function( error, response, teams ) {
             let exists = true;
 
             if( response.statusCode > 200 ){
@@ -17,7 +25,7 @@ class LiquidPedia {
             }
 
             callback.call( _this, {
-                name: parsedPhrase,
+                name: formattedName,
                 exists: exists
             });
 
