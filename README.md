@@ -3,9 +3,11 @@ Data for Counter Strike: Global Offensive
 
 For teams:
  * Logo
- * Steam "id"
- * CSGOLounge "id"
+ * Steam id (if applicable)
+ * CSGOLounge name
  * GosuGamers name and id
+ * HLTV name and id
+ * LiquidPedia name
  * An unique identifier
 
 ## How do I add a team?
@@ -34,17 +36,15 @@ There is a supersimple node app that does that for you.
 2. Go to the directory where you have cloned the repository and run ```npm install``` from the command line
 3. Run ```node teamlogos.js``` and it should generate what you need.
 
-## Who are using this?
+## How can I use this on my server or anywhere else?
 
-### CSGO Bettingstats
-A site that consolidates betting stats for upcoming matches
+If you want to use this for some web project or something, there are two examples live on
+[csgo-data.com](http://csgo-data.com).
 
-[CSGO Bettingstats](http://csgobettingstats.com/)
+For the server there's a great plugin.
 
-### Team Logo Manager
+[Team Logo Manager](https://forums.alliedmods.net/showthread.php?t=258206)  
 A SourceMod plugin that let's you select both logo and team-name easily on your own server.
-
-[Team Logo Manager](https://forums.alliedmods.net/showthread.php?t=258206)
 
 
 ## Miscellaneous
