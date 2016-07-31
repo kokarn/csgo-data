@@ -865,6 +865,25 @@
         },
         "liquidpedia": "FlipSid3_Tactics"
     },
+    "fluffygangsters": {
+        "name": "FLuffy Gangsters",
+        "steam": {
+            "name": "fluff"
+        },
+        "csgolounge": {
+            "name": "FG"
+        },
+        "hltv": {
+            "name": "Fluffy Gangsters",
+            "id": "6668"
+        },
+        "gosugamers": {
+            "name": "Fluffy Gangsters",
+            "id": 14365
+        },
+        "liquidpedia": "FLuffy_Gangsters",
+        "identifier": "fluffygangsters"
+    },
     "fmesports": {
         "name": "fm-eSports",
         "steam": {
