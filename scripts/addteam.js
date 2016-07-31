@@ -85,7 +85,7 @@ var http = require( 'http' ),
             } );
         },
         setLiquidPedia : function( searchPhrase ){
-            liquidpedia.exists( searchPhrase, function( team ){
+            liquidPedia.exists( searchPhrase, function( team ){
                 if( team.exists ){
                     addTeam.teamData.liquidpedia = team.name;
                 }
