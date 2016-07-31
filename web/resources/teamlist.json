@@ -88,7 +88,7 @@
             "name": "aimface",
             "id": "5722"
         },
-        "liquidpedia": "aimface"
+        "liquidpedia": "Aimface"
     },
     "aligon": {
         "name": "AliGon",
@@ -297,7 +297,7 @@
             "id": 11458
         },
         "identifier": "begenius",
-        "liquidpedia": "beGenius"
+        "liquidpedia": "BeGenius_Electronic_Sport_Club"
     },
     "bornoffire": {
         "name": "Born of Fire",
@@ -407,7 +407,7 @@
             "name": "Clan-Mystik",
             "id": "4948"
         },
-        "liquidpedia": "Clan_Mystik"
+        "liquidpedia": "Clan-Mystik"
     },
     "cloud9": {
         "name": "Cloud9",
@@ -460,7 +460,7 @@
             "name": "compLexity",
             "id": "5005"
         },
-        "liquidpedia": "compLexity"
+        "liquidpedia": "CompLexity_Gaming"
     },
     "controlesports": {
         "name": "Control eSports",
@@ -547,7 +547,7 @@
             "name": "dAT",
             "id": "4592"
         },
-        "liquidpedia": "dAT_Team"
+        "liquidpedia": "DAT_Team"
     },
     "denialesports": {
         "name": "Denial eSports",
@@ -622,7 +622,7 @@
             "id": 12720
         },
         "identifier": "ebettle",
-        "liquidpedia": "eBettle"
+        "liquidpedia": "Team_eBettle"
     },
     "echofox": {
         "name": "Echo Fox",
@@ -660,7 +660,7 @@
             "name": "eLevate",
             "id": "5775"
         },
-        "liquidpedia": "eLevate"
+        "liquidpedia": "ELevate"
     },
     "enceesports": {
         "name": "ENCE eSports",
@@ -694,7 +694,7 @@
             "id": 9220
         },
         "identifier": "energyesports",
-        "liquidpedia": "Energy_eSports"
+        "liquidpedia": "ENergy_eSports"
     },
     "enervategaming": {
         "name": "Enervate Gaming",
@@ -796,7 +796,7 @@
             "id": "1847"
         },
         "identifier": "esuba",
-        "liquidpedia": "eSuba"
+        "liquidpedia": "ESuba"
     },
     "excelesports": {
         "name": "exceL eSports",
@@ -807,7 +807,7 @@
             "name": "execeL"
         },
         "identifier": "excelesports",
-        "liquidpedia": "exceL_eSports"
+        "liquidpedia": "ExceL_eSports"
     },
     "fazeclan": {
         "name": "FaZe Clan",
@@ -863,7 +863,7 @@
             "name": "FlipSid3",
             "id": "5988"
         },
-        "liquidpedia": "Flipsid3_Tactics"
+        "liquidpedia": "FlipSid3_Tactics"
     },
     "fmesports": {
         "name": "fm-eSports",
@@ -882,7 +882,7 @@
             "name": "fm-eSports",
             "id": "4445"
         },
-        "liquidpedia": "fm-eSports"
+        "liquidpedia": "FM_eSports"
     },
     "fnatic": {
         "name": "Fnatic",
@@ -909,7 +909,7 @@
             "name": "g3ner"
         },
         "identifier": "g3nerationx",
-        "liquidpedia": "g3nerationX"
+        "liquidpedia": "G3nerationX"
     },
     "gambitgaming": {
         "name": "Gambit Gaming",
@@ -947,7 +947,7 @@
             "name": "Gamers2",
             "id": "5995"
         },
-        "liquidpedia": "Gamers2"
+        "liquidpedia": "G2_Esports"
     },
     "games4u": {
         "name": "Games4u",
@@ -985,7 +985,7 @@
             "id": 8770
         },
         "identifier": "gbots",
-        "liquidpedia": "gBots"
+        "liquidpedia": "GBots_eSports_Club"
     },
     "ggwp": {
         "name": "GGWP",
@@ -1057,7 +1057,7 @@
             "name": "GPlay",
             "id": "5817"
         },
-        "liquidpedia": "GPlay"
+        "liquidpedia": "GPlay.bg"
     },
     "h2k": {
         "name": "H2K",
@@ -1076,7 +1076,7 @@
             "id": 8652
         },
         "identifier": "h2k",
-        "liquidpedia": "H2K"
+        "liquidpedia": "H2k_Gaming"
     },
     "headshotbg": {
         "name": "HEADSHOTBG",
@@ -1171,7 +1171,7 @@
             "name": "iBUYPOWER",
             "id": "5231"
         },
-        "liquidpedia": "iBUYPOWER"
+        "liquidpedia": "IBUYPOWER"
     },
     "igamerz": {
         "name": "iGamerz",
@@ -1277,7 +1277,7 @@
             "name": "iNation",
             "id": "3419"
         },
-        "liquidpedia": "iNation"
+        "liquidpedia": "INation"
     },
     "incursion": {
         "name": "Incursion",
@@ -1536,7 +1536,7 @@
             "name": "Lions",
             "id": "1705"
         },
-        "liquidpedia": "Lions"
+        "liquidpedia": "Lions_eSportsKlubb"
     },
     "londonconspiracy": {
         "name": "London Conspiracy",
@@ -1704,7 +1704,7 @@
             "name": "mouseSpaz",
             "id": "4749"
         },
-        "liquidpedia": "mouseSpaz"
+        "liquidpedia": "MouseSpaz"
     },
     "mousesports": {
         "name": "mousesports",
@@ -1723,7 +1723,7 @@
             "name": "mousesports",
             "id": "60"
         },
-        "liquidpedia": "mousesports"
+        "liquidpedia": "Mousesports"
     },
     "mvpkarnal": {
         "name": "MVP.Karnal",
@@ -1795,7 +1795,7 @@
             "id": 8589
         },
         "identifier": "myrevenge",
-        "liquidpedia": "myRevenge"
+        "liquidpedia": "MyRevenge_e.V."
     },
     "mythic": {
         "name": "Mythic",
@@ -1885,7 +1885,7 @@
             "name": "nEophyte",
             "id": "665"
         },
-        "liquidpedia": "nEophyte"
+        "liquidpedia": "NEophyte"
     },
     "nerdrage": {
         "name": "nerdRage",
@@ -1904,7 +1904,7 @@
             "id": 11732
         },
         "identifier": "nerdrage",
-        "liquidpedia": "nerdRage"
+        "liquidpedia": "NerdRage"
     },
     "netcodeguides": {
         "name": "Netcodeguides",
@@ -1939,7 +1939,7 @@
             "name": "neXtPlease!",
             "id": "2303"
         },
-        "liquidpedia": "neXtPlease!"
+        "liquidpedia": "NeXtPlease!"
     },
     "nface": {
         "name": "nFace",
@@ -1973,7 +1973,7 @@
             "name": "Nihilum Gaming",
             "id": 11485
         },
-        "liquidpedia": "Nihilum"
+        "liquidpedia": "Nihilum_Gaming"
     },
     "ninjasinpyjamas": {
         "name": "Ninjas in Pyjamas",
@@ -2011,7 +2011,7 @@
             "id": 8608
         },
         "identifier": "nxl",
-        "liquidpedia": "nxl"
+        "liquidpedia": "Team_nxl"
     },
     "onlinebots": {
         "name": "OnlineBOTS",
@@ -2184,7 +2184,7 @@
             "name": "Playing Ducks",
             "id": "3396"
         },
-        "liquidpedia": "Playing_Ducks"
+        "liquidpedia": "Playing_Ducks_e.V."
     },
     "pride": {
         "name": "PRIDE",
@@ -2361,7 +2361,7 @@
             "name": "rizeGaming",
             "id": "5185"
         },
-        "liquidpedia": "rizeGaming"
+        "liquidpedia": "RizeGaming"
     },
     "sapphirekelownadotcom": {
         "name": "SapphireKelownaDotCom",
@@ -2399,7 +2399,7 @@
             "id": 14731
         },
         "identifier": "selfless",
-        "liquidpedia": "Selfless"
+        "liquidpedia": "Selfless_Gaming"
     },
     "skgaming": {
         "name": "SK Gaming",
@@ -2615,7 +2615,7 @@
             "name": "Alternate",
             "id": "61"
         },
-        "liquidpedia": "Team_Alternate"
+        "liquidpedia": "Team_ALTERNATE"
     },
     "teamcaseking": {
         "name": "Team Caseking",
@@ -2669,7 +2669,7 @@
             "id": "6292"
         },
         "identifier": "teamconquest",
-        "liquidpedia": "Team_Conquest"
+        "liquidpedia": "Conquest"
     },
     "teamdignitas": {
         "name": "Team Dignitas",
@@ -3279,7 +3279,7 @@
             "name": "USSR",
             "id": "2438"
         },
-        "liquidpedia": "USSR"
+        "liquidpedia": "USSR_Team"
     },
     "vegasquadron": {
         "name": "Vega Squadron",
@@ -3392,7 +3392,7 @@
             "name": "Virtus.pro",
             "id": "5378"
         },
-        "liquidpedia": "Virtus.Pro"
+        "liquidpedia": "Virtus.pro"
     },
     "volgare": {
         "name": "VOLGARE",
@@ -3446,7 +3446,7 @@
             "name": "vVv Gaming",
             "id": "2655"
         },
-        "liquidpedia": "vVv_Gaming"
+        "liquidpedia": "VVv_Gaming"
     },
     "webspell": {
         "name": "webSPELL",
@@ -3465,7 +3465,7 @@
             "name": "webSPELL",
             "id": "4449"
         },
-        "liquidpedia": "webSPELL"
+        "liquidpedia": "WebSPELL_Gaming"
     },
     "weplay": {
         "name": "WePlay",
@@ -3554,7 +3554,7 @@
             "name": "Wizards",
             "id": "2587"
         },
-        "liquidpedia": "Wizards"
+        "liquidpedia": "Wizards_e-Sports_Club"
     },
     "wreckinggaming": {
         "name": "Wrecking Gaming",
@@ -3591,7 +3591,7 @@
             "name": "x6tence",
             "id": "156"
         },
-        "liquidpedia": "x6tence"
+        "liquidpedia": "X6tence"
     },
     "xgamekz": {
         "name": "xGame.kz",
@@ -3606,7 +3606,7 @@
             "name": "xGame.KZ",
             "id": "6020"
         },
-        "liquidpedia": "xGame.kz"
+        "liquidpedia": "XGame.kz"
     },
     "xpcgaming": {
         "name": "XPC Gaming",
