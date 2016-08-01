@@ -193,7 +193,7 @@
     <div class="container-fluid page-wrapper">
         <div class="row match-wrapper">
             <div class="team-wrapper first-team-wrapper col-md-5 js-first-team-wrapper">
-                <img src="resources/teams/3dmax-500x500.png">
+                <img src="logos/3dmax/500">
                 <h2>
                     3DMAX
                 </h2>
@@ -204,7 +204,7 @@
                 </div>
             </div>
             <div class="team-wrapper second-team-wrapper col-md-5 js-second-team-wrapper">
-                <img src="resources/teams/virtuspro-500x500.png">
+                <img src="logos/virtuspro/500">
                 <h2>
                     Virtus.Pro
                 </h2>
@@ -473,13 +473,13 @@
 
         function setFirstTeam( identifier ){
             team1 = identifier;
-            $( '.js-first-team-wrapper' ).find( 'img' ).attr( 'src', 'resources/teams/' + identifier + '-500x500.png' );
+            $( '.js-first-team-wrapper' ).find( 'img' ).attr( 'src', 'logos/' + identifier + '/500' );
             $( '.js-first-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ].name );
         }
 
         function setSecondTeam( identifier ){
             team2 = identifier;
-            $( '.js-second-team-wrapper' ).find( 'img' ).attr( 'src', 'resources/teams/' + identifier + '-500x500.png' );
+            $( '.js-second-team-wrapper' ).find( 'img' ).attr( 'src', 'logos/' + identifier + '/500' );
             $( '.js-second-team-wrapper' ).find( 'h2' ).text( teamList[ identifier ].name );
         }
 

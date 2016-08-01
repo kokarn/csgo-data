@@ -1,11 +1,6 @@
 module.exports = function( grunt ) {
     var jf = require( 'jsonfile' );
 
-    global[ 'createIdentifier' ] = function ( name ){
-        var normalizeForSearch = require( 'normalize-for-search' );
-        return normalizeForSearch( name.replace( /[\s\.\-]+/g, '' ) );
-    };
-
     grunt.initConfig({
         jshint: {
             tasks: [
@@ -29,22 +24,6 @@ module.exports = function( grunt ) {
                         return dest + data.steam.name + '.png';
                     }
                 }]
-            },
-            match : {
-                options : {
-                    actions : {
-                        resize: [ 500, 500 ]
-                    }
-                },
-                files : [{
-                    expand: true,
-                    cwd: 'teams/',
-                    src: [ '**/*.png' ],
-                    dest: 'web/resources/teams/',
-                    rename: function( dest, src ){
-                        return dest + createIdentifier( src.split( '/' )[ 0 ] ) + '-500x500.png';
-                    }
-                }]
             }
         }
     });
@@ -53,5 +32,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-jimp' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
-    grunt.registerTask( 'default', [ 'newer:jimp:ingame', 'newer:jimp:match' ] );
+    grunt.registerTask( 'default', [ 'newer:jimp:ingame' );
 };

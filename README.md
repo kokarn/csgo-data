@@ -30,11 +30,12 @@ issue](https://github.com/kokarn/csgo-teams/issues/new) and we'll look into addi
 ## How do I get team logos in a different size?
 Glad you asked!
 
-There is a supersimple node app that does that for you.
+There's a script hosted on csgo-data that does this for you.
 
-1. If you haven't used [NodeJS](http://nodejs.org/) before you need to install that first
-2. Go to the directory where you have cloned the repository and run ```npm install``` from the command line
-3. Run ```node teamlogos.js``` and it should generate what you need.
+Just go to http://csgo-data.com/logos/IDENTIFIER/SIZE
+#### Examples
+http://csgo-data.com/logos/3dmax/64
+[http://csgo-data.com/logos/Ninjas in pyjamas/200](http://csgo-data.com/logos/Ninjas in pyjamas/200)
 
 ## How can I use this on my server or anywhere else?
 
@@ -65,6 +66,15 @@ If you use apache, this is a .htaccess file that goes in the '/teams/' directory
     ForceType application/octet-stream
     Header set Content-Disposition attachment
 </FilesMatch>
+```
+
+### How do I set up my own logo generation script in nginx?
+Easy peasy, just add this to your nginx config
+
+```
+location /logos {
+        rewrite ^/logos/(.*)/(.*)$ /logos/index.php?team=$1&size=$2 last;
+}
 ```
 
 ## Low hanging fruit
