@@ -261,6 +261,7 @@ var http = require( 'http' ),
                     });
 
                     response.on( 'end', function() {
+                        addTeam.csGoLoungeName();
                         fs.rename( writeTarget, addTeam.logoFilename, function( error ) {
                             if( error ) {
                                 console.log( 'ERROR: ' + error );
@@ -270,8 +271,6 @@ var http = require( 'http' ),
 
                     response.pipe( writeStream );
                 });
-
-                addTeam.csGoLoungeName();
             }
         },
         createTeam : function( teamName ){
