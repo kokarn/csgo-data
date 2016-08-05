@@ -32,5 +32,5 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-jimp' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
-    grunt.registerTask( 'default', [ 'newer:jimp:ingame' );
+    grunt.registerTask( 'default', [ 'newer:jimp:ingame' ] );
 };
