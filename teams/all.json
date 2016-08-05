@@ -753,6 +753,25 @@
         },
         "liquidpedia": "Epsilon_eSports"
     },
+    "escapegaming": {
+        "name": "Escape Gaming",
+        "steam": {
+            "name": "escap"
+        },
+        "hltv": {
+            "name": "Escape Gaming",
+            "id": "837"
+        },
+        "csgolounge": {
+            "name": "Escape"
+        },
+        "liquidpedia": "Escape_Gaming",
+        "gosugamers": {
+            "name": "Escape Gaming",
+            "id": 14959
+        },
+        "identifier": "escapegaming"
+    },
     "escgaming": {
         "name": "ESC Gaming",
         "steam": {
