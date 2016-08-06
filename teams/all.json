@@ -2161,6 +2161,18 @@
         "identifier": "overgaming",
         "liquidpedia": "OverGaming"
     },
+    "paingaming": {
+        "name": "paiN Gaming",
+        "steam": {
+            "name": "paing"
+        },
+        "liquidpedia": "PaiN_Gaming",
+        "hltv": {
+            "name": "paiN",
+            "id": "4773"
+        },
+        "identifier": "paingaming"
+    },
     "pentasports": {
         "name": "PENTA Sports",
         "steam": {
