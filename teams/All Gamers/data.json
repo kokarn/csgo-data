@@ -1,0 +1,19 @@
+{
+    "name": "All Gamers",
+    "steam": {
+        "name": "allga"
+    },
+    "csgolounge": {
+        "name": "AGamers"
+    },
+    "liquidpedia": "All_Gamers",
+    "gosugamers": {
+        "name": "All Gamers.",
+        "id": 16636
+    },
+    "hltv": {
+        "name": "AllGamers",
+        "id": "6504"
+    },
+    "identifier": "allgamers"
+}
