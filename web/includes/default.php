@@ -92,19 +92,10 @@ function outputJson( $data ){
     if ( ($info[2] == IMAGETYPE_GIF) || ($info[2] == IMAGETYPE_PNG) ) {
       $transparency = imagecolortransparent($image);
       $palletsize = imagecolorstotal($image);
-
-      if ($transparency >= 0 && $transparency < $palletsize) {
-        $transparent_color  = imagecolorsforindex($image, $transparency);
-        $transparency       = imagecolorallocate($image_resized, $transparent_color['red'], $transparent_color['green'], $transparent_color['blue']);
-        imagefill($image_resized, 0, 0, $transparency);
-        imagecolortransparent($image_resized, $transparency);
-      }
-      elseif ($info[2] == IMAGETYPE_PNG) {
-        imagealphablending($image_resized, false);
-        $color = imagecolorallocatealpha($image_resized, 0, 0, 0, 127);
-        imagefill($image_resized, 0, 0, $color);
-        imagesavealpha($image_resized, true);
-      }
+      imagealphablending($image_resized, false);
+      $color = imagecolorallocatealpha($image_resized, 0, 0, 0, 127);
+      imagefill($image_resized, 0, 0, $color);
+      imagesavealpha($image_resized, true);
     }
     imagecopyresampled($image_resized, $image, 0, 0, $cropWidth, $cropHeight, $final_width, $final_height, $width_old - 2 * $cropWidth, $height_old - 2 * $cropHeight);
 
