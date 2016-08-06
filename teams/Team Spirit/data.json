@@ -1,0 +1,19 @@
+{
+    "name": "Team Spirit",
+    "steam": {
+        "name": "spiri"
+    },
+    "liquidpedia": "Team_Spirit",
+    "csgolounge": {
+        "name": "Spirit"
+    },
+    "gosugamers": {
+        "name": "Team Spirit.",
+        "id": 17049
+    },
+    "hltv": {
+        "name": "Spirit",
+        "id": "7020"
+    },
+    "identifier": "teamspirit"
+}
