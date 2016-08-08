@@ -836,6 +836,25 @@
         "identifier": "esuba",
         "liquidpedia": "ESuba"
     },
+    "euronicsgaming": {
+        "name": "EURONICS Gaming",
+        "steam": {
+            "name": "euron"
+        },
+        "csgolounge": {
+            "name": "Euronics"
+        },
+        "liquidpedia": "EURONICS_Gaming",
+        "gosugamers": {
+            "name": "Euronics Gaming",
+            "id": 12893
+        },
+        "hltv": {
+            "name": "EURONICS",
+            "id": "6343"
+        },
+        "identifier": "euronicsgaming"
+    },
     "excelesports": {
         "name": "exceL eSports",
         "steam": {
