@@ -159,6 +159,25 @@
         "identifier": "arcadeesports",
         "liquidpedia": "Arcade_eSports"
     },
+    "archangels": {
+        "name": "ArchAngels",
+        "steam": {
+            "name": "archa"
+        },
+        "csgolounge": {
+            "name": "ArchAngel"
+        },
+        "hltv": {
+            "name": "ArchAngels",
+            "id": "7039"
+        },
+        "liquidpedia": "ArchAngels",
+        "gosugamers": {
+            "name": "ArchAngels",
+            "id": 17137
+        },
+        "identifier": "archangels"
+    },
     "area51": {
         "name": "Area51",
         "steam": {
