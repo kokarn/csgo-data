@@ -1,0 +1,19 @@
+{
+    "name": "VAULT",
+    "steam": {
+        "name": "vault"
+    },
+    "csgolounge": {
+        "name": "Vault"
+    },
+    "hltv": {
+        "name": "Vault",
+        "id": "6366"
+    },
+    "gosugamers": {
+        "name": "Vault GG",
+        "id": 13299
+    },
+    "liquidpedia": "VAULT",
+    "identifier": "vault"
+}
