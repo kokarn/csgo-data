@@ -3263,6 +3263,25 @@
         },
         "liquidpedia": "Team_XENEX"
     },
+    "tectonic": {
+        "name": "Tectonic",
+        "steam": {
+            "name": "tecto"
+        },
+        "csgolounge": {
+            "name": "Tectonic"
+        },
+        "liquidpedia": "Tectonic",
+        "hltv": {
+            "name": "Tectonic",
+            "id": "6425"
+        },
+        "gosugamers": {
+            "name": "Tectonic",
+            "id": 14050
+        },
+        "identifier": "tectonic"
+    },
     "tempogaming": {
         "name": "Tempo Gaming",
         "steam": {
