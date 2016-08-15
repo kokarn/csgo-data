@@ -1,0 +1,18 @@
+{
+    "name": "Kingdom eSports",
+    "steam": {
+        "name": "kingd"
+    },
+    "csgolounge": {
+        "name": "Kingdom"
+    },
+    "gosugamers": {
+        "name": "Kingdom eSports",
+        "id": 15284
+    },
+    "hltv": {
+        "name": "Kingdom",
+        "id": "6973"
+    },
+    "identifier": "kingdomesports"
+}
