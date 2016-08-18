@@ -2349,6 +2349,13 @@
         },
         "liquidpedia": "Playing_Ducks_e.V."
     },
+    "powerwithinplebs": {
+        "name": "Power Within Plebs",
+        "steam": {
+            "name": "plebs"
+        },
+        "identifier": "powerwithinplebs"
+    },
     "pride": {
         "name": "PRIDE",
         "steam": {
