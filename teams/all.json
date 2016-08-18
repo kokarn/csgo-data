@@ -2526,6 +2526,22 @@
         },
         "liquidpedia": "RizeGaming"
     },
+    "rogue": {
+        "name": "Rogue",
+        "steam": {
+            "name": "rogue"
+        },
+        "liquidpedia": "Rogue",
+        "gosugamers": {
+            "name": "Rogue.",
+            "id": 17978
+        },
+        "hltv": {
+            "name": "Rogue",
+            "id": "7157"
+        },
+        "identifier": "rogue"
+    },
     "ronin": {
         "name": "RONIN",
         "steam": {
