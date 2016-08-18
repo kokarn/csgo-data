@@ -6,7 +6,6 @@ var fs = require( 'fs' ),
     chalk = require( 'chalk' ),
     missingLogos = {
         lowresLogos : [],
-        sortedLogos : [],
         teamsChecked : 0,
         invalidImages : 0,
         markdown : '|Image|Team|Current size|\n|---|---|---|\n',
@@ -79,25 +78,16 @@ var fs = require( 'fs' ),
             var _this = this;
 
             if( _this.teamsChecked == _this.teams.length - 1 ){
+
+                _this.lowresLogos.sort( function( obj1, obj2 ){
+                    if( obj1.size !== obj2.size ){
+                        return obj1.size - obj2.size;
+                    }
+
+                    return obj1.name.localeCompare( obj2.name );
+                } );
+
                 _this.lowresLogos.forEach( function( data ){
-                    var i,
-                        hasAdded = false;
-
-                    for( i = 0; i < _this.sortedLogos.length; i = i + 1 ){
-                        if( data.size < _this.sortedLogos[ i ].size ){
-                            _this.sortedLogos.splice( i, 0, data );
-                            hasAdded = true;
-                            break;
-                        }
-                    }
-
-                    if( !hasAdded ){
-                        _this.sortedLogos.push( data );
-                    }
-
-                });
-
-                _this.sortedLogos.forEach( function( data ){
                     _this.markdown = _this.markdown + '|' + data.image + '|' + data.name + '|' + data.size + '|\n';
                 });
 

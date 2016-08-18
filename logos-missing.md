@@ -10,8 +10,8 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nerdr.png)|nerdRage|152|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aligo.png)|AliGon|179|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aimfa.png)|aimface|179|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aligo.png)|AliGon|179|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/agent.png)|Team Agent|180|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/indw.png)|Team Wolf|180|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/zbril.png)|Zbrilo|180|
