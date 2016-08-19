@@ -66,6 +66,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mvppr.png)|MVP Project|454|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/excel.png)|exceL eSports|459|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spaz.png)|mouseSpaz|462|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/signa.png)|Signature|469|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/qeeyo.png)|QeeYou|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/spiri.png)|Team Spirit|470|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ronin.png)|RONIN|473|

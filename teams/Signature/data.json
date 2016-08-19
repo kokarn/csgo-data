@@ -1,0 +1,19 @@
+{
+    "name": "Signature",
+    "steam": {
+        "name": "signa"
+    },
+    "hltv": {
+        "name": "Signature",
+        "id": "6774"
+    },
+    "gosugamers": {
+        "name": "Signature",
+        "id": 15143
+    },
+    "csgolounge": {
+        "name": "Signature"
+    },
+    "liquidpedia": "Signature_Gaming",
+    "identifier": "signature"
+}
