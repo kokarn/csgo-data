@@ -1,0 +1,19 @@
+{
+    "name": "Heroic",
+    "steam": {
+        "name": "heroi"
+    },
+    "csgolounge": {
+        "name": "Heroic"
+    },
+    "liquidpedia": "Heroic",
+    "gosugamers": {
+        "name": "Heroic",
+        "id": 18052
+    },
+    "hltv": {
+        "name": "Heroic",
+        "id": "7175"
+    },
+    "identifier": "heroic"
+}
