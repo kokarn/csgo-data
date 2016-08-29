@@ -2368,6 +2368,24 @@
         },
         "liquidpedia": "Playing_Ducks_e.V."
     },
+    "pndagaming": {
+        "name": "PNDA Gaming",
+        "steam": {
+            "name": "pnda"
+        },
+        "csgolounge": {
+            "name": "pnda"
+        },
+        "gosugamers": {
+            "name": "Pnda",
+            "id": 18050
+        },
+        "hltv": {
+            "name": "Pnda",
+            "id": "7155"
+        },
+        "identifier": "pndagaming"
+    },
     "powerwithinplebs": {
         "name": "Power Within Plebs",
         "steam": {
