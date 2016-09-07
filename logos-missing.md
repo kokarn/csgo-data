@@ -43,7 +43,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/energ.png)|Energy eSports|297|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/conqu.png)|Team Conquest|307|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lions.png)|Lions|322|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/imagi.png)|Imaginary Gaming|323|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/giant.png)|GIANT5|330|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vende.png)|Vendetta|331|
