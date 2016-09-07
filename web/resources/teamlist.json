@@ -147,6 +147,22 @@
         },
         "liquidpedia": "ALSEN_Team"
     },
+    "alternate_attax": {
+        "name": "ALTERNATE aTTaX",
+        "steam": {
+            "name": "attax"
+        },
+        "gosugamers": {
+            "id": 7398,
+            "name": "ALTERNATE aTTaX"
+        },
+        "identifier": "alternate_attax",
+        "hltv": {
+            "name": "ALTERNATE aTTaX",
+            "id": "4501"
+        },
+        "liquidpedia": "ALTERNATE_aTTaX"
+    },
     "arcadeesports": {
         "name": "Arcade eSports",
         "steam": {
@@ -2871,25 +2887,6 @@
         },
         "identifier": "teamalientech",
         "liquidpedia": "Team_Alientech"
-    },
-    "teamalternate": {
-        "name": "Team Alternate",
-        "steam": {
-            "name": "alter"
-        },
-        "gosugamers": {
-            "id": 7398,
-            "name": "Team Alternate.CS"
-        },
-        "csgolounge": {
-            "name": "ATN"
-        },
-        "identifier": "teamalternate",
-        "hltv": {
-            "name": "Alternate",
-            "id": "61"
-        },
-        "liquidpedia": "Team_ALTERNATE"
     },
     "teamcaseking": {
         "name": "Team Caseking",
