@@ -1,0 +1,16 @@
+{
+    "name": "Crowns eSport Club",
+    "steam": {
+        "name": "crown"
+    },
+    "gosugamers": {
+        "name": "Crowns.gg",
+        "id": 16174
+    },
+    "hltv": {
+        "name": "Crowns",
+        "id": "7168"
+    },
+    "liquidpedia": "Crowns_Esports_Club",
+    "identifier": "crownsesportclub"
+}
