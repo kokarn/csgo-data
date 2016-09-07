@@ -37,7 +37,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/dat.png)|dAT Team|257|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/contr.png)|Control eSports|265|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ob.png)|OnlineBOTS|265|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wizar.png)|Wizards|271|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mythi.png)|Mythic|272|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/uniai.png)|uni.AiN|276|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ggwp.png)|GGWP|287|
