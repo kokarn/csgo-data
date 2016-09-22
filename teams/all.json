@@ -2196,6 +2196,22 @@
         },
         "liquidpedia": "Ninjas_in_Pyjamas"
     },
+    "nrgesports": {
+        "name": "NRG eSports",
+        "steam": {
+            "name": "nrg"
+        },
+        "liquidpedia": "NRG_eSports",
+        "gosugamers": {
+            "name": "NRG eSports.",
+            "id": 14391
+        },
+        "hltv": {
+            "name": "NRG",
+            "id": "6673"
+        },
+        "identifier": "nrgesports"
+    },
     "nxl": {
         "name": "nxl",
         "steam": {
