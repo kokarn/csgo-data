@@ -18,6 +18,22 @@
         },
         "liquidpedia": "3DMAX"
     },
+    "3supenterprises": {
+        "name": "3sUp Enterprises",
+        "steam": {
+            "name": "3sup"
+        },
+        "gosugamers": {
+            "name": "3sUP",
+            "id": 12583
+        },
+        "hltv": {
+            "name": "3sUP",
+            "id": "6261"
+        },
+        "liquidpedia": "3sUP_Enterprises",
+        "identifier": "3supenterprises"
+    },
     "acegaming": {
         "name": "Ace Gaming",
         "steam": {

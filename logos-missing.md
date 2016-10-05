@@ -58,6 +58,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/vexit.png)|Vexitus E-Sports|391|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/m5.png)|Moscow Five|401|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/3sup.png)|3sUp Enterprises|430|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gbots.png)|gBots|439|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
