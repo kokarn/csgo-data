@@ -179,6 +179,22 @@
         },
         "liquidpedia": "ALTERNATE_aTTaX"
     },
+    "anox": {
+        "name": "ANOX",
+        "steam": {
+            "name": "anox"
+        },
+        "liquidpedia": "ANOX",
+        "hltv": {
+            "name": "ANOX",
+            "id": "6923"
+        },
+        "gosugamers": {
+            "name": "ANOX",
+            "id": 15188
+        },
+        "identifier": "anox"
+    },
     "arcadeesports": {
         "name": "Arcade eSports",
         "steam": {
