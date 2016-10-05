@@ -919,6 +919,22 @@
         "identifier": "esuba",
         "liquidpedia": "ESuba"
     },
+    "eunited": {
+        "name": "eUnited",
+        "steam": {
+            "name": "eunit"
+        },
+        "hltv": {
+            "name": "eUnited",
+            "id": "7106"
+        },
+        "liquidpedia": "EUnited",
+        "gosugamers": {
+            "name": "eUnited",
+            "id": 17905
+        },
+        "identifier": "eunited"
+    },
     "euronicsgaming": {
         "name": "EURONICS Gaming",
         "steam": {
