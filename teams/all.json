@@ -385,6 +385,22 @@
         "identifier": "begenius",
         "liquidpedia": "BeGenius_Electronic_Sport_Club"
     },
+    "blightgaming": {
+        "name": "Blight Gaming",
+        "steam": {
+            "name": "bligh"
+        },
+        "liquidpedia": "Blight_Gaming",
+        "hltv": {
+            "name": "Blight Gaming",
+            "id": "2400"
+        },
+        "gosugamers": {
+            "name": "Blight",
+            "id": 17784
+        },
+        "identifier": "blightgaming"
+    },
     "bornoffire": {
         "name": "Born of Fire",
         "steam": {
