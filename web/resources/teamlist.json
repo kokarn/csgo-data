@@ -3954,6 +3954,22 @@
         },
         "liquidpedia": "VVv_Gaming"
     },
+    "vwsgaming": {
+        "name": "VwS Gaming",
+        "steam": {
+            "name": "vws"
+        },
+        "liquidpedia": "VwS_Gaming",
+        "gosugamers": {
+            "name": "VwS Gaming",
+            "id": 14838
+        },
+        "hltv": {
+            "name": "VwS",
+            "id": "6756"
+        },
+        "identifier": "vwsgaming"
+    },
     "webspell": {
         "name": "webSPELL",
         "steam": {
