@@ -3626,6 +3626,21 @@
         },
         "liquidpedia": "Titan"
     },
+    "tornadorox": {
+        "name": "TORNADO ROX",
+        "steam": {
+            "name": "rox"
+        },
+        "gosugamers": {
+            "name": "RoX.CS",
+            "id": 19108
+        },
+        "hltv": {
+            "name": "RoX",
+            "id": "7450"
+        },
+        "identifier": "tornadorox"
+    },
     "torpedo": {
         "name": "Torpedo",
         "steam": {
