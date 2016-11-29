@@ -3529,6 +3529,22 @@
         },
         "liquidpedia": "Team_XENEX"
     },
+    "teamyp": {
+        "name": "Team YP",
+        "steam": {
+            "name": "yp"
+        },
+        "liquidpedia": "Team_YP",
+        "hltv": {
+            "name": "YP",
+            "id": "6471"
+        },
+        "gosugamers": {
+            "name": "YP",
+            "id": 14058
+        },
+        "identifier": "teamyp"
+    },
     "tectonic": {
         "name": "Tectonic",
         "steam": {
