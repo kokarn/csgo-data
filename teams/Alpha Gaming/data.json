@@ -1,0 +1,16 @@
+{
+    "name": "Alpha Gaming",
+    "steam": {
+        "name": "alpha"
+    },
+    "liquidpedia": "Alpha_Gaming",
+    "hltv": {
+        "name": "Alpha",
+        "id": "6807"
+    },
+    "gosugamers": {
+        "name": "Alpha.",
+        "id": 14837
+    },
+    "identifier": "alphagaming"
+}
