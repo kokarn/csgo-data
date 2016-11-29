@@ -777,6 +777,18 @@
         "identifier": "echofox",
         "liquidpedia": "Echo_Fox"
     },
+    "elementsprogaming": {
+        "name": "Elements Pro Gaming",
+        "steam": {
+            "name": "eleme"
+        },
+        "liquidpedia": "Elements_Pro_Gaming",
+        "hltv": {
+            "name": "Elements",
+            "id": "7489"
+        },
+        "identifier": "elementsprogaming"
+    },
     "elevate": {
         "name": "eLevate",
         "steam": {
