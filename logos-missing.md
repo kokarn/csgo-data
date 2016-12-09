@@ -24,7 +24,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/volga.png)|VOLGARE|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/torqu.png)|Torqued|214|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alsen.png)|ALSEN|220|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/tride.png)|TRIDENT|221|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/winou.png)|WinOut|229|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/viceg.png)|Vice Gaming|230|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/g4u.png)|Games4u|234|
