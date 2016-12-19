@@ -22,6 +22,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/espen.png)|eSport Engine|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/lionc.png)|Lioncast|200|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/volga.png)|VOLGARE|200|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gbots.png)|gBots|214|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/torqu.png)|Torqued|214|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/alsen.png)|ALSEN|220|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/winou.png)|WinOut|229|
@@ -61,7 +62,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/selfl.png)|Selfless|405|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/wepla.png)|WePlay|419|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/3sup.png)|3sUp Enterprises|430|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/gbots.png)|gBots|439|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/casek.png)|Team Caseking|447|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/boxr.png)|BOXR|450|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/risky.png)|Risky Gaming|453|
