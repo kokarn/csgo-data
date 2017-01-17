@@ -9,6 +9,7 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/storm.png)|Team Storm|146|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/skdc.png)|SapphireKelownaDotCom|149|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/nerdr.png)|nerdRage|152|
+|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mythi.png)|Mythic|169|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/makew.png)|Make War Not Love|170|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aimfa.png)|aimface|179|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/aligo.png)|AliGon|179|
@@ -37,7 +38,6 @@
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/dat.png)|dAT Team|257|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/contr.png)|Control eSports|265|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ob.png)|OnlineBOTS|265|
-|![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/mythi.png)|Mythic|272|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/uniai.png)|uni.AiN|276|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/ggwp.png)|GGWP|287|
 |![logo](https://github.com/kokarn/csgo-data/raw/master/web/resources/ingame/neoph.png)|nEophyte|288|
