@@ -1978,6 +1978,22 @@
         },
         "identifier": "mineski"
     },
+    "misfits": {
+        "name": "Misfits",
+        "steam": {
+            "name": "misfi"
+        },
+        "liquidpedia": "Misfits",
+        "hltv": {
+            "name": "Misfits",
+            "id": "7557"
+        },
+        "gosugamers": {
+            "name": "Misfits.CS",
+            "id": 20123
+        },
+        "identifier": "misfits"
+    },
     "molotovsandmarshmallows": {
         "name": "Molotovs and Marshmallows",
         "steam": {
