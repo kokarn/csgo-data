@@ -401,6 +401,22 @@
         "identifier": "begenius",
         "liquidpedia": "BeGenius_Electronic_Sport_Club"
     },
+    "big": {
+        "name": "BIG",
+        "steam": {
+            "name": "big"
+        },
+        "liquidpedia": "BIG",
+        "hltv": {
+            "name": "BIG",
+            "id": "7532"
+        },
+        "gosugamers": {
+            "name": "BIG",
+            "id": 19832
+        },
+        "identifier": "big"
+    },
     "blightgaming": {
         "name": "Blight Gaming",
         "steam": {
